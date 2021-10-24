@@ -1,4 +1,4 @@
-# grupo_9_MiTrebol
+# Grupo_9_MiTrebol
 
 ## Descripcion de la pagina
 
