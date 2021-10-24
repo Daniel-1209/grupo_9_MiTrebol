@@ -16,3 +16,5 @@ Publico en genaral que sepa navegar en un sitio web
 
 
 ## Sitios de Referencia
+- https://www.fairtrade.ec/artesaniasandinaslp
+- https://www.ensambleartesano.org/
