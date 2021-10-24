@@ -11,8 +11,8 @@ Publico en genaral que sepa navegar en un sitio web
 ## Integrantes
 - Harumi Camarillo Torres
 - Brenda Sarai Gonzalez Saldivar
-- 
-- Daniel Garcia Mendoza
+- Rodrigo Daniel Domínguez García
+- Daniel García Mendoza
 
 
 ## Sitios de Referencia
