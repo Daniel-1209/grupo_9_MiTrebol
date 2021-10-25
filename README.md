@@ -18,3 +18,6 @@ Publico en genaral que sepa navegar en un sitio web
 ## Sitios de Referencia
 - https://www.fairtrade.ec/artesaniasandinaslp
 - https://www.ensambleartesano.org/
+- https://semillasisla.mx/
+- https://estadonatural.com.mx/pages/sucursales
+- https://www.semillascasacobo.mx/
