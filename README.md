@@ -21,3 +21,7 @@ Publico en genaral que sepa navegar en un sitio web
 - https://semillasisla.mx/
 - https://estadonatural.com.mx/pages/sucursales
 - https://www.semillascasacobo.mx/
+- https://www.somostierra.com.mx/
+- https://ecotiendamexico.com/
+- https://denda.com.mx/
+- https://packagefreeshop.com/
