@@ -2,11 +2,11 @@
 
 ## Descripcion de la pagina
 
-Pagina para la venta de articulos y productos de orginen natural y artesanal de productores mexicanos.
+Pagina para la venta de articulos y productos de origen natural y artesanal de productores mexicanos.
 
 ## Para el publico
 
-Publico en genaral que sepa navegar en un sitio web
+Publico en general que sepa navegar en un sitio web
 
 ## Integrantes
 - Harumi Camarillo Torres
