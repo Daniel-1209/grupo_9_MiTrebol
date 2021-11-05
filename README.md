@@ -16,13 +16,15 @@ Publico en general que sepa navegar en un sitio web
 
 
 ## Sitios de Referencia
-- https://www.fairtrade.ec/artesaniasandinaslp
-- https://www.ensambleartesano.org/
+Sitios similares, relacionados y de interés:
+● Por los productos o servicios que ofrecen.
+● Por la estética que presentan.
+● Por las funcionalidades implementadas
+
 - https://semillasisla.mx/
-- https://estadonatural.com.mx/pages/sucursales
-- https://www.semillascasacobo.mx/
-- https://bonastoria.com/
-- https://www.somostierra.com.mx/
-- https://ecotiendamexico.com/
-- https://denda.com.mx/
 - https://packagefreeshop.com/
+- https://estadonatural.com.mx/pages/sucursales
+- https://bonastoria.com/
+- https://www.ensambleartesano.org/
+- https://miastral.com/
+
