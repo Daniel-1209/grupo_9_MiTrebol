@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/productCart.css">
     <title>Mi Carrito</title>
 </head>
 <body>
     <!-- Cabecera de la pagina-->
     <header>
-        <img src="/img/logo-mi-trebol.png" alt="logotipo" class="logo">
+        <img src="/img/trebol.png" alt="logotipo" class="logo">
+        
         <nav>
-            <ul>
+            
+            <ul class="parteUno">
                 <li><a href="#">Acerca</a></li>
                 <li><a href="#">Contatos</a></li>
             </ul>
 
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="#">Comprar</a></li>
+            <ul class="parteDos"> 
+                <li><a href="/" class="ini">Inicio</a></li>
+                <li><a href="#" class="com">Comprar</a></li>
             </ul>
         </nav>
 
@@ -32,7 +34,8 @@
     <!-- Cuerpo de la pagina-->
     <main>
         <div class="carrito">
-            <h2>MI CARRITO DE COMPRAS</h2>
+            <!--MI CARRITO DE COMPRAS-->
+            <h2>COMPRAS</h2>
 
                 <section class="carro">
                     <article class="producto">
@@ -63,10 +66,10 @@
         
 
         <div class="totalPagar">
-            <div>
+        
                 <h2>TOTAL A PAGAR</h2>
                 <h2>$ <span id="enteros"> 000</span>.<span id="decimales">000</span> </h2>
-            </div>
+            
 
             <input type="button" value="PAGAR">
             
@@ -77,7 +80,12 @@
     
     <!-- Pie de la pagina-->
     <footer>
-        <img src="/img/logo-mi-trebol.png" alt="logotipo" class="logo">
+        <img src="/img/trebol.png" alt="logotipo" class="logo">
+        
+        <div class="texto">
+            <p>Conoce todo sob</p>
+        </div>
+        
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
