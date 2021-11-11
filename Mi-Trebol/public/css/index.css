@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #fff
+}
+
+h3 {
+    font-size: 24px
+}
+
+p {
+    font-size: 16px
+}
+
+nav,
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: .9
+}
+
+a:hover {
+    opacity: 1
+}
+
+hr {
+    width: 150px;
+    height: 2px;
+    background-color: #00b158;
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 80px
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 125px 100px
+}
+
+@media (max-width:1000px) {
+    section {
+        padding: 100px 50px
+    }
+}
+
+@media (max-width:600px) {
+    section {
+        padding: 80px 30px
+    }
+}
+
+section h3.title {
+    color: #414a4f;
+    text-transform: capitalize;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center
+}
+
+section p {
+    text-align: center;
+    line-height: 1.5
+}
+
+.logo {
+    width: 50%
+}
+
+.trebol {
+    background-color: rgb(0 0 0 / 21%)
+}
+
+.tienda {
+    text-align: center
+}
+
+.logos {
+    display: flex;
+    vertical-align: middle;
+    padding: 0
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 100px 0
+}
+
+header h2 {
+    font-family: Montserrat, sans-serif
+}
+
+header nav {
+    display: flex
+}
+
+header nav li {
+    margin: 0 15px
+}
+
+header nav li:first-child {
+    margin-left: 0
+}
+
+header nav li:last-child {
+    margin-right: 0
+}
+
+@media (max-width:1000px) {
+    header {
+        padding: 20px 50px
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column
+    }
+    header h2 {
+        margin-bottom: 15px
+    }
+}
+
+
+/* Imagen de tienda - Hero */
+
+.hero {
+    position: relative;
+    justify-content: center;
+    min-height: 90vh;
+    color: #fff;
+    text-align: center
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #2196f3;
+    z-index: -1
+}
+
+.hero .background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #414a4f;
+    opacity: .75
+}
+
+.hero h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 15px
+}
+
+.hero h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    margin-bottom: 40px
+}
+
+@media (max-width:800px) {
+    .hero {
+        min-height: 600px
+    }
+    .hero h1 {
+        font-size: 48px
+    }
+    .hero h3 {
+        font-size: 24px
+    }
+}
+
+
+/* Contenido */
+
+.categorias,
+.populares {
+    background-color: #ebebeb
+}
+
+.promociones {
+    background-color: #f7f7f7
+}
+
+.categorias-container {
+    max-width: 1400px;
+    margin: 0
+}
+
+.producto-cat {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    flex-basis: 25%
+}
+
+@media (min-width:900px) {
+    .categorias-container {
+        display: flex;
+        justify-content: space-between
+    }
+}
+
+.equipo {
+    width: 100vw
+}
+
+
+/* Categorias y valoraciones */
+
+.categoria {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center
+}
+
+.categoria-producto {
+    width: 100%
+}
+
+.img-categorias {
+    box-shadow: 0 0 10px rgb(100 100 100);
+    width: 100%
+}
+
+.valoracion {
+    text-align: center;
+    font-weight: bolder
+}
+
+.stars {
+    font-size: 18px;
+    color: #00954c;
+    margin-top: 15px
+}
+
+
+/* Información de Promociones */
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap
+}
+
+@media (max-width:600px) {
+    .contenedor {
+        flex-direction: column
+    }
+}
+
+.elemento {
+    flex-basis: 33%;
+    margin-bottom: 15px
+}
+
+.icon-promo {
+    font-size: 38px;
+    color: #00954c;
+    margin-bottom: 15px
+}
+
+.info-promo {
+    text-align: center;
+    margin-bottom: 15px
+}
+
+
+/* Info Footer */
+
+.footer-contenedor {
+    display: flex;
+    width: 100%
+}
+
+.footer-elemento {
+    flex-basis: 33%
+}
+
+@media (max-width:600px) {
+    .footer-contenedor {
+        flex-direction: column
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding: 60px 0
+}
+
+footer ul {
+    margin-bottom: 25px;
+    font-size: 16px
+}
+
+footer ul li {
+    margin: 0 8px
+}
+
+footer ul li:first-child {
+    margin-left: 0
+}
+
+footer ul li:last-child {
+    margin-right: 0
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .6);
+    margin-bottom: 10px
+}
+
+footer p a {
+    color: #fff
+}
+
+@media (max-width:700px) {
+    footer {
+        padding: 80px 15px
+    }
+}
