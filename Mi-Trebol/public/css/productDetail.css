@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+header div.topheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+img.logotipo{
+    align-self: center;
+    width: 10%;
+    height: 10%;
+}
+
+div.submit{
+    width: 20px;
+    height: 20px;
+    color:cornflowerblue;
+    padding: 5%;
+    margin: 5%;
+    font-size: 22px;
+}
+
+nav.leftheader{
+    display: flex;
+    justify-content: space-around;
+}
+
+header div nav p.login{
+    justify-content: flex-end;
+    padding:5%;
+    margin: 5%;
+}
+header div nav p a{
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-color: black;
+}
+
+header div nav p.carrito{
+    padding: 5%;
+    margin: 5%;
+    text-decoration: none;
+}
+
+#menu-header-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header div nav ul li{
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-color: black;
+}
