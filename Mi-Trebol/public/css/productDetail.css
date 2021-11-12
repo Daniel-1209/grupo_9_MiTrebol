@@ -10,6 +10,7 @@ header div.topheader{
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 5%;
+    align-items: center;
 }
 
 img.logotipo{
@@ -18,12 +19,12 @@ img.logotipo{
     height: 10%;
 }
 
-div.submit{
+header div.submit{
     width: 20px;
     height: 20px;
     color:cornflowerblue;
     padding: 5%;
-    margin: 5%;
+    margin: 0 3%;
     font-size: 22px;
 }
 
@@ -40,24 +41,72 @@ header div nav p.login{
 header div nav p a{
     text-decoration: none;
     text-decoration-line: none;
-    text-decoration-color: black;
+    text-decoration-color: none;
+    color:black;
 }
-
 header div nav p.carrito{
     padding: 5%;
     margin: 5%;
     text-decoration: none;
 }
 
+
 #menu-header-ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     list-style-type: none;
+    justify-content: center;
 }
-
-header div nav ul li{
+header nav ul li a{
     text-decoration: none;
     text-decoration-line: none;
-    text-decoration-color: black;
+    text-decoration-color: none;
+    color: black;
+}
+
+header nav ul li{
+    padding: 0 6%;
+    margin: 0 5% 5% 5%;
+}
+/*header nav ul li.inicio{
+    position: relative;
+    left: 20px;
+}*/
+/*---IMAGENES a DETALLE del producto a mostrar---*/
+main section{
+    display: flex;
+}
+main section div.img-a-detalle{
+    display:flex;
+    width: 45%;
+    margin: 5% 0 5% 5%;
+}
+main section div article.img1DP{
+ 
+    flex-grow: 1;
+}
+main section div article{
+    align-self: center;
+}
+
+/*--Informacion del producto a detallar--*/
+main section div.info-producto-detalle{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin: 5%;
+}
+main section div{
+    flex-grow: 1;
+}
+h1{
+    font-size: 60px;
+}
+#precio{
+    padding: 1%;
+    margin: 3%;
+}
+#titulo-producto{
+    font-style: bold;
+    padding: 1%;
 }
