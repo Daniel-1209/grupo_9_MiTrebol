@@ -5,60 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/productCart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Mi Carrito</title>
 </head>
 <body>
     <!-- Cabecera de la pagina-->
-    <header>
-        <img src="/img/trebol.png" alt="logotipo" class="logo">
-        
+    <header class="trebol">
+        <div class="logos">
+            <a href="#"><img class="logo" src="/img/logo.png" alt=""></a>
+            <h1 class="tienda">MiTrébol</h1>
+        </div>
+
         <nav>
-            
-            <ul class="parteUno">
-                <li><a href="#">Acerca</a></li>
-                <li><a href="#">Contatos</a></li>
-            </ul>
-
-            <ul class="parteDos"> 
-                <li><a href="/" class="ini">Inicio</a></li>
-                <li><a href="#" class="com">Comprar</a></li>
-            </ul>
+            <li><a href="#inicio">Inicio <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="#">Contactos </a></li>
         </nav>
-
-
-        
-
-
     </header>
 
     <!-- Cuerpo de la pagina-->
     <main>
         <div class="carrito">
             <!--MI CARRITO DE COMPRAS-->
-            <h2>COMPRAS</h2>
+            <h2> >>> COMPRAS <<< </h2>
 
                 <section class="carro">
                     <article class="producto">
-                        <img src="" alt="articulo">
-                        <strong>Titulo del articulo y detalles</strong>
-                        <p>$ 000.00</p>
+                        <img src="/img/aceite_aguacate_rev.png" alt="articulo">
+                        <strong>Aceite de Aguacate</strong>
+                        <p>$ 150.00MXN</p>
                         <div class="cantidad">
+                            <label for="canti">Cantidad De Productos: </label>
                             <input type="number" name="canti" id="can-pro" value="1">
                         </div>
-                        <div class="eliminar"> 
-                            <input type="button" value="Eliminar">
-                        </div>
+                         
+                            <input type="button" value="Eliminar" class="eliminar">
+                        
                     </article>
                     <article class="producto">
-                        <img src="" alt="articulo">
-                        <strong>Titulo del articulo y detalles</strong>
-                        <p>$ 000.00</p>
+                        <img src="/img/velas_rev.png" alt="articulo">
+                        <strong>Velas florales</strong>
+                        <p>$539.99MXN</p>
                         <div class="cantidad">
+                            <label for="canti">Cantidad De Productos: </label>
                             <input type="number" name="canti" id="can-pro" value="1">
                         </div>
-                        <div class="eliminar"> 
-                            <input type="button" value="Eliminar">
-                        </div>
+                         
+                            <input type="button" value="Eliminar" class="eliminar">
+                        
                     </article>
 
                 </section>
@@ -68,7 +61,7 @@
         <div class="totalPagar">
         
                 <h2>TOTAL A PAGAR</h2>
-                <h2>$ <span id="enteros"> 000</span>.<span id="decimales">000</span> </h2>
+                <h2>$ <span id="enteros"> 690</span>.<span id="decimales">000</span> </h2>
             
 
             <input type="button" value="PAGAR">
@@ -79,22 +72,44 @@
     </main>
     
     <!-- Pie de la pagina-->
-    <footer>
-        <img src="/img/trebol.png" alt="logotipo" class="logo">
-        
-        <div class="texto">
-            <p>Conoce todo sob</p>
+    <footer id="contacto">
+        <div class="footer-contenedor">
+            <div class="footer-elemento">
+                <ul>
+                    <li><img src="/img/logo.png" alt=""></li>
+                    <li>
+                        <h4>MiTrébol</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-elemento">
+                <ul>
+                    <li><a href="">Conócenos</a> </li>
+                    <li><a href="">¿Quiénes somos?</a></li>
+                    <li><a href="">Nuestro trabajo</a> </li>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Síguenos</a></li>
+                </ul>
+            </div>
+            <div class="footer-elemento">
+                <ul>
+                    <ul>
+                        <li><a href="">Ayuda</a> </li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                        <li><a href="">Envío</a> </li>
+                    </ul>
+            </div>
+            <div class="footer-elemento">
+                <ul>
+                    <li>Danos tu opinión</li>
+                    <li> <label>Correo:</label>
+                        <input placeholder="Coloca tu correo" type="email" name="correo"></li>
+                    <li> <label>Escribe tu mensaje:</label>
+                        <input placeholder="Escribe tu mensaje" type="text" name="mensaje"></li>
+                </ul>
+            </div>
+
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca</a></li>
-                <li><a href="#">Contatos</a></li>
-            </ul>
-        </nav>
-
-
     </footer>
 
 
