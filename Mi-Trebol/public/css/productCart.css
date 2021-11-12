@@ -1,82 +1,116 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: Montserrat, sans-serif;
     box-sizing: border-box;
 }
 
 /* Cabecera del documento*/
 
-header{
-    width: 100vw;
-    background: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);
-    /*background:  rgb(136, 255, 136);*/
-    padding: 20px 5px 20px 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-   
+
+a{
     
-}
-header nav{
-    
-    display: flex;
-    justify-content: space-between;
-}
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: .9
 
-.parteUno{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
 }
 
-.parteUno li{
-    margin-right: 30px;
-}    
-
-.parteDos{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.logo{
-    width: 60px;
-    margin-bottom: 10px;
-}
-
-nav ul li  {
+nav, ul {
     list-style: none;
 }
 
-nav ul li a{
-    text-decoration: none;
+header{
+    width: 100vw;
+    height: 15vh;
+    background: url(/img/trebol.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background:  rgb(136, 255, 136);*/
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    position: relative;
+   
+    
+}
+.logos{
+    width: 100%;
+    height: 100%;
 }
 
 
-.ini, .com {
-    padding: 5px;
+.logo {
+    width: 70px;
+    height: 70px;
+    left: 10px ;
+    top: 10px;
+    position: absolute;
+      
+}
+nav {
     color: white;
-    font-weight: 800;
-    background-color: rgb(0, 81, 255);
-    border: 2px solid black;
-    border-radius: 10%;
-    margin-bottom: 20px;
-    margin-right: 5px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    
+}
+
+
+.tienda{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    background-color:  rgba(0, 0, 0, 0.452);
 }
 
 
 /* Cuerpo del documento*/
 
 main{
-    border: 1px solid red;
+    
     display: flex;
+    background-color: #ebebeb;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+section article img{
+    width:  150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+section article .eliminar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    
+    color: white;
+}
+section article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+section article div input {
+    padding: 10px;
+    width: 50px;
 }
 
 .carrito{
@@ -89,22 +123,119 @@ main{
 }
 
 .totalPagar {
-    border: 1px solid gray;
-    border-radius: 20%;
+    width: 50%;
+    height:  300px;
+    background-color: rgba(10, 255, 10, 0.329);
+    border: none;
+    border-radius: 10px;
     display: flex ;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.totalPagar input{
+    margin-top: 20px;
+    padding: 20px;
+    font-size:  20px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border: groove 2px rgb(0, 255, 0);
+    border-radius: 20px;
+}
+
+.producto{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.452);
+    background-color: white;
+    border-radius: 10%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 760px){
+    main{
+
+        flex-direction:row;
+        justify-content: space-evenly;
+        
+    }
+
+    .totalPagar {
+        width: 30%;
+        height:  300px;
+        
+    }
+    
+
+}
+
 
 /* Pie de pagina*/
 
-footer{
+
+.footer-contenedor {
     display: flex;
-    justify-content: space-between;
-    background-color: rgb(172, 236, 172);
-    border-top: 2px solid rgb(0, 26, 255);
-    padding: 10px;
-    
+    width: 100%
+}
+
+.footer-elemento {
+    flex-basis: 33%
+}
+
+@media (max-width:600px) {
+    .footer-contenedor {
+        flex-direction: column
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding: 60px 0
+}
+
+footer ul {
+    margin-bottom: 25px;
+    font-size: 16px
+}
+
+footer ul li {
+    margin: 0 8px
+}
+
+footer ul li:first-child {
+    margin-left: 0
+}
+
+footer ul li:last-child {
+    margin-right: 0
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .6);
+    margin-bottom: 10px
+}
+
+footer p a {
+    color: #fff
+}
+
+@media (max-width:700px) {
+    footer {
+        padding: 80px 15px
+    }
 }
