@@ -23,54 +23,71 @@ nav, ul {
 
 header{
     width: 100vw;
-    height: 15vh;
+    height: auto;
     background: url(/img/trebol.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     /*background:  rgb(136, 255, 136);*/
     
-    display: flex;
-    flex-wrap: wrap;
     
-    align-items: center;
-    position: relative;
-   
     
-}
-.logos{
-    width: 100%;
-    height: 100%;
 }
 
 
 .logo {
     width: 70px;
     height: 70px;
-    left: 10px ;
-    top: 10px;
-    position: absolute;
-      
+    margin-right: 30px;
+    margin-bottom: 10px;
+    
 }
 nav {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    position: absolute;
-    right: 10px;
+    
     
 }
 
 
-.tienda{
+.trebol{
     width: 100%;
     height: 100%;
     text-align: center;
     color: white;
     padding-top: 30px;
     background-color:  rgba(0, 0, 0, 0.452);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+   
 }
 
 
-/* Cuerpo del documento*/
+/* Dispositivo de TABLET*/
+
+@media(min-width: 480px){
+    .trebol{
+        width: 100%;
+    }
+    
+    .letras{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+
+        width: 80%;
+    }
+
+
+}
+
+
+/* ++++++++++++ Cuerpo del documento +++++++++++++++++++++*/
 
 main{
     
@@ -84,7 +101,7 @@ main{
 }
 
 section article img{
-    width:  150px;
+    width:  100%;
     margin-top: 10px;
     margin-bottom: 10px;
     
@@ -121,9 +138,15 @@ section article div input {
     width: 60%;
     margin-bottom: 50px;
 }
+main .carrito h2.titulo{
+    width: 100%;
+    color: green;
+    font-size: 20px;
+    text-align: center  ;
+}
 
 .totalPagar {
-    width: 50%;
+    width: 40%;
     height:  300px;
     background-color: rgba(10, 255, 10, 0.329);
     border: none;
@@ -133,6 +156,10 @@ section article div input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.totalPagar h2{
+    text-align: center;
 }
 
 .totalPagar input{
@@ -160,25 +187,62 @@ section article div input {
     align-items: center;
 }
 
-@media (min-width: 760px){
-    main{
 
-        flex-direction:row;
-        justify-content: space-evenly;
+/* Dispositivo de TABLET*/
+
+@media (min-width: 480px){
+    .carrito{
+        width: 100%;
+    }
+    
+    .carro{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
         
     }
 
-    .totalPagar {
-        width: 30%;
-        height:  300px;
-        
+    .carro .producto{
+        width: 40%;
+
     }
     
 
 }
 
+/* Dispositivo de Computadora*/
 
-/* Pie de pagina*/
+@media (min-width: 760px){
+
+    main{
+        flex-direction: row;
+
+    }
+       
+    .carrito{   
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 75%;
+    }
+    .carro .producto{
+        width: 30%;
+
+    }
+    
+    
+
+    .totalPagar{
+        width: 20%;
+    }
+
+}
+
+
+
+
+/*++++++++++++++++++++++++++ Pie de pagina ++++++++++++++++++++++*/
 
 
 .footer-contenedor {
@@ -190,11 +254,6 @@ section article div input {
     flex-basis: 33%
 }
 
-@media (max-width:600px) {
-    .footer-contenedor {
-        flex-direction: column
-    }
-}
 
 footer {
     display: flex;
@@ -234,7 +293,14 @@ footer p a {
     color: #fff
 }
 
-@media (max-width:700px) {
+@media (max-width:480px) {
+    .footer-contenedor {
+        flex-direction: column
+    }
+}
+
+
+@media (max-width:760px) {
     footer {
         padding: 80px 15px
     }
