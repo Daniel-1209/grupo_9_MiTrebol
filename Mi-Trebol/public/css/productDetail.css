@@ -198,3 +198,23 @@ h1{
     font-style: bold;
     padding: 1%;
 }
+
+/*--Información del producto de Detalle--*/
+main section div .titulo-natural1{
+    padding: 10% 10% 0% 10%;
+    margin: 8% 8% 0% 8%;
+}
+main section div .titulo-natural2{
+    padding: 0% 10% 10% 10%;
+    margin: 0% 8% 8% 8%;
+}
+section div .stars{
+    font-size: 18px;
+    color: #00954c;
+    margin-top: 15px;
+}
+section div .detalles{
+    text-align: center;
+    padding: 0% 10%;
+    margin: 0% 8%;
+}
