@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-     <!-- Hoja de Estilos -->
-     <link rel="stylesheet" href="/css/productDetail.css">
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="/css/productDetail.css">
     <title>.::Detalle del producto::.</title>
 </head>
 
@@ -23,7 +23,7 @@
             <h3 class="tienda">MiTrébol</h3>
         </div>
 
-        <nav>
+        <nav class='nav'>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
@@ -39,37 +39,42 @@
                     <img width=30% src="img/portavela_rev.png" alt="X producto">
                 </article>
                 <article id=img3DP>
-                    <img width=30% src="/grupo_9_MiTrebol/Mi-Trebol/public/img/****un producto**" alt="X producto">
+                    <img width=30% src="img/vela_1.jpg" alt="Vela con rosas">
                 </article>
                 <article id=img4DP>
-                    <img width=30% src="/grupo_9_MiTrebol/Mi-Trebol/public/img/****un producto**" alt="X producto">
+                    <img width=30% src="img/vela_2.jpg" alt="vela y sueter">
                 </article>
                 <article id=img5DP>
-                    <img width=30% src="/grupo_9_MiTrebol/Mi-Trebol/public/img/****un producto**" alt="X producto">
+                    <img width=30% src="img/vela_3.jpg" alt="vela 3">
                 </article>
             </div>
-           
+
             <div class='info-producto-detalle'>
                 <h1 class='titulo-natural1'>Producto</h1>
                 <h1 class='titulo-natural2'> 100% Natural</h1>
-               
-                <div id='detalles'-
-                >
-                    <p id='precio'>$100.00</p>
-                    <p id='titulo-producto'>Loret en bold</p>
-                    <p id='*'>Texto con la info grl del producto</p>
-                </div>
-                <div >
-                    <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
+                <div class='rateing'>
+                    <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i></p>
                     <p class="valoracion">100 valoraciones</p>
+                </div>
+                <div class='detalles' ->
+                    <p id='precio'>$100.00</p>
+                    <p id='titulo-producto'>Velas florales</p>
+                    <p id='*'>Texto con la información general del producto</p>
+                </div>
+               
+                <div class='detalles_menu'>
                     <p>Detalles</p>
-                    <p>precio por kilo</p>
-                    <p>Hecho por: x</p>
-                    <p>lorem....</p>
+                    <ul class='detalles_lista'>
+                        <li class='costo_kilo'>precio por kilo</li>
+                        <li class='artesado'>Hecho por: x</li>
+                        <li >lorem....</li>
+                    </ul>
                 </div>
                 <br>
-                <ul id='Envío'>
-                    <p>Detalles</p>
+                <ul class='envio'>
+                    <p>Envío</p>
                     <li>lorem...</li>
                     <li>lorem...</li>
                     <li>lorem...</li>
@@ -78,11 +83,11 @@
         </section>
 
         <!--PRODUCTOS RELACIONADOS-->
-        <section>
-            <h2>Productos relacionados</h2>
-            <div>
+        <section class='prod_relac'>
+            <h2 class='titulo_relacionados'>Productos relacionados</h2>
+            <div class='imagenes_relacionadas'>
                 <article id=producto_info_general>
-                    <img src='*' alt="Título producto">
+                    <img src='img/aceite_aguacate_rev.png' alt="Aceite de aguacate">
                     <div id='caja_general'>
                         <div id='info_producto'>
                             <p>lorem en bold...</p>
@@ -99,7 +104,7 @@
                 </article>
 
                 <article id=producto_info_general>
-                    <img src='*' alt="Título producto">
+                    <img src='img/jabones de manzanilla.jpeg' alt="Jabones de manzanilla">
                     <div id='caja_general'>
                         <div id='info_producto'>
                             <p>lorem en bold...</p>
@@ -116,7 +121,7 @@
                 </article>
 
                 <article id=producto_info_general>
-                    <img src='*' alt="Título producto">
+                    <img src='img/producto1.png' alt="Jabones naturales">
                     <div id='caja_general'>
                         <div id='info_producto'>
                             <p>lorem en bold...</p>
@@ -133,7 +138,7 @@
                 </article>
 
                 <article id=producto_info_general>
-                    <img src='*' alt="Título producto">
+                    <img src='img/producto:4.png' alt="Semillas">
                     <div id='caja_general'>
                         <div id='info_producto'>
                             <p>lorem en bold...</p>
@@ -191,7 +196,7 @@
             <p>lorem...</p>
             <form>
                 <input type="email" name=email>
-                    <button type="submit" name='suscribete' ...... . . . . . . </form>
+                <button type="submit" name='suscribete' ...... . . . . . . </form>
         </footer>
     </main>
 </body>

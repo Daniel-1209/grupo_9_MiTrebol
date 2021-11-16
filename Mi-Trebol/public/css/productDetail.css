@@ -3,16 +3,16 @@
     padding: 0px;    
     box-sizing: border-box;
 }
-main, body {
+body {
     font-family: Montserrat, sans-serif;
-    background-color: #fff;
+    background-color: rgba(255, 246, 241, 0.897);
 }
 
 p {
     font-size: 16px;
 }
 /*--Header genérico, casi igual a index--*/
-header nav ul {
+header nav li {
     list-style: none;
 }
 
@@ -27,25 +27,6 @@ a {
 a:hover {
     opacity: 1;
 }
-
-header div .logo {
-    width: 50%;
-}
-
-header .trebol {
-    background-color: rgb(0 0 0 / 21%);
-}
-
-header div .tienda {
-    text-align: center;
-}
-
-header div .logos {
-    display: flex;
-    vertical-align: middle;
-    padding: 0;
-}
-
 header {
     position: absolute;
     top: 0;
@@ -57,8 +38,29 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*color: #fff;*/
+    flex-wrap: wrap;
+    background-color: rgba(243, 154, 103, 0.897);
+    /*color: rgba(243, 154, 103, 0.897);*/
     padding: 0 100px 0
+}
+
+header div .logos{
+    width: 999px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+header div .logo {
+    
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+}
+
+header div .tienda {
+    text-align: center;
 }
 
 header nav {
@@ -92,75 +94,6 @@ header nav li:last-child {
     }
 }
 
-/*---Mi header--
-header div.topheader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 5%;
-    align-items: center;
-}
-
-img.logotipo{
-    align-self: center;
-    width: 10%;
-    height: 10%;
-}
-
-header div.submit{
-    width: 20px;
-    height: 20px;
-    color:cornflowerblue;
-    padding: 5%;
-    margin: 0 3%;
-    font-size: 22px;
-}
-
-nav.leftheader{
-    display: flex;
-    justify-content: space-around;
-}
-
-header div nav p.login{
-    justify-content: flex-end;
-    padding:5%;
-    margin: 5%;
-}
-header div nav p a{
-    text-decoration: none;
-    text-decoration-line: none;
-    text-decoration-color: none;
-    color:black;
-}
-header div nav p.carrito{
-    padding: 5%;
-    margin: 5%;
-    text-decoration: none;
-}
-
-
-#menu-header-ul{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: center;
-}
-header nav ul li a{
-    text-decoration: none;
-    text-decoration-line: none;
-    text-decoration-color: none;
-    color: black;
-}
-
-header nav ul li{
-    padding: 0 6%;
-    margin: 0 5% 5% 5%;
-}
-/*header nav ul li.inicio{
-    position: relative;
-    left: 20px;
-}*/
 /*---IMAGENES a DETALLE del producto a mostrar---*/
 main section{
     display: flex;
@@ -179,42 +112,75 @@ main section div article{
 
 /*--Informacion del producto a detallar--*/
 main section div.info-producto-detalle{
-    display: flex;
-    flex-direction: column;
     width: 55%;
     margin: 5%;
+    padding: 5% 0%;
 }
 main section div{
     flex-grow: 1;
 }
 h1{
-    font-size: 60px;
+    font-size: 60px; 
 }
 #precio{
-    padding: 1%;
-    margin: 3%;
+    margin: 5% 0%;
+    font-weight: bold;
 }
 #titulo-producto{
-    font-style: bold;
-    padding: 1%;
+    font-weight: bold;
+    margin: 2% 3% 2% 0%;
 }
 
 /*--Información del producto de Detalle--*/
 main section div .titulo-natural1{
-    padding: 10% 10% 0% 10%;
-    margin: 8% 8% 0% 8%;
+    padding: 10% 10% 0% 0%;
+    margin: 8% 8% 0% 2%;
 }
 main section div .titulo-natural2{
-    padding: 0% 10% 10% 10%;
-    margin: 0% 8% 8% 8%;
+    padding: 0% 10% 0% 0%;
+    margin: 0% 2% 2% 2%;
 }
 section div .stars{
     font-size: 18px;
     color: #00954c;
     margin-top: 15px;
+    margin-right: 15px;
 }
 section div .detalles{
-    text-align: center;
-    padding: 0% 10%;
-    margin: 0% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0% 10% 0% 0%;
+}
+section div .rateing{
+    margin: 0% 1%;
+    display: flex;
+    align-items: center;
+}
+div .detalles_menu{
+    color: #414a4f;
+}
+div ul .detalles_lista{
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+section div ul .envio{
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+section h2 .prod_relac{
+    width: 100%;
+}
+section h2 .titulo_relacionados{
+    width: 100%;
+    height: 20%;
+}
+section div .imagenes_relacionadas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
