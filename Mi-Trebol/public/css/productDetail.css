@@ -97,6 +97,13 @@ header nav li:last-child {
 main section.info_completa{
     display: flex;
 }
+section div.imagen_grande{
+    width: 45%;
+    padding: 10px;
+}
+section div.contenedor_img_grande{
+    height: 300px;
+}
 main section div.img-a-detalle{
     display:flex;
     width: 55%;
