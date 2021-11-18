@@ -1,57 +1,123 @@
 *{
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
 }
+
 body{
     margin: 0;
     padding: 0;
-}
-header{    
-    background-color: #ffefdf;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
-
-.form-container{
-    margin: 1em;
-}
-#login{
-    text-align: center;
-}
-form{
-    width: 30%;
-    height: auto;
-    padding: 0 15 0 15;
-    border: 3px solid black;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    padding: 2em;
-    justify-content: space-around;
-}
-input{
-    border: 1px solid #5f5f5f;  
-    padding: 10px 5px;  
-    border-radius: 10px;
-    margin: 7px;
-}
-button{
-    margin: auto;
-    padding: 10px 5px;
-    width:fit-content;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid #afafaf;
-}
-button:hover{
-    background-color: black;
-    color: #fafafa;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
 }
 
-span{
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.form-container{
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 1px #afafaf;
+    background-color: white;
+}
+
+.formsheader{
+    color: white;
+    width: 100%;
+    padding:0.1px;
+    border-radius: 10px;
+    background-color: #28aa59;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input{
+    margin: 10px;
+}
+#email, #password{
+    width: 85%;
+    padding: 2%;
+    border-radius: 15px;
+    border: none;
+    margin: 5px;
+    background-color: #ebebeb;
+}
+::placeholder{
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: green;
+}
+
+#remember-forgot{
+    font-size: 10px;
+    margin: 16px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+#remember{
+    bottom: 4.5px;
+    display: flex;
 }
 
+#forgot{
+    bottom: 4.5px;
+    display: flex;
+}
+
+
+#forgot > span{
+    margin: auto;
+}
+
+label{
+    margin: auto;
+}
+button{
+    padding: 10px 15px;
+    margin: 10px;
+    width: 80%;
+    color: white;
+    border-radius: 15px;
+    background-color: #28aa59;
+    border: none;
+    
+}
+button:hover{
+    background-color: #00954b;
+    color: #fafafa;
+}
+.formsfooter{
+    font-size: 13px;
+    margin: 10%;
+    padding-top: 5%;
+}
+.titulofooter{
+color: grey;
+}
+footer{
+    position: fixed;
+    bottom: 10px;
+}
+
+
+
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column
+    }
+    header h2 {
+        margin-bottom: 15px
+    }
+}

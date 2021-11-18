@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
-<body>
-    <header>
+
+<body > 
+    <header class="trebol">
+       
     </header>
-    <div></div>
-    <main>
+    <main class="main">
         <div class="form-container">
-        <h2 id="login">Login</h2>
-        <form action="" method="post">
-            <input placeholder="Email" type="email" name="email" required id="email">
-            <input placeholder="Contraseña" type="password" required id="contraseña">
-            <div class="boton">
-                <button type="submit">Iniciar Sesión</button>
-            </div>
-                </span>
-                    <label for="recordar"> Recuerdame <input type="radio" name="recordar" value="si" id="recordar">
-                    </label>
-                <a href="#" >¿Olvidaste tu contraseña?</a></span>
-        </form>
-    </div>
+            <form action="">
+                <div class="formsheader">
+                    <h3 class="login">Login</h3>
+                </div>
+                <div class="input">
+                    <input placeholder="Email" type="email" name="email" required id="email">
+                    <input placeholder="Contraseña" type="password" name="password" required id="password">
+                </div>
+                <div id="remember-forgot">
+                    <div id="remember">
+                        <label>Remember me</label>
+                        <input type="checkbox" name="remember" value="Si">
+                    </div>
+                    <div id="forgot">
+                        <span>Forgot <a href="">password?</a></span>
+                    </div>
+                </div>
+                    <div>
+                    <button type="submit">Ingresar</button>
+                    </div>
+                    <div class="formsfooter">
+                        <p class="titulofooter">¿No tienes una cuenta?</p>
+                        <a href="register.html">Crear</a>
+                    </div>
+            </form>
+        </div>
     </main>
-    <div>
     <footer>
+        <p>Derechos Reservados ©</p>
     </footer>
-</div>
 </body>
+
 </html>
