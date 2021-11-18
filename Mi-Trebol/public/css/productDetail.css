@@ -96,24 +96,38 @@ header nav li:last-child {
 /*---IMAGENES a DETALLE del producto a mostrar---*/
 main section.info_completa{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-section div.imagen_grande{
-    width: 45%;
-    padding: 10px;
+section div.carrusel_img_detalle{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
 }
 section div.contenedor_img_grande{
-    height: 300px;
-}
-main section div.img-a-detalle{
-    display:flex;
     width: 55%;
+    padding: 6%;
+    margin: 2px;
+
+}
+section div.imagen_grande{
+    width: 55%;
+    padding: 3px;
+    margin: 2px;
+}
+main section div.imgenes-a-detalle{
+    display:flex;
+    width: 40%;
     margin: 5% 0 5% 5%;
+    justify-content: space-between;
+    align-items: center;
 }
-main section div article.img1DP{
+main section div article.imgDP{
     flex-grow: 1;
-}
-main section div article{
     align-self: center;
+
 }
 
 /*--Informacion del producto a detallar--*/
@@ -185,7 +199,7 @@ section div ul{
     text-decoration-line: none;
 }
 /*--Productos Relacionados--*/
-main section.info_completa{
+main section.prod_relac{
     display: flex;
     flex-direction: row;
 }
