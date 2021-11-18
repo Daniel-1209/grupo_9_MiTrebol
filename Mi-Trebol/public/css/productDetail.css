@@ -105,29 +105,35 @@ section div.carrusel_img_detalle{
     justify-content: center;
     align-items: center;
     width: 75%;
+    margin: 10% 0 10% 5%;
 }
 section div.contenedor_img_grande{
-    width: 55%;
-    padding: 6%;
+    width: 100%;
+    padding: 1px;
     margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 
 }
-section div.imagen_grande{
+section div img.imagen_grande{
     width: 55%;
-    padding: 3px;
-    margin: 2px;
+    border: #414a4f 2px solid;
+    margin: 1%;
+    border-radius: 8px;
 }
 main section div.imgenes-a-detalle{
     display:flex;
-    width: 40%;
-    margin: 5% 0 5% 5%;
-    justify-content: space-between;
+    margin: 0% 5%;
+    justify-content: center;
     align-items: center;
 }
-main section div article.imgDP{
-    flex-grow: 1;
-    align-self: center;
-
+#imgDP{
+    display: flex;
+    justify-content: center;
+    border: #414a4f 2px solid;
+    margin: 1%;
+    border-radius: 6px;
 }
 
 /*--Informacion del producto a detallar--*/
@@ -184,24 +190,28 @@ section div p .valoracion{
 div.detalles_menu{
     color: #414a4f;
     border-bottom: solid 3px #414a4f;
+    width: 10%;
 }
 div ul.detalles_lista{
-    list-style: none;
-    list-style-type: none;
-    text-decoration: none;
-    text-decoration-line: none;
+    opacity: 0;
+    transition: opacity 500ms;
 }
-section div ul{
+div ul.detalles_lista:hover{
+    opacity: 1;
+    transition: opacity 500ms;
+}
+div ul{
     color: #414a4f;
+    display:block;
     list-style: none;
     list-style-type: none;
     text-decoration: none;
     text-decoration-line: none;
 }
+
 /*--Productos Relacionados--*/
 main section.prod_relac{
-    display: flex;
-    flex-direction: row;
+    width: 100%;
 }
 
 section h2.titulo_relacionados{
@@ -215,16 +225,46 @@ section div.imagenes_relacionadas{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-wrap: nowrap;
     margin: 5%;
 }
+#producto_info_general{
+    width:30%;
+    height: 40%;
+    flex-grow: 1;
+    max-width: 450px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 img.imgPR{
-    padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
-    max-width: 150px;
+    max-width: 250px;
+    border: #414a4f 2px solid;
+    margin: 1%;
+    border-radius: 6px;
+}
+article div p.titulo_prod{
+    font-weight: bold;
+    margin: 3px;
+}
+article div p.texto_peque{
+    margin: 5px 0;
+}
+#precioRel{
+    color: rgba(14, 13, 13, 0.781);
+    margin:5px 0;
+}
+#bttn_al_carrito{
+    padding:5px;
+    margin: 12px;
+    width: 240px;
+    border: solid #28aa59 5px;
+    border-radius: 10px;
 }
 
 /*-- ¿qué hay en la caja?--*/
@@ -242,17 +282,88 @@ section p.regala_caja_sorpresa{
     text-align: center;
 }
 section div.cajas_dispo{
-    max-width: 450px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin: 5%;
+    width: 100%;
 }
-#producto_info_general{
-    width:30%;
+#caja_info_general{
+    width: 25%;
     height: 40%;
     flex-grow: 1;
-    align-self: center;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* -----Info Footer------ */
+
+.footer-contenedor {
+    display: flex;
+    width: 100%
+}
+
+.footer-elemento {
+    flex-basis: 33%
+}
+
+@media (max-width:600px) {
+    .footer-contenedor {
+        flex-direction: column
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding: 60px 0
+}
+
+footer ul {
+    margin-bottom: 25px;
+    font-size: 16px
+}
+
+footer ul li {
+    margin: 0 8px
+}
+
+footer ul li:first-child {
+    margin-left: 0
+}
+
+footer ul li:last-child {
+    margin-right: 0
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .6);
+    margin-bottom: 10px
+}
+
+footer p a {
+    color: #fff
+}
+
+@media (max-width:700px) {
+    footer {
+        padding: 80px 15px
+    }
+}
+div ul.lista_foot{
+    color: white;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    text-decoration-line: none;
 }

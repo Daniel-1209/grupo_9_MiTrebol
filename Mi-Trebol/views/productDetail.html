@@ -19,14 +19,14 @@
 <body>
     <header class="trebol">
         <div class="logos">
-            <a href="#"><img class="logo" src="/img/logo.png" alt=""></a>
+            <a href="inicio"><img class="logo" src="/img/logo.png" alt=""></a>
             <h3 class="tienda">Mi Trébol</h3>
         </div>
 
         <nav class='nav'>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
         </nav>
     </header>
     <main>
@@ -37,19 +37,19 @@
                 </div>
                 <div class='imgenes-a-detalle'>
                     <article id=imgDP>
-                        <img width=40% src="img/velas_rev.png" alt="Velas aromáticas">
+                        <img width=130px height=140px src="img/velas_rev.png" alt="Velas aromáticas">
                     </article>
                     <article id=imgDP>
-                        <img width=40% src="img/portavela_rev.png" alt="X producto">
+                        <img width=130px height=140px=100% src="img/portavela_rev.png" alt="X producto">
                     </article>
                     <article id=imgDP>
-                        <img width=30% src="img/vela_1.jpg" alt="Vela con rosas">
+                        <img width=130px height=140px=100% src="img/vela_1.jpg" alt="Vela con rosas">
                     </article>
                     <article id=imgDP>
-                        <img width=30% src="img/vela_2.jpg" alt="vela y sueter">
+                        <img width=130px height=140px=100% src="img/vela_2.jpg" alt="vela y sueter">
                     </article>
                     <article id=imgDP>
-                        <img width=30% src="img/vela_3.jpg" alt="vela 3">
+                        <img width=130px height=140px=100% src="img/vela_3.jpg" alt="vela 3">
                     </article>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                             class="fas fa-star"></i><i class="fas fa-star"></i></p>
                     <p class='valoracion'>25 compras</p>
                 </div>
-                <div class='detalles' ->
+                <div class='detalles'>
                     <p id='precio'>$100.00</p>
                     <p id='titulo-producto'>Velas florales</p>
                     <p id='texto_producto_detalle'>Texto con la información general del producto</p>
@@ -96,15 +96,13 @@
                     <img class='imgPR' src='img/aceite_aguacate_rev.png' alt="Aceite de aguacate">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>Lorem en bold...</p>
+                            <p class='texto_peque'>Lorem normal...</p>
                             <p id='precioRel'>Precio$$</p>
                         </div>
 
                         <div id='bttn_al_carrito'>
-                            <input class="input" placeholder="Agrega el producto a tu carrito" type="text"
-                                name="search">
-                            <button name="submit" type="button"><i class="fas fa-search"></i></button>
+                            <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </article>
@@ -113,15 +111,13 @@
                     <img class='imgPR' src='img/jabones de manzanilla.jpeg' alt="Jabones de manzanilla">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>Lorem en bold...</p>
+                            <p class='texto_peque'>Lorem normal...</p>
                             <p id='precioRel'>Precio$$</p>
                         </div>
 
                         <div id='bttn_al_carrito'>
-                            <input class="input" placeholder="Agrega el producto a tu carrito" type="text"
-                                name="search">
-                            <button name="submit" type="button"><i class="fas fa-search"></i></button>
+                            <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>    
                         </div>
                     </div>
                 </article>
@@ -130,15 +126,13 @@
                     <img class='imgPR' src='img/producto1.png' alt="Jabones naturales">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>lorem en bold...</p>
+                            <p class='texto_peque'>lorem normal...</p>
                             <p id='precioRel'>Precio$$</p>
                         </div>
 
                         <div id='bttn_al_carrito'>
-                            <input class="input" placeholder="Agrega el producto a tu carrito" type="text"
-                                name="search">
-                            <button name="submit" type="button"><i class="fas fa-search"></i></button>
+                            <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </article>
@@ -147,62 +141,94 @@
                     <img class='imgPR' src='img/producto_4.png' alt="Semillas">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>lorem en bold...</p>
+                            <p class='texto_peque'>lorem normal...</p>
                             <p id='precioRel'>Precio$$</p>
                         </div>
 
                         <div id='bttn_al_carrito'>
-                            <input class="input" placeholder="Agrega el producto a tu carrito" type="text"
-                                name="search">
-                            <button name="submit" type="button"><i class="fas fa-search"></i></button>
+                            <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
+ <!---------- ¿QUÉ HAY EN LA CAJA?------------>       
         <section>
             <h2 class='cajas'>¿Qué hay en la caja?</h2>
             <p class='regala_caja_sorpresa'>lorem kskdnca akdocac aloena qeow fwe wc b egw ...</p>
             <div class='cajas_dispo'>
-                <article id=producto_info_general>
-                    <img src='img/caja_1.jpg' alt="Caja sorpresa amiges">
+                <article id=caja_info_general>
+                    <img class='imgPR' width=40% src='img/caja_1.jpg' alt="Caja sorpresa amiges">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>lorem en bold...</p>
+                            <p class='texto_peque'>lorem normal...</p>
                         </div>
                     </div>
                 </article>
 
-                <article id=producto_info_general>
-                    <img src='img/caja_2.jpg' alt="Caja sorpresa de bodas">
+                <article id=caja_info_general>
+                    <img class='imgPR' src='img/caja_2.jpg' alt="Caja sorpresa de bodas">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>lorem en bold...</p>
+                            <p class='texto_peque'>lorem normal...</p>
                         </div>
                     </div>
                 </article>
 
-                <article id=producto_info_general>
-                    <img src='img/caja_3.jpg' alt="caja sorpresa parejas">
+                <article id=caja_info_general>
+                    <img class='imgPR' src='img/caja_3.jpg' alt="caja sorpresa parejas">
                     <div id='caja_general'>
                         <div id='info_producto'>
-                            <p>lorem en bold...</p>
-                            <p>lorem normal...</p>
+                            <p class='titulo_prod'>lorem en bold...</p>
+                            <p class='texto_peque'>lorem normal...</p>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
-        <footer>
-            <h3 class='mitrebol'>MiTrebol</h3>
-            <p>lorem...</p>
-            <form>
-                <input type="email" name=email>
-                <button type="submit" name='suscribete' ...... . . . . . . </form>
-        </footer>
+<!-- ------Footer -------->
+    <footer id="contacto">
+        <div class="footer-contenedor">
+            <div class="footer-elemento">
+                <ul class='lista_foot'>
+                    <li><img src="/img/logo.png" alt=""></li>
+                    <li>
+                        <h4>MiTrébol</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-elemento">
+                <ul class='lista_foot'>
+                    <li><a href="">Conócenos</a> </li>
+                    <li><a href="">¿Quiénes somos?</a></li>
+                    <li><a href="">Nuestro trabajo</a> </li>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Síguenos</a></li>
+                </ul>
+            </div>
+            <div class="footer-elemento">
+                <ul class='lista_foot'>
+                    <ul>
+                        <li><a href="">Ayuda</a> </li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                        <li><a href="">Envío</a> </li>
+                    </ul>
+            </div>
+            <div class="footer-elemento">
+                <ul class='lista_foot'>
+                    <li>Danos tu opinión</li>
+                    <li> <label>Correo:</label>
+                        <input placeholder="Coloca tu correo" type="text" name="correo"></li>
+                    <li> <label>Escribe tu mensaje:</label>
+                        <input placeholder="Escribe tu mensaje" type="text" name="mensaje"></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
     </main>
 </body>
