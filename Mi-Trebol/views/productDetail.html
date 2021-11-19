@@ -70,21 +70,18 @@
                     <p id='titulo-producto'>Velas florales</p>
                     <p id='texto_producto_detalle'>Texto con la información general del producto</p>
                 </div>
-
-                <div class='detalles_menu'>
-                    <p>Detalles</p>
-                    <ul class='detalles_lista'>
-                        <li class='costo_kilo'>precio por kilo</li>
-                        <li class='artesado'>Hecho por: x</li>
-                        <li>lorem....</li>
-                    </ul>
+                <div class='listas_desplegables'>
+                    <select class='detalles_menu' name='Detalles'>
+                        <option class='lista_detalles' value="menudeo">Detalles</option>
+                        <option class='costo_kilo' value="menudeo">Menudeo</option>
+                        <option class='artesado' value="mayoreo">Mayore</option>
+                    </select>
+                    <select class='envio' name='Envio'>
+                        <option class='lista_envio' value="menudeo">Envío</option>
+                        <option value="A domicilio">A domicilio</option>
+                        <option value="Recoger en tienda">Recoger en tienda</option>
+                    </select>
                 </div>
-                <ul class='envio'>
-                    <p>Envío</p>
-                    <li>lorem...</li>
-                    <li>lorem...</li>
-                    <li>lorem...</li>
-                </ul>
                 <p class='cantidad'>Cantidad</p>
                 <div class='cantidad_y_carrito'>
                     <div class='cuantos_quieres'>
@@ -96,7 +93,7 @@
                         <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
@@ -130,7 +127,7 @@
                         </div>
 
                         <div id='bttn_al_carrito'>
-                            <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>    
+                            <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </article>
@@ -167,7 +164,7 @@
             </div>
         </section>
 
- <!---------- ¿QUÉ HAY EN LA CAJA?------------>       
+        <!---------- ¿QUÉ HAY EN LA CAJA?------------>
         <section>
             <h2 class='cajas'>¿Qué hay en la caja?</h2>
             <p class='regala_caja_sorpresa'>lorem kskdnca akdocac aloena qeow fwe wc b egw ...</p>
@@ -203,45 +200,47 @@
                 </article>
             </div>
         </section>
-<!-- ------Footer -------->
-    <footer id="contacto">
-        <div class="footer-contenedor">
-            <div class="footer-elemento">
-                <ul class='lista_foot'>
-                    <li><img src="/img/logo.png" alt=""></li>
-                    <li>
-                        <h4>MiTrébol</h4>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-elemento">
-                <ul class='lista_foot'>
-                    <li><a href="">Conócenos</a> </li>
-                    <li><a href="">¿Quiénes somos?</a></li>
-                    <li><a href="">Nuestro trabajo</a> </li>
-                    <li><a href="">Contacto</a></li>
-                    <li><a href="">Síguenos</a></li>
-                </ul>
-            </div>
-            <div class="footer-elemento">
-                <ul class='lista_foot'>
-                    <ul>
-                        <li><a href="">Ayuda</a> </li>
-                        <li><a href="">Preguntas frecuentes</a></li>
-                        <li><a href="">Envío</a> </li>
+        <!-- ------Footer -------->
+        <footer id="contacto">
+            <div class="footer-contenedor">
+                <div class="footer-elemento">
+                    <ul class='lista_foot'>
+                        <li><img src="/img/logo.png" alt=""></li>
+                        <li>
+                            <h4>MiTrébol</h4>
+                        </li>
                     </ul>
-            </div>
-            <div class="footer-elemento">
-                <ul class='lista_foot'>
-                    <li>Danos tu opinión</li>
-                    <li> <label>Correo:</label>
-                        <input placeholder="Coloca tu correo" type="text" name="correo"></li>
-                    <li> <label>Escribe tu mensaje:</label>
-                        <input placeholder="Escribe tu mensaje" type="text" name="mensaje"></li>
-                </ul>
-            </div>
+                </div>
+                <div class="footer-elemento">
+                    <ul class='lista_foot'>
+                        <li><a href="">Conócenos</a> </li>
+                        <li><a href="">¿Quiénes somos?</a></li>
+                        <li><a href="">Nuestro trabajo</a> </li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Síguenos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-elemento">
+                    <ul class='lista_foot'>
+                        <ul>
+                            <li><a href="">Ayuda</a> </li>
+                            <li><a href="">Preguntas frecuentes</a></li>
+                            <li><a href="">Envío</a> </li>
+                        </ul>
+                </div>
+                <div class="footer-elemento">
+                    <ul class='lista_foot'>
+                        <li>Danos tu opinión</li>
+                        <li> <label>Correo:</label>
+                            <input placeholder="Coloca tu correo" type="text" name="correo">
+                        </li>
+                        <li> <label>Escribe tu mensaje:</label>
+                            <input placeholder="Escribe tu mensaje" type="text" name="mensaje">
+                        </li>
+                    </ul>
+                </div>
 
-        </div>
-    </footer>
+            </div>
+        </footer>
     </main>
 </body>
