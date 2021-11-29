@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuente Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <!-- Hoja de Estilos -->
     <title>.::MiTrébol::.</title>
-    <!-- Fuente Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <!-- Hoja de Estilos -->
     <link rel="stylesheet" href="/css/index.css">
 
 </head>
@@ -173,45 +173,8 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contacto">
-        <div class="footer-contenedor">
-            <div class="footer-elemento">
-                <ul>
-                    <li><img src="/img/logo.png" alt=""></li>
-                    <li>
-                        <h4>MiTrébol</h4>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-elemento">
-                <ul>
-                    <li><a href="">Conócenos</a> </li>
-                    <li><a href="">¿Quiénes somos?</a></li>
-                    <li><a href="">Nuestro trabajo</a> </li>
-                    <li><a href="">Contacto</a></li>
-                    <li><a href="">Síguenos</a></li>
-                </ul>
-            </div>
-            <div class="footer-elemento">
-                <ul>
-                    <ul>
-                        <li><a href="">Ayuda</a> </li>
-                        <li><a href="">Preguntas frecuentes</a></li>
-                        <li><a href="">Envío</a> </li>
-                    </ul>
-            </div>
-            <div class="footer-elemento">
-                <ul>
-                    <li>Danos tu opinión</li>
-                    <li> <label>Correo:</label>
-                        <input placeholder="Coloca tu correo" type="text" name="correo"></li>
-                    <li> <label>Escribe tu mensaje:</label>
-                        <input placeholder="Escribe tu mensaje" type="text" name="mensaje"></li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
+    
 
 </body>
 

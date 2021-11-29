@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fuente Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <!-- Hoja de Estilos -->
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <title>.::Detalle del producto::.</title>
-</head>
+   
+    <head>
+        <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/productDetail.css">
+        <title>Detalle Producto</title>
+    </head>
 
 <body>
-    <header class="trebol">
-        <div class="logos">
-            <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
-            <h3 class="tienda">Mi Trébol</h3>
-        </div>
+    <!--Cabecera del documento-->
+    <%- include('../partials/header') %>
 
-        <nav class='nav'>
-            <li><a href="#"><i class="fas fa-search"></i></a></li>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
-        </nav>
-    </header>
     <main>
         <section class='info_completa'>
             <div class=carrusel_img_detalle>
@@ -201,46 +183,5 @@
             </div>
         </section>
         <!-- ------Footer -------->
-        <footer id="contacto">
-            <div class="footer-contenedor">
-                <div class="footer-elemento">
-                    <ul class='lista_foot'>
-                        <li><img src="/img/logo.png" alt=""></li>
-                        <li>
-                            <h4>MiTrébol</h4>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-elemento">
-                    <ul class='lista_foot'>
-                        <li><a href="">Conócenos</a> </li>
-                        <li><a href="">¿Quiénes somos?</a></li>
-                        <li><a href="">Nuestro trabajo</a> </li>
-                        <li><a href="">Contacto</a></li>
-                        <li><a href="">Síguenos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-elemento">
-                    <ul class='lista_foot'>
-                        <ul>
-                            <li><a href="">Ayuda</a> </li>
-                            <li><a href="">Preguntas frecuentes</a></li>
-                            <li><a href="">Envío</a> </li>
-                        </ul>
-                </div>
-                <div class="footer-elemento">
-                    <ul class='lista_foot'>
-                        <li>Danos tu opinión</li>
-                        <li> <label>Correo:</label>
-                            <input placeholder="Coloca tu correo" type="text" name="correo">
-                        </li>
-                        <li> <label>Escribe tu mensaje:</label>
-                            <input placeholder="Escribe tu mensaje" type="text" name="mensaje">
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </footer>
-    </main>
+        <%- include('../partials/footer') %>
 </body>

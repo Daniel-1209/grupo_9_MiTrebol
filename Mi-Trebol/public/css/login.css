@@ -26,7 +26,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 5px 1px #afafaf;
+    box-shadow: 0px 0px 5px 1px #ffffff;
     background-color: white;
 }
 
@@ -53,7 +53,7 @@ main{
 ::placeholder{
     color: black;
 }
-a{
+main a{
     text-decoration: none;
     color: green;
 }
@@ -102,13 +102,7 @@ button:hover{
     margin: 10%;
     padding-top: 5%;
 }
-.titulofooter{
-color: grey;
-}
-footer{
-    position: fixed;
-    bottom: 10px;
-}
+
 
 
 

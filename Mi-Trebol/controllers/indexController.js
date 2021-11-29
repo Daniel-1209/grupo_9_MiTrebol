@@ -6,10 +6,18 @@ let controlador = {
 
     },
     productDetail: (req, res) => {
-        res.render('productDetail.ejs');
+        res.render('./products/productDetail.ejs');
     },
     login: (req, res) => {
         res.render('./users/login.ejs')
+    },
+
+    register: (req, res) => {
+        res.render('./users/register.ejs')
+    },
+
+    car: (req, res) => {
+        res.render ('./products/productCart.ejs');
     }
 };
 

@@ -3,7 +3,7 @@
 let express = require('express');
 let path = require('path');
 
-let producCar = require('./routes/producCarRoute');
+
 let index = require('./routes/indexRoute');
 
 let app = express();
@@ -21,7 +21,7 @@ app.set('views enginen', 'ejs');
 // LLamado a las paginas web para usarse
 
 app.use('/', index);
-app.use('/productCart', producCar);
+
 
 // Definiendo el puerto de arranque
 
