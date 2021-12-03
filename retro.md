@@ -46,7 +46,27 @@
 
 ## Accionable es:    
 
-* Respetar la fecha límite acordada por el equipo, sin prorrogas. Y agendar un día al finalizar cada quien su parte del proyecto para pruebas y testeo.
+* Respetar la fecha límite acordada por el equipo, sin prorrogas. Y agendar un día al finalizar cada quien su parte del proyecto para pruebas y testeo.   
+
+# Retroalimentación del 3er Sprint    
+
+## Comenzar a hacer:
+	- Reunión daily
+	- Organizarnos mejor para el SCRUM Planing
+	- Mejorar la repartición de tareas
+## Seguir haciendo:
+	- Trabajar en equipo
+	- Buena comunicación
+	- Apoyo!
+## Hacer más:
+	- Reunión de scrum planing
+	- Dar más tiempo de manera individual al sprint
+	- Preguntar más a los profes nuestras dudas.
+## Dejar de hacer:
+	- No darle importancia a las tareas individuales
+	- Confiarse del tiempo
+## Hacer menos:
+	- No dejar solo al sprint </3
 
 
 
