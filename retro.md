@@ -17,5 +17,39 @@
 •	Opinar más    
 •	Aumentar el seguimiento de las actividades realizadas.    
 
+# Retroalimentación 2do Sprint (hecho en clase)   
+
+*¿Qué problemas tuvimos?*   
+
+* Falta un poco de coordinación en los trabajos
+* Entregas a destiempo
+* No tuvimos la reunión de final/cierre del Sprint
+
+*¿Qué hicimos bien?*    
+
+* Cumplimos con las tareas del Sprint
+* Casi finalizamos en tiempo el Sprint
+* Cada quien realizó su parte del proyecto
+* Hubo mejor comunicación
+* Obtuvimos resultados fascinantes
+* Nos quedó ruda la página C:
+* El equipo continúa unido <3
+
+*¿Qué queremos mejorar?*    
+
+* Mas coordinación en nuestros trabajos
+* * Mas coordinación en nuestros trabajos
+* Entregar nuestras actividades a tiempo
+* Respetar las reuniones del equipo
+* Seguir la metodología SCRUM
+* Realizar una etapa de pruebas y testeo
+
+*Accionable es:*    
+
+* Respetar la fecha límite acordada por el equipo, sin prorrogas. Y agendar un día al finalizar cada quien su parte del proyecto para pruebas y testeo.
+
+
+
+
 
 
