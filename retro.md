@@ -19,13 +19,13 @@
 
 # Retroalimentación 2do Sprint (hecho en clase)   
 
-##¿Qué problemas tuvimos?   
+## ¿Qué problemas tuvimos?   
 
 * Falta un poco de coordinación en los trabajos
 * Entregas a destiempo
 * No tuvimos la reunión de final/cierre del Sprint
 
-##¿Qué hicimos bien?    
+## ¿Qué hicimos bien?    
 
 * Cumplimos con las tareas del Sprint
 * Casi finalizamos en tiempo el Sprint
@@ -35,7 +35,7 @@
 * Nos quedó ruda la página C:
 * El equipo continúa unido <3
 
-##¿Qué queremos mejorar?    
+## ¿Qué queremos mejorar?    
 
 * Mas coordinación en nuestros trabajos
 * Mas coordinación en nuestros trabajos
@@ -44,7 +44,7 @@
 * Seguir la metodología SCRUM
 * Realizar una etapa de pruebas y testeo
 
-##Accionable es:    
+## Accionable es:    
 
 * Respetar la fecha límite acordada por el equipo, sin prorrogas. Y agendar un día al finalizar cada quien su parte del proyecto para pruebas y testeo.
 
