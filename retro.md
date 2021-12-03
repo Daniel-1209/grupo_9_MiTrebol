@@ -19,54 +19,63 @@
 
 # Retroalimentación 2do Sprint (hecho en clase)   
 
-## ¿Qué problemas tuvimos?   
+## 1.-¿Qué problemas tuvimos?   
 
-* Falta un poco de coordinación en los trabajos
-* Entregas a destiempo
-* No tuvimos la reunión de final/cierre del Sprint
+• Falta un poco de coordinación en los trabajos
+• Entregas a destiempo
+• No tuvimos la reunión de final/cierre del Sprint
 
-## ¿Qué hicimos bien?    
+## 2.-¿Qué hicimos bien?    
 
-* Cumplimos con las tareas del Sprint
-* Casi finalizamos en tiempo el Sprint
-* Cada quien realizó su parte del proyecto
-* Hubo mejor comunicación
-* Obtuvimos resultados fascinantes
-* Nos quedó ruda la página C:
-* El equipo continúa unido <3
+• Cumplimos con las tareas del Sprint
+• Casi finalizamos en tiempo el Sprint
+• Cada quien realizó su parte del proyecto
+• Hubo mejor comunicación
+• Obtuvimos resultados fascinantes
+• Nos quedó ruda la página C:
+• El equipo continúa unido <3
 
-## ¿Qué queremos mejorar?    
+## 3.-¿Qué queremos mejorar?    
 
-* Mas coordinación en nuestros trabajos
-* Mas coordinación en nuestros trabajos
-* Entregar nuestras actividades a tiempo
-* Respetar las reuniones del equipo
-* Seguir la metodología SCRUM
-* Realizar una etapa de pruebas y testeo
+• Mas coordinación en nuestros trabajos
+• Mas coordinación en nuestros trabajos
+• Entregar nuestras actividades a tiempo
+• Respetar las reuniones del equipo
+• Seguir la metodología SCRUM
+• Realizar una etapa de pruebas y testeo
 
 ## Accionable es:    
 
-* Respetar la fecha límite acordada por el equipo, sin prorrogas. Y agendar un día al finalizar cada quien su parte del proyecto para pruebas y testeo.   
+• Respetar la fecha límite acordada por el equipo, sin prorrogas. Y agendar un día al finalizar cada quien su parte del proyecto para pruebas y testeo.   
 
 # Retroalimentación del 3er Sprint    
 
-## Comenzar a hacer:
-	- Reunión daily
-	- Organizarnos mejor para el SCRUM Planing
-	- Mejorar la repartición de tareas
-## Seguir haciendo:
-	- Trabajar en equipo
-	- Buena comunicación
-	- Apoyo!
-## Hacer más:
-	- Reunión de scrum planing
-	- Dar más tiempo de manera individual al sprint
-	- Preguntar más a los profes nuestras dudas.
-## Dejar de hacer:
-	- No darle importancia a las tareas individuales
-	- Confiarse del tiempo
-## Hacer menos:
-	- No dejar solo al sprint </3
+## 1.-Comenzar a hacer:		
+
+• Reunión daily
+• Organizarnos mejor para el SCRUM Planing
+• Mejorar la repartición de tareas		
+
+## 2.-Seguir haciendo:		
+
+• Trabajar en equipo
+• Buena comunicación
+• Apoyo!		
+
+## 3.-Hacer más:		
+
+• Reunión de scrum planing
+• Dar más tiempo de manera individual al sprint
+• Preguntar más a los profes nuestras dudas.		
+
+## 4.-Dejar de hacer:		
+
+• No darle importancia a las tareas individuales
+• Confiarse del tiempo		
+
+## 5.-Hacer menos:		
+
+• No dejar solo al sprint </3
 
 
 
