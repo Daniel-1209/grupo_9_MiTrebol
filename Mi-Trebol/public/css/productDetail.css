@@ -1,4 +1,4 @@
-*{
+                      *{
     margin: 0px;
     padding: 0px;    
     box-sizing: border-box;
@@ -21,7 +21,7 @@ main section.info_completa{
 }
 main section.info_completa{
     width: 100%;
-    height: 1100px;
+    /*height: 1100px;*/
     padding: 150px 0 ;
 }
 section div.carrusel_img_detalle{
@@ -35,7 +35,7 @@ section div.carrusel_img_detalle{
 section div.contenedor_img_grande{
     width: 100%;
     padding: 1px;
-    margin: 2px;
+    margin: 3% 10% 1% 1%;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -47,10 +47,10 @@ section div a.flecha{
 section div img.imagen_grande{
     width: 55%;
     border: #414a4f 2px solid;
-    margin: 1% 10% 2% 5%;
+    margin: 1% 4% 2% 4%;
     border-radius: 8px;
 }
-main section div.imgenes-a-detalle{
+main section div.img-a-detalle{
     display:flex;
     margin: 0% 10% 0 5%;
     justify-content: center;
@@ -67,7 +67,7 @@ main section div.imgenes-a-detalle{
 /*--Informacion del producto a detallar--*/
 main section div.info-producto-detalle{
     width: 55%;
-    margin: 5% 5% 2% 0%;
+    margin: 5% 5% 2% 5%;
     padding: 5% 0% 1% 0%;
 }
 
@@ -84,7 +84,7 @@ h1{
 }
 
 /*--Información del producto de Detalle--*/
-main section div .titulo-natural1{
+main section div.titulo-natural1{
     padding: 10% 10% 0% 0%;
     margin: 8% 8% 0% 0%;
 }
@@ -120,6 +120,7 @@ section div .listas_desplegables{
     flex-direction: column;
 }
 section div select.detalles_menu{
+    font-size: 16px;
     color: #414a4f;
     width: 70%;
     padding: 3%;
@@ -160,23 +161,42 @@ div.cuantos_quieres{
     justify-content: center;
 }
 div.cuantos_quieres{
-   margin: 0 10% 0 5%;
+   margin: 0 10% 0 0;
 }
 div .numero , .quitar , .agregar{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: 2px #414a4f solid;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2px;
 }
 #bttn0_al_carrito{
-    align-items: center;
+    background-color: #28aa59;
     padding:5px;
     margin: 12px;
     width: 240px;
     border: solid #28aa59 5px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#bttn0_al_carrito a.texto_bttn_carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+
+#bttn0_al_carrito i.fas.fa-shopping-cart{
+order: -1;
+margin: 0 3% 0 0 ;
+}
+
 p.quitar{
     order:-1;
 }
@@ -184,6 +204,7 @@ p.quitar{
 /*--Productos Relacionados--*/
 main section.prod_relac{
     width: 100%;
+    margin: 5% 1%;
 }
 
 section h2.titulo_relacionados{
@@ -225,13 +246,14 @@ article div p.titulo_prod{
     margin: 3px;
 }
 article div p.texto_peque{
-    margin: 5px 0;
+    margin: 5px 3px;
 }
 #precioRel{
     color: rgba(14, 13, 13, 0.781);
-    margin:5px 0;
+    margin:5px 3px;
 }
 #bttn_al_carrito{
+    background-color: #28aa59;
     padding:5px;
     margin: 12px;
     width: 240px;
@@ -272,4 +294,317 @@ section div.cajas_dispo{
     justify-content: space-between;
 }
 
-/* -----Info Footer------ */
+/* ----------BREAK POINTS------------ */
+/*-------Mobile-------*/
+@media (max-width: 500px){
+    main section.info_completa{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 10% 0;
+        padding: 0%;
+    }
+
+    section div.imagenes_relacionadas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: nowrap;
+        margin: 0 5%;
+    }
+
+    section div.cajas_dispo{
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+        margin: 5% 3% 5% 3%;
+        width: 90%;
+    }
+
+    main section div.img-a-detalle{
+        display:flex;
+        margin: 0% 10% 0 5%;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    h1{
+        font-size: 30px; 
+    }
+
+    section h2.titulo_relacionados{
+        font-size: 28px;
+    }
+
+    main section div.info-producto-detalle{
+        width: 100%;
+        margin: 5% 5% 2% 5%;
+        padding: 5% 0% 1% 0%;
+    }
+
+    main section div.titulo-natural1{
+        padding: 0% 10%;
+        margin: 3% 3% 0% 0%;
+    }
+
+    main section div.img-a-detalle{
+        display: none;
+    }
+
+    section div.contenedor_img_grande{
+        width: 100%;
+        padding: 1px;
+        margin: 0% 5% 1% 5%;
+    }
+
+    section div.carrusel_img_detalle{
+        width: 100%;
+        margin: 3% 0% 6% 0%;
+    }
+
+    main section div.info-producto-detalle{
+        width: 90%;
+        margin: 3% 0% 2% 4%;
+        padding: 2% 0% 1% 4%;
+    }
+
+    div.cantidad_y_carrito{
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+    #bttn0_al_carrito{
+        margin: 10% 0;
+        width: 100%;
+    }
+
+    #bttn_al_carrito{
+        padding:5px;
+        margin: 10% 0;
+        width: 100%;
+    }
+
+    #texto_producto_detalle{
+        width: 100%;
+        margin: 3% 0;
+    }
+
+    section div select.detalles_menu{
+        width: 90%;
+        padding: 3%;
+    }
+
+    section div select.envio{
+        width: 90%;
+        padding: 3%;
+    }
+
+    #producto_info_general{
+        width:90%;
+        height: 40%;
+        margin: 8%;
+    }
+
+    section p.regala_caja_sorpresa{
+        width: 90%;
+        height: 16%;
+        margin: 1% 3%;
+        text-align: center;
+    }
+
+    section h2.cajas{
+        width: 100%;
+        height: 20%;
+        margin: 4% 0;
+    }
+
+    #caja_info_general{
+        width: 80%;
+        height: 80%;
+        margin: 8%;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    p.cantidad{
+        padding: 3% 3% 0 0;
+        margin: 0;
+    }
+
+    #info_producto{
+        margin: 0 4%;
+    }
+}
+/*------TABLET------*/
+@media (min-width: 400px){
+    section div.carrusel_img_detalle{
+        width: 90%;
+        margin: 3% 3% 5% 3%;
+        align-content: center;
+    }
+
+    section div.info-producto-detalle{
+        width: 45%;
+    }
+
+    section.info_completa{
+        padding: 0;
+    }
+
+    main section.info_completa {
+        padding: 0;
+    }
+
+    section div.contenedor_img_grande{
+        margin: 0% 10% 1% 0%;
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+    }
+
+    #imgDP{
+       display: none;
+    }
+
+    h1{
+    font-size: 40px;
+    }
+
+    main section div.info-producto-detalle{ 
+        margin: 4% 3% 2% 3%;
+        padding: 0;
+        width: 90%;
+    }
+
+    section div .stars{
+        font-size: 12px;
+    }
+
+    p.cantidad{
+        margin: 6% 6% 3% 0;
+        padding: 0;
+    }
+
+    div.cantidad_y_carrito{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #bttn0_al_carrito{
+        margin: 12px 0;
+        width: 90%;
+    }
+
+    div.cuantos_quieres {
+        margin: 0 10% 0 0
+    }
+    section div select.detalles_menu{
+        width: 90%;
+        padding: 3% 0;
+    }
+    section div select.envio{
+        width: 90%;
+        padding: 3% 0;
+    }
+
+    img.imgPR {
+        max-width: 90%;
+    }
+
+    section div.imagenes_relacionadas {
+        flex-wrap: wrap;
+    }
+
+    #producto_info_general{
+        width:100%;
+        height: 50%;
+        margin: 3% 0;
+    }
+    #caja_general{
+        text-align: center;
+    }
+
+    #bttn_al_carrito{
+        width: 100%;
+        font-size: 18px;
+    }
+    #caja_info_general{
+        align-items: center;
+    } 
+    
+    section div.cajas_dispo{
+        margin: 5% 0;
+    }
+
+    section h2.cajas{
+       width: 90%
+    }
+
+    section p.regala_caja_sorpresa {
+        width: 90%;
+    }
+
+    section h2.titulo_relacionados {
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    main section.prod_relac {
+        width: 90%;
+    }
+}
+@media (min-width: 500px){
+    section div.imagenes_relacionadas {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: inherit;
+    }
+
+    section h2.titulo_relacionados {
+        display: flex;
+        justify-content: center;
+    }
+
+    #bttn_al_carrito {
+        width: 81%;
+        font-size: 8px;
+    }
+    #bttn0_al_carrito{
+        font-size: 80%;
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 769px){
+    main section.prod_relac {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    section div.imagenes_relacionadas {
+        flex-wrap: nowrap;
+        margin: 2% 4%;
+    }
+
+    #bttn_al_carrito {
+        width: 86%;
+        font-size: 13px;
+    }
+
+    section br.brPR{
+        display: none;
+    }
+}
+
+@media(min-width: 1000px){
+    #imgDP {
+        display: block;
+        border: none;
+    }
+}
