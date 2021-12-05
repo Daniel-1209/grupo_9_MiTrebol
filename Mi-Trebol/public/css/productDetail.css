@@ -296,7 +296,7 @@ section div.cajas_dispo{
 
 /* ----------BREAK POINTS------------ */
 /*-------Mobile-------*/
-@media (max-width: 361px){
+@media (max-width: 500px){
     main section.info_completa{
         display: flex;
         flex-direction: column;
@@ -336,7 +336,6 @@ section div.cajas_dispo{
 
     section h2.titulo_relacionados{
         font-size: 28px;
-        margin: 3% 0;
     }
 
     main section div.info-producto-detalle{
@@ -440,10 +439,10 @@ section div.cajas_dispo{
         margin: 0 4%;
     }
 }
-/*------Tablet------*/
-@media (min-width: 700px){
+/*------TABLET------*/
+@media (min-width: 400px){
     section div.carrusel_img_detalle{
-        width: 55%;
+        width: 90%;
         margin: 3% 3% 5% 3%;
         align-content: center;
     }
@@ -460,4 +459,152 @@ section div.cajas_dispo{
         padding: 0;
     }
 
+    section div.contenedor_img_grande{
+        margin: 0% 10% 1% 0%;
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+    }
+
+    #imgDP{
+       display: none;
+    }
+
+    h1{
+    font-size: 40px;
+    }
+
+    main section div.info-producto-detalle{ 
+        margin: 4% 3% 2% 3%;
+        padding: 0;
+        width: 90%;
+    }
+
+    section div .stars{
+        font-size: 12px;
+    }
+
+    p.cantidad{
+        margin: 6% 6% 3% 0;
+        padding: 0;
+    }
+
+    div.cantidad_y_carrito{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #bttn0_al_carrito{
+        margin: 12px 0;
+        width: 90%;
+    }
+
+    div.cuantos_quieres {
+        margin: 0 10% 0 0
+    }
+    section div select.detalles_menu{
+        width: 90%;
+        padding: 3% 0;
+    }
+    section div select.envio{
+        width: 90%;
+        padding: 3% 0;
+    }
+
+    img.imgPR {
+        max-width: 90%;
+    }
+
+    section div.imagenes_relacionadas {
+        flex-wrap: wrap;
+    }
+
+    #producto_info_general{
+        width:100%;
+        height: 50%;
+        margin: 3% 0;
+    }
+    #caja_general{
+        text-align: center;
+    }
+
+    #bttn_al_carrito{
+        width: 100%;
+        font-size: 18px;
+    }
+    #caja_info_general{
+        align-items: center;
+    } 
+    
+    section div.cajas_dispo{
+        margin: 5% 0;
+    }
+
+    section h2.cajas{
+       width: 90%
+    }
+
+    section p.regala_caja_sorpresa {
+        width: 90%;
+    }
+
+    section h2.titulo_relacionados {
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    main section.prod_relac {
+        width: 90%;
+    }
+}
+@media (min-width: 500px){
+    section div.imagenes_relacionadas {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: inherit;
+    }
+
+    section h2.titulo_relacionados {
+        display: flex;
+        justify-content: center;
+    }
+
+    #bttn_al_carrito {
+        width: 81%;
+        font-size: 8px;
+    }
+    #bttn0_al_carrito{
+        font-size: 80%;
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 769px){
+    main section.prod_relac {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    section div.imagenes_relacionadas {
+        flex-wrap: nowrap;
+        margin: 2% 4%;
+    }
+
+    #bttn_al_carrito {
+        width: 86%;
+        font-size: 13px;
+    }
+
+    section br.brPR{
+        display: none;
+    }
+}
+
+@media(min-width: 1000px){
+    #imgDP {
+        display: block;
+        border: none;
+    }
 }
