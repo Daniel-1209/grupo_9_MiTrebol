@@ -35,7 +35,7 @@ section div.carrusel_img_detalle{
 section div.contenedor_img_grande{
     width: 100%;
     padding: 1px;
-    margin: 2px;
+    margin: 3% 10% 1% 1%;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -47,10 +47,10 @@ section div a.flecha{
 section div img.imagen_grande{
     width: 55%;
     border: #414a4f 2px solid;
-    margin: 1% 10% 2% 5%;
+    margin: 1% 4% 2% 4%;
     border-radius: 8px;
 }
-main section div.imgenes-a-detalle{
+main section div.img-a-detalle{
     display:flex;
     margin: 0% 10% 0 5%;
     justify-content: center;
@@ -67,7 +67,7 @@ main section div.imgenes-a-detalle{
 /*--Informacion del producto a detallar--*/
 main section div.info-producto-detalle{
     width: 55%;
-    margin: 5% 5% 2% 0%;
+    margin: 5% 5% 2% 5%;
     padding: 5% 0% 1% 0%;
 }
 
@@ -84,7 +84,7 @@ h1{
 }
 
 /*--Información del producto de Detalle--*/
-main section div .titulo-natural1{
+main section div.titulo-natural1{
     padding: 10% 10% 0% 0%;
     margin: 8% 8% 0% 0%;
 }
@@ -120,6 +120,7 @@ section div .listas_desplegables{
     flex-direction: column;
 }
 section div select.detalles_menu{
+    font-size: 16px;
     color: #414a4f;
     width: 70%;
     padding: 3%;
@@ -160,23 +161,42 @@ div.cuantos_quieres{
     justify-content: center;
 }
 div.cuantos_quieres{
-   margin: 0 10% 0 5%;
+   margin: 0 10% 0 0;
 }
 div .numero , .quitar , .agregar{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: 2px #414a4f solid;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2px;
 }
 #bttn0_al_carrito{
-    align-items: center;
+    background-color: #28aa59;
     padding:5px;
     margin: 12px;
     width: 240px;
     border: solid #28aa59 5px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#bttn0_al_carrito a.texto_bttn_carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+
+#bttn0_al_carrito i.fas.fa-shopping-cart{
+order: -1;
+margin: 0 3% 0 0 ;
+}
+
 p.quitar{
     order:-1;
 }
@@ -225,13 +245,14 @@ article div p.titulo_prod{
     margin: 3px;
 }
 article div p.texto_peque{
-    margin: 5px 0;
+    margin: 5px 3px;
 }
 #precioRel{
     color: rgba(14, 13, 13, 0.781);
-    margin:5px 0;
+    margin:5px 3px;
 }
 #bttn_al_carrito{
+    background-color: #28aa59;
     padding:5px;
     margin: 12px;
     width: 240px;
@@ -272,4 +293,58 @@ section div.cajas_dispo{
     justify-content: space-between;
 }
 
-/* -----Info Footer------ */
+/* -----BREAK POINTS------ */
+@media (max-width: 361px){
+    main section.info_completa{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 20% 0 50% 0;
+    }
+
+    section div.imagenes_relacionadas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: nowrap;
+        margin: 0 5%;
+    }
+
+    section div.cajas_dispo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+        flex-wrap: wrap;
+        margin: 5%;
+        width: 100%;
+    }
+
+    main section div.img-a-detalle{
+        display:flex;
+        margin: 0% 10% 0 5%;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    h1{
+        font-size: 30px; 
+    }
+
+    section h2.titulo_relacionados{
+        font-size: 20px;
+    }
+
+    main section div.info-producto-detalle{
+        width: 100%;
+        margin: 5% 5% 2% 5%;
+        padding: 5% 0% 1% 0%;
+    }
+
+    main section div.titulo-natural1{
+        padding: 0% 10%;
+        margin: 3% 3% 0% 0%;
+    }
+
+}
