@@ -1,5 +1,6 @@
 
 let products = require('./products');
+let shoppingList = require('./compras');
 
 let controlador = {
     home: (req, res) => {
@@ -19,7 +20,7 @@ let controlador = {
     },
 
     car: (req, res) => {
-        res.render ('./products/productCart.ejs');
+        res.render ('./products/productCart.ejs', {shoppingList,products});
     }
 };
 
