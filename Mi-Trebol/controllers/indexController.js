@@ -1,12 +1,14 @@
 
+let products = require('./products');
 
 let controlador = {
     home: (req, res) => {
-        res.render('index.ejs');
+        res.render('index.ejs', {products: products});
 
     },
     productDetail: (req, res) => {
-        res.render('./products/productDetail.ejs');
+        let id = req.params.id;
+        res.render('./products/productDetail.ejs', {product: products[id], products} );
     },
     login: (req, res) => {
         res.render('./users/login.ejs')

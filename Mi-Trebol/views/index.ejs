@@ -93,50 +93,27 @@
         <hr>
         <!-- third example -->
         <div class="categorias-container">
-            <div class="producto-cat">
-                <a href="/productDetail">
-                    <img class="categoria-producto" src="/img/aceite_aguacate_rev.png" alt="">
-                    <h4 class="categoria">Aceite de Aguacate</h4>
-                </a>
-                <p>Producto 100% orgánico - 150ml</p>
-                <p>$150.00MXN </p>
-                <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                <p class="valoracion">230 valoraciones</p>
-            </div>
+            
 
+        <% for ( product of products ) { %>
             <div class="producto-cat">
-                <a href="/productDetail">
-                    <img class="categoria-producto" src="/img/velas_rev.png" alt="">
-                    <h4 class="categoria">Velas florales</h4>
+                <a href="/productDetail/<%= product.id%>">
+                    <img class="categoria-producto" src="/img/<%= product.imgs[0]%>" alt="">
+                    <h4 class="categoria"> <%= product.title %> </h4>
                 </a>
-                <p>Set de 4 velas con pétalos naturales</p>
-                <p>$539.99MXN</p>
+                <p>  <%= product.shortdescription%> </p>
+                <p>$<%= product.price%>MXN </p>
                 <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                <p class="valoracion">75 valoraciones</p>
+                <p class="valoracion"> <%= product.ratings%> valoraciones</p>
             </div>
+        <% } %>
 
-            <div class="producto-cat">
-                <a href="/productDetail">
-                    <img class="categoria-producto" src="/img/portavela_rev.png" alt="">
-                    <h4 class="categoria">Portavela</h4>
-                </a>
-                <p>Concreto - 15cm</p>
-                <p>$179.85MXN</p>
-                <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                <p class="valoracion">100 valoraciones</p>
-            </div>
+            
 
-            <div class="producto-cat">
-                <a href="/productDetail">
-                    <img class="categoria-producto" src="/img/frascos_rev.png" alt="">
-                    <h4 class="categoria">Kit de viaje</h4>
-                </a>
-                <p>Tres frascos para viaje</p>
-                <p>$399.99MXN</p>
-                <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                <p class="valoracion">180 valoraciones</p>
-            </div>
-        </div>
+            
+
+           
+
     </section>
 
     <!-- Promociones -->
