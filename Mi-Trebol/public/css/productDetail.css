@@ -21,7 +21,7 @@ main section.info_completa{
 }
 main section.info_completa{
     width: 100%;
-    height: 1100px;
+    /*height: 1100px;*/
     padding: 150px 0 ;
 }
 section div.carrusel_img_detalle{
@@ -204,6 +204,7 @@ p.quitar{
 /*--Productos Relacionados--*/
 main section.prod_relac{
     width: 100%;
+    margin: 5% 1%;
 }
 
 section h2.titulo_relacionados{
@@ -293,13 +294,15 @@ section div.cajas_dispo{
     justify-content: space-between;
 }
 
-/* -----BREAK POINTS------ */
+/* ----------BREAK POINTS------------ */
+/*-------Mobile-------*/
 @media (max-width: 361px){
     main section.info_completa{
         display: flex;
         flex-direction: column;
         align-content: center;
-        margin: 20% 0 50% 0;
+        margin: 10% 0;
+        padding: 0%;
     }
 
     section div.imagenes_relacionadas{
@@ -312,13 +315,12 @@ section div.cajas_dispo{
     }
 
     section div.cajas_dispo{
-        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: space-around;
+        align-content: space-around;
         flex-wrap: wrap;
-        margin: 5%;
-        width: 100%;
+        margin: 5% 3% 5% 3%;
+        width: 90%;
     }
 
     main section div.img-a-detalle{
@@ -333,7 +335,8 @@ section div.cajas_dispo{
     }
 
     section h2.titulo_relacionados{
-        font-size: 20px;
+        font-size: 28px;
+        margin: 3% 0;
     }
 
     main section div.info-producto-detalle{
@@ -345,6 +348,116 @@ section div.cajas_dispo{
     main section div.titulo-natural1{
         padding: 0% 10%;
         margin: 3% 3% 0% 0%;
+    }
+
+    main section div.img-a-detalle{
+        display: none;
+    }
+
+    section div.contenedor_img_grande{
+        width: 100%;
+        padding: 1px;
+        margin: 0% 5% 1% 5%;
+    }
+
+    section div.carrusel_img_detalle{
+        width: 100%;
+        margin: 3% 0% 6% 0%;
+    }
+
+    main section div.info-producto-detalle{
+        width: 90%;
+        margin: 3% 0% 2% 4%;
+        padding: 2% 0% 1% 4%;
+    }
+
+    div.cantidad_y_carrito{
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+    #bttn0_al_carrito{
+        margin: 10% 0;
+        width: 100%;
+    }
+
+    #bttn_al_carrito{
+        padding:5px;
+        margin: 10% 0;
+        width: 100%;
+    }
+
+    #texto_producto_detalle{
+        width: 100%;
+        margin: 3% 0;
+    }
+
+    section div select.detalles_menu{
+        width: 90%;
+        padding: 3%;
+    }
+
+    section div select.envio{
+        width: 90%;
+        padding: 3%;
+    }
+
+    #producto_info_general{
+        width:90%;
+        height: 40%;
+        margin: 8%;
+    }
+
+    section p.regala_caja_sorpresa{
+        width: 90%;
+        height: 16%;
+        margin: 1% 3%;
+        text-align: center;
+    }
+
+    section h2.cajas{
+        width: 100%;
+        height: 20%;
+        margin: 4% 0;
+    }
+
+    #caja_info_general{
+        width: 80%;
+        height: 80%;
+        margin: 8%;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    p.cantidad{
+        padding: 3% 3% 0 0;
+        margin: 0;
+    }
+
+    #info_producto{
+        margin: 0 4%;
+    }
+}
+/*------Tablet------*/
+@media (min-width: 700px){
+    section div.carrusel_img_detalle{
+        width: 55%;
+        margin: 3% 3% 5% 3%;
+        align-content: center;
+    }
+
+    section div.info-producto-detalle{
+        width: 45%;
+    }
+
+    section.info_completa{
+        padding: 0;
+    }
+
+    main section.info_completa {
+        padding: 0;
     }
 
 }
