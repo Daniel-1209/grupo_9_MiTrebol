@@ -30,8 +30,8 @@ section article img{
 section article .eliminar {
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: none;
     border-radius: 100%;
     background-color: red;
@@ -63,6 +63,10 @@ main .carrito h2.titulo{
     color: green;
     font-size: 20px;
     text-align: center  ;
+}
+
+main article strong {
+    font-size: 20px;
 }
 
 .totalPagar {
@@ -105,6 +109,7 @@ main .carrito h2.titulo{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
