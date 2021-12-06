@@ -6,7 +6,9 @@ let indexController = require('../controllers/indexController');
 /* GET home page. */
 router.get('/', indexController.home);
 
-router.get('/productDetail', indexController.productDetail);
+router.get('/indexVendedor', indexController.indexVendedor);
+
+router.get('/productDetail/:id', indexController.productDetail);
 
 router.get('/login', indexController.login);
 

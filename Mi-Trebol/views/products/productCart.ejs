@@ -18,32 +18,24 @@
             <h2 class="titulo">LISTA DE COMPRAS</h2>
 
                 <section class="carro" > 
-                    <article class="producto"> <a href="/productDetail">
-                        <img src="/img/aceite_aguacate_rev.png" alt="articulo">
-                        <strong>Aceite de Aguacate</strong>
-                        <p>$ 150.00MXN</p>
-                        <div class="cantidad">
-                            <label for="canti">Cantidad De Productos: </label>
-                            <input type="number" name="canti" id="can-pro" value="1">
-                        </div>
-                         
-                            <input type="button" value="Eliminar" class="eliminar">
-                        </a>
-                    </article>
 
-                    <article class="producto"> <a href="/productDetail">
-                        <img src="/img/velas_rev.png" alt="articulo">
-                        <strong>Velas florales</strong>
-                        <p>$539.99MXN</p>
-                        <div class="cantidad">
-                            <label for="canti">Cantidad De Productos: </label>
-                            <input type="number" name="canti" id="can-pro" value="1">
-                        </div>
-                         
-                            <input type="button" value="Eliminar" class="eliminar">
-                        </a>
-                    </article>
+                    <% for ( article of shoppingList) { %>
 
+                        <article class="producto"> <a href="/productDetail/<%= article%>">
+                            <img src="/img/<%=products[article].imgs[0]%>" alt="articulo">
+                            <strong> <%=products[article].title%> </strong> </a>
+                            <p> $<%=products[article].price%> MXN</p>
+                            <div class="cantidad">
+                                <label for="canti">Cantidad De Productos: </label>
+                                <input type="number" name="canti" id="can-pro" value="1">
+                            </div>
+                             
+                                <input type="button" value="Eliminar" class="eliminar">
+                            
+                        </article>
+
+
+                    <%}%>
                     
 
                 </section>

@@ -357,3 +357,67 @@ footer p a {
         padding: 80px 15px
     }
 }
+
+
+/* Estilos para vendedor */
+.profile{
+    width: 10%;
+}
+
+.perfil{
+    margin-right: -32px;
+}
+.btn-secondari {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.modal-title {
+    color: #28aa59;
+    font-weight: 600;
+}
+
+label{
+    color: #00954c;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, .85);  
+    backdrop-filter: blur(5px);
+    background-clip: padding-box;
+    border: 0px ;
+    border-radius: 15px;
+    outline: 0;
+}
+.form-control {
+    border-radius: 0px;
+    border-radius: 18px;
+    box-shadow: 4px 3px 10px rgb(145 143 143 / 38%);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #00954c;
+    border-color: #00954c;
+    border-radius: 25px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #03582f;
+    border-color: #03582f;
+}
+
+.editar {
+    position: relative;
+    text-align: right;
+    top: 45px;
+    right: 10px;
+    z-index: 1;
+}
