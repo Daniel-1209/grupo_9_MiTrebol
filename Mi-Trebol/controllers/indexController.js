@@ -6,6 +6,10 @@ let controlador = {
         res.render('index.ejs', {products: products});
 
     },
+    indexVendedor: (req, res) => {
+        res.render('indexVendedor.ejs', {products: products});
+
+    },
     productDetail: (req, res) => {
         let id = req.params.id;
         res.render('./products/productDetail.ejs', {product: products[id], products} );

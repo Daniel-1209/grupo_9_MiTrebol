@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuente Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Hoja de Estilos -->
+    <title>.::MiTrébol::.</title>
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+
+    <header class="trebol">
+        <div class="logos">
+            <a href="/"><img class="logo" src="/img/logo.png" alt="logotipo de MiTrébol"></a>
+            <h1 class="tienda">MiTrébol</h1>
+        </div>
+
+        <nav>
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/">Añadir productos <i class="fas fa-plus-circle"></i></a></li>
+            <div class="dropdown">
+                <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="profile" src="/img/profile.png" alt="imagen de perfil"> Alejandro
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Cuenta</a></li>
+                  <li><a class="dropdown-item" href="#">MisProductos</a></li>
+                  <li><a class="dropdown-item" href="/login">Cerrar sesión</a></li>
+                </ul>
+              </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
+        <h1>Bienvenido a MiTrébol</h1>
+        <h3>Disfruta de la naturaleza</h3>
+    </section>
+
+
+    <section class="categorias" id="categorias">
+        <h3 class="title">Nuestras categorías</h3>
+        <p>Conoce las categorías de nuestro sitio, inspiradas en la naturaleza de nuestro país.</p>
+        <hr>
+        <!-- Parrilla de productos -->
+        <div class="categorias-container">
+            <div class="producto-cat">
+                <a href="#"> <img class="img-categorias" src="/img/producto1.png" alt="Jabones naturales">
+                    <h4 class="categoria">Jabones naturales</h4>
+                </a>
+
+            </div>
+
+            <div class="producto-cat">
+                <a href="#"><img class="img-categorias" src="/img/producto_2.png" alt="Belleza al natural">
+                    <h4 class="categoria">Belleza al natural</h4>
+                </a>
+            </div>
+
+            <div class="producto-cat">
+                <a href="#"><img class="img-categorias" src="/img/producto_4.png" alt="Semillas orgánicas">
+                    <h4 class="categoria">Semillas orgánicas</h4>
+                </a>
+
+            </div>
+            <div class="producto-cat">
+                <a href="#"><img class="img-categorias" src="/img/catrina.png" alt="Artesanías">
+                    <h4 class="categoria">Artesanías</h4>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo -->
+
+    <section class="equipos" id="equipo">
+        <h3 class="title">Nuestro equipo</h3>
+        <p>Trabajamos de la mano con productores, agricultores y artesanos mexicanos. Uno de nuestros principales objetivos es reconectar con nuestra tierra, su diversidad y su naturaleza.</p>
+        <hr>
+
+        <div>
+            <img class="equipo" src="/img/artesana.png" alt="Artesanías Mexicanas">
+        </div>
+    </section>
+
+    <!-- Lo + popular  -->
+    <section class="populares" id="populares">
+        <h3 class="title">Los más populares</h3>
+        <p>Tus productos favoritos, siempre disponibles.</p>
+        <hr>
+        <!-- third example -->
+        <div class="categorias-container">
+            
+
+        <% for ( product of products ) { %>
+            <div class="producto-cat">
+                <div class="editar">
+                    <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i class="fas fa-pencil-alt"></i></a>
+                </div>
+               
+                <a href="/productDetail/<%= product.id%>">
+                    <img class="categoria-producto edit" src="/img/<%= product.imgs[0]%>" alt="">
+                    <h4 class="categoria"> <%= product.title %> </h4>
+                </a>
+                <p>  <%= product.shortdescription%> </p>
+                <p>$<%= product.price%>MXN </p>
+                <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p class="valoracion"> <%= product.ratings%> valoraciones</p>
+            </div>
+        <% } %>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modificar producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-container">
+                <form action="">
+                    <div class="input">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                          </div>
+                          <div class="mb-3">
+                            <label for="Descripción del producto" class="form-label">Descripción del producto</label>
+                            <textarea class="form-control" id="Descripción del producto" rows="3"></textarea>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="formFile" class="form-label">Modificar imagen</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                          <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Categoría</option>
+                    <option value="1">Jabones naturales</option>
+                    <option value="2">Belleza al natural</option>
+                    <option value="3">Semillas orgánicas</option>
+                    <option value="3">Artesanías</option>
+                </div>
+                  </select>
+                  <div class="mb-3">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Cantidad</option>
+                    <option value="1">1</option>
+                    <option value="2">+5</option>
+                    <option value="3">+10</option>
+                  </select>
+                </div>
+
+                  <div class="input-group mb-3">
+                    <label for="formFile" class="form-label"></label>
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" placeholder="Precio" aria-label="Dollar amount (with dot and two decimal places)">
+                  </div>
+                    </div>
+                    
+                       
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Guardar cambios <i class="fas fa-plus-circle"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+            
+
+            
+
+           
+
+    </section>
+
+    <!-- Promociones -->
+    <section class="promociones" id="promociones">
+        <h3 class="title">Nuestras promociones</h3>
+        <p>Manejamos excelentes promociones durante todo el año, además de un excelente servicio al cliente.</p>
+        <hr>
+
+        <div class="contenedor">
+            <div class="elemento">
+                <div class="info-promo">
+                    <i class="fas fa-hand-holding-usd icon-promo"></i>
+                    <h4>Compra 2x1</h4>
+                </div>
+                <p>No pierdas esta promoción en los productos marcados.</p>
+            </div>
+
+            <div class="elemento">
+                <div class="info-promo">
+                    <i class="fas fa-truck icon-promo"></i>
+                    <h4>Envío gratis</h4>
+                </div>
+                <p>Disfruta de envios completamente gratuitos en compras de $500.00MX o más.</p>
+            </div>
+
+            <div class="elemento">
+                <div class="info-promo">
+                    <i class="fas fa-thumbs-up icon-promo"></i>
+                    <h4>Garantía</h4>
+                </div>
+                <p>Si un producto no te gusta, coméntanos y te devolvemos tu dinero.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include('./partials/footer') %>
+    
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Función modal -->
+<script>
+    var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script>
+</body>
+
+</html>
