@@ -65,10 +65,20 @@ main a{
     flex-direction: row;
     justify-content: space-around;
 }
-#imagen{
-    
-}
-
+#fileInputHolder {
+    padding: 5px;
+    background: #00954b;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  #imagen {
+    display: none;
+  }
 #selectors{
     bottom: 4.5px;
     display: flex;

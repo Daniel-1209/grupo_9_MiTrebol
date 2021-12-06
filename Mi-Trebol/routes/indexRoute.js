@@ -16,4 +16,6 @@ router.get('/register', indexController.register);
 
 router.get('/productCart', indexController.car);
 
+router.get('/addProduct', indexController.addProduct);
+
 module.exports = router;

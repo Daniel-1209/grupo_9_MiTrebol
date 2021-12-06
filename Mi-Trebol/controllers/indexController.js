@@ -25,7 +25,11 @@ let controlador = {
 
     car: (req, res) => {
         res.render ('./products/productCart.ejs', {shoppingList,products});
-    }
+    },
+
+    addProduct: (req, res) => {
+        res.render('./addProduct.ejs');
+    },
 };
 
 module.exports = controlador;   
