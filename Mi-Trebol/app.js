@@ -4,7 +4,11 @@ let express = require('express');
 let path = require('path');
 
 
+
 let index = require('./routes/indexRoute');
+let products = require('./routes/productsRoute');
+let user = require('./routes/usersRoute');
+
 
 let app = express();
 let port = 3030;
@@ -21,6 +25,8 @@ app.set('views enginen', 'ejs');
 // LLamado a las paginas web para usarse
 
 app.use('/', index);
+app.use('/', products);
+app.use('/', user);
 
 
 // Definiendo el puerto de arranque

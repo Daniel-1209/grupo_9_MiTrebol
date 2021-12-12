@@ -5,17 +5,10 @@ let indexController = require('../controllers/indexController');
 
 /* GET home page. */
 router.get('/', indexController.home);
+//router.get('/indexVendedor', indexController.);
+router.get('/search',indexController.search )
 
-router.get('/indexVendedor', indexController.indexVendedor);
 
-router.get('/productDetail/:id', indexController.productDetail);
 
-router.get('/login', indexController.login);
-
-router.get('/register', indexController.register);
-
-router.get('/productCart', indexController.car);
-
-router.get('/addProduct', indexController.addProduct);
 
 module.exports = router;
