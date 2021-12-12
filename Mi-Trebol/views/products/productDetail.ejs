@@ -70,7 +70,7 @@
                         <p class='agregar'>+</p>
                     </div>
                     <div id='bttn0_al_carrito'>
-                        <a class="texto_bttn_carrito" href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
+                        <a class="texto_bttn_carrito" href="/products/cart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
 
@@ -83,8 +83,10 @@
             <br class="brPR">
             <div class='imagenes_relacionadas'>
                 <% for ( element of products ) { %>
-                    <article id=producto_info_general>
-                        <img class='imgPR' src='/img/<%= element.imgs[0]%>' alt="Aceite de aguacate">
+                    <% if( element.class == product.class) { %>
+                    
+                    <article id=producto_info_general> <a href="/products/detail/<%= element.id%>">
+                        <img class='imgPR' src='/img/<%= element.imgs[0]%>' alt="Imagen de producto"> </a>
                         <div id='caja_general'>
                             <div id='info_producto'>
                                 <p class='titulo_prod'> <%= element.title%> </p>
@@ -92,11 +94,14 @@
                                 <p id='precioRel'>$ <%= element.price%></p>
                             </div>
     
-                            <div id='bttn_al_carrito'>
-                                <a href="/productCart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
-                            </div>
+                            <form action="" method="" >
+                               
+                                <input type="button" id='bttn_al_carrito' value="Agregar al carrito"> <!--<i class="fas fa-shopping-cart"></i> -->
+                            </form>
                         </div>
                     </article>
+                        
+                    <% } %>
                 <% } %>
 
                 

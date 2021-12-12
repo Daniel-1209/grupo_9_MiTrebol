@@ -2,29 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <%- include('../partials/head') %> 
     <link rel="stylesheet" href="/css/addProduct.css">
     <title>añadirproducto</title>
 </head>
 
 <body > 
-    <header class="trebol">
-       
-    </header>
-    <main class="main">
+    <!-- Cabecera de la pagina-->
+    <%- include('../partials/header') %>
+
+    
         <div class="form-container">
-            <form action="">
+            <form action="/products/create" method="POST">
                 <div class="formsheader">
-                    <h3 class="titulo">Añadir producto</h3>
+                    <h2 class="titulo">Añadir producto</h2>
                 </div>
                 <div class="input">
-                    <label for="">Nombre del producto</label>
-                    <input placeholder="" type="text" name="text" required id="text">
-                    <label for="">Descripción</label>
-                    <input placeholder="" type="text2" name="text2" required id="text2">
+                    <label for="title">Nombre del producto</label>
+                    <input placeholder="" type="text" name="title" required id="text">
+                    
+                    <input placeholder="Descripción Corta" type="text" name="shortdescription" required id="text2">
+                    
+                    <input placeholder="Descripción Larga" type="text" name="longDescription" required id="text2">
                 </div>
                 <div id="filepriceandselectors">
                     <label id="fileInputHolder">
@@ -32,23 +31,18 @@
                         Seleccionar archivo >
                       </label>
                     <div id="selectors">
-                        <span>Categoría <select name="categoria" id="">
-                            <option value="">jabones</option>
-                            <option value="">belleza</option>
-                            <option value="">semillas</option>
-                            <option value="">artesania</option>
+                        <span>Categoría <select name="class" id="">
+                            <option value="Jabon">jabones</option>
+                            <option value="Belleza">belleza</option>
+                            <option value="Semillas">semillas</option>
+                            <option value="Artesanias">artesania</option>
                         </select></span>
-                        <span>Cantidad<select name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                        </select></span>
+                        
                     </div>
                 </div>
                 <div class="price">
                     <p class="tituloprice">Precio $ 
-                        <input type="number" name="" id="">
+                        <input type="number" name="price" id="">
                     </p>
                     
                 </div>
@@ -58,10 +52,11 @@
                     
             </form>
         </div>
-    </main>
-    <footer>
-        <p>Derechos Reservados ©</p>
-    </footer>
+  
+
+     <!-- Pie de la pagina-->
+    
+    <%- include('../partials/footer') %>
 </body>
 
 </html>

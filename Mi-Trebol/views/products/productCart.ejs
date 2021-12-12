@@ -21,7 +21,7 @@
 
                     <% for ( article of shoppingList) { %>
 
-                        <article class="producto"> <a href="/productDetail/<%= article%>">
+                        <article class="producto"> <a href="/products/detail/<%= article%>">
                             <img src="/img/<%=products[article].imgs[0]%>" alt="articulo">
                             <strong> <%=products[article].title%> </strong> </a>
                             <p> $<%=products[article].price%> MXN</p>
@@ -29,9 +29,9 @@
                                 <label for="canti">Cantidad De Productos: </label>
                                 <input type="number" name="canti" id="can-pro" value="1">
                             </div>
-                             
+                             <form action="" >
                                 <input type="button" value="Eliminar" class="eliminar">
-                            
+                            </form>
                         </article>
 
 

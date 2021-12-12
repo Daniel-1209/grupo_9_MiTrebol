@@ -2,20 +2,28 @@
 // Requiriendo los modulos a utilizar, estableciendo variables, requiriendo rutas 
 let express = require('express');
 let path = require('path');
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
 
-let index = require('./routes/indexRoute');
-let products = require('./routes/productsRoute');
-let user = require('./routes/usersRoute');
-
-
+// ************ express() - (don't touch) ************
 let app = express();
-let port = 3030;
+let port = 3000;
 
-// Ruta para utilizar los recursos de la carpeta public
 
-app.use(express.static(path.resolve(__dirname,'./public')));
+// ************ Middlewares - (don't touch) ************
+
+
+app.use(express.static(path.resolve(__dirname,'./public'))); // Ruta para utilizar los recursos de la carpeta public
+app.use(express.urlencoded({ extended: false }));
+
+app.use(express.json());
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
+
+
+
+
 
 // Configuramos EJS como el template engine de la app.
 
@@ -24,9 +32,13 @@ app.set('views enginen', 'ejs');
 
 // LLamado a las paginas web para usarse
 
+const index = require('./routes/indexRoute');
+const productsRoute = require('./routes/productsRoute');
+const user = require('./routes/usersRoute');
+
 app.use('/', index);
-app.use('/', products);
-app.use('/', user);
+app.use('/products', productsRoute);
+app.use('/users', user);
 
 
 // Definiendo el puerto de arranque

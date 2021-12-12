@@ -5,7 +5,6 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/listaDeProductos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 let controlador = {
     home: (req, res) => {
@@ -13,8 +12,11 @@ let controlador = {
 
     },
     search: (req, res) => {
-        res.send('Esta es la busqueda');
-    }
+        res.send('Estado de busqueda');
+    },
+    vendedor: (req, res) => {
+        res.render('indexVendedor.ejs', {products});
+    },
     
 };
 

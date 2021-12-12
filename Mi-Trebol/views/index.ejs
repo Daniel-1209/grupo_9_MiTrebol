@@ -28,8 +28,8 @@
         <nav>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
             <li><a href="/">Inicio</a></li>
-            <li><a href="/productCart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
-            <li><a href="/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="/users/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
         </nav>
     </header>
 
@@ -71,6 +71,13 @@
                 </a>
 
             </div>
+
+            <div class="producto-cat">
+                <a href="/products"><img class="img-categorias" src="/img/trebol.png" alt="">
+                    <h4 class="categoria"> ==>> Todos Los Productos <<==</h4>
+                </a>
+
+            </div>
         </div>
     </section>
 
@@ -96,8 +103,10 @@
             
 
         <% for ( product of products ) { %>
+            <% if ( product.ratings >= 300 ){ %>
+
             <div class="producto-cat">
-                <a href="/productDetail/<%= product.id%>">
+                <a href="/products/detail/<%= product.id%>">
                     <img class="categoria-producto" src="/img/<%= product.imgs[0]%>" alt="">
                     <h4 class="categoria"> <%= product.title %> </h4>
                 </a>
@@ -106,6 +115,7 @@
                 <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                 <p class="valoracion"> <%= product.ratings%> valoraciones</p>
             </div>
+            <%}%>
         <% } %>
 
             

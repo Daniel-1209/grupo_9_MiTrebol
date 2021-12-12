@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <head>
+        <%- include('../partials/head') %>
+        <link rel="stylesheet" href="/css/index.css">
+        <title>Login</title>
+
+    </head>
+    
+</head>
+
+<!--Todos los productos  -->
+<section class="populares" id="populares">
+    <h3 class="title">TODOS LOS PRODUCTOS DISPONIBLES</h3>
+    <p>Tus productos favoritos, siempre disponibles.</p>
+    <hr>
+    <!-- third example -->
+    <div class="categorias-container">
+        
+
+    <% for ( product of products ) { %>
+        <div class="producto-cat">
+            <a href="/products/detail/<%= product.id%>">
+                <img class="categoria-producto" src="/img/<%= product.imgs[0]%>" alt="">
+                <h4 class="categoria"> <%= product.title %> </h4>
+            </a>
+            <p>  <%= product.shortdescription%> </p>
+            <p>$<%= product.price%>MXN </p>
+            <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            <p class="valoracion"> <%= product.ratings%> valoraciones</p>
+        </div>
+    <% } %>
+
+        
+
+        
+
+       
+
+</section>
+
+<body > 
+    <!-- Cabecera de la pagina-->
+    <%- include('../partials/header') %>
+
+    
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
