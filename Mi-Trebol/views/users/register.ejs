@@ -12,15 +12,22 @@
 
         <main>
             <div class="form-container">
-                <form action="">
+                <form action="/users/register" method="POST">
                     <div class="head-register"> 
                         <h3>Registro</h3>
                     </div>
                     <div class="input">
-                        <input placeholder="Nombre" type="text" name="nombre" required id="nombre">
-                        <input placeholder="Apellido" type="text" name="apellido" required id="apellido">
+                        <input placeholder="Usuario" type="text" name="user" required id="user">
+                        <input placeholder="Nombre" type="text" name="firstName" required id="nombre">
+                        <input placeholder="Apellido" type="text" name="lastName" required id="apellido">
                         <input placeholder="Email" type="email" name="email" required id="email">
                         <input placeholder="Contraseña" type="password" name="password" required id="password">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category">
+                            <option value="Comprador">Comprador</option>
+                            <option value="Vendedor">Vendedor</option>
+                            <label for="image">Foto de perfil</label>
+                            <input type="file" name="image" id="">
                     </div>
                     <div class="button">
                         <button type="submit">Registrarme</button>
