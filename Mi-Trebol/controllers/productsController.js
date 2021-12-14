@@ -19,6 +19,7 @@ let controlador = {
     },
     car: (req, res) => {
         let list =shoppingList.car
+
         res.send(shoppingList);
         //res.render ('./products/productCart.ejs', {list:shoppingList.car ,products});
     },
@@ -40,7 +41,7 @@ let controlador = {
         res.redirect(`/products/detail/`+ newProduct.id);
     },
     edit: (req, res) => {
-        res.reder('/products/')
+        res.render('./products/editProduct.ejs')
     },
     update: (req, res) => {
         let newProduct ={

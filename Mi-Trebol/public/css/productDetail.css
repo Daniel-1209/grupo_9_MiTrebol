@@ -277,7 +277,7 @@ article div p.texto_peque{
     background-color: #60D3;
     border: solid #60D3 5px;
 }
-
+}
 
 /*-- ¿qué hay en la caja?--*/
 section h2.cajas{
@@ -579,7 +579,7 @@ section div.cajas_dispo{
     main section.prod_relac {
         width: 90%;
     }
-
+}
 @media (min-width: 500px){
     section div.imagenes_relacionadas {
         display: flex;

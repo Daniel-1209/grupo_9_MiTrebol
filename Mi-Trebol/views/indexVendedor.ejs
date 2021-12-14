@@ -133,7 +133,7 @@
         <% for ( product of products ) { %>
             <div class="producto-cat">
                 <div class="editar">
-                    <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i class="fas fa-pencil-alt"></i></a>
+                    <a type="button" class="btn btn-primary" href="/products/edit/<%= product.id%>"><i class="fas fa-pencil-alt"></i></a>
                 </div>
                
                 <a href="/productDetail/<%= product.id%>">
@@ -148,7 +148,7 @@
         <% } %>
 
   <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -207,7 +207,7 @@
       </div>
     </div>
   </div>
-            
+             -->
 
             
 
