@@ -10,8 +10,15 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 let controlador = {
     home: (req, res) => {
-        res.render('index.ejs', {products});
-
+        let id = req.params.id;
+        let user ;
+        for(element of users){
+            if (element.id == id){
+                user = element;
+                break;
+            }
+        }
+        res.render('index.ejs', {products, user});
     },
     search: (req, res) => {
         res.send('Estado de busqueda');
@@ -27,6 +34,7 @@ let controlador = {
         }
         res.render('indexVendedor.ejs', {products, user});
     },
+    
     
 };
 
