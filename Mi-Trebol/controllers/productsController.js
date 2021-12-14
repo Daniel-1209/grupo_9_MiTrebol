@@ -7,10 +7,14 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const carFilePath = path.join(__dirname, '../data/usersList.json');
 const shoppingList = JSON.parse(fs.readFileSync(carFilePath, 'utf-8'));
 
+const usersFilePath = path.join(__dirname, '../data/usersList.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+let user = null;
 
 let controlador = {
     home: (req,res) => {
-        let user = {
+        user = {
             id: req.params.iduser,
         }
         res.render('./products/products.ejs', {products, user});
@@ -18,7 +22,7 @@ let controlador = {
    
     detail: (req, res) => {
         let id = req.params.id;
-        res.render('./products/productDetail.ejs', {product: products[id], products} );
+        res.render('./products/productDetail.ejs', {product: products[id], products, user} );
     },
     car: (req, res) => {
         let list =shoppingList.car
@@ -28,7 +32,15 @@ let controlador = {
     },
 
     addProduct: (req, res) => {
-        res.render('./products/addProduct.ejs');
+        let id = req.params.id;
+        user ;
+        for(element of users){
+            if (element.id == id){
+                user = element;
+                break;
+            }
+        }
+        res.render('./products/addProduct.ejs', {user});
     },
     create: (req, res) => {
         let newProduct ={

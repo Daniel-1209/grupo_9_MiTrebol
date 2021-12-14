@@ -7,10 +7,6 @@ let productsController = require('../controllers/productsController');
 //Todos los productos
 router.get('/:iduser', productsController.home);
 
-// Creacion de nuevos productos
-router.get ('/create', productsController.addProduct);
-router.post('/create', productsController.create );
-
 // Detalle de los productos por id
 router.get('/detail/:id', productsController.detail);
 
