@@ -10,7 +10,10 @@ const shoppingList = JSON.parse(fs.readFileSync(carFilePath, 'utf-8'));
 
 let controlador = {
     home: (req,res) => {
-        res.render('./products/products.ejs', {products});
+        let user = {
+            id: req.params.iduser,
+        }
+        res.render('./products/products.ejs', {products, user});
     },
    
     detail: (req, res) => {

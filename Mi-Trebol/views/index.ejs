@@ -21,14 +21,21 @@
 
     <header class="trebol">
         <div class="logos">
-            <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
+            <% if(user == null){ %>
+                <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
+                <%  }else { %>
+                    <a href="/<%= user.id %>"><img class="logo" src="/img/logo.png" alt=""></a>
+                <% } %>
             <h1 class="tienda">MiTrébol</h1>
         </div>
 
         <nav>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
             <li><a href="/">Inicio</a></li>
-            <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
+            <% if(user !== null){ %>
+                <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
+                <% } %>
+            
             <% if(user == null){ %>
                 <li><a href="/users/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
                 <%  }else { %>
@@ -38,8 +45,8 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Cuenta</a></li>
-                          <li><a class="dropdown-item" href="#">MisProductos</a></li>
-                          <li><a class="dropdown-item" href="/login">Cerrar sesión</a></li>
+                          <li><a class="dropdown-item" href="/products/ <%= user.id %>">MisProductos</a></li>
+                          <li><a class="dropdown-item" href="/">Cerrar sesión</a></li>
                         </ul>
                       </div>
                 <% } %>

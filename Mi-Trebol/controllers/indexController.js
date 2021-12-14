@@ -8,15 +8,18 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/usersList.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+let user = null;
+
+
 let controlador = {
     home: (req, res) => {
-        let user = null;
+        user = null;
         res.render('index.ejs', {products, user});
 
     },
     homeid: (req, res) => {
-        let id = req.params.id;
-        let user ;
+        let id = req.params.iduser;
+         user ;
         for(element of users){
             if (element.id == id){
                 user = element;
@@ -31,7 +34,6 @@ let controlador = {
     },
     vendedor: (req, res) => {
         let id = req.params.id;
-        let user ;
         for(element of users){
             if (element.id == id){
                 user = element;
