@@ -45,55 +45,80 @@
 
     <section class="hero" id="inicio">
         <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
-        <h1>Bienvenido a MiTrébol</h1>
+        <h1>Bienvenido <%= user.firstName %></h1>
         <h3>Disfruta de la naturaleza</h3>
     </section>
 
 
     <section class="categorias" id="categorias">
-        <h3 class="title">Nuestras categorías</h3>
-        <p>Conoce las categorías de nuestro sitio, inspiradas en la naturaleza de nuestro país.</p>
+        <h3 class="title">Tus productos</h3>
+        <p> Velas Aromáticas HUM </p>
         <hr>
         <!-- Parrilla de productos -->
         <div class="categorias-container">
             <div class="producto-cat">
-                <a href="#"> <img class="img-categorias" src="/img/producto1.png" alt="Jabones naturales">
-                    <h4 class="categoria">Jabones naturales</h4>
+                <a href="#"> <img class="img-categorias" src="/img/velas_rev.png" alt="Velas florales">
+                    <h4 class="categoria">Velas Florales</h4>
                 </a>
 
             </div>
 
             <div class="producto-cat">
-                <a href="#"><img class="img-categorias" src="/img/producto_2.png" alt="Belleza al natural">
-                    <h4 class="categoria">Belleza al natural</h4>
+                <a href="#"><img class="img-categorias" src="/img/portavela_rev.png" alt="Relajantes">
+                    <h4 class="categoria">Aromas relajantes</h4>
                 </a>
             </div>
 
             <div class="producto-cat">
-                <a href="#"><img class="img-categorias" src="/img/producto_4.png" alt="Semillas orgánicas">
-                    <h4 class="categoria">Semillas orgánicas</h4>
+                <a href="#"><img class="img-categorias" src="/img/vela_1.jpg" alt="Vela con rosas">
+                    <h4 class="categoria">Aromas energéticos</h4>
                 </a>
 
             </div>
             <div class="producto-cat">
-                <a href="#"><img class="img-categorias" src="/img/catrina.png" alt="Artesanías">
-                    <h4 class="categoria">Artesanías</h4>
+                <a href="#"><img class="img-categorias" src="/img/vela_navidegna.jpeg" alt="vela con arbolito">
+                    <h4 class="categoria">!De temporada!</h4>
                 </a>
 
             </div>
         </div>
     </section>
 
-    <!-- Nuestro Equipo -->
+    <!-- Información para el vendedor -->
 
     <section class="equipos" id="equipo">
-        <h3 class="title">Nuestro equipo</h3>
-        <p>Trabajamos de la mano con productores, agricultores y artesanos mexicanos. Uno de nuestros principales objetivos es reconectar con nuestra tierra, su diversidad y su naturaleza.</p>
+        <h3 class="title">Resumen del mes</h3>
+        <p>Encuentra más información a cerca de las ventas, comentarios y rating de tus productos.</p>
         <hr>
 
-        <div>
-            <img class="equipo" src="/img/artesana.png" alt="Artesanías Mexicanas">
+      <!-- Parrilla del Resumen del mes -->
+      <div class="categorias-container">
+        <div class="producto-cat-2">
+            <a href="#"> <img class="img-categorias" src="/img/grafica1.png" alt="Ventas por producto">
+                <h4 class="categoria">Ventas</h4>
+            </a>
+
         </div>
+
+        <div class="producto-cat-2">
+            <a href="#"><img  class="img-categorias" src="/img/reviews.png" alt="Relajantes">
+                <h4 class="categoria">Calificaciones</h4>
+            </a>
+        </div>
+
+        <div class="producto-cat-2">
+            <a href="#"><img class="img-categorias" src="/img/simbolo-comentarios.png" alt="Vela con rosas">
+                <h4 class="categoria">Comentarios</h4>
+            </a>
+
+        </div>
+        <div class="producto-cat-2">
+            <a href="#"><img class="img-categorias" src="/img/grafica1.png" alt="vela con arbolito">
+                <h4 class="categoria">!De temporada!</h4>
+            </a>
+
+        </div>
+    </div>
     </section>
 
     <!-- Lo + popular  -->

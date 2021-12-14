@@ -27,7 +27,6 @@ let controlador = {
             }
         }
         res.render('index.ejs', {products, user});
-
     },
     search: (req, res) => {
         res.send('Estado de busqueda');
@@ -42,6 +41,7 @@ let controlador = {
         }
         res.render('indexVendedor.ejs', {products, user});
     },
+    
     
 };
 
