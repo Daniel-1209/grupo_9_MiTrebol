@@ -40,7 +40,7 @@ let controlador = {
         res.redirect(`/products/detail/`+ newProduct.id);
     },
     edit: (req, res) => {
-        res.reder('/products/')
+        res.render('./products/editProduct.ejs')
     },
     update: (req, res) => {
         let newProduct ={
