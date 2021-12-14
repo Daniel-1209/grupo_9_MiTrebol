@@ -10,7 +10,20 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 let controlador = {
     home: (req, res) => {
-        res.render('index.ejs', {products});
+        let user = null;
+        res.render('index.ejs', {products, user});
+
+    },
+    homeid: (req, res) => {
+        let id = req.params.id;
+        let user ;
+        for(element of users){
+            if (element.id == id){
+                user = element;
+                break;
+            }
+        }
+        res.render('index.ejs', {products, user});
 
     },
     search: (req, res) => {

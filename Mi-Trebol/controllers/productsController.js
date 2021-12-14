@@ -19,6 +19,7 @@ let controlador = {
     },
     car: (req, res) => {
         let list =shoppingList.car
+
         res.send(shoppingList);
         //res.render ('./products/productCart.ejs', {list:shoppingList.car ,products});
     },
