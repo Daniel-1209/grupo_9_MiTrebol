@@ -18,7 +18,7 @@
   "shortdescription": "Set de 4 velas con pétalos naturales",
   "longDescription": "Texto con la información general del producto",
   "price": 539.99,
-  "class": "Artesanias",
+  "class": "velas-DAN",
   "purchases": 200,
   "ratings": 400,
   "imgs": [
@@ -31,7 +31,7 @@
   "shortdescription": "Concreto - 15cm",
   "longDescription": "Texto con la información general del producto",
   "price": 179.85,
-  "class": "Artesanias",
+  "class": "velas-DAN",
   "purchases": 10,
   "ratings": 324,
   "imgs": [
@@ -83,5 +83,31 @@
   "imgs": [
    "none"
   ]
+ },
+ {
+    "id": 7,
+    "title": "Vela de rosas",
+    "shortdescription": "Concreto - 15cm",
+    "longDescription": "Texto con la información general del producto",
+    "price": 250.50,
+    "class": "velas-DAN",
+    "purchases": 10,
+    "ratings": 324,
+    "imgs": [
+     "vela_1.jpg"
+    ]
+ },
+ {
+    "id": 8,
+    "title": "Vela Navideña",
+    "shortdescription": "Concreto - 15cm",
+    "longDescription": "Texto con la información general del producto",
+    "price": 179.85,
+    "class": "velas-DAN",
+    "purchases": 10,
+    "ratings": 324,
+    "imgs": [
+     "vela_navidegna.jpeg"
+    ]
  }
 ]
