@@ -218,6 +218,14 @@ header nav li:last-child {
     margin: 0
 }
 
+.categorias-container-edit {
+    max-width: 1400px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .producto-cat {
     padding: 20px;
     box-sizing: border-box;
@@ -229,6 +237,7 @@ header nav li:last-child {
     height:25%;
     padding: 34px;
     box-sizing: border-box;
+    text-align: center;
     margin-bottom: 10px;
     flex-basis: 25%
 }
@@ -260,6 +269,12 @@ header nav li:last-child {
 .img-categorias {
     box-shadow: 0 0 10px rgb(100 100 100);
     width: 100%
+}
+
+.img-categorias-2 {
+    box-shadow: 0 0 10px rgb(100 100 100);
+    width: 90%;
+    height: 180px;
 }
 
 .valoracion {

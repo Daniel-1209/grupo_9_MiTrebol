@@ -46,13 +46,12 @@
     <section class="hero" id="inicio">
         <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
         <h1>Bienvenido <%= user.firstName %></h1>
-        <h3>Disfruta de la naturaleza</h3>
+        <h3> Velas Aromáticas DAN </h3>
     </section>
 
 
     <section class="categorias" id="categorias">
         <h3 class="title">Tus productos</h3>
-        <p> Velas Aromáticas HUM </p>
         <hr>
         <!-- Parrilla de productos -->
         <div class="categorias-container">
@@ -94,40 +93,40 @@
       <!-- Parrilla del Resumen del mes -->
       <div class="categorias-container">
         <div class="producto-cat-2">
-            <a href="#"> <img class="img-categorias" src="/img/grafica1.png" alt="Ventas por producto">
-                <h4 class="categoria">Ventas</h4>
+            <a href="#"> <img class="img-categorias-2" src="/img/grafica-ventas.jpg" alt="Ventas por producto">
+                <h6 class="categoria">Ventas</h6>
             </a>
 
         </div>
 
         <div class="producto-cat-2">
-            <a href="#"><img  class="img-categorias" src="/img/reviews.png" alt="Relajantes">
-                <h4 class="categoria">Calificaciones</h4>
+            <a href="#"><img  class="img-categorias-2" src="/img/grafica-reviews.jpg" alt="calificaciones">
+                <h6 class="categoria">Calificaciones</h6>
             </a>
         </div>
 
         <div class="producto-cat-2">
-            <a href="#"><img class="img-categorias" src="/img/simbolo-comentarios.png" alt="Vela con rosas">
-                <h4 class="categoria">Comentarios</h4>
+            <a href="#"><img class="img-categorias-2" src="/img/simbolo-comentarios.png" alt="comentarios">
+                <h6 class="categoria">Comentarios</h6>
             </a>
 
         </div>
         <div class="producto-cat-2">
-            <a href="#"><img class="img-categorias" src="/img/grafica1.png" alt="vela con arbolito">
-                <h4 class="categoria">!De temporada!</h4>
+            <a href="#"><img class="img-categorias-2" src="/img/grafico-stock.jpg" alt="Inventario">
+                <h6 class="categoria">Inventario</h6>
             </a>
 
         </div>
     </div>
     </section>
 
-    <!-- Lo + popular  -->
+    <!-- Inventario  -->
     <section class="populares" id="populares">
-        <h3 class="title">Los más populares</h3>
-        <p>Tus productos favoritos, siempre disponibles.</p>
+        <h3 class="title">Inventario</h3>
+        <p>Tus productos más vendidos, tenlos siempre disponibles.</p>
         <hr>
-        <!-- third example -->
-        <div class="categorias-container">
+        <!-- Editar productos-->
+        <div class="categorias-container-edit">
             
 
         <% for ( product of products ) { %>
@@ -209,16 +208,12 @@
   </div>
              -->
 
-            
-
-           
-
     </section>
 
     <!-- Promociones -->
     <section class="promociones" id="promociones">
-        <h3 class="title">Nuestras promociones</h3>
-        <p>Manejamos excelentes promociones durante todo el año, además de un excelente servicio al cliente.</p>
+        <h3 class="title">Tus promociones</h3>
+        <p>Maneja excelentes promociones durante todo el año, además de un excelente servicio al cliente.</p>
         <hr>
 
         <div class="contenedor">
