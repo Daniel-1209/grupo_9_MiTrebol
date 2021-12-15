@@ -33,12 +33,16 @@ app.set('views enginen', 'ejs');
 // LLamado a las paginas web para usarse
 
 const index = require('./routes/indexRoute');
+const vendedor = require('./routes/vendedorRoute');
 const productsRoute = require('./routes/productsRoute');
 const user = require('./routes/usersRoute');
 
 app.use('/', index);
+app.use('/indexVendedor',vendedor);
 app.use('/products', productsRoute);
 app.use('/users', user);
+
+
 
 
 // Definiendo el puerto de arranque

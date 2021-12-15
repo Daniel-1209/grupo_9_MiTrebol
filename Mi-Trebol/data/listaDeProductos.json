@@ -72,5 +72,16 @@
   "imgs": [
    "none"
   ]
+ },
+ {
+  "id": 6,
+  "title": "Computadora",
+  "shortdescription": "Se vende compu",
+  "longDescription": "Mucha descripcion",
+  "class": "Semillas",
+  "price": "5000",
+  "imgs": [
+   "none"
+  ]
  }
 ]

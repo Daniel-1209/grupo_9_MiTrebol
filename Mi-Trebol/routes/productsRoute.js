@@ -5,11 +5,7 @@ let router = express.Router();
 let productsController = require('../controllers/productsController');
 
 //Todos los productos
-router.get('/', productsController.home);
-
-// Creacion de nuevos productos
-router.get ('/create', productsController.addProduct);
-router.post('/create', productsController.create );
+router.get('/:iduser', productsController.home);
 
 // Detalle de los productos por id
 router.get('/detail/:id', productsController.detail);

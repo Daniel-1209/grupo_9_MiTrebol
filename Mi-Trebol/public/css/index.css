@@ -224,6 +224,14 @@ header nav li:last-child {
     margin-bottom: 20px;
     flex-basis: 25%
 }
+.producto-cat-2 {
+    width: 25%; 
+    height:25%;
+    padding: 34px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    flex-basis: 25%
+}
 
 @media (min-width:900px) {
     .categorias-container {
@@ -361,7 +369,7 @@ footer p a {
 
 /* Estilos para vendedor */
 .profile{
-    width: 10%;
+    width: 30%;
 }
 
 .perfil{
