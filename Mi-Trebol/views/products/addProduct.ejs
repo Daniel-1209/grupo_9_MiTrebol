@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <%- include('../partials/head') %> 
-    <link rel="stylesheet" href="/css/addProduct.css">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/addProduct.css" />
     <title>añadirproducto</title>
-</head>
+  </head>
 
-<body > 
+  <body>
     <!-- Cabecera de la pagina-->
     <%- include('../partials/header') %>
 
-    
-        <div class="form-container">
-            <form action="/products/create" method="POST">
-                <div class="formsheader">
-                    <h2 class="titulo">Añadir producto</h2>
-                </div>
-                <div class="input">
-                    <label for="title">Nombre del producto</label>
-                    <input placeholder="" type="text" name="title" required id="text">
-                    
-                    <input placeholder="Descripción Corta" type="text" name="shortdescription" required id="text2">
-                    
-                    <input placeholder="Descripción Larga" type="text" name="longDescription" required id="text2">
-                </div>
-                <div id="filepriceandselectors">
-                    <label id="fileInputHolder">
-                        <input type="file" id="imagen" />
-                        Seleccionar archivo >
-                      </label>
-                    <div id="selectors">
-                        <span>Categoría <select name="class" id="">
-                            <option value="Jabon">jabones</option>
-                            <option value="Belleza">belleza</option>
-                            <option value="Semillas">semillas</option>
-                            <option value="Artesanias">artesania</option>
-                        </select></span>
-                        
-                    </div>
-                </div>
-                <div class="price">
-                    <p class="tituloprice">Precio $ 
-                        <input type="number" name="price" id="">
-                    </p>
-                    
-                </div>
-                    <div>
-                    <button type="submit">Guardar</button>
-                    </div>
-                    
-            </form>
+    <div class="form-container">
+      <form action="/products/create" method="POST">
+        <div class="formsheader">
+          <h2 class="titulo">Añadir producto</h2>
         </div>
-  
+        <div class="input">
+          <div>
+            <label class="label-text" for="title">Nombre del producto</label>
+            <input placeholder="" type="text" name="title" required id="text" />
+          </div>
+          <div>
+            <label class="label-text" for="title">Descripción corta</label>
+            <textarea
+              type="text"
+              name="shortdescription"
+              required
+              id="text2"
+            ></textarea>
+          </div>
+          <div>
+            <label class="label-text" for="title">Descripción larga</label>
+            <textarea
+              type="text"
+              name="longdescription"
+              required
+              id="text3"
+            ></textarea>
+          </div>
+        </div>
+        <div id="filepriceandselectors">
+          <div class="select-file">
+            <label id="fileInputHolder">
+              <input type="file" id="imagen" />
+              Seleccionar archivo >
+            </label>
+          </div>
+          <div id="selectors">
+            <select name="class" id="class">
+              <option hidden disabled selected value>Categoria</option>
+              <option value="Jabon">jabones</option>
+              <option value="Belleza">belleza</option>
+              <option value="Semillas">semillas</option>
+              <option value="Artesanias">artesania</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="price">
+            <label class="label-text" for="price"> Precio </label>
+            <div class="wrapper">
+              <span>$</span>
+              <input type="number" name="price" id="priceInput" />
+            </div>
+          </div>
+          <div>
+            <button type="submit">
+              Guardar Producto<span class="plus-icon">+</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
 
-     <!-- Pie de la pagina-->
-    
+    <!-- Pie de la pagina-->
+
     <%- include('../partials/footer') %>
-</body>
-
+  </body>
 </html>

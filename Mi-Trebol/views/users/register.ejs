@@ -21,14 +21,18 @@
                         <input placeholder="Nombre" type="text" name="firstName" required id="nombre">
                         <input placeholder="Apellido" type="text" name="lastName" required id="apellido">
                         <input placeholder="Email" type="email" name="email" required id="email">
-                        <input placeholder="Contraseña" type="password" name="password" required id="password">
-                        <label for="category">Categoria</label>
+                        <input placeholder="Contraseña" type="password" name="password" required id="password" minlength="6">
+                        <input placeholder="Repetir contraseña" type="password" name="password_confirmation" required id="password_confirmation">
+                        <div>
+                        <label for="category">Categoría</label> </div>
                         <select name="category" id="category">
                             <option value="Comprador">Comprador</option>
                             <option value="Vendedor">Vendedor</option>
-                            <label for="image">Foto de perfil</label>
-                            <input type="file" name="image" id="">
-                    </div>
+                        </select>
+                        <div>
+                            <label>Foto de perfil</label></div>
+                            <input type="file" name="image" id="file"/>
+                        </div>
                     <div class="button">
                         <button type="submit">Registrarme</button>
                     </div>

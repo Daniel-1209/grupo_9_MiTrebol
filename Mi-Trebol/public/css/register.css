@@ -33,9 +33,9 @@ main{
 }
 .input{
     margin: 10px;
-    
 }
-#nombre, #apellido, #email, #password{
+
+#user, #nombre, #apellido, #email, #password, #category,#file,#password_confirmation{
     width: 85%;
     padding: 2%;
     border-radius: 15px;
@@ -43,6 +43,7 @@ main{
     margin: 5px;
     background-color: #ebebeb;
 }
+
 ::placeholder{
     color: black;
 }
@@ -70,6 +71,7 @@ button:hover{
 .titulofooter{
 color: grey;
 }
+
 
 @media  (min-width: 900px) {
     .form-container{

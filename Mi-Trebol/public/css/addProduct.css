@@ -1,121 +1,167 @@
-*{
+* {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-}
-
-body{
+  }
+  
+  body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: white
-}
-label{
+    background-color: white;
+  }
+  .label-text {
     color: #28aa59;
-}
-
-
-.form-container{
+    font-size: 1.2rem;
+    align-self: flex-start;
+    width: 100%;
+    padding-left: 10px;
+  }
+  
+  .form-container {
     text-align: center;
     border-radius: 70px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0px 0px 5px 1px #ffffff;
     background-color: hsl(0, 0%, 92%);
-    height: 80%;
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.formsheader{
+    padding: 35px;
+  }
+  
+  .formsheader {
     color: #28aa59;
     font-weight: bolder;
-    width: 100%;
-    padding:0.1px;
+    padding: 0.1px;
     border-radius: 70px;
     background-color: #ebebeb;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-}
-.input{
-    margin: 10px;
-}
-#text, #text2{
-    width: 85%;
+  }
+  .input {
+    margin: auto;
+    text-align: left;
+  }
+  #text,
+  #text2,
+  #text3,
+  #priceInput {
+    width: 100%;
     padding: 2%;
-    border-radius: 15px;
+    border-radius: 35px;
     border: none;
     margin: 5px;
+    margin-bottom: 20px;
     background-color: white;
-}
-
-main a{
-    text-decoration: none;
-    color: green;
-}
-
-#filepriceandselectors{
+  }
+  
+  #filepriceandselectors {
     font-size: 10px;
     margin: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-#fileInputHolder {
-    padding: 5px;
+    align-items: center;
+  }
+  #fileInputHolder {
     background: #00954b;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 35px;
     display: inline-block;
-    padding: 6px 12px;
+    padding: 20px 20px;
     cursor: pointer;
     color: #ffffff;
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap;
   }
   
   #imagen {
     display: none;
   }
-#selectors{
-    bottom: 4.5px;
-    display: flex;
-}
-
-
-#forgot > span{
-    margin: auto;
-}
-
-label{
-    margin: auto;
-}
-button{
+  
+  button {
+    position: relative;
+    right: 50px;
     padding: 10px 15px;
-    margin: 10px;
-    width: 15%;
     color: white;
     border-radius: 15px;
     background-color: #28aa59;
     border: none;
-    
-}
-button:hover{
+  }
+  button:hover {
     background-color: #00954b;
     color: #fafafa;
-}
-
-
-
-
-
-
-@media (max-width:500px) {
-    header {
-        flex-direction: column
-    }
-    header h2 {
-        margin-bottom: 15px
-    }
-}
+  }
+  
+  .row {
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 100px;
+  }
+  
+  #class {
+      position: relative;
+      right: 20px;
+    width: 50%;
+    padding: 20px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    color: #00954b;
+    border-radius: 35px;
+    background-color: #ffffff;
+    margin-left: 30px;
+  }
+  
+  .wrapper {
+    position: relative;
+  }
+  
+  .wrapper > span {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    color: #00954b;
+  }
+  
+  #priceInput {
+    height: 35px;
+    text-align: center;
+  }
+  
+  .plus-icon {
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    border-radius: 100px;
+    color: #00954b;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    display: inline-block;
+    font-weight: bolder;
+  }
+  @media(min-width:680px){
+      .form-container{
+          margin: auto;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          padding: 35px;
+      }
+      #class {
+        width: 100%;
+      }
+      button{
+          position:relative;
+          left: 10px;
+      }
+  }
+ 
