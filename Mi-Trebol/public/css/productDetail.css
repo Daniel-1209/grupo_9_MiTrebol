@@ -175,7 +175,6 @@ div .numero , .quitar , .agregar{
 }
 #bttn0_al_carrito{
     background-color: #28aa59;
-    padding:5px;
     margin: 12px;
     width: 240px;
     border: solid #28aa59 5px;
@@ -188,14 +187,26 @@ div .numero , .quitar , .agregar{
 }
 #bttn0_al_carrito:hover{
     background-color: #60D3;
-    border: solid #60D3 5px;
+    border: solid #60D3 1px;
 }
 
-#bttn0_al_carrito a.texto_bttn_carrito{
+#bttn0_al_carrito button.texto_bttn_carrito{
+    background-color: #28aa59;
+    border: solid #28aa59 1px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: inherit;
+    transition: background-color 450ms;
+    transition: border 400ms;
+}
+
+#bttn0_al_carrito button.texto_bttn_carrito:hover{
+    background-color: #60D3;
+    border: solid rgba(103, 0, 221, 0.104) 1px;
+    border-radius: 10px;
+    width: inherit;
 }
 
 #bttn0_al_carrito i.fas.fa-shopping-cart{
