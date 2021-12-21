@@ -10,11 +10,11 @@ const shoppingList = JSON.parse(fs.readFileSync(carFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/usersList.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-let user = null;
+
 
 let controlador = {
     home: (req,res) => {
-        user = {
+        let user = {
             id: req.params.iduser,
         }
         res.render('./products/products.ejs', {products, user});
@@ -22,18 +22,45 @@ let controlador = {
    
     detail: (req, res) => {
         let id = req.params.id;
+        let user = req.session.user;
         res.render('./products/productDetail.ejs', {product: products[id], products, user} );
     },
     car: (req, res) => {
-        let list =shoppingList.car
+        let list;
+        let userNow =  req.session.user;
+        // Cada que se escribe algo en el archivo json se reinicioa el usuario
+        console.log(userNow);
+        for ( carr of shoppingList){
+            if ( carr.id == userNow.id ){
+               list =   carr.car ;
+               
+               break;
+            }
+        }
+        //
 
-        res.send(shoppingList);
+        res.render('./products/productCart.ejs', {list, user:  userNow, products});
         //res.render ('./products/productCart.ejs', {list:shoppingList.car ,products});
+    },
+    newCarProduct: (req, res) => {
+        let userNow = req.session.user;
+        //console.log(userNow);
+        for ( user of users){
+            if ( userNow.id == user.id){
+                let index = parseInt( req.params.id);
+                user.car.push(index);
+                
+                break;
+            }
+        }
+
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+        res.redirect('/products/cart');
     },
 
     addProduct: (req, res) => {
         let id = req.params.id;
-        user ;
+        let user ;
         for(element of users){
             if (element.id == id){
                 user = element;

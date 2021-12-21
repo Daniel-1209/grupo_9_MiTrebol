@@ -21,9 +21,9 @@ let controlador = {
     //Hacia el inicio despues de logearse
     begin: (req, res) => {
 
-        user = {...req.query};
+        user = {...req.body};
         let yes = false;
-
+        
         for(element of users){
             if (element.email == user.email && element.password == user.password ){
                 user = element;
@@ -31,12 +31,16 @@ let controlador = {
                 break;
             }
         }
+        //console.log(user);
+        // Verifica si fue encontrado el usuario 
         if( yes){
+            req.session.user = user;
             //res.render('index.ejs', {products, user})
-            if( user.class == 'Vendedor'){
-                res.redirect('/'+ user.id);
+            // Elije si es vendedor o comprador
+            if( user.category == 'Vendedor'){
+                res.redirect('/indexVendedor');
             }else {
-                res.redirect('/indexVendedor/'+ user.id);
+                res.redirect('/');
             }
            
         }else{
@@ -47,6 +51,7 @@ let controlador = {
 
     // Hacia las vista del registro
     register: (req, res) => {
+        user = null;
         res.render('./users/register.ejs' ,{user})
     },
     // Hacia el inicion una vez registrada la persona

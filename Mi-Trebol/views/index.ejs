@@ -24,7 +24,7 @@
             <% if(user == null){ %>
                 <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
                 <%  }else { %>
-                    <a href="/<%= user.id %>"><img class="logo" src="/img/logo.png" alt=""></a>
+                    <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
                 <% } %>
             <h1 class="tienda">MiTrébol</h1>
         </div>
@@ -46,7 +46,9 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Cuenta</a></li>
                           <li><a class="dropdown-item" href="/products/ <%= user.id %>">MisProductos</a></li>
-                          <li><a class="dropdown-item" href="/">Cerrar sesión</a></li>
+                          <form class="dropdown-item" action="/close" method="POST">
+                              <button type="submit">Cerrar sesión</button>
+                          </form>
                         </ul>
                       </div>
                 <% } %>

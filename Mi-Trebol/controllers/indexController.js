@@ -13,34 +13,25 @@ let user = null;
 
 let controlador = {
     home: (req, res) => {
-        user = null;
-        res.render('index.ejs', {products, user});
-
-    },
-    homeid: (req, res) => {
-        let id = req.params.iduser;
-         user ;
-        for(element of users){
-            if (element.id == id){
-                user = element;
-                break;
-            }
+        if ( req.session.user != undefined){
+            user = req.session.user;
+        }else{
+            user = null;
         }
         res.render('index.ejs', {products, user});
+
     },
     search: (req, res) => {
         res.send('Estado de busqueda');
     },
     vendedor: (req, res) => {
-        let id = req.params.id;
-        for(element of users){
-            if (element.id == id){
-                user = element;
-                break;
-            }
-        }
+        user = req.session.user;
         res.render('indexVendedor.ejs', {products, user});
     },
+    close: (req,res) => {
+        req.session.user = undefined;
+        res.redirect('/');
+    }
     
     
 };

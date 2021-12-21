@@ -23,15 +23,15 @@
 
     <header class="trebol">
         <div class="logos">
-            <a href="/indexVendedor/<%= user.id %>"><img class="logo" src="/img/logo.png"
+            <a href="/indexVendedor><img class="logo" src="/img/logo.png"
                     alt="logotipo de MiTrébol"></a>
             <h1 class="tienda">MiTrébol</h1>
         </div>
 
         <nav>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
-            <li><a href="/indexVendedor/<%= user.id %>">Inicio</a></li>
-            <li><a href="/indexVendedor/<%= user.id %>/create">Añadir productos <i class="fas fa-plus-circle"></i></a>
+            <li><a href="/indexVendedor">Inicio</a></li>
+            <li><a href="/indexVendedor/create">Añadir productos <i class="fas fa-plus-circle"></i></a>
             </li>
             <div class="dropdown">
                 <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -42,7 +42,9 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Cuenta</a></li>
                     <li><a class="dropdown-item" href="#">MisProductos</a></li>
-                    <li><a class="dropdown-item" href="/">Cerrar sesión</a></li>
+                    <form class="dropdown-item"  action="/close" method="POST">
+                        <button type="submit">Cerrar sesión</button>
+                    </form>
                 </ul>
             </div>
         </nav>
@@ -139,7 +141,7 @@
                                 class="fas fa-pencil-alt"></i></a>
                     </div>
 
-                    <a href="/productDetail/<%= product.id%>">
+                    <a href="/products/detail/<%= product.id%>">
                         <img class="categoria-producto edit" src="/img/<%= product.imgs[0]%>" alt="">
                         <h4 class="categoria">
                             <%= product.title %>

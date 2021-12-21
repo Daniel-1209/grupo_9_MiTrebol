@@ -3,7 +3,7 @@
 let express = require('express');
 let path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
-
+let session = require('express-session');
 
 
 // ************ express() - (don't touch) ************
@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
+app.use(session({secret:'Secreto'}));
 
 
 
@@ -36,6 +37,7 @@ const index = require('./routes/indexRoute');
 const vendedor = require('./routes/vendedorRoute');
 const productsRoute = require('./routes/productsRoute');
 const user = require('./routes/usersRoute');
+const { setServers } = require('dns');
 
 app.use('/', index);
 app.use('/indexVendedor',vendedor);

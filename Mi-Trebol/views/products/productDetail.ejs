@@ -69,9 +69,8 @@
                         <p class='quitar'>-</p>
                         <p class='agregar'>+</p>
                     </div>
-                    <div id='bttn0_al_carrito'>
-                        <a class="texto_bttn_carrito" href="/products/cart">Agregar al carrito<i class="fas fa-shopping-cart"></i></a>
-                    </div>
+                    
+                    <form action="/products/cart/<%= product.id%>" method="POST" id='bttn0_al_carrito'> <button type="submit" class="texto_bttn_carrito" >Agregar al carrito <i class="fas fa-shopping-cart"></i></button></form>
                 </div>
 
             </div>

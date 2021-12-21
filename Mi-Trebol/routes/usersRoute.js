@@ -9,7 +9,7 @@ let userController = require('../controllers/userController');
 router.get('/login', userController.login);
 
 // Iniciar sesion en la cuenta
-router.get('/begin', userController.begin);
+router.post('/login', userController.begin);
 // Registrarse por primera vez
 router.get('/register', userController.register);
 

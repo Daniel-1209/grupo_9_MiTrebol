@@ -1,30 +1,5 @@
 [
  {
-  "id": 1,
-  "user": "Daniel78",
-  "firstName": "Daniel",
-  "lastName": "Garcia Mendoza",
-  "email": "danielgarciamendoza.204@gmail.com",
-  "password": "Daniel12",
-  "category": "Comprador",
-  "car": [
-   1,
-   2
-  ],
-  "image": "perfil"
- },
- {
-  "id": 2,
-  "user": "Daniel79",
-  "firstName": "Daniel",
-  "lastName": "Garcia Mendoza",
-  "email": "danielgarciamendoza.204@gmail.com",
-  "password": "Daniel12",
-  "category": "Vendedor",
-  "image": "perfil",
-  "myProducts": []
- },
- {
   "id": 3,
   "user": "Daniel80",
   "firstName": "Daniel",
@@ -34,30 +9,13 @@
   "category": "Comprador",
   "car": [
    1,
-   2
+   2,
+   7,
+   8,
+   3,
+   3,
+   3
   ],
   "image": "perfil"
- },
- {
-  "id": 4,
-  "user": "Alex13",
-  "firstName": "Alex",
-  "lastName": "Mendoza",
-  "email": "yspinkau_t931f@pebih.com",
-  "password": "Helio",
-  "category": "Comprador",
-  "image": "Prfile",
-  "car": []
- },
- {
-  "id": 5,
-  "user": "Geovani78",
-  "firstName": "Geovany",
-  "lastName": "Pacheco",
-  "email": "geovani@pebih.com",
-  "password": "cubo",
-  "category": "Vendedor",
-  "image": "Prfile",
-  "car": []
  }
 ]
