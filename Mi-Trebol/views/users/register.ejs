@@ -12,7 +12,7 @@
 
         <main>
             <div class="form-container">
-                <form action="/users/register" method="POST">
+                <form action="/users/register" method="POST" enctype="multiport/form-data">
                     <div class="head-register"> 
                         <h3>Registro</h3>
                     </div>
@@ -31,7 +31,7 @@
                         </select>
                         <div>
                             <label>Foto de perfil</label></div>
-                            <input type="file" name="image" id="file"/>
+                            <input type="file" name="avatar" id="file" single/>
                         </div>
                     <div class="button">
                         <button type="submit">Registrarme</button>

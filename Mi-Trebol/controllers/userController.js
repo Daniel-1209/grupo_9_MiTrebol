@@ -60,8 +60,8 @@ let controlador = {
         user = {
             id : users.length+1,
             ...req.body,
+            imgs: req.file, //'Profile' //agregar imagen del perfil
             car: [],
-            image: 'Prfile'
         }
 
         users.push(user);

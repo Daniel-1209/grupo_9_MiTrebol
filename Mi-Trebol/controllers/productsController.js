@@ -73,14 +73,14 @@ let controlador = {
         let newProduct ={
             id: products.length,
             ...req.body,
-            imgs: ["none"]
+            imgs: req.file //["none"]
         };
         
         products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
 
-        res.redirect(`/products/detail/`+ newProduct.id);
+        res.redirect('./products/detail' + newProduct.id);
     },
     edit: (req, res) => {
         res.render('./products/editProduct.ejs')

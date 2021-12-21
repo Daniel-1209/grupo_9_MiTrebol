@@ -16,6 +16,89 @@
    3,
    3
   ],
-  "image": "perfil"
+  "avatar": "perfil"
+ },
+ {
+  "id": 2,
+  "user": "humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "harumicamarillo@gmail.com",
+  "password": "Harumi123",
+  "password_confirmation": "Harumi123",
+  "category": "Vendedor",
+  "avatar": "Prfile",
+  "car": []
+ },
+ {
+  "id": 3,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "lalala@gmail.com",
+  "password": "111111",
+  "password_confirmation": "111111",
+  "category": "Vendedor",
+  "car": []
+ },
+ {
+  "id": 4,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "lalala@gmail.com",
+  "password": "222222",
+  "password_confirmation": "222222",
+  "category": "Vendedor",
+  "avatar": "aceite_aguacate_rev.png",
+  "car": []
+ },
+ {
+  "id": 5,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "lalala@gmail.com",
+  "password": "444444",
+  "password_confirmation": "444444",
+  "category": "Vendedor",
+  "avatar": "aceite_aguacate_rev.png",
+  "car": []
+ },
+ {
+  "id": 6,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "lalala@gmail.com",
+  "password": "123456",
+  "password_confirmation": "123456",
+  "category": "Vendedor",
+  "avatar": "aceite_aguacate_rev.png",
+  "car": []
+ },
+ {
+  "id": 7,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "lalala@gmail.com",
+  "password": "111111",
+  "password_confirmation": "111111",
+  "category": "Vendedor",
+  "avatar": "aceite_aguacate_rev.png",
+  "car": []
+ },
+ {
+  "id": 8,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cam",
+  "email": "lalala@gmail.com",
+  "password": "222223",
+  "password_confirmation": "2222223",
+  "category": "Vendedor",
+  "avatar": "aceite_aguacate_rev.png",
+  "car": []
  }
 ]

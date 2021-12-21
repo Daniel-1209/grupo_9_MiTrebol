@@ -87,8 +87,8 @@
  {
     "id": 7,
     "title": "Vela de rosas",
-    "shortdescription": "Concreto - 15cm",
-    "longDescription": "Texto con la información general del producto",
+    "shortdescription": "Velas con aromas florales",
+    "longDescription": "Delicioso aroma rosas silvestres",
     "price": 250.50,
     "class": "velas-DAN",
     "purchases": 10,
@@ -100,8 +100,8 @@
  {
     "id": 8,
     "title": "Vela Navideña",
-    "shortdescription": "Concreto - 15cm",
-    "longDescription": "Texto con la información general del producto",
+    "shortdescription": "Vela de temporada",
+    "longDescription": "Delicioso aroma a ponche",
     "price": 179.85,
     "class": "velas-DAN",
     "purchases": 10,

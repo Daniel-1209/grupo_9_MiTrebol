@@ -35,5 +35,5 @@ let controlador = {
     
     
 };
-
+console.log(user);
 module.exports = controlador;   
