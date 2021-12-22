@@ -1,1 +1,40 @@
-[{"id":1,"user":"Dante12","firstName":"Daniel","lastName":"Garcia","email":"danielgarciamendoza.204@gmail.com","password":"Daniel12","password_confirmation":"Daniel12","category":"Comprador","imgs":"Avatar-1640152912559.png","car":[5]},{"id":2,"user":"Harumi12","firstName":"Harumi","lastName":"Pacheco","email":"harumicamarillo@gmail.com","password":"123456","password_confirmation":"123456","category":"Vendedor","imgs":"Avatar-1640154766130.jpg","myProducts":[]}]
+[
+ {
+  "id": 1,
+  "user": "Dante12",
+  "firstName": "Daniel",
+  "lastName": "Garcia",
+  "email": "danielgarciamendoza.204@gmail.com",
+  "password": "Daniel12",
+  "password_confirmation": "Daniel12",
+  "category": "Comprador",
+  "imgs": "Avatar-1640152912559.png",
+  "car": [
+   5
+  ]
+ },
+ {
+  "id": 2,
+  "user": "Harumi12",
+  "firstName": "Harumi",
+  "lastName": "Pacheco",
+  "email": "harumicamarillo@gmail.com",
+  "password": "123456",
+  "password_confirmation": "123456",
+  "category": "Vendedor",
+  "imgs": "Avatar-1640154766130.jpg",
+  "myProducts": []
+ },
+ {
+  "id": 3,
+  "user": "Haru",
+  "firstName": "Haru",
+  "lastName": "Cam",
+  "email": "harumicamarillo@gmail.com",
+  "password": "Perritos123",
+  "password_confirmation": "Perritos123",
+  "category": "Vendedor",
+  "imgs": "Avatar-1640195548066.png",
+  "myProducts": []
+ }
+]

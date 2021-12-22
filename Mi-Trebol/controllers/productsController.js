@@ -68,7 +68,7 @@ let controlador = {
         let newProduct ={
             id: products.length,
             ...req.body,
-            imgs: [req.file.filename] ,//["none"]
+            imgs: [req.files.filename],
             ratings: 0,
         };
         //console.log(req.file);

@@ -88,5 +88,149 @@
    "Product-1640160114191.jpeg"
   ],
   "ratings": 0
+ },
+ {
+  "id": 7,
+  "title": "kskskks",
+  "shortdescription": "ada",
+  "longdescription": "aaaaaaaaaaaaa",
+  "class": "Artesanias",
+  "price": "111",
+  "imgs": [
+   "Product-1640190905903.png"
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 8,
+  "title": "lalala",
+  "shortdescription": "LALALALA",
+  "longdescription": "lalala",
+  "class": "Jabon",
+  "price": "200",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 9,
+  "title": "qwert",
+  "shortdescription": "qwertuil",
+  "longdescription": "lvlklsvksvlmslm",
+  "class": "Belleza",
+  "price": "500",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 10,
+  "title": "lalal",
+  "shortdescription": "lalala",
+  "longdescription": "lalalla",
+  "class": "Jabon",
+  "price": "1200",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 11,
+  "title": "neora",
+  "shortdescription": "prod bienestar",
+  "longdescription": "productos para le bienestar y retraso delenvejecimiento",
+  "class": "Belleza",
+  "price": "2000",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 12,
+  "title": "qwqqe",
+  "shortdescription": "eeee",
+  "longdescription": "erge",
+  "class": "Belleza",
+  "price": "2500",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 13,
+  "title": "eeerr",
+  "shortdescription": "rrrr",
+  "longdescription": "fthbrdbd",
+  "class": "Belleza",
+  "price": "2000",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 14,
+  "title": "www",
+  "shortdescription": "rthr",
+  "longdescription": "jtnf",
+  "class": "Jabon",
+  "price": "5210",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 15,
+  "title": "rr",
+  "shortdescription": "rrr",
+  "longdescription": "egressg",
+  "class": "Jabon",
+  "price": "5464",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 16,
+  "title": "ery",
+  "shortdescription": "tjf",
+  "longdescription": "lmdbdm",
+  "class": "Jabon",
+  "price": "5465",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 17,
+  "title": "oisn",
+  "shortdescription": "wrgsnoies",
+  "longdescription": "lkoinerdonb",
+  "class": "Belleza",
+  "price": "5000",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 18,
+  "title": "lkn",
+  "shortdescription": "oib",
+  "longdescription": "jbo",
+  "class": "Jabon",
+  "price": "5555",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
  }
 ]
