@@ -1,8 +1,15 @@
 <header>
   <div class="trebol">
-    <% if(user == null){ %>
-        <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
+
+    <% if(locals.user){ %>
+        <% if(user.category == 'Vendedor'){ %>
+         
+          <a href="/indexVendedor"><img class="logo" src="/img/logo.png" alt=""></a>
+        <% } else { %>
+          <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
+          <% } %>
         <%  }else { %>
+
             <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
         <% } %>
     
@@ -11,8 +18,12 @@
       <div class="letras">
           <h1 class="tienda">MiTrébol</h1>
       <nav>
-        <% if(user == null){ %>
-          <li><a href="/">Inicio <i class="fas fa-sign-in-alt"></i></a></li>
+        <% if(locals.user){ %>
+          <% if(user.category == 'Vendedor'){ %>
+            <li><a href="/indexVendedor">Inicio <i class="fas fa-sign-in-alt"></i></a></li>
+          <% } else { %>
+            <li><a href="/">Inicio <i class="fas fa-sign-in-alt"></i></a></li>
+            <% } %>
           <%  }else { %>
             <li><a href="/">Inicio <i class="fas fa-sign-in-alt"></i></a></li>
           <% } %>

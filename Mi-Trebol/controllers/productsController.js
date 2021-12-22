@@ -29,7 +29,7 @@ let controlador = {
         let list;
         let userNow =  req.session.user;
         // Cada que se escribe algo en el archivo json se reinicioa el usuario
-        console.log(userNow);
+        //console.log(userNow);
         for ( carr of shoppingList){
             if ( carr.id == userNow.id ){
                list =   carr.car ;
@@ -54,33 +54,30 @@ let controlador = {
             }
         }
 
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ''));
         res.redirect('/products/cart');
     },
 
     addProduct: (req, res) => {
-        let id = req.params.id;
-        let user ;
-        for(element of users){
-            if (element.id == id){
-                user = element;
-                break;
-            }
-        }
+        
+        let user = req.session.user;
+        
         res.render('./products/addProduct.ejs', {user});
     },
     create: (req, res) => {
         let newProduct ={
             id: products.length,
             ...req.body,
-            imgs: req.file //["none"]
+            imgs: [req.file.filename] ,//["none"]
+            ratings: 0,
         };
+        //console.log(req.file);
         
         products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
 
-        res.redirect('./products/detail' + newProduct.id);
+        res.redirect('/products/detail/' + newProduct.id);
     },
     edit: (req, res) => {
         res.render('./products/editProduct.ejs')

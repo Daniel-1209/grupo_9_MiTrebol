@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { resetWatchers } = require('nodemon/lib/monitor/watch');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/usersList.json');
@@ -56,13 +57,25 @@ let controlador = {
     },
     // Hacia el inicion una vez registrada la persona
     enter: (req, res) => {
-        
-        user = {
-            id : users.length+1,
-            ...req.body,
-            imgs: req.file, //'Profile' //agregar imagen del perfil
-            car: [],
+
+        if ( req.body.category == 'Comprador'){
+            user = {
+                id : users.length+1,
+                ...req.body,
+                imgs: req.file.filename, 
+                car: [],
+            }
+
+        }else{
+            user = {
+                id : users.length+1,
+                ...req.body,
+                imgs: req.file.filename, //'Profile' //agregar imagen del perfil
+                myProducts: [],
+            }
         }
+        
+        
 
         users.push(user);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));

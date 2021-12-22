@@ -11,7 +11,7 @@
     <%- include('../partials/header') %>
 
     <div class="form-container">
-      <form action="/products/create" method="POST">
+      <form action="/indexVendedor/create" method="POST"enctype="multipart/form-data">
         <div class="formsheader">
           <h2 class="titulo">Añadir producto</h2>
         </div>
@@ -40,12 +40,13 @@
           </div>
         </div>
         <div id="filepriceandselectors">
-          <div class="select-file">
-            <label id="fileInputHolder">
-              <input type="file" id="imagen" />
+          
+            <label for="image">
+             
               Seleccionar archivo >
             </label>
-          </div>
+            <input  class="select-file" type="file" name="image" id="" >
+            
           <div id="selectors">
             <select name="class" id="class">
               <option hidden disabled selected value>Categoria</option>

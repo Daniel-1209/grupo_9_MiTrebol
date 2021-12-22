@@ -1,8 +1,13 @@
 
 let express = require('express');
+const { path } = require('path');
 let router = express.Router();
+let multer = require('multer');
+
 
 let productsController = require('../controllers/productsController');
+
+
 
 //Todos los productos
 router.get('/', productsController.home);
@@ -18,5 +23,6 @@ router.post('/cart/:id', productsController.newCarProduct);
 // Editar detalles del producto
 router.get('/edit/:id', productsController.edit)
 router.put('/edit/:id', productsController.edit)
+
 
 module.exports =  router;

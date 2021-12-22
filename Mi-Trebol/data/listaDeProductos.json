@@ -53,61 +53,40 @@
  },
  {
   "id": 4,
-  "title": "Celular",
-  "shortdescription": "asdfasdf",
-  "longDescription": "dasdfasdfaewf",
-  "class": "jabon",
-  "price": "3000",
+  "title": "Vela de rosas",
+  "shortdescription": "Velas con aromas florales",
+  "longDescription": "Delicioso aroma rosas silvestres",
+  "price": 250.5,
+  "class": "velas-DAN",
+  "purchases": 10,
+  "ratings": 324,
   "imgs": [
-   "none"
+   "vela_1.jpg"
   ]
  },
  {
   "id": 5,
-  "title": "Jabon",
-  "shortdescription": "Jabon sin aroma",
-  "longDescription": "Este jabon contiene grandes aromas sin olor",
-  "class": "Jabon",
-  "price": "5000",
+  "title": "Vela Navideña",
+  "shortdescription": "Vela de temporada",
+  "longDescription": "Delicioso aroma a ponche",
+  "price": 179.85,
+  "class": "velas-DAN",
+  "purchases": 10,
+  "ratings": 324,
   "imgs": [
-   "none"
+   "vela_navidegna.jpeg"
   ]
  },
  {
   "id": 6,
-  "title": "Computadora",
-  "shortdescription": "Se vende compu",
-  "longDescription": "Mucha descripcion",
-  "class": "Semillas",
-  "price": "5000",
+  "title": "Shampoo ",
+  "shortdescription": "Shampoo ",
+  "longdescription": "Shampoo Narural de diferentes productos",
+  "class": "Belleza",
+  "price": "100",
   "imgs": [
-   "none"
-  ]
- },
- {
-    "id": 7,
-    "title": "Vela de rosas",
-    "shortdescription": "Velas con aromas florales",
-    "longDescription": "Delicioso aroma rosas silvestres",
-    "price": 250.50,
-    "class": "velas-DAN",
-    "purchases": 10,
-    "ratings": 324,
-    "imgs": [
-     "vela_1.jpg"
-    ]
- },
- {
-    "id": 8,
-    "title": "Vela Navideña",
-    "shortdescription": "Vela de temporada",
-    "longDescription": "Delicioso aroma a ponche",
-    "price": 179.85,
-    "class": "velas-DAN",
-    "purchases": 10,
-    "ratings": 324,
-    "imgs": [
-     "vela_navidegna.jpeg"
-    ]
+   "Product-1640160114191.jpeg"
+  ],
+  "ratings": 0
  }
 ]

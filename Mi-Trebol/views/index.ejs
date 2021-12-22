@@ -21,7 +21,7 @@
 
     <header class="trebol">
         <div class="logos">
-            <% if(user == null){ %>
+            <% if(locals.user){ %>
                 <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
                 <%  }else { %>
                     <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
@@ -32,16 +32,16 @@
         <nav>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
             <li><a href="/">Inicio</a></li>
-            <% if(user !== null){ %>
+            <% if(locals.user){ %>
                 <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
                 <% } %>
             
-            <% if(user == null){ %>
+            <% if(!locals.user){ %>
                 <li><a href="/users/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
                 <%  }else { %>
                     <div class="dropdown">
                         <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img class="profile" src="/img/profile.png" alt="imagen de perfil"> <%= user.firstName %>
+                            <img class="profile" src="/img/avatars/<%= user.imgs %>" alt="imagen de perfil"> <%= user.firstName %>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Cuenta</a></li>
@@ -59,7 +59,7 @@
 
     <section class="hero" id="inicio">
         <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
-        <% if(user == null){ %>
+        <% if(!locals.user){ %>
             <h1>Bienvenido a MiTrébol </h1>
             <%  }else { %>
             <h1>Bienvenido a MiTrébol <%= user.firstName%></h1>
