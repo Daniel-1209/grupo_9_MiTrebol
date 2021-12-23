@@ -16,11 +16,14 @@ let storage = multer.diskStorage({
         cb(null, folder);
     },
     filename:(req, file, cb) => {
-        console.log(file);
-        let idUser = req.session.user.id;
+        console.log(req.file);
+        let idUser = req.session.user.id;  //Guardo el id del user (vendedor)*
+        //let fileName = req.files.filename; //Guarda normbre de ls imagen del producto
+        //Asocia el nombre 
+          
         // Establece un nombre a las imagenes segun fecha en mili seg, agrega un string identificador y usa la extension del mismo archivo
-        let nameAvatar = 'Product-'+ idUser + '-' + Date.now()+ path.extname(file.originalname);
-        cb(null, nameAvatar) ; 
+        let imageProductUser = 'Product-'+ idUser + '-' + Date.now()+ path.extname(file.originalname);
+        cb(null, imageProductUser) ; 
     }
 });
 

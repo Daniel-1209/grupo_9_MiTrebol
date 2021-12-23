@@ -36,5 +36,17 @@
   "category": "Vendedor",
   "imgs": "Avatar-1640195548066.png",
   "myProducts": []
+ },
+ {
+  "id": 4,
+  "user": "a",
+  "firstName": "a",
+  "lastName": "a",
+  "email": "a@a.a",
+  "password": "111111",
+  "password_confirmation": "1234",
+  "category": "Vendedor",
+  "imgs": "Avatar-1640227801656.JPG",
+  "myProducts": []
  }
 ]

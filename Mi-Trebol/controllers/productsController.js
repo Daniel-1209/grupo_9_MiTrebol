@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { off } = require('process');
 
 const productsFilePath = path.join(__dirname, '../data/listaDeProductos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -23,7 +24,8 @@ let controlador = {
     detail: (req, res) => {
         let id = req.params.id;
         let user = req.session.user;
-        res.render('./products/productDetail.ejs', {product: products[id], products, user} );
+        res.render('./products/productDetail.ejs', {product: products[id], products, user});
+        console.log(user);
     },
     car: (req, res) => {
         let list;
@@ -65,19 +67,45 @@ let controlador = {
         res.render('./products/addProduct.ejs', {user});
     },
     create: (req, res) => {
-        let newProduct ={
-            id: products.length,
-            ...req.body,
-            imgs: [req.files.filename],
-            ratings: 0,
-        };
-        //console.log(req.file);
         
-        products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        let imagesProductUser = req.files;
+        if (imagesProductUser){
+            var newProduct ={
+                id: products.length,
+                ...req.body,
+                imgs: imagesProductUser,
+                ratings: 0,
+            };
 
+            for(let i = 0; i <= imagesProductUser.length; i++){
+                for(imageFile of imagesProductUser[i]){
+                    var imageFile + i = imageFile;
+                    var imageFileName[i] = imageFile[i].filename;
+                    console.log(imageFileName);
+                }
 
-        res.redirect('/products/detail/' + newProduct.id);
+            };
+
+           
+    
+            console.log('body:');
+            console.log(req.body);
+            console.log('newProduct:');
+            console.log(newProduct); 
+
+            products.push(newProduct);
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    
+    
+            res.redirect('/products/detail/' + newProduct.id);
+        }
+        else{
+            
+        let user = req.session.user;
+        
+        res.render('./products/addProduct.ejs', {user});
+        }
+        
     },
     edit: (req, res) => {
         res.render('./products/editProduct.ejs')

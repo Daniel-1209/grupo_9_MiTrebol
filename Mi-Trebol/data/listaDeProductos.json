@@ -232,5 +232,301 @@
    null
   ],
   "ratings": 0
+ },
+ {
+  "id": 19,
+  "title": "hhh",
+  "shortdescription": "corta",
+  "longdescription": "larga",
+  "class": "Belleza",
+  "price": "2500",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 20,
+  "title": "r",
+  "shortdescription": "rr",
+  "longdescription": "rrrr",
+  "class": "Belleza",
+  "price": "33333",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 21,
+  "title": "sscs",
+  "shortdescription": "sc",
+  "longdescription": "scdsffwa",
+  "class": "Artesanias",
+  "price": "22222",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 22,
+  "title": "qqqq",
+  "shortdescription": "qqq",
+  "longdescription": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "class": "Belleza",
+  "price": "2111212",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 23,
+  "title": "lalal",
+  "shortdescription": "lal",
+  "longdescription": "ssssssssssssssssssssssssssssss",
+  "class": "Semillas",
+  "price": "22",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 24,
+  "title": "www",
+  "shortdescription": "wwww",
+  "longdescription": "wwwwwwwwww",
+  "class": "Belleza",
+  "price": "111111111",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 25,
+  "title": "e",
+  "shortdescription": "wgrw",
+  "longdescription": "wgrwgw",
+  "class": "Jabon",
+  "price": "33333",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 26,
+  "title": "w",
+  "shortdescription": "w",
+  "longdescription": "w",
+  "class": "Belleza",
+  "price": "23",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 27,
+  "title": "rrt",
+  "shortdescription": "trrt",
+  "longdescription": "trgrrrrrrrrrrrrrrrrrrrrrrr",
+  "class": "Artesanias",
+  "price": "3333",
+  "imgs": [
+   null
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 28,
+  "title": "nuevo",
+  "shortdescription": "nuevo",
+  "longdescription": "nuevoooooooo",
+  "class": "Artesanias",
+  "price": "232323",
+  "imgs": [
+   [
+    {
+     "fieldname": "image",
+     "originalname": "_MG_3153.JPG",
+     "encoding": "7bit",
+     "mimetype": "image/jpeg",
+     "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+     "filename": "Product-4-1640242906267.JPG",
+     "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640242906267.JPG",
+     "size": 3758530
+    },
+    {
+     "fieldname": "image",
+     "originalname": "_MG_3162.JPG",
+     "encoding": "7bit",
+     "mimetype": "image/jpeg",
+     "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+     "filename": "Product-4-1640242906325.JPG",
+     "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640242906325.JPG",
+     "size": 4340715
+    }
+   ]
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 29,
+  "title": "nuevo2nuevo2",
+  "shortdescription": "nuevo2",
+  "longdescription": "nuevo2",
+  "class": "Velas",
+  "price": "2323232",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "_MG_3153.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640243083488.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640243083488.JPG",
+    "size": 3758530
+   },
+   {
+    "fieldname": "image",
+    "originalname": "_MG_3154.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640243083549.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640243083549.JPG",
+    "size": 4087438
+   }
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 30,
+  "title": "jala file?",
+  "shortdescription": "file?",
+  "longdescription": "file?",
+  "class": "Semillas",
+  "price": "465",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "_MG_2708.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640243444748.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640243444748.JPG",
+    "size": 3975172
+   },
+   {
+    "fieldname": "image",
+    "originalname": "_MG_2712.CR2",
+    "encoding": "7bit",
+    "mimetype": "image/cr2",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640243444803.CR2",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640243444803.CR2",
+    "size": 20413518
+   }
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 31,
+  "title": "reqreq",
+  "shortdescription": "req",
+  "longdescription": "rewqqq",
+  "class": "Artesanias",
+  "price": "11111",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "_MG_3151.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640243910634.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640243910634.JPG",
+    "size": 3813646
+   },
+   {
+    "fieldname": "image",
+    "originalname": "_MG_3156.CR2",
+    "encoding": "7bit",
+    "mimetype": "image/cr2",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640243910697.CR2",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640243910697.CR2",
+    "size": 22711028
+   }
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 32,
+  "title": "jpo",
+  "shortdescription": "kihoihnlk",
+  "longdescription": "ughikn",
+  "class": "Belleza",
+  "price": "8787878",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "IMG_0269.CR2",
+    "encoding": "7bit",
+    "mimetype": "image/cr2",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640247049033.CR2",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640247049033.CR2",
+    "size": 21826868
+   },
+   {
+    "fieldname": "image",
+    "originalname": "IMG_0269.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640247049528.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640247049528.JPG",
+    "size": 5925260
+   }
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 33,
+  "title": "lml",
+  "shortdescription": "lmñ",
+  "longdescription": "lmñlmlm´lm´lm",
+  "class": "Artesanias",
+  "price": "874854",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "IMG_0269.CR2",
+    "encoding": "7bit",
+    "mimetype": "image/cr2",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640247353948.CR2",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640247353948.CR2",
+    "size": 21826868
+   },
+   {
+    "fieldname": "image",
+    "originalname": "IMG_0269.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "Product-4-1640247354127.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-4-1640247354127.JPG",
+    "size": 5925260
+   }
+  ],
+  "ratings": 0
  }
 ]
