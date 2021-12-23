@@ -22,7 +22,7 @@ let storage = multer.diskStorage({
         //Asocia el nombre 
           
         // Establece un nombre a las imagenes segun fecha en mili seg, agrega un string identificador y usa la extension del mismo archivo
-        let imageProductUser = 'Product-'+ idUser + '-' + Date.now()+ path.extname(file.originalname);
+        let imageProductUser = idUser + '-' + Date.now()+ path.extname(file.originalname);
         cb(null, imageProductUser) ; 
     }
 });
