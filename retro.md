@@ -66,7 +66,7 @@
 
 - Reunión de scrum planing
 - Dar más tiempo de manera individual al sprint
-- Preguntar más a los profes nuestras dudas.		
+- Preguntar más a los profes nuestras dudas.	
 
 ## 4.-Dejar de hacer:		
 
@@ -78,7 +78,28 @@
 - No dejar solo al sprint </3
 
 
+# Retroalimentación 4to Sprint  
 
+## 1.-¿Qué problemas tuvimos?
+- Se perdió el ritmo de trabajo
+- Se perdió la comunicación
+- Faltó realizar las reuniones semanales
+- Mala distribución de las tareas
 
+## 2.-Seguir haciendo:	
+- Unidad en el equipo
+- Continuar con las entregas personales
 
+## 3.-Hacer más:	
+- Mejorar y ampliar el desgloce de los entregables en Trello
+- Incrementar el compromiso con el sprint
+- Mejorar el cálculo de los tiempos de entrega
+- Mejorar el cálculo de los tiempos que toma cada tarea del Trello
 
+## 4.-Dejar de hacer:
+- No calcular el tiempo necesario para cada tarea
+- Cancelar las reuniones
+
+## 5.-Hacer menos:
+-  Atrasarse con las clases del Playground
+-  Tomar trabajo ya asignado
