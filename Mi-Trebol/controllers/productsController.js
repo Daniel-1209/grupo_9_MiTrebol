@@ -24,8 +24,10 @@ let controlador = {
     detail: (req, res) => {
         let id = req.params.id;
         let user = req.session.user;
+        console.log(products[id]);
         res.render('./products/productDetail.ejs', { product: products[id], products, user });
         console.log(user);
+        
     },
     car: (req, res) => {
         let list;
@@ -70,7 +72,6 @@ let controlador = {
 
         var imagesProductUser = req.files; //files para varios archivos
         var user = req.session.user;
-        var fileName = (imagesProductUser.pop()).filename;
         console.log('req.files'); 
         console.log(req.files);
         if (imagesProductUser !== undefined) {
@@ -82,12 +83,14 @@ let controlador = {
             //console.log(fileName);  
             //}
 
+            const images = imagesProductUser.map(image => {
+                return image.filename;
+            })
             var newProduct = {
                 id: products.length,
                 idUser: user.id,
-                fileName: fileName, 
                 ...req.body,
-                imgs: req.files,
+                imgs: images,
                 ratings: 0,
             };
             console.log('imagesProductUser:');

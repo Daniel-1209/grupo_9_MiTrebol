@@ -48,5 +48,17 @@
   "category": "Vendedor",
   "imgs": "Avatar-1640227801656.JPG",
   "myProducts": []
+ },
+ {
+  "id": 5,
+  "user": "a@a.a",
+  "firstName": "pomlpk",
+  "lastName": "´mop",
+  "email": "harumicamarillo@gmail.com",
+  "password": "111111",
+  "password_confirmation": "111111",
+  "category": "Vendedor",
+  "imgs": "Avatar-1640315385195.JPG",
+  "myProducts": []
  }
 ]

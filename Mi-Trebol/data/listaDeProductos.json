@@ -429,5 +429,90 @@
    }
   ],
   "ratings": 0
+ },
+ {
+  "id": 23,
+  "idUser": 4,
+  "fileName": "4-1640313868515.JPG",
+  "title": "lalal",
+  "shortdescription": "wge",
+  "longdescription": "nklwf",
+  "class": "Belleza",
+  "price": "2000",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "_MG_9112.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "4-1640313868440.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\4-1640313868440.JPG",
+    "size": 6944084
+   }
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 24,
+  "idUser": 5,
+  "fileName": "5-1640315482513.JPG",
+  "title": "ppppp",
+  "shortdescription": "ppppp",
+  "longdescription": "iiiiii",
+  "class": "Jabon",
+  "price": "21515",
+  "imgs": [
+   {
+    "fieldname": "image",
+    "originalname": "_MG_9112.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "5-1640315482417.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\5-1640315482417.JPG",
+    "size": 6944084
+   },
+   {
+    "fieldname": "image",
+    "originalname": "_MG_9157.JPG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
+    "filename": "5-1640315482466.JPG",
+    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\5-1640315482466.JPG",
+    "size": 5232372
+   }
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 25,
+  "idUser": 4,
+  "fileName": "4-1640317388806.JPG",
+  "title": "qqqq",
+  "shortdescription": "ref",
+  "longdescription": "lalalal",
+  "class": "Jabon",
+  "price": "521",
+  "imgs": [
+   "4-1640317388709.JPG"
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 26,
+  "idUser": 4,
+  "title": "2",
+  "shortdescription": "s",
+  "longdescription": "nkl",
+  "class": "Jabon",
+  "price": "545453",
+  "imgs": [
+   "4-1640317654678.JPG",
+   "4-1640317654800.JPG",
+   "4-1640317654887.JPG"
+  ],
+  "ratings": 0
  }
 ]

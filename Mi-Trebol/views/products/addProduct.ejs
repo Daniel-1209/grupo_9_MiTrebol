@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head') %>
+
+<head>
+  <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/addProduct.css" />
     <title>añadirproducto</title>
-  </head>
+</head>
 
-  <body>
-    <!-- Cabecera de la pagina-->
-    <%- include('../partials/header') %>
+<body>
+  <!-- Cabecera de la pagina-->
+  <%- include('../partials/header') %>
 
     <div class="form-container">
       <form action="/indexVendedor/create" method="POST" enctype="multipart/form-data">
@@ -22,31 +23,20 @@
           </div>
           <div>
             <label class="label-text" for="title">Descripción corta</label>
-            <textarea
-              type="text"
-              name="shortdescription"
-              required
-              id="text2"
-            ></textarea>
+            <textarea type="text" name="shortdescription" required id="text2"></textarea>
           </div>
           <div>
             <label class="label-text" for="title">Descripción larga</label>
-            <textarea
-              type="text"
-              name="longdescription"
-              required
-              id="text3"
-            ></textarea>
+            <textarea type="text" name="longdescription" required id="text3"></textarea>
           </div>
         </div>
         <div id="filepriceandselectors">
-          
-            <label for="image">
-             
-              Seleccionar archivo >
-            </label>
-            <input  class="select-file" type="file" name="image" id="" multiple>
-            
+
+          <label for="image">
+            Seleccionar archivo >
+          </label>
+          <input class="select-file" type="file" name="image" id="" multiple>
+
           <div id="selectors">
             <%- include('../partials/categories') %>
           </div>
@@ -71,5 +61,6 @@
     <!-- Pie de la pagina-->
 
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>
