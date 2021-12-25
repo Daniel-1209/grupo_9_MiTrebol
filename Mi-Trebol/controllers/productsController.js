@@ -27,7 +27,7 @@ let controlador = {
         console.log(products[id]);
         res.render('./products/productDetail.ejs', { product: products[id], products, user });
         console.log(user);
-        
+
     },
     car: (req, res) => {
         let list;
@@ -72,17 +72,10 @@ let controlador = {
 
         var imagesProductUser = req.files; //files para varios archivos
         var user = req.session.user;
-        console.log('req.files'); 
-        console.log(req.files);
-        if (imagesProductUser !== undefined) {
-            //
-            //for(let i = 0; i<= imagesProductUser.length; i++){
-            //var lastImgFile = imagesProductUser.pop();
-            //var fileName = lastImgFile.filename;
-            //console.log('fileName:'); 
-            //console.log(fileName);  
-            //}
+        console.log('req.file');
+        console.log(req.file);
 
+        if (req.file) {
             const images = imagesProductUser.map(image => {
                 return image.filename;
             })
@@ -93,10 +86,9 @@ let controlador = {
                 imgs: images,
                 ratings: 0,
             };
-            console.log('imagesProductUser:');
-            console.log(imagesProductUser);
-            console.log('newProduct:');
-            console.log(newProduct);
+
+            //console.log('newProduct:');
+            //console.log(newProduct);
 
             products.push(newProduct);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
@@ -104,9 +96,9 @@ let controlador = {
             res.redirect('/products/detail/' + newProduct.id);
         }
         else {
-            return res.send("Archivos no enviados");
-            //let user = req.session.user;
-            //res.render('./products/addProduct.ejs', { user });
+            //return res.send("Archivos no enviados");
+            let user = req.session.user;
+            res.render('./products/addProduct.ejs', { user });
         }
     },
 

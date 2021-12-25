@@ -91,428 +91,91 @@
  },
  {
   "id": 7,
-  "title": "kskskks",
-  "shortdescription": "ada",
-  "longdescription": "aaaaaaaaaaaaa",
-  "class": "Artesanias",
-  "price": "111",
+  "idUser": 4,
+  "title": "sesiones 1",
+  "shortdescription": "temático 1",
+  "longdescription": "axul cielo",
+  "class": "Belleza",
+  "price": "30303",
   "imgs": [
-   "Product-1640190905903.png"
+   "4-1640455914878.JPG",
+   "4-1640455914915.JPG",
+   "4-1640455914964.JPG"
   ],
   "ratings": 0
  },
  {
   "id": 8,
-  "title": "lvñmd",
-  "shortdescription": "aebv",
-  "longdescription": "aewgverasb",
-  "class": "Semillas",
-  "price": "86542",
+  "idUser": 4,
+  "title": "prueba ejs",
+  "shortdescription": "pruebs",
+  "longdescription": "knl",
+  "class": "Belleza",
+  "price": "11000",
   "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-11-19 at 16.02.10.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "Product-3-1640278645525.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-3-1640278645525.jpeg",
-    "size": 98307
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-12-11 at 12.03.07.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "Product-3-1640278645529.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-3-1640278645529.jpeg",
-    "size": 139914
-   }
+   "4-1640470372556.JPG",
+   "4-1640470372649.JPG",
+   "4-1640470372730.JPG"
   ],
   "ratings": 0
  },
  {
   "id": 9,
-  "title": "5",
-  "shortdescription": "klm",
-  "longdescription": "lm,mkklm",
-  "class": "Semillas",
-  "price": "75445",
+  "idUser": 4,
+  "title": "prueba ejs",
+  "shortdescription": "pruebs",
+  "longdescription": "knl",
+  "class": "Belleza",
+  "price": "11000",
   "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-10-28 at 14.33.37.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "Product-3-1640281018281.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-3-1640281018281.jpeg",
-    "size": 353030
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-11-19 at 16.02.10.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "Product-3-1640281018285.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-3-1640281018285.jpeg",
-    "size": 98307
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-12-21 at 10.33.05.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "Product-3-1640281018291.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\Product-3-1640281018291.jpeg",
-    "size": 71512
-   }
+   "4-1640471368562.JPG",
+   "4-1640471368665.JPG",
+   "4-1640471368730.JPG"
   ],
   "ratings": 0
  },
  {
   "id": 10,
-  "title": "oljm",
-  "shortdescription": "gvhjn",
-  "longdescription": "7ugibiobnoi",
-  "class": "Jabon",
-  "price": "8574",
-  "imgs": "Product-3-1640294192376.jpeg",
+  "idUser": 4,
+  "title": "prueba error",
+  "shortdescription": "sin imagen",
+  "longdescription": "no image",
+  "class": "Belleza",
+  "price": "1000",
+  "imgs": [],
   "ratings": 0
  },
  {
   "id": 11,
-  "title": "rhr",
-  "shortdescription": "rshtfnf",
-  "longdescription": "nfrmnrtmn",
+  "idUser": 4,
+  "title": "error image",
+  "shortdescription": "plm",
+  "longdescription": "l",
   "class": "Belleza",
-  "price": "87",
-  "imgs": "Product-3-1640294485146.jpeg",
+  "price": "20000",
+  "imgs": [],
   "ratings": 0
  },
  {
   "id": 12,
-  "title": "oiknl",
-  "shortdescription": "ioonkl",
-  "longdescription": "ghbnjmkl",
+  "idUser": 4,
+  "title": "error image",
+  "shortdescription": "plm",
+  "longdescription": "l",
   "class": "Belleza",
-  "price": "75652",
-  "imgs": "Product-3-1640294606952.jpeg",
+  "price": "20000",
+  "imgs": [],
   "ratings": 0
  },
  {
   "id": 13,
-  "title": "piknl",
-  "shortdescription": "esdrctfvgybhunjimko",
-  "longdescription": "xsedrcftvgybhungvyftc",
-  "class": "Belleza",
-  "price": "85421",
-  "imgs": "Product-3-1640295013936.jpeg",
-  "ratings": 0
- },
- {
-  "id": 14,
-  "title": "lki",
-  "shortdescription": "lknm",
-  "longdescription": "pohnklnk",
-  "class": "Velas",
-  "price": "5755775",
-  "imgs": "Product-3-1640295287047.jpeg",
-  "ratings": 0
- },
- {
-  "id": 15,
-  "title": "lomñ",
-  "shortdescription": "lñ",
-  "longdescription": "ñlk",
-  "class": "Belleza",
-  "price": "74210",
-  "imgs": "Product-3-1640295754358.jpeg",
-  "ratings": 0
- },
- {
-  "id": 16,
-  "title": "l",
-  "shortdescription": "lñ",
-  "longdescription": "klñkk",
-  "class": "Semillas",
-  "price": "",
-  "imgs": "3-1640296405434.jpeg",
-  "ratings": 0
- },
- {
-  "id": 17,
-  "idUser": 3,
-  "title": "kjkk",
-  "shortdescription": "kkn",
-  "longdescription": "wesrdtfgvybhujnimkl,",
-  "class": "Jabon",
-  "price": "862120",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-10-28 at 14.33.37.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640296947399.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640296947399.jpeg",
-    "size": 353030
-   }
-  ],
-  "fileName": "3-1640296947408.jpeg",
-  "ratings": 0
- },
- {
-  "id": 18,
-  "idUser": 3,
-  "title": "ev",
-  "shortdescription": "etbr",
-  "longdescription": "rtb",
-  "class": "Belleza",
-  "price": "5555",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-10-28 at 14.33.37.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640297267207.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640297267207.jpeg",
-    "size": 353030
-   }
-  ],
-  "fileName": "3-1640297267218.jpeg",
-  "ratings": 0
- },
- {
-  "id": 19,
-  "idUser": 3,
-  "title": "kk",
-  "shortdescription": "kkk",
-  "longdescription": "llllll",
-  "class": "Belleza",
-  "price": "2020202",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-10-28 at 14.33.37.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640297972601.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640297972601.jpeg",
-    "size": 353030
-   }
-  ],
-  "fileName": "3-1640297972608.jpeg",
-  "ratings": 0
- },
- {
-  "id": 20,
-  "idUser": 3,
-  "title": "ljm, mlk",
-  "shortdescription": "iohuyc",
-  "longdescription": "jpoiujkl{ñkjh",
-  "class": "Artesanias",
-  "price": "65421",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-12-11 at 12.03.07.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640298590126.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640298590126.jpeg",
-    "size": 139914
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-12-21 at 10.11.57.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640298590130.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640298590130.jpeg",
-    "size": 200979
-   }
-  ],
-  "ratings": 0
- },
- {
-  "id": 21,
-  "idUser": 3,
-  "fileName": "3-1640299442505.jpeg",
-  "title": "s",
-  "shortdescription": "1",
-  "longdescription": "alarga",
-  "class": "Artesanias",
-  "price": "65320",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-10-28 at 14.33.37.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640299442485.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640299442485.jpeg",
-    "size": 353030
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-11-19 at 16.02.10.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640299442492.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640299442492.jpeg",
-    "size": 98307
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-12-11 at 12.03.07.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640299442494.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640299442494.jpeg",
-    "size": 139914
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-12-21 at 10.11.57.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640299442500.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640299442500.jpeg",
-    "size": 200979
-   }
-  ],
-  "ratings": 0
- },
- {
-  "id": 22,
-  "idUser": 3,
-  "fileName": "3-1640300599338.jpeg",
-  "title": "ñlkhjhg",
-  "shortdescription": "ñlkjfh",
-  "longdescription": "{ñlkhjgfhgjklkñl{lufy",
-  "class": "Jabon",
-  "price": "4546546",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-10-28 at 14.33.37.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640300599327.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640300599327.jpeg",
-    "size": 353030
-   },
-   {
-    "fieldname": "image",
-    "originalname": "WhatsApp Image 2021-11-19 at 16.02.10.jpeg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "3-1640300599336.jpeg",
-    "path": "C:\\Users\\Accu Lenovo\\Desktop\\fullStackHumii\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\3-1640300599336.jpeg",
-    "size": 98307
-   }
-  ],
-  "ratings": 0
- },
- {
-  "id": 23,
   "idUser": 4,
-  "fileName": "4-1640313868515.JPG",
-  "title": "lalal",
-  "shortdescription": "wge",
-  "longdescription": "nklwf",
+  "title": "error2",
+  "shortdescription": "imagn",
+  "longdescription": "l",
   "class": "Belleza",
-  "price": "2000",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "_MG_9112.JPG",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "4-1640313868440.JPG",
-    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\4-1640313868440.JPG",
-    "size": 6944084
-   }
-  ],
-  "ratings": 0
- },
- {
-  "id": 24,
-  "idUser": 5,
-  "fileName": "5-1640315482513.JPG",
-  "title": "ppppp",
-  "shortdescription": "ppppp",
-  "longdescription": "iiiiii",
-  "class": "Jabon",
-  "price": "21515",
-  "imgs": [
-   {
-    "fieldname": "image",
-    "originalname": "_MG_9112.JPG",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "5-1640315482417.JPG",
-    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\5-1640315482417.JPG",
-    "size": 6944084
-   },
-   {
-    "fieldname": "image",
-    "originalname": "_MG_9157.JPG",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img",
-    "filename": "5-1640315482466.JPG",
-    "path": "C:\\Users\\harum\\DH WEB FULL STACK\\grupo_9_MiTrebol\\Mi-Trebol\\public\\img\\5-1640315482466.JPG",
-    "size": 5232372
-   }
-  ],
-  "ratings": 0
- },
- {
-  "id": 25,
-  "idUser": 4,
-  "fileName": "4-1640317388806.JPG",
-  "title": "qqqq",
-  "shortdescription": "ref",
-  "longdescription": "lalalal",
-  "class": "Jabon",
-  "price": "521",
-  "imgs": [
-   "4-1640317388709.JPG"
-  ],
-  "ratings": 0
- },
- {
-  "id": 26,
-  "idUser": 4,
-  "title": "2",
-  "shortdescription": "s",
-  "longdescription": "nkl",
-  "class": "Jabon",
-  "price": "545453",
-  "imgs": [
-   "4-1640317654678.JPG",
-   "4-1640317654800.JPG",
-   "4-1640317654887.JPG"
-  ],
+  "price": "2200",
+  "imgs": [],
   "ratings": 0
  }
 ]

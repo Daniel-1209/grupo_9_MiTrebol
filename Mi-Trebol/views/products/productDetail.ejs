@@ -16,7 +16,10 @@
             <div class=carrusel_img_detalle>
                 <div class='contenedor_img_grande'>
                     <a class='flecha' href="#next-image"> <i class="fas fa-arrow-left"></i></a>
-                    <img class='imagen_grande' width=30% src="/img/<%=  product.imgs[0] %>" alt="<%= product.title%>">
+                    <% product.imgs.forEach(function(value){%>
+                    <img class='imagen_grande' width=30% src="/img/<%= value %>" alt="<%= product.title%>">
+                    <% }) %>
+                    
                     <a class='flecha' href="#next-image"><i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class='img-a-detalle'>
