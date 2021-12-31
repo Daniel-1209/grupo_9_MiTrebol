@@ -101,7 +101,15 @@ let controlador = {
             res.render('./products/addProduct.ejs', { user });
         }
     },
-
+    error: (req, res, next) => {
+        const file = req.file
+        if(!file){
+            const error = new Error ('Por favor selecciona un archivo')
+            error.httpStatusCode = 400
+            return next(error)
+        }
+        res.send(file);
+    },
     edit: (req, res) => {
         res.render('./products/editProduct.ejs')
     },
@@ -123,6 +131,13 @@ let controlador = {
 
         res.redirect(`/products/detail/` + newProduct.id);
     },
+    notFound: (req, res, err) => {
+        if(err){
+            res.status(400).send("Algo salió mal :(");
+        }
+        res.send(req.file);
+    }
+  
 };
 
 module.exports = controlador;   

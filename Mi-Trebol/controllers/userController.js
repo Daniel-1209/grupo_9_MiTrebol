@@ -82,6 +82,15 @@ let controlador = {
         
         res.redirect('/users/login');
         
+    },
+    error: (req, res, next) => {
+        const file = req.file
+        if(!file){
+            const error = new Error ('Por favor selecciona un archivo')
+            error.httpStatusCode = 400
+            return next(error)
+        }
+        res.redirect('./users/register.ejs' ,{user});
     }
 }
 

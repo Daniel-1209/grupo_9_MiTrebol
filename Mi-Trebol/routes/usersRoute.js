@@ -30,7 +30,8 @@ router.get('/login', userController.login);
 router.post('/login', userController.begin);
 // Registrarse por primera vez
 router.get('/register', userController.register);
-
+//Ruta de error
+router.post('/register',uploadFile.single('avatar'), userController.error);
 // Iniciarse
 router.post('/register', uploadFile.single('avatar'), userController.enter);
 
