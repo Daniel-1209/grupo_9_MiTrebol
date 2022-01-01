@@ -19,10 +19,11 @@ router.get('/detail/:id', productsController.detail);
 router.get('/cart', productsController.car);
 // Agregando un nuevo producto al carrito
 router.post('/cart/:id', productsController.newCarProduct);
-
 // Editar detalles del producto
-router.get('/edit/:id', productsController.edit)
-router.put('/edit/:id', productsController.edit)
+router.get('/edit/:id', productsController.edit);
+router.put('/edit/:id', productsController.edit);
+// Eliminar archivos
+router.delete('/edit/:id/eliminar', productsController.delete);
 
 
 module.exports =  router;

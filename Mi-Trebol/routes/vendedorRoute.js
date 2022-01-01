@@ -42,7 +42,7 @@ router.get('/', indexController.vendedor);
 // Creacion de nuevos productos
 router.get('/create', productsController.addProduct);
 router.post('/create', uploadFile.array('image') ,productsController.create);
- 
+
 //rutas de error
 router.post('/create', uploadFile.array('image') ,productsController.error);
 router.post('/create',uploadFile.array('image'), productsController.notFound);

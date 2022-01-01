@@ -108,7 +108,9 @@ let controlador = {
             error.httpStatusCode = 400
             return next(error)
         }
-        res.send(file);
+
+        let user = req.session.user;
+        res.render('./products/addProduct.ejs', { user });
     },
     edit: (req, res) => {
         res.render('./products/editProduct.ejs')
@@ -127,9 +129,12 @@ let controlador = {
         }
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-
         res.redirect(`/products/detail/` + newProduct.id);
+    },
+    delete: (req, res) => {
+        let idProduct = req.params.id; 
+        products.splice(idProduct, 1);
+
     },
     notFound: (req, res, err) => {
         if(err){

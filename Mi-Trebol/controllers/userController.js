@@ -90,6 +90,7 @@ let controlador = {
             error.httpStatusCode = 400
             return next(error)
         }
+        user = null;
         res.redirect('./users/register.ejs' ,{user});
     }
 }
