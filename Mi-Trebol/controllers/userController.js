@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { resetWatchers } = require('nodemon/lib/monitor/watch');
 const path = require('path');
+const bcrypt = require ('bcryptjs');
 
 const productsFilePath = path.join(__dirname, '../data/usersList.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -62,14 +63,17 @@ let controlador = {
             user = {
                 id : users.length+1,
                 ...req.body,
+                password: bcrypt.hashSync(req.user.password, 10),   //guarda la contraseña hasheada 
                 imgs: req.file.filename, 
                 car: [],
             }
-
+    console.log('user::');
+console.log(user);
         }else{
             user = {
                 id : users.length+1,
                 ...req.body,
+                password: bcrypt.hashSync(req.user.password, 10),
                 imgs: req.file.filename, //'Profile' //agregar imagen del perfil
                 myProducts: [],
             }
@@ -90,8 +94,10 @@ let controlador = {
             error.httpStatusCode = 400
             return next(error)
         }
-        user = null;
-        res.redirect('./users/register.ejs' ,{user});
+        else {
+            user = null;
+            res.render('error');
+       }
     }
 }
 
