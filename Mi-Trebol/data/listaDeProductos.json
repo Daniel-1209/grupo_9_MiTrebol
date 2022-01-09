@@ -166,16 +166,5 @@
   "price": "20000",
   "imgs": [],
   "ratings": 0
- },
- {
-  "id": 13,
-  "idUser": 4,
-  "title": "error2",
-  "shortdescription": "imagn",
-  "longdescription": "l",
-  "class": "Belleza",
-  "price": "2200",
-  "imgs": [],
-  "ratings": 0
  }
 ]

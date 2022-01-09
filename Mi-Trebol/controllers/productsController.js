@@ -132,7 +132,14 @@ let controlador = {
         res.redirect(`/products/detail/` + newProduct.id);
     },
     delete: (req, res) => {
-        console.log('Delete complet');
+        // console.log('Delete complet');
+        const id = req.params.id;
+        let newProducts = products.filter((product) => {
+            return product.id != id;
+        });
+        // console.log(newProducts, id);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
         res.redirect('/indexVendedor');
 
     },
