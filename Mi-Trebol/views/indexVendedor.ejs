@@ -127,19 +127,23 @@
     <!-- Inventario  -->
     <section class="populares" id="populares">
         <h3 class="title">Inventario</h3>
-        <p>Tus productos más vendidos, tenlos siempre disponibles.</p>
+        <p>Listado de todos tus productos puedes editarlos, verlos o eliminarlos.</p>
         <hr>
         <!-- Editar productos-->
         <div class="categorias-container-edit">
 
 
             <% for ( product of products ) { %>
-                <% if (product.class == "velas-DAN") {%>
                 <div class="producto-cat">
                     <div class="editar">
-                        <a type="button" class="btn btn-primary" href="/products/edit/<%= product.id%>"><i
-                                class="fas fa-pencil-alt"></i></a>
+                        <a type="button" class="btn btn-primary" href="/products/edit/<%= product.id%>">
+                            <i class="fas fa-pencil-alt "></i>
+                        </a>
+                        <form  action="/products/edit/<%= product.id%>/eliminar?_method=DELETE" method="post">
+                            <button class="btn btn-primaryEliminate" type="submit"> <i class="fas fa-trash-alt"></i></button>
+                        </form>
                     </div>
+                    
 
                     <a href="/products/detail/<%= product.id%>">
                         <img class="categoria-producto edit" src="/img/<%= product.imgs[0]%>" alt="">
@@ -157,7 +161,6 @@
                         <%= product.ratings%> valoraciones
                     </p>
                 </div>
-                <% } %>
                 <% } %>
 
                     <!-- Modal -->

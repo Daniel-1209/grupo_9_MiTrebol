@@ -1,6 +1,6 @@
 function yesRegister(req, res, next) {
     let ruta = req.url;
-    console.log(ruta)
+    // console.log(ruta)
 
     if (ruta === `/` && req.session.user != undefined) {
         if(req.session.user.category === 'Vendedor'){

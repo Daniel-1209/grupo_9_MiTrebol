@@ -430,11 +430,24 @@ label{
     border-color: #00954c;
     border-radius: 25px;
 }
+.btn-primaryEliminate {
+    color: #fff;
+    background-color: #c50000;
+    border-color: #c50000;
+    border-radius: 25px;
+}
+
 
 .btn-primary:hover {
     color: #fff;
     background-color: #03582f;
     border-color: #03582f;
+}
+
+.btn-primaryEliminate:hover {
+    color: #fff;
+    background-color: #580303;
+    border-color: #580303;
 }
 
 .editar {

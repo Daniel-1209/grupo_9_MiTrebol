@@ -27,8 +27,19 @@ let controlador = {
     },
     vendedor: (req, res) => {
         let user = req.session.user;
-        console.log(user);
-        res.render('indexVendedor.ejs', {products, user});
+        // console.log(user);
+        let myProducts = [];
+        myProducts.length
+        for (let i = 0 ; i< user.myProducts.length; i++) {
+            for(let j = 0; j < products.length; j++) {
+                if( user.myProducts[i] === products[j].id){
+                    myProducts.push(products[j]);
+                    break;
+                }
+            }
+        }
+        // console.log(myProducts);
+        res.render('indexVendedor.ejs', {products : myProducts, user});
     },
     close: (req,res) => {
         req.session.user = undefined;

@@ -132,8 +132,8 @@ let controlador = {
         res.redirect(`/products/detail/` + newProduct.id);
     },
     delete: (req, res) => {
-        let idProduct = req.params.id; 
-        products.splice(idProduct, 1);
+        console.log('Delete complet');
+        res.redirect('/indexVendedor');
 
     },
     notFound: (req, res, err) => {
