@@ -23,8 +23,11 @@ let storage = multer.diskStorage({
 //Guarda la configuracion previa la const storage  para poder ser usada como middleware
 let uploadFile = multer({storage: storage});
 
+// Requiriendo middleawares
+const yesRegisterMiddleaware = require("../Middleaweares/yesRegisterMiddleaware");
+
 // Ir a la vista de iniciar sesion en la cuenta
-router.get('/login', userController.login);
+router.get('/login',yesRegisterMiddleaware, userController.login);
 
 // Iniciar sesion en la cuenta
 router.post('/login', userController.begin);

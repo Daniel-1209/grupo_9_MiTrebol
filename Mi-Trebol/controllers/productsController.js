@@ -24,9 +24,9 @@ let controlador = {
     detail: (req, res) => {
         let id = req.params.id;
         let user = req.session.user;
-        console.log(products[id]);
+        // console.log(products[id]);
         res.render('./products/productDetail.ejs', { product: products[id], products, user });
-        console.log(user);
+        // console.log(user);
 
     },
     car: (req, res) => {
@@ -72,8 +72,8 @@ let controlador = {
 
         var imagesProductUser = req.files; //files para varios archivos
         var user = req.session.user;
-        console.log('req.file');
-        console.log(req.file);
+        // console.log('req.file');
+        // console.log(req.file);
 
         if (req.file) {
             const images = imagesProductUser.map(image => {

@@ -44,8 +44,7 @@
                             <img class="profile" src="/img/avatars/<%= user.imgs %>" alt="imagen de perfil"> <%= user.firstName %>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Cuenta</a></li>
-                          <li><a class="dropdown-item" href="/products/ <%= user.id %>">MisProductos</a></li>
+                          <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
                           <form class="dropdown-item" action="/close" method="POST">
                               <button type="submit">Cerrar sesión</button>
                           </form>
