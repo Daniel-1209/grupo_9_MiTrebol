@@ -27,7 +27,7 @@ let controlador = {
         let yes = false;
         
         for(element of users){
-            if (element.email == user.email && element.password == user.password ){
+            if (element.email == user.email && element.password == bcrypt.compareSync(element.password), user.password){
                 user = element;
                 yes = true;
                 break;
@@ -58,28 +58,33 @@ let controlador = {
     },
     // Hacia el inicion una vez registrada la persona
     enter: (req, res) => {
-
+        console.log('body:');
+        console.log(req.body);
+       
         if ( req.body.category == 'Comprador'){
             user = {
                 id : users.length+1,
                 ...req.body,
-                password: bcrypt.hashSync(req.user.password, 10),   //guarda la contraseña hasheada 
+                //password: passHasheada ,   //guarda la contraseña hasheada 
                 imgs: req.file.filename, 
                 car: [],
             }
-    console.log('user::');
-console.log(user);
-        }else{
+            let passHasheada = bcrypt.hashSync(req.body.password, 10);
+            req.user.password = passHasheada;
+            req.user.password_confirmation = passHasheada;
+        }
+        else{
+            let passHasheada = bcrypt.hashSync(req.body.password, 10);
+            
             user = {
                 id : users.length+1,
                 ...req.body,
-                password: bcrypt.hashSync(req.user.password, 10),
+                password: passHasheada,
+                password_confirmation: passHasheada,
                 imgs: req.file.filename, //'Profile' //agregar imagen del perfil
                 myProducts: [],
             }
         }
-        
-        
 
         users.push(user);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
@@ -87,18 +92,18 @@ console.log(user);
         res.redirect('/users/login');
         
     },
-    error: (req, res, next) => {
-        const file = req.file
-        if(!file){
-            const error = new Error ('Por favor selecciona un archivo')
-            error.httpStatusCode = 400
-            return next(error)
-        }
-        else {
-            user = null;
-            res.render('error');
-       }
-    }
+    //error: (req, res, next) => {
+      //  const file = req.file
+        //if(!file){
+          //  const error = new Error ('Por favor selecciona un archivo')
+            //error.httpStatusCode = 400
+            //return next(error)
+        //}
+        //else {
+          //  user = null;
+            //res.send('error');
+       //}
+    //}
 }
 
 module.exports = controlador;   
