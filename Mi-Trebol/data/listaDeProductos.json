@@ -39,19 +39,6 @@
   ]
  },
  {
-  "id": 3,
-  "title": "Kit de viaje",
-  "shortdescription": "Tres frascos para viaje",
-  "longDescription": "Texto con la información general del producto",
-  "price": 399.99,
-  "class": "Belleza",
-  "purchases": 34,
-  "ratings": 350,
-  "imgs": [
-   "frascos_rev.png"
-  ]
- },
- {
   "id": 4,
   "title": "Vela de rosas",
   "shortdescription": "Velas con aromas florales",

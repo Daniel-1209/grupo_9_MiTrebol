@@ -25,15 +25,17 @@ let controlador = {
 
         user = {...req.body};
         let yes = false;
-        
+        console.log(user);
+      
         for(element of users){
-            if (element.email == user.email && element.password == bcrypt.compareSync(element.password), user.password){
+            console.log(bcrypt.compareSync(element.password,user.password ));
+            if (element.email === user.email &&  bcrypt.compareSync(user.password,element.password ) ){
                 user = element;
                 yes = true;
                 break;
             }
         }
-        //console.log(user);
+        // console.log(user);
         // Verifica si fue encontrado el usuario 
         if( yes){
             req.session.user = user;
@@ -58,8 +60,8 @@ let controlador = {
     },
     // Hacia el inicion una vez registrada la persona
     enter: (req, res) => {
-        console.log('body:');
-        console.log(req.body);
+        // console.log('body:');
+        // console.log(req.body);
        
         if ( req.body.category == 'Comprador'){
             user = {
@@ -70,8 +72,8 @@ let controlador = {
                 car: [],
             }
             let passHasheada = bcrypt.hashSync(req.body.password, 10);
-            req.user.password = passHasheada;
-            req.user.password_confirmation = passHasheada;
+            user.password = passHasheada;
+            user.password_confirmation = passHasheada;
         }
         else{
             let passHasheada = bcrypt.hashSync(req.body.password, 10);
@@ -79,11 +81,11 @@ let controlador = {
             user = {
                 id : users.length+1,
                 ...req.body,
-                password: passHasheada,
-                password_confirmation: passHasheada,
                 imgs: req.file.filename, //'Profile' //agregar imagen del perfil
                 myProducts: [],
             }
+            user.password = passHasheada;
+            user.password_confirmation = passHasheada;
         }
 
         users.push(user);

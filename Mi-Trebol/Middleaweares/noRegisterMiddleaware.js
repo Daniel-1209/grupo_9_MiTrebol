@@ -3,7 +3,8 @@ function yesRegister(req, res, next) {
   let id = req.params.id;
   // console.log(id,ruta,`/products/cart/${id}` );
   if (ruta === `/cart/${id}` && req.session.user == undefined) {
-    res.send("no ");
+    // window.alert("Ingresa para poder comprar");
+    res.redirect("/");
   }
 
   next();
