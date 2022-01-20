@@ -1,6 +1,9 @@
-// Requiriendo los modulos a utilizar, estableciendo variables, requiriendo rutas
-let express = require("express");
-let path = require("path");
+var createError = require("http-errors");
+var express = require("express");
+var path = require("path");
+var cookieParser = require("cookie-parser");
+var logger = require("morgan");
+
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 let session = require("express-session");
 
@@ -8,29 +11,27 @@ let session = require("express-session");
 const noVendedorMiddleware = require("./Middleaweares/noVendedorMiddleware");
 const noCompradorMiddleware = require("./Middleaweares/noCompradorMiddleware");
 
-// ************ express() - (don't touch) ************
-let app = express();
-let port = 3000;
+var app = express();
 
 // ************ Middlewares - (don't touch) ************
 
-app.use(express.static(path.resolve(__dirname, "./public"))); // Ruta para utilizar los recursos de la carpeta public
-app.use(express.urlencoded({ extended: false }));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
+app.use(logger("dev"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-app.use(session({ secret: "Secreto" }));
+app.use(session({ secret: "Secreto" })); // Para guardar un usuario con sesion
 
 // Utilizando mis middleawares
 
 app.use(noVendedorMiddleware);
 app.use(noCompradorMiddleware);
-
-// Configuramos EJS como el template engine de la app.
-
-app.set("views", path.join(__dirname, "./views"));
-app.set("views enginen", "ejs");
 
 // LLamado a las paginas web para usarse
 
@@ -45,8 +46,20 @@ app.use("/indexVendedor", vendedor);
 app.use("/products", productsRoute);
 app.use("/users", user);
 
-// Definiendo el puerto de arranque
-
-app.listen(port, () => {
-  console.log(`Servidor corriendo -> ${port}`);
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  next(createError(404));
 });
+
+// error handler
+app.use(function (err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get("env") === "development" ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render("error");
+});
+
+module.exports = app;
