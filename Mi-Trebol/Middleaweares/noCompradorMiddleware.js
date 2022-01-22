@@ -9,7 +9,7 @@ function yesRegister(req, res, next) {
     }
 
     if (req.session.user != undefined) {
-        if (req.session.user.category === "Comprador") {
+        if (req.session.user.category === "Vendedor") {
           let arraySplit = ruta.split("/");
           for (let i = 0; i < arraySplit.lenght; i++) {
             if (arraySplit[i] === "car") {

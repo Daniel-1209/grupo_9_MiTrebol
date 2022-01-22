@@ -29,7 +29,7 @@
 
     <nav>
       <!-- <li><a href="#"><i class="fas fa-search"></i></a></li> -->
-      <li><a href="/">Inicio</a></li>
+      <li><a href="/indexVendedor">Inicio</a></li>
       <!-- <li><a href="/products/create">Añadir productos <i class="fas fa-plus-circle"></i></a></li>
             <div class="dropdown"> -->
       <!-- <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,58 +54,53 @@
         </div>
         <div class="modal-body">
           <div class="form-container">
-            <form action="" method="">
+            
+            <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data">
               <div class="input">
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1">
+                  <input value="<%= produtNow.title %>" type="text" name="title" required id="text" />
                 </div>
                 <div class="mb-3">
                   <label for="Descripción del producto" class="form-label">Descripción corta</label>
-                  <textarea class="form-control" name="" rows="1"></textarea>
+                  <textarea type="text" name="shortdescription" required
+                    id="text2"><%= produtNow.shortdescription %></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="Descripción del producto" class="form-label">Descripción larga</label>
-                  <textarea class="form-control" name="" rows="3"></textarea>
+                  <label class="label-text" for="longdescription">Descripción larga</label>
+                  <textarea type="text" name="longdescription" required
+                    id="text3"><%= produtNow.longdescription %></textarea>
                 </div>
 
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Modificar imagen</label>
-                  <input class="form-control" type="file" name="formFile">
+                  <input class="select-file" type="file" name="productoImage" required id="" single>
                 </div>
                 <div class="mb-3">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Categoría</option>
-                    <option value="1">Jabones naturales</option>
-                    <option value="2">Belleza al natural</option>
-                    <option value="3">Semillas orgánicas</option>
-                    <option value="3">Artesanías</option>
-                    <option value="4">velas aromáticas</option>
-                </div>
-                </select>
-                <div class="mb-3">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Cantidad</option>
-                    <option value="1">1</option>
-                    <option value="2">+5</option>
-                    <option value="3">+10</option>
+                  <label for="formFile" class="form-label">Categoria</label>
+                  <select name="form-select" id="class">
+                    <option value="Jabon" <%=produtNow.class=='Jabon' ? 'selected' : '' %> >jabones</option>
+                    <option value="Belleza" <%=produtNow.class=='Belleza' ? 'selected' : '' %> >belleza</option>
+                    <option value="Semillas" <%=produtNow.class=='Semillas' ? 'selected' : '' %> >semillas</option>
+                    <option value="Artesanias" <%=produtNow.class=='Artesanias' ? 'selected' : '' %> >artesania</option>
+                    <option value="Velas" <%=produtNow.class=='Velas' ? 'selected' : '' %> >velas aromáticas</option>
                   </select>
                 </div>
 
                 <div class="input-group mb-3">
-                  <label for="formFile" class="form-label"></label>
+                  <label for="formFile" class="form-label">Precio</label>
                   <span class="input-group-text">$</span>
-                  <input type="text" class="form-control" placeholder="Precio"
-                    aria-label="Dollar amount (with dot and two decimal places)">
+                  <input name="price" type="text" class="form-control" value="<%= produtNow.price %>">
                 </div>
               </div>
 
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar cambios <i
+                    class="fas fa-plus-circle"></i></button>
+              </div>
 
             </form>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Guardar cambios <i class="fas fa-plus-circle"></i></button>
         </div>
       </div>
     </div>

@@ -16,14 +16,10 @@ let storage = multer.diskStorage({
         cb(null, folder);
     },
     filename:(req, file, cb) => {
-        console.log(req.file);
-        let idUser = req.session.user.id;  //Guardo el id del user (vendedor)*
-        //let fileName = req.files.filename; //Guarda normbre de ls imagen del producto
-        //Asocia el nombre 
-          
         // Establece un nombre a las imagenes segun fecha en mili seg, agrega un string identificador y usa la extension del mismo archivo
-        let imageProductUser = idUser + '-' + Date.now()+ path.extname(file.originalname);
-        cb(null, imageProductUser) ; 
+        
+        let imageProducto = 'Producto-' + Date.now()+ path.extname(file.originalname);
+        cb(null, imageProducto) ; 
     }
 });
 
@@ -41,11 +37,11 @@ let uploadFile = multer({storage: storage});
 router.get('/', indexController.vendedor);
 // Creacion de nuevos productos
 router.get('/create', productsController.addProduct);
-router.post('/create', uploadFile.array('image') ,productsController.create);
+router.post('/create',  uploadFile.single('productoImage') ,productsController.create);
 
 //rutas de error
-router.post('/create', uploadFile.array('image') ,productsController.error);
-router.post('/create',uploadFile.array('image'), productsController.notFound);
+// router.post('/create', productsController.error);
+// router.post('/create', productsController.notFound);
 
 
 module.exports = router;

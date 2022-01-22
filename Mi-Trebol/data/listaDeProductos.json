@@ -39,7 +39,7 @@
   ]
  },
  {
-  "id": 4,
+  "id": 3,
   "title": "Vela de rosas",
   "shortdescription": "Velas con aromas florales",
   "longDescription": "Delicioso aroma rosas silvestres",
@@ -52,7 +52,7 @@
   ]
  },
  {
-  "id": 5,
+  "id": 4,
   "title": "Vela Navideña",
   "shortdescription": "Vela de temporada",
   "longDescription": "Delicioso aroma a ponche",
@@ -65,93 +65,25 @@
   ]
  },
  {
-  "id": 6,
-  "title": "Shampoo ",
-  "shortdescription": "Shampoo ",
-  "longdescription": "Shampoo Narural de diferentes productos",
-  "class": "Belleza",
-  "price": "100",
+  "id": 5,
+  "title": "Producto Mejorado",
+  "shortdescription": "adsfsadfsa",
+  "longdescription": "adsfasdfsa",
+  "form-select": "Belleza",
+  "price": "90",
   "imgs": [
-   "Product-1640160114191.jpeg"
-  ],
-  "ratings": 0
+   "Producto-1642826922868.jpg"
+  ]
  },
  {
-  "id": 7,
-  "idUser": 4,
-  "title": "sesiones 1",
-  "shortdescription": "temático 1",
-  "longdescription": "axul cielo",
-  "class": "Belleza",
-  "price": "30303",
+  "id": 1642827455935,
+  "title": "Suero H",
+  "shortdescription": "Suero hidratante",
+  "longdescription": "Suero hidratante muy bueno",
+  "form-select": "Belleza",
+  "price": "900",
   "imgs": [
-   "4-1640455914878.JPG",
-   "4-1640455914915.JPG",
-   "4-1640455914964.JPG"
-  ],
-  "ratings": 0
- },
- {
-  "id": 8,
-  "idUser": 4,
-  "title": "prueba ejs",
-  "shortdescription": "pruebs",
-  "longdescription": "knl",
-  "class": "Belleza",
-  "price": "11000",
-  "imgs": [
-   "4-1640470372556.JPG",
-   "4-1640470372649.JPG",
-   "4-1640470372730.JPG"
-  ],
-  "ratings": 0
- },
- {
-  "id": 9,
-  "idUser": 4,
-  "title": "prueba ejs",
-  "shortdescription": "pruebs",
-  "longdescription": "knl",
-  "class": "Belleza",
-  "price": "11000",
-  "imgs": [
-   "4-1640471368562.JPG",
-   "4-1640471368665.JPG",
-   "4-1640471368730.JPG"
-  ],
-  "ratings": 0
- },
- {
-  "id": 10,
-  "idUser": 4,
-  "title": "prueba error",
-  "shortdescription": "sin imagen",
-  "longdescription": "no image",
-  "class": "Belleza",
-  "price": "1000",
-  "imgs": [],
-  "ratings": 0
- },
- {
-  "id": 11,
-  "idUser": 4,
-  "title": "error image",
-  "shortdescription": "plm",
-  "longdescription": "l",
-  "class": "Belleza",
-  "price": "20000",
-  "imgs": [],
-  "ratings": 0
- },
- {
-  "id": 12,
-  "idUser": 4,
-  "title": "error image",
-  "shortdescription": "plm",
-  "longdescription": "l",
-  "class": "Belleza",
-  "price": "20000",
-  "imgs": [],
-  "ratings": 0
+   "Producto-1642828429830.jpg"
+  ]
  }
 ]

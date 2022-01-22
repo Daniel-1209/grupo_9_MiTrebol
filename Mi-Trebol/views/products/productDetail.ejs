@@ -1,158 +1,154 @@
 <!DOCTYPE html>
 <html>
-   
-    <head>
-        <%- include('../partials/head') %>
+
+<head>
+    <%- include('../partials/head') %>
         <link rel="stylesheet" href="/css/productDetail.css">
         <title>Detalle Producto</title>
-    </head>
+</head>
 
 <body>
     <!--Cabecera del documento-->
     <%- include('../partials/header') %>
 
-    <main>
-        <section class='info_completa'>
-            <div class=carrusel_img_detalle>
-                <div class='contenedor_img_grande'>
-                    <a class='flecha' href="#next-image"> <i class="fas fa-arrow-left"></i></a>
-                    <% product.imgs.forEach(function(value){%>
-                    <img class='imagen_grande' width=30% src="/img/<%= value %>" alt="<%= product.title%>">
-                    <% }) %>
-                    
-                    <a class='flecha' href="#next-image"><i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class='img-a-detalle'>
-                    <article id=imgDP>
-                        <img width=130px height=140px src="/img/velas_rev.png" alt="Velas aromáticas">
-                    </article>
-                    <article id=imgDP>
-                        <img width=130px height=140px=100% src="/img/portavela_rev.png" alt="Relajantes">
-                    </article>
-                    <article id=imgDP>
-                        <img width=130px height=140px=100% src="/img/vela_1.jpg" alt="Vela con rosas">
-                    </article>
-                    <article id=imgDP>
-                        <img width=130px height=140px=100% src="/img/vela_2.jpg" alt="vela y sueter">
-                    </article>
-                    <article id=imgDP>
-                        <img width=130px height=140px=100% src="/img/vela_3.jpg" alt="vela 3">
-                    </article>
-                </div>
-            </div>
+        <main>
+            <section class='info_completa'>
+                <div class=carrusel_img_detalle>
+                    <div class='contenedor_img_grande'>
+                        <img class='imagen_grande' width=30% src="/img/<%=  product.imgs[0] %>"
+                            alt="<%= product.title%>">
 
-            <div class='info-producto-detalle'>
-                <h1 class='titulo-natural1'><%= product.title%></h1>
 
-                <div class='rateing'>
-                    <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                    <p class='valoracion'> <%= product.purchases %> compras</p>
-                </div>
-                <div class='detalles'>
-                    <p id='precio'>$ <%= product.price%> </p>
-                    <p id='texto_producto_detalle'> <%= product.longDescription %></p>
-                </div>
-                <div class='listas_desplegables'>
-                    <select class='detalles_menu' name='Detalles'>
-                        <option class='lista_detalles' value="menudeo">Detalles</option>
-                        <option class='costo_kilo' value="menudeo">Menudeo</option>
-                        <option class='artesado' value="mayoreo">Mayore</option>
-                    </select>
-                    <select class='envio' name='Envio'>
-                        <option class='lista_envio' value="menudeo">Envío</option>
-                        <option value="A domicilio">A domicilio</option>
-                        <option value="Recoger en tienda">Recoger en tienda</option>
-                    </select>
-                </div>
-                <p class='cantidad'>Cantidad</p>
-                <div class='cantidad_y_carrito'>
-                    <div class='cuantos_quieres'>
-                        <p class='numero'>1</p>
-                        <p class='quitar'>-</p>
-                        <p class='agregar'>+</p>
                     </div>
-                    
-                    <form action="/products/cart/<%= product.id%>" method="POST" id='bttn0_al_carrito'> 
-                        <button type="submit" class="texto_bttn_carrito" >Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
-                    </form>
                 </div>
 
-            </div>
-        </section>
+                <div class='info-producto-detalle'>
+                    <h1 class='titulo-natural1'>
+                        <%= product.title%>
+                    </h1>
 
-        <!--PRODUCTOS RELACIONADOS-->
-        <section class='prod_relac'>
-            <h2 class='titulo_relacionados'>Productos relacionados</h2>
-            <br class="brPR">
-            <div class='imagenes_relacionadas'>
-                <% for ( element of products ) { %>
-                    <% if( element.class == product.class) { %>
-                    
-                    <article id=producto_info_general> <a href="/products/detail/<%= element.id%>">
-                        <img class='imgPR' src='/img/<%= element.imgs[0]%>' alt="Imagen de producto"> </a>
+                    <div class='rateing'>
+                        <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p class='valoracion'>
+                            <%= product.purchases %> compras
+                        </p>
+                    </div>
+                    <div class='detalles'>
+                        <p id='precio'>$ <%= product.price%>
+                        </p>
+                        <p id='texto_producto_detalle'>
+                            <%= product.longDescription %>
+                        </p>
+                    </div>
+                    <div class='listas_desplegables'>
+                        <select class='detalles_menu' name='Detalles'>
+                            <option class='lista_detalles' value="menudeo">Detalles</option>
+                            <option class='costo_kilo' value="menudeo">Menudeo</option>
+                            <option class='artesado' value="mayoreo">Mayore</option>
+                        </select>
+                        <select class='envio' name='Envio'>
+                            <option class='lista_envio' value="menudeo">Envío</option>
+                            <option value="A domicilio">A domicilio</option>
+                            <option value="Recoger en tienda">Recoger en tienda</option>
+                        </select>
+                    </div>
+                    <p class='cantidad'>Cantidad</p>
+                    <div class='cantidad_y_carrito'>
+                        <div class='cuantos_quieres'>
+                            <p class='numero'>1</p>
+                            <p class='quitar'>-</p>
+                            <p class='agregar'>+</p>
+                        </div>
+
+                        <form action="/products/cart/<%= product.id%>" method="POST" id='bttn0_al_carrito'>
+                            <button type="submit" class="texto_bttn_carrito">Agregar al carrito <i
+                                    class="fas fa-shopping-cart"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--PRODUCTOS RELACIONADOS-->
+            <section class='prod_relac'>
+                <h2 class='titulo_relacionados'>Productos relacionados</h2>
+                <br class="brPR">
+                <div class='imagenes_relacionadas'>
+                    <% for ( element of products ) { %>
+                        <% if( element.class==product.class) { %>
+
+                            <article id=producto_info_general> <a href="/products/detail/<%= element.id%>">
+                                    <img class='imgPR' src='/img/<%= element.imgs[0]%>' alt="Imagen de producto"
+                                        width="200px" height="200px"> </a>
+                                <div id='caja_general'>
+                                    <div id='info_producto'>
+                                        <p class='titulo_prod'>
+                                            <%= element.title%>
+                                        </p>
+                                        <p class='texto_peque'>
+                                            <%= element.shortDescription %>
+                                        </p>
+                                        <p id='precioRel'>$ <%= element.price%>
+                                        </p>
+                                    </div>
+
+                                    <form action="" method="">
+                                        <input type="button" id='bttn_al_carrito' value="Agregar al carrito">
+                                        <!--<i class="fas fa-shopping-cart"></i> -->
+                                    </form>
+                                </div>
+                            </article>
+
+                            <% } %>
+                                <% } %>
+
+
+
+
+
+
+
+
+                </div>
+            </section>
+
+            <!---------- ¿QUÉ HAY EN LA CAJA?------------>
+            <section>
+                <h2 class='cajas'>¿Qué hay en la caja?</h2>
+                <p class='regala_caja_sorpresa'>lorem kskdnca akdocac aloena qeow fwe wc b egw ...</p>
+                <div class='cajas_dispo'>
+                    <article id=caja_info_general>
+                        <img class='imgPR' width=50% src='/img/caja_1.jpg' alt="Caja sorpresa amiges">
                         <div id='caja_general'>
                             <div id='info_producto'>
-                                <p class='titulo_prod'> <%= element.title%> </p>
-                                <p class='texto_peque'> <%= element.shortDescription %> </p>
-                                <p id='precioRel'>$ <%= element.price%></p>
+                                <p class='titulo_prod'>lorem en bold...</p>
+                                <p class='texto_peque'>lorem normal...</p>
                             </div>
-    
-                            <form action="" method="" > 
-                                <input type="button" id='bttn_al_carrito' value="Agregar al carrito"> <!--<i class="fas fa-shopping-cart"></i> -->
-                            </form>
                         </div>
                     </article>
-                        
-                    <% } %>
-                <% } %>
 
-                
-
-                
-
-                
-
-                
-            </div>
-        </section>
-
-        <!---------- ¿QUÉ HAY EN LA CAJA?------------>
-        <section>
-            <h2 class='cajas'>¿Qué hay en la caja?</h2>
-            <p class='regala_caja_sorpresa'>lorem kskdnca akdocac aloena qeow fwe wc b egw ...</p>
-            <div class='cajas_dispo'>
-                <article id=caja_info_general>
-                    <img class='imgPR' width=50% src='/img/caja_1.jpg' alt="Caja sorpresa amiges">
-                    <div id='caja_general'>
-                        <div id='info_producto'>
-                            <p class='titulo_prod'>lorem en bold...</p>
-                            <p class='texto_peque'>lorem normal...</p>
+                    <article id=caja_info_general>
+                        <img class='imgPR' src='/img/caja_2.jpg' alt="Caja sorpresa de bodas">
+                        <div id='caja_general'>
+                            <div id='info_producto'>
+                                <p class='titulo_prod'>lorem en bold...</p>
+                                <p class='texto_peque'>lorem normal...</p>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article id=caja_info_general>
-                    <img class='imgPR' src='/img/caja_2.jpg' alt="Caja sorpresa de bodas">
-                    <div id='caja_general'>
-                        <div id='info_producto'>
-                            <p class='titulo_prod'>lorem en bold...</p>
-                            <p class='texto_peque'>lorem normal...</p>
+                    <article id=caja_info_general>
+                        <img class='imgPR' src='/img/caja_3.jpg' alt="caja sorpresa parejas">
+                        <div id='caja_general'>
+                            <div id='info_producto'>
+                                <p class='titulo_prod'>lorem en bold...</p>
+                                <p class='texto_peque'>lorem normal...</p>
+                            </div>
                         </div>
-                    </div>
-                </article>
-
-                <article id=caja_info_general>
-                    <img class='imgPR' src='/img/caja_3.jpg' alt="caja sorpresa parejas">
-                    <div id='caja_general'>
-                        <div id='info_producto'>
-                            <p class='titulo_prod'>lorem en bold...</p>
-                            <p class='texto_peque'>lorem normal...</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <!-- ------Footer -------->
-        <%- include('../partials/footer') %>
+                    </article>
+                </div>
+            </section>
+            <!-- ------Footer -------->
+            <%- include('../partials/footer') %>
 </body>
