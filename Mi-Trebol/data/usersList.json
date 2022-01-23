@@ -1,1 +1,49 @@
-[]
+[
+ {
+  "id": 3,
+  "user": "Dani23",
+  "firstName": "Daniel",
+  "lastName": "Garcia",
+  "email": "algo@gmail.com",
+  "password": "$2a$10$hljlYgb7ai2EysnORNYKhe1Fof6TXs.DCXgmhvJiAZcf2cvXMgNt.",
+  "password_confirmation": "Daniel12",
+  "category": "Comprador",
+  "imgs": "Avatar-1642658606578.jpg",
+  "car": [
+   1,
+   5,
+   0,
+   1642827455935
+  ]
+ },
+ {
+  "id": 2,
+  "user": "Alex12",
+  "firstName": "Alejandro",
+  "lastName": "Montes",
+  "email": "danielgarciamendoza.204@gmail.com",
+  "password": "$2a$10$c68zwFGgdvc4ix.Bm3BN7up037lDG.heZg98WmjfxPpnkHzuCLbPG",
+  "password_confirmation": "$2a$10$c68zwFGgdvc4ix.Bm3BN7up037lDG.heZg98WmjfxPpnkHzuCLbPG",
+  "category": "Vendedor",
+  "imgs": "Avatar-1642659257207.jpg",
+  "myProducts": [
+   9,
+   1642827455935
+  ]
+ },
+ {
+  "id": 4,
+  "user": "Ales99",
+  "firstName": "Alejandra",
+  "lastName": "Mons",
+  "email": "danga.204@gmail.com",
+  "password": "$2a$10$c68zwFGgdvc4ix.Bm3BN7up037lDG.heZg98WmjfxPpnkHzuCLbPG",
+  "password_confirmation": "$2a$10$c68zwFGgdvc4ix.Bm3BN7up037lDG.heZg98WmjfxPpnkHzuCLbPG",
+  "category": "Vendedor",
+  "imgs": "Avatar-1642659257207.jpg",
+  "myProducts": [
+   9,
+   1642827455935
+  ]
+ }
+]
