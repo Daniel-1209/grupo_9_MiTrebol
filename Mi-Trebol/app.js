@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
-let session = require("express-session");
+const session = require("express-session");
 
 // Requiriendo middleawares
 const noVendedorMiddleware = require("./Middleaweares/noVendedorMiddleware");
@@ -26,7 +26,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-app.use(session({ secret: "Secreto" })); // Para guardar un usuario con sesion
+app.use(session({ secret: "Secreto",
+  saveUninitialized: true,
+  resave: true,
+  cookie : {
+    maxAge:(1000 * 60 * 100)
+}   
+})); // Para guardar un usuario con sesion
 
 // Utilizando mis middleawares
 

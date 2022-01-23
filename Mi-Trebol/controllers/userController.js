@@ -2,7 +2,7 @@ const fs = require('fs');
 const { resetWatchers } = require('nodemon/lib/monitor/watch');
 const path = require('path');
 const bcrypt = require ('bcryptjs');
-
+const User = require('../models/User')
 const productsFilePath = path.join(__dirname, '../data/usersList.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -60,14 +60,11 @@ let controlador = {
     },
     // Hacia el inicion una vez registrada la persona
     enter: (req, res) => {
-        // console.log('body:');
-        // console.log(req.body);
        
         if ( req.body.category == 'Comprador'){
             user = {
                 id : users.length+1,
                 ...req.body,
-                //password: passHasheada ,   //guarda la contraseña hasheada 
                 imgs: req.file.filename, 
                 car: [],
             }
@@ -87,6 +84,8 @@ let controlador = {
             user.password = passHasheada;
             user.password_confirmation = passHasheada;
         }
+
+        User.create(req.body);
 
         users.push(user);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
