@@ -41,6 +41,7 @@ let controlador = {
             req.session.user = user;
             //res.render('index.ejs', {products, user})
             // Elije si es vendedor o comprador
+            res.cookie('Mi-Trebol-User-Id', user.id);
             if( user.category == 'Vendedor'){
                 res.redirect('/indexVendedor');
             }else {
