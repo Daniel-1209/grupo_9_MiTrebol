@@ -9,7 +9,8 @@ const session = require("express-session");
 
 // Requiriendo middleawares
 const noVendedorMiddleware = require("./Middleaweares/noVendedorMiddleware");
-const noCompradorMiddleware = require("./Middleaweares/noCompradorMiddleware");
+const noCompradorMiddleware = require("./Middleaweares/noCompradorMiddleware")
+const getCookiesMiddleware = require('./Middleaweares/getCookiesMiddleware');
 
 var app = express();
 
@@ -38,7 +39,7 @@ app.use(session({ secret: "Secreto",
 
 app.use(noVendedorMiddleware);
 app.use(noCompradorMiddleware);
-
+app.use(getCookiesMiddleware);
 // LLamado a las paginas web para usarse
 
 const index = require("./routes/indexRoute");
