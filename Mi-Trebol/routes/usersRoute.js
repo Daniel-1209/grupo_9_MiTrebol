@@ -3,6 +3,7 @@ let express = require('express');
 let router = express.Router();
 var path = require('path');
 var multer = require('multer');
+const {check} = require('express-validator');
 
 let userController = require('../controllers/userController');
 
@@ -27,7 +28,10 @@ let uploadFile = multer({storage: storage});
 const yesRegisterMiddleaware = require("../Middleaweares/yesRegisterMiddleaware");
 
 // Ir a la vista de iniciar sesion en la cuenta
-router.get('/login',yesRegisterMiddleaware, userController.login);
+router.get('/login',[
+    check('email').notEmpty().isEmail().withMessage('Introduzca un email valido'),
+    check('password').notEmpty().isLength({min: 8})
+] ,yesRegisterMiddleaware, userController.login);
 
 // Iniciar sesion en la cuenta
 router.post('/login', userController.begin);

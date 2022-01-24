@@ -2,50 +2,61 @@
 <html lang="en">
 
 <head>
+
     <head>
         <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/login.css">
-        <title>Login</title>
+            <link rel="stylesheet" href="/css/login.css">
+            <title>Login</title>
 
     </head>
-    
+
 </head>
 
-<body > 
+<body>
     <!-- Cabecera de la pagina-->
     <%- include('../partials/header') %>
 
-    <main class="main">
-        <div class="form-container">
-            <form action="/users/login" method="POST">
-                <div class="formsheader">
-                    <h3 class="login">Login</h3>
-                </div>
-                <div class="input">
-                    <input placeholder="Email" type="email" name="email" required id="email">
-                    <input placeholder="Contraseña" type="password" name="password" required id="password">
-                </div>
-                <div id="remember-forgot">
-                    <div id="remember">
-                        <label>Remember me</label>
-                        <input type="checkbox" name="remember" value="Si">
+        <main class="main">
+            <% if (typeof errors !='undefined' ) { %>
+                <p style='color: red'>ERROR</p>
+                <ul>
+                    <% for (let i=0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                        <% } %>
+                </ul>
+            <% } %>
+                    <div class="form-container">
+                        <form action="/users/login" method="POST">
+                            <div class="formsheader">
+                                <h3 class="login">Login</h3>
+                            </div>
+                            <div class="input">
+                                <input placeholder="Email" type="email" name="email" required id="email">
+                                <input placeholder="Contraseña" type="password" name="password" required id="password">
+                            </div>
+                            <div id="remember-forgot">
+                                <div id="remember">
+                                    <label>Remember me</label>
+                                    <input type="checkbox" name="remember" value="Si">
+                                </div>
+                                <div id="forgot">
+                                    <span>Forgot <a href="">password?</a></span>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit">Ingresar </button>
+                            </div>
+                            <div class="formsfooter">
+                                <p class="titulofooter">¿No tienes una cuenta?</p>
+                                <a href="/users/register">Crear</a>
+                            </div>
+                        </form>
                     </div>
-                    <div id="forgot">
-                        <span>Forgot <a href="">password?</a></span>
-                    </div>
-                </div>
-                    <div>
-                    <button type="submit">Ingresar </button>
-                    </div>
-                    <div class="formsfooter">
-                        <p class="titulofooter">¿No tienes una cuenta?</p>
-                        <a href="/users/register">Crear</a>
-                    </div>
-            </form>
-        </div>
-    </main>
-    
-    <%- include('../partials/footer') %>
+        </main>
+
+        <%- include('../partials/footer') %>
 </body>
 
 </html>

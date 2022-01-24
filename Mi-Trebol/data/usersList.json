@@ -45,5 +45,17 @@
    9,
    1642827455935
   ]
+ },
+ {
+  "id": 4,
+  "user": "Humi",
+  "firstName": "Harumi",
+  "lastName": "Cama",
+  "email": "humi@gmail.com",
+  "password": "$2a$10$60afRyf0vMJe7v4Q2IdjOeDw3uyCVqM03AEFO/i.J/vk57sZpr0Tq",
+  "password_confirmation": "$2a$10$60afRyf0vMJe7v4Q2IdjOeDw3uyCVqM03AEFO/i.J/vk57sZpr0Tq",
+  "category": "Comprador",
+  "imgs": "Avatar-1642995542209.jpg",
+  "car": []
  }
 ]
