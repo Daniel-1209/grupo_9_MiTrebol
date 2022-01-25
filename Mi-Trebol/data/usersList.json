@@ -57,5 +57,29 @@
   "category": "Comprador",
   "imgs": "Avatar-1642995542209.jpg",
   "car": []
+ },
+ {
+  "id": 5,
+  "user": "algo@gmail.com",
+  "firstName": "Daniel",
+  "lastName": "",
+  "email": "algo@gmail.com",
+  "password": "$2a$10$wnLq8XmBxKjbfEyDogOhPenkLjl3aa2yaYdNo/XjTo8Gm7TN3oz1q",
+  "password_confirmation": "$2a$10$wnLq8XmBxKjbfEyDogOhPenkLjl3aa2yaYdNo/XjTo8Gm7TN3oz1q",
+  "category": "Vendedor",
+  "imgs": "Avatar-1643092795374.jpg",
+  "myProducts": []
+ },
+ {
+  "id": 6,
+  "user": "Carloos",
+  "firstName": "Carlos",
+  "lastName": "Montes",
+  "email": "hause@gmail.com",
+  "password": "$2a$10$/XcySd4TogkfiUuLS2oP4O/YxCx3f8rpCQZ/jH0TlcXXX7TJA2nUu",
+  "password_confirmation": "$2a$10$/XcySd4TogkfiUuLS2oP4O/YxCx3f8rpCQZ/jH0TlcXXX7TJA2nUu",
+  "category": "Vendedor",
+  "imgs": "Avatar-1643095211083.jpg",
+  "myProducts": []
  }
 ]
