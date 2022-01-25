@@ -103,3 +103,33 @@
 ## 5.-Hacer menos:
 -  Atrasarse con las clases del Playground
 -  Tomar trabajo ya asignado
+
+
+
+# Retroalimentación 5to Sprint  
+
+## 1.-¿Qué problemas tuvimos?
+- Problemas de salud
+- Aumento del ritmo del curso
+- Dificultad para estar al corriente con los temas del Playground más desarrollar el proyecto integrador
+- Desface entre las clases del Playground y los temas de las clases en vivo
+
+## 2.-Seguir haciendo:	
+- Mantener la comunicación 
+- Buen reparto de tareas
+- Esforzandonos individual y colectivamente
+- Entregas de productos finales en tiempo y forma
+
+## 3.-Hacer más:	
+- Autodidacta
+- Organización personal para lograr finalizar las clases previas
+- Preguntar nuestras dudas
+
+## 4.-Dejar de hacer:
+- Procrastinar el trabajo 
+- No compartir las dudas con el equipo
+
+## 5.-Hacer menos:
+- Confiar que la teoría del Playground es suficiente para comprender los temas y lograr completar el Proyecto Integrados
+- Quedarnos con dudas
+
