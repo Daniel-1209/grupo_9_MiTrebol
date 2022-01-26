@@ -47,14 +47,13 @@ let controlador = {
         errors: [{ msg: "Datos Invalidos" }],
       });
     }
-    user = { ...req.body };
     //let yes = false;
 
     // Verifica si fue encontrado el usuario
     // if( yes){
     req.session.user = user;
-    console.log("user:");
-    console.log(user);
+    // console.log("user:");
+    // console.log(user);
     //res.render('index.ejs', {products, user})
     // Elije si es vendedor o comprador
     if (user.category == "Vendedor") {

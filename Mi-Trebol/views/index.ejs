@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fuente Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <!-- Hoja de Estilos -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuente Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- Hoja de Estilos -->
     <title>.::MiTrébol::.</title>
     <link rel="stylesheet" href="/css/index.css">
 
@@ -23,10 +23,10 @@
         <div class="logos">
             <% if(locals.user){ %>
                 <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
-                <%  }else { %>
+                <% }else { %>
                     <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
-                <% } %>
-            <h1 class="tienda">MiTrébol</h1>
+                    <% } %>
+                        <h1 class="tienda">MiTrébol</h1>
         </div>
 
         <nav>
@@ -35,24 +35,27 @@
             <% if(locals.user){ %>
                 <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
                 <% } %>
-            
-            <% if(!locals.user){ %>
-                <li><a href="/users/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
-                <%  }else { %>
-                    <div class="dropdown">
-                        <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img class="profile" src="/img/avatars/<%= user.imgs %>" alt="imagen de perfil"> <%= user.firstName %>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
-                          <form class="dropdown-item" action="/close" method="POST">
-                              <button type="submit">Cerrar sesión</button>
-                          </form>
-                        </ul>
-                      </div>
-                <% } %>
-            
-            
+
+                    <% if(!locals.user){ %>
+                        <li><a href="/users/login">Ingresar <i class="fas fa-sign-in-alt"></i></a></li>
+                        <% }else { %>
+                            <div class="dropdown">
+                                <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="profile" src="/img/avatars/<%= user.imgs %>" height="40px" width="50px"
+                                        alt="imagen de perfil">
+                                    <%= user.firstName %>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
+                                    <form class="dropdown-item" action="/close" method="POST">
+                                        <button type="submit">Cerrar sesión</button>
+                                    </form>
+                                </ul>
+                            </div>
+                            <% } %>
+
+
         </nav>
     </header>
 
@@ -60,11 +63,12 @@
         <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
         <% if(!locals.user){ %>
             <h1>Bienvenido a MiTrébol </h1>
-            <%  }else { %>
-            <h1>Bienvenido a MiTrébol <%= user.firstName%></h1>
-            <% } %>
-        
-        <h3>Disfruta de la naturaleza</h3>
+            <% }else { %>
+                <h1>Bienvenido a MiTrébol <%= user.firstName%>
+                </h1>
+                <% } %>
+
+                    <h3>Disfruta de la naturaleza</h3>
     </section>
 
 
@@ -102,7 +106,7 @@
 
             <div class="producto-cat">
                 <a href="/products"><img class="img-categorias" src="/img/trebol.png" alt="">
-                    <h4 class="categoria"> ==>> Todos Los Productos <<==</h4>
+                    <h4 class="categoria"> ==>> Todos Los Productos <<==< /h4>
                 </a>
 
             </div>
@@ -113,7 +117,8 @@
 
     <section class="equipos" id="equipo">
         <h3 class="title">Nuestro equipo</h3>
-        <p>Trabajamos de la mano con productores, agricultores y artesanos mexicanos. Uno de nuestros principales objetivos es reconectar con nuestra tierra, su diversidad y su naturaleza.</p>
+        <p>Trabajamos de la mano con productores, agricultores y artesanos mexicanos. Uno de nuestros principales
+            objetivos es reconectar con nuestra tierra, su diversidad y su naturaleza.</p>
         <hr>
 
         <div>
@@ -128,29 +133,36 @@
         <hr>
         <!-- third example -->
         <div class="categorias-container">
-            
 
-        <% for ( product of products ) { %>
-            <% if ( product.ratings >= 300 ){ %>
 
-            <div class="producto-cat">
-                <a href="/products/detail/<%= product.id%>">
-                    <img class="categoria-producto" src="/img/<%= product.imgs[0]%>" alt="">
-                    <h4 class="categoria"> <%= product.title %> </h4>
-                </a>
-                <p>  <%= product.shortdescription%> </p>
-                <p>$<%= product.price%>MXN </p>
-                <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                <p class="valoracion"> <%= product.ratings%> valoraciones</p>
-            </div>
-            <%}%>
-        <% } %>
+            <% for ( product of products ) { %>
+                <% if ( product.ratings>= 300 ){ %>
 
-            
+                    <div class="producto-cat">
+                        <a href="/products/detail/<%= product.id%>">
+                            <img class="categoria-producto" src="/img/<%= product.imgs[0]%>" alt="">
+                            <h4 class="categoria">
+                                <%= product.title %>
+                            </h4>
+                        </a>
+                        <p>
+                            <%= product.shortdescription%>
+                        </p>
+                        <p>$<%= product.price%>MXN </p>
+                        <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p class="valoracion">
+                            <%= product.ratings%> valoraciones
+                        </p>
+                    </div>
+                    <%}%>
+                        <% } %>
 
-            
 
-           
+
+
+
+
 
     </section>
 
@@ -189,7 +201,7 @@
 
     <!-- Footer -->
     <%- include('./partials/footer') %>
-    
+
 
 </body>
 
