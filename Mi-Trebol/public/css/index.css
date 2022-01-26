@@ -214,8 +214,10 @@ header nav li:last-child {
 }
 
 .categorias-container {
-    max-width: 1400px;
-    margin: 0
+    width: 100% ;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .categorias-container-edit {
@@ -230,8 +232,12 @@ header nav li:last-child {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 20px;
-    flex-basis: 25%
+    width: 15%;
 }
+.producto-cat img {
+    height: 200px;
+}
+
 .producto-cat-2 {
     width: 25%; 
     height:25%;

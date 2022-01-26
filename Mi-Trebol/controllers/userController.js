@@ -22,15 +22,6 @@ let controlador = {
   },
   //Hacia el inicio despues de logearse
   begin: (req, res) => {
-    //let errors = locals.errors;
-    //if (errors.isEmpty()){
-    // if (User.getData == ""){
-    //   User.create(req.body);
-    // return user = newUser;
-    // } else {
-    //   return users;
-    // }
-    //}
     for (element of users) {
       //console.log(bcrypt.compareSync(element.password,user.password ));
       if (
@@ -47,14 +38,7 @@ let controlador = {
         errors: [{ msg: "Datos Invalidos" }],
       });
     }
-    //let yes = false;
-
-    // Verifica si fue encontrado el usuario
-    // if( yes){
     req.session.user = user;
-    // console.log("user:");
-    // console.log(user);
-    //res.render('index.ejs', {products, user})
     // Elije si es vendedor o comprador
     if (user.category == "Vendedor") {
       res.redirect("/indexVendedor");
@@ -76,7 +60,7 @@ let controlador = {
   // Hacia el inicion una vez registrada la persona
   enter: (req, res) => {
     let errors = validationResult(req);
-
+    // console.log(errors.array())
     if (!errors.isEmpty()) {
       res.render("./users/register.ejs", {
         user,
@@ -95,7 +79,6 @@ let controlador = {
         let passHasheada = bcrypt.hashSync(req.body.password, 10);
         user.password = passHasheada;
         user.password_confirmation = passHasheada;
-
       } else {
         let passHasheada = bcrypt.hashSync(req.body.password, 10);
 
@@ -113,7 +96,6 @@ let controlador = {
       fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
 
       res.redirect("/users/login");
-      
     }
   },
   //error: (req, res, next) => {
