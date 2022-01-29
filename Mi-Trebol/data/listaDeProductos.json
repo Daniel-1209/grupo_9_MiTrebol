@@ -85,5 +85,29 @@
   "imgs": [
    "Producto-1642828429830.jpg"
   ]
+ },
+ {
+  "id": 1643174064425,
+  "title": "ddddxx",
+  "shortdescription": "ssss",
+  "longDescription": "        ddd",
+  "class": "Semillas",
+  "price": "222",
+  "imgs": [
+   "Producto-1643174064415.jpg"
+  ],
+  "ratings": 0
+ },
+ {
+  "id": 1643176583008,
+  "title": "Desodorante",
+  "shortdescription": "Desodorante Natural",
+  "longDescription": "  Desodorante Natural eficaz para el ejercicion intenso",
+  "class": "Belleza",
+  "price": "40",
+  "imgs": [
+   "Producto-1643176583004.jpg"
+  ],
+  "ratings": 0
  }
 ]

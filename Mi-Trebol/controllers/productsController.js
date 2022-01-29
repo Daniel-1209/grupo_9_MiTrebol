@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require("express-validator");
 
 const productsFilePath = path.join(__dirname, "../data/listaDeProductos.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -22,16 +23,16 @@ let controlador = {
     let id = req.params.id;
     let user = req.session.user;
     let product;
-   
+
     for (element of products) {
       if (element.id == id) {
         product = element;
       }
     }
-    console.log(id, user, product)
+    // console.log(id, user, product);
     // console.log(products[id]);
     res.render("./products/productDetail.ejs", {
-        product,
+      product,
       products,
       user,
     });
@@ -79,7 +80,16 @@ let controlador = {
     // var imagesProductUser = req.files; //files para varios archivos
     let user = req.session.user;
     // console.log('req.file');
-    // console.log(req.file);
+
+    let errors = validationResult(req);
+    console.log(errors.array())
+    if (!errors.isEmpty()) {
+      res.render("./products/addProduct.ejs", {
+        user,
+        errors: errors.array(),
+        old: req.body,
+      });
+    }
 
     var newProduct = {
       id: Date.now(),

@@ -16,45 +16,63 @@
         <div class="formsheader">
           <h2 class="titulo">Añadir producto</h2>
         </div>
-        <div class="input">
-          <div>
-            <label class="label-text" for="title">Nombre del producto</label>
-            <input placeholder="" type="text" name="title" required id="text" />
-          </div>
-          <div>
-            <label class="label-text" for="title">Descripción corta</label>
-            <textarea type="text" name="shortdescription" required id="text2"></textarea>
-          </div>
-          <div>
-            <label class="label-text" for="title">Descripción larga</label>
-            <textarea type="text" name="longdescription" required id="text3"></textarea>
-          </div>
-        </div>
-        <div id="filepriceandselectors">
+        <% if (locals.errors) {%>
+            <%for(error of errors ) { %>
+                <p>
+                  <%= error.msg %>
+                </p>
+              <% } %>
+          <% } %>
+                <div class="input">
+                  <div>
+                    <label class="label-text" for="title">Nombre del producto</label>
+                    <input  type="text" name="title"
+                      value="<%= locals.old && old.title ? old.title : '' %>" id="text" />
+                  </div>
+                  <div>
+                    <label class="label-text" for="shortdescription">Descripción corta</label>
+                    <textarea type="text" name="shortdescription"
+                      id="text2"><%= locals.old && old.shortdescription ? old.shortdescription : '' %></textarea>
+                  </div>
+                  <div>
+                    <label class="label-text" for="longDescription">Descripción larga</label>
+                    <textarea type="text" name="longDescription"
+                      id="text3"> <%= locals.old && old.longDescription ? old.longDescription : '' %></textarea>
+                  </div>
+                </div>
+                <div id="filepriceandselectors">
 
-          <label for="image">
-            Seleccionar archivo >
-          </label>
-          <input class="select-file" type="file" name="productoImage" id="" single>
+                  <label class="label-text" for="productoImage">
+                    Seleccionar archivo
+                  </label>
+                  <input class="select-file" type="file" name="productoImage" id="" single>
 
-          <div id="selectors">
-            <%- include('../partials/categories') %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="price">
-            <label class="label-text" for="price"> Precio </label>
-            <div class="wrapper">
-              <span>$</span>
-              <input type="number" name="price" id="priceInput" />
-            </div>
-          </div>
-          <div>
-            <button type="submit">
-              Guardar Producto<span class="plus-icon">+</span>
-            </button>
-          </div>
-        </div>
+                  <div id="selectors">
+                    <label class="label-text" for="class">Categoría</label>
+                    <select name="class" id="class">
+                      <option value="Jabon" <%= locals.old && old.class === 'Jabon' ? 'selected' : '' %> >jabones</option>
+                      <option value="Belleza" <%=  locals.old && old.class === 'Belleza' ? 'selected' : '' %> >belleza</option>
+                      <option value="Semillas" <%=  locals.old && old.class === 'Semillas' ? 'selected' : '' %> >semillas</option>
+                      <option value="Artesanias" <%=  locals.old && old.class === 'Artesanias' ? 'selected' : '' %> >artesania</option>
+                      <option value="Velas" <%=  locals.old && old.class === 'Velas' ? 'selected' : '' %> >velas aromáticas</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="price">
+                    <label class="label-text" for="price"> Precio </label>
+                    <div class="wrapper">
+                      <span>$</span>
+                      <input type="number" name="price" value="<%= locals.old && old.price ? old.price : '' %>"
+                        id="priceInput" />
+                    </div>
+                  </div>
+                  <div>
+                    <button type="submit">
+                      Guardar Producto<span class="plus-icon">+</span>
+                    </button>
+                  </div>
+                </div>
       </form>
     </div>
 
