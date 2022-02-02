@@ -39,6 +39,9 @@ let controlador = {
       });
     }
     req.session.user = user;
+    console.log('user: ');
+    console.log(user);
+
     // Elije si es vendedor o comprador
     if (user.category == "Vendedor") {
       res.redirect("/indexVendedor");

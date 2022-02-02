@@ -36,7 +36,8 @@ let controlador = {
       products,
       user,
     });
-    // console.log(user);
+    console.log('user');
+    console.log(user);
   },
   car: (req, res) => {
     let list;
@@ -79,7 +80,7 @@ let controlador = {
   create: (req, res) => {
     // var imagesProductUser = req.files; //files para varios archivos
     let user = req.session.user;
-    // console.log('req.file');
+    console.log('req.session.user');
 
     let errors = validationResult(req);
     console.log(errors.array())
@@ -128,6 +129,7 @@ let controlador = {
   edit: (req, res) => {
     let id = req.params.id;
     let produtNow;
+    let user = req.session.user;
     for (element of products) {
       if (element.id == id) {
         produtNow = element;
@@ -135,7 +137,7 @@ let controlador = {
     }
     // console.log(produtNow);
 
-    res.render("./products/editProduct.ejs", { produtNow });
+    res.render("./products/editProduct.ejs", { produtNow, user });
   },
   update: (req, res) => {
     let newProduct = {
