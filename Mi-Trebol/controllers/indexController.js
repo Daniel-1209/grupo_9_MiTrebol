@@ -10,13 +10,25 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 
+// Importamos la base de datos que esta en la carpeta de modelos
+const db = require('../database/models')
+
+
 
 let controlador = {
     home: (req, res) => {
+            db.Users.findAll()
+                .then((data)=>{
+                console.log(data);
+                }).catch((error) => {  
+                    res.send("Error");
+                });
+
         if ( req.session.user != undefined){
             let user = req.session.user;
             res.render('index.ejs', {products, user});
         }else{
+            
             res.render('index.ejs', {products});
         }
         
