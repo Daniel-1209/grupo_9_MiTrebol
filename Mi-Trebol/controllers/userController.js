@@ -7,10 +7,10 @@ const productsFilePath = path.join(__dirname, "../data/usersList.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const usersFilePath = path.join(__dirname, "../data/usersList.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+// const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 // Base de datos
-// const db = require('../database/models')
+const db = require('../database/models')
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let user = null;
@@ -22,9 +22,11 @@ let controlador = {
     res.render("./users/login.ejs", { user });
   },
   //Hacia el inicio despues de logearse
-  begin: (req, res) => {
+  begin: async (req, res) => {
+
+    let users = await db.Users.findAll({include: [{association: 'myProducts'}]});
+
     for (element of users) {
-      //console.log(bcrypt.compareSync(element.password,user.password ));
       if (
         element.email === req.body.email &&
         bcrypt.compareSync(req.body.password, element.password)
@@ -39,21 +41,16 @@ let controlador = {
         errors: [{ msg: "Datos Invalidos" }],
       });
     }
-    req.session.user = user;
+    req.session.user = user.dataValues;
     console.log('user: ');
-    console.log(user);
+    console.log(user.dataValues);
 
     // Elije si es vendedor o comprador
-    if (user.category == "Vendedor") {
+    if (user.dataValues.id_category == 1) {
       res.redirect("/indexVendedor");
     } else {
       res.redirect("/");
     }
-    // }
-    //else {
-    res.redirect("/users/login");
-    //return res.render('login', {errors: errors.errors});
-    //}
   },
 
   // Hacia las vista del registro
@@ -102,18 +99,6 @@ let controlador = {
       res.redirect("/users/login");
     }
   },
-  //error: (req, res, next) => {
-  //  const file = req.file
-  //if(!file){
-  //  const error = new Error ('Por favor selecciona un archivo')
-  //error.httpStatusCode = 400
-  //return next(error)
-  //}
-  //else {
-  //  user = null;
-  //res.send('error');
-  //}
-  //}
 };
 
 module.exports = controlador;

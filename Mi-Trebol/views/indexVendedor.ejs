@@ -36,8 +36,8 @@
             <div class="dropdown">
                 <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="profile" src="/img/avatars/<%= user.imgs %>" height="40px" alt="imagen de perfil">
-                    <%= user.firstName %>
+                    <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px" alt="imagen de perfil">
+                    <%= user.first_name %>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Cuenta</a></li>
@@ -52,7 +52,7 @@
 
     <section class="hero" id="inicio">
         <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
-        <h1>Bienvenido <%= user.firstName %>
+        <h1>Bienvenido <%= user.first_name %>
         </h1>
         <h3> MIS PRODUCTOS</h3>
     </section>
@@ -130,7 +130,7 @@
         <p>Listado de todos tus productos puedes editarlos, verlos o eliminarlos.</p>
         <hr>
         <!-- Editar productos-->
-        <div class="categorias-container-edit">
+        <div class="categorias-container">
 
 
             <% for ( product of products ) { %>
@@ -146,19 +146,19 @@
                     
 
                     <a href="/products/detail/<%= product.id%>">
-                        <img class="categoria-producto edit" src="/img/<%= product.imgs[0]%>" alt="">
+                        <img class="categoria-producto edit" src="/img/<%= product.imgs[0].name%>" alt="">
                         <h4 class="categoria">
                             <%= product.title %>
                         </h4>
                     </a>
                     <p>
-                        <%= product.shortdescription%>
+                        <%= product.shortdescription %>
                     </p>
                     <p>$<%= product.price%>MXN </p>
                     <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                             class="fas fa-star"></i><i class="fas fa-star"></i></p>
                     <p class="valoracion">
-                        <%= product.ratings%> valoraciones
+                        <%= product.raiting%> valoraciones
                     </p>
                 </div>
                 <% } %>

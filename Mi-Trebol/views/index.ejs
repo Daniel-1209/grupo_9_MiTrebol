@@ -42,9 +42,9 @@
                             <div class="dropdown">
                                 <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img class="profile" src="/img/avatars/<%= user.imgs %>" height="40px" width="50px"
+                                    <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px" width="50px"
                                         alt="imagen de perfil">
-                                    <%= user.firstName %>
+                                    <%= user.first_name %>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
@@ -64,7 +64,7 @@
         <% if(!locals.user){ %>
             <h1>Bienvenido a MiTrébol </h1>
             <% }else { %>
-                <h1>Bienvenido a MiTrébol <%= user.firstName%>
+                <h1>Bienvenido a MiTrébol <%= user.first_name%>
                 </h1>
                 <% } %>
 
@@ -136,11 +136,11 @@
 
 
             <% for ( product of products ) { %>
-                <% if ( product.ratings>= 300 ){ %>
+                <% if ( product.raiting>= 300 ){ %>
 
                     <div class="producto-cat">
                         <a href="/products/detail/<%= product.id%>">
-                            <img class="categoria-producto" src="/img/<%= product.imgs[0]%>" alt="">
+                            <img class="categoria-producto" src="/img/<%= product.imgs[0].name%>" alt="">
                             <h4 class="categoria">
                                 <%= product.title %>
                             </h4>
@@ -152,7 +152,7 @@
                         <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                         <p class="valoracion">
-                            <%= product.ratings%> valoraciones
+                            <%= product.raiting%> valoraciones
                         </p>
                     </div>
                     <%}%>

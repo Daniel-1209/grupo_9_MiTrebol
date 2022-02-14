@@ -28,7 +28,7 @@
                 <% for ( product of products ) { %>
                     <div class="producto-cat">
                         <a href="/products/detail/<%= product.id%>">
-                            <img class="categoria-producto" src="/img/<%= product.imgs[0]%>"  alt="producto">
+                            <img class="categoria-producto" src="/img/<%= product.imgs[0].name%>"  alt="producto">
                             <h4 class="categoria">
                                 <%= product.title %>
                             </h4>
@@ -40,7 +40,7 @@
                         <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                         <p class="valoracion">
-                            <%= product.ratings%> valoraciones
+                            <%= product.raiting%> valoraciones
                         </p>
                     </div>
                     <% } %>
