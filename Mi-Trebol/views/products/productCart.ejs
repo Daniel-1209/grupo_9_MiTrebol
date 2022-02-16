@@ -21,11 +21,11 @@
 
                     <% for ( article of list) { %>
 
-                        <article class="producto"> <a href="/products/detail/<%= article%>">
-                            <img src="/img/<%=products[article].imgs[0]%>" alt="articulo">
-                            <strong> <%=products[article].title%> </strong> </a>
-                            <p> $<%=products[article].price%> MXN</p>
-                            <% suma += products[article].price%>
+                        <article class="producto"> <a href="/products/detail/<%= article.id%>">
+                            <img src="/img/<%= article.img_principal %>" alt="articulo">
+                            <strong> <%= article.name %> </strong> </a>
+                            <p> $<%= article.price %> MXN</p>
+                            <% suma += parseFloat(article.price) %>
                             <div class="cantidad">
                                 <label for="canti">Cantidad De Productos: </label>
                                 <input type="number" name="canti" id="can-pro" value="1">
@@ -46,7 +46,7 @@
         <div class="totalPagar">
         
                 <h2>TOTAL A PAGAR</h2>
-                <h2>$ <span id="enteros"><%= suma%></span> </h2>
+                <h2>$ <span id="enteros"><%= suma %></span> </h2>
             
 
             <input type="button" value="PAGAR">

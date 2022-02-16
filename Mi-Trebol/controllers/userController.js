@@ -24,7 +24,7 @@ let controlador = {
   //Hacia el inicio despues de logearse
   begin: async (req, res) => {
 
-    let users = await db.Users.findAll({include: [{association: 'myProducts'}]});
+    let users = await db.Users.findAll({include: [{association: 'myProducts'}, {association: 'ShoppingCar'} ]});
 
     for (element of users) {
       if (

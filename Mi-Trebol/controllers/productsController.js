@@ -51,20 +51,10 @@ let controlador = {
       console.log(user);
     },
     car: (req, res) => {
-      let list;
-      let userNow = req.session.user;
-      // Cada que se escribe algo en el archivo json se reinicioa el usuario
-      //console.log(userNow);
-      for (carr of shoppingList) {
-        if (carr.id == userNow.id) {
-          list = carr.car;
+      let list = req.session.user.ShoppingCar;
+      let user = req.session.user;
 
-          break;
-        }
-      }
-      //
-
-      res.render("./products/productCart.ejs", { list, user: userNow, products });
+      res.render("./products/productCart.ejs", { list, user });
       //res.render ('./products/productCart.ejs', {list:shoppingList.car ,products});
     },
     newCarProduct: (req, res) => {

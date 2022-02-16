@@ -31,7 +31,10 @@ module.exports = (sequelize, dataTypes) => {
         } ,
         purchases: {
             type: dataTypes.INTEGER
-        } 
+        },
+        img_principal: {
+            type: dataTypes.STRING 
+        }
 
     }
     
@@ -54,6 +57,14 @@ module.exports = (sequelize, dataTypes) => {
             as: 'imgs',
             foreignKey: 'id_product'
         })
+
+        Product.belongsToMany(models.Users, {
+            as: "CarShopping",
+            through: "car",
+            foreignKey: "id_product",
+            otherKey: "id_user",
+            timestamps: false
+        });
     }
 
     return Product;
