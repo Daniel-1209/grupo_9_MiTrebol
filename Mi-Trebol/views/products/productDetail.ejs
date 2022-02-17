@@ -15,7 +15,7 @@
             <section class='info_completa'>
                 <div class=carrusel_img_detalle>
                     <div class='contenedor_img_grande'>
-                        <img class='imagen_grande' width=30% src="/img/<%=  product.imgs[0].name %>"
+                        <img class='imagen_grande' width=30% src="/img/<%=  product.imgs[0]?.name %>"
                             alt="<%= product.title%>">
 
 
@@ -79,7 +79,7 @@
                         <% if( element.class==product.class ) { %>
 
                             <article id=producto_info_general> <a href="/products/detail/<%= element.id%>">
-                                    <img class='imgPR' src='/img/<%= element.imgs[0].name%>' alt="Imagen de producto"
+                                    <img class='imgPR' src='/img/<%= element.imgs[0]?.name%>' alt="Imagen de producto"
                                         width="200px" height="200px"> </a>
                                 <div id='caja_general'>
                                     <div id='info_producto'>

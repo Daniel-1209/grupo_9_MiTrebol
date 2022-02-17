@@ -47,8 +47,8 @@ let controlador = {
         products,
         user,
       });
-      console.log('user');
-      console.log(user);
+      // console.log('user');
+      // console.log(user);
     },
     car: (req, res) => {
       let list = req.session.user.ShoppingCar;
@@ -78,43 +78,50 @@ let controlador = {
       res.render("./products/addProduct.ejs", { user });
     },
     // Creacion del producto
-    create: (req, res) => {
-      // var imagesProductUser = req.files; //files para varios archivos
+    create: async (req, res) => {
+      
       let user = req.session.user;
-      console.log('req.session.user');
 
       let errors = validationResult(req);
       console.log(errors.array())
+
       if (!errors.isEmpty()) {
         res.render("./products/addProduct.ejs", {
           user,
           errors: errors.array(),
           old: req.body,
         });
+      }else {
+          let { title, shortdescription, longDescription,classe, price } = req.body;
+
+          let product = await db.Products.create({
+            name: title,
+            price: price,
+            raiting: 0,
+            id_class: classe,
+            shortdescription: shortdescription,
+            longDescription: longDescription,
+            purchases: 0,
+            img_principal: req.file.filename
+            });
+
+      
+            db.Images.create({
+              id_product: product.id,
+              name: req.file.filename
+              });
+
+            db.SellerProducts.create({
+              id_user: user.id ,
+              id_product: product.id
+              });
+
+    
+      res.redirect("/products/detail/" +  product.id);
       }
+      
+      
 
-      var newProduct = {
-        id: Date.now(),
-        ...req.body,
-        imgs: [req.file.filename],
-        ratings: 0,
-      };
-
-      //console.log(userNow);
-      for (userNow of users) {
-        if (userNow.id == user.id) {
-          userNow.myProducts.push(newProduct.id);
-          break;
-        }
-      }
-
-      //console.log('newProduct:');
-      //console.log(newProduct);
-
-      products.push(newProduct);
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ""));
-      res.redirect("/products/detail/" + newProduct.id);
     },
     error: (req, res, next) => {
       const file = req.file;

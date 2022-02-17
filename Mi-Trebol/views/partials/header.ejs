@@ -2,7 +2,7 @@
   <div class="trebol">
 
     <% if(locals.user){ %>
-        <% if(user.category == 'Vendedor'){ %>
+        <% if(user.id_category == 1 ){ %>
          
           <a href="/indexVendedor"><img class="logo" src="/img/logo.png" alt=""></a>
         <% } else { %>
@@ -19,7 +19,7 @@
           <h1 class="tienda">MiTrébol</h1>
       <nav>
         <% if(locals.user){ %>
-          <% if(user.category == 'Vendedor'){ %>
+          <% if(user.id_category == 1){ %>
             <li><a href="/indexVendedor">Inicio <i class="fas fa-sign-in-alt"></i></a></li>
           <% } else { %>
             <li><a href="/">Inicio <i class="fas fa-sign-in-alt"></i></a></li>

@@ -20,7 +20,7 @@ const validateCreateUser = [
     .withMessage("Ingresa una descripciono detallada")
     .isLength({ min: 15 })
     .withMessage("El nombre debe tener al menos 15 caracteres"),
-  check("class").notEmpty().withMessage("Selecciona una clase de tu producto"),
+  check("classe").notEmpty().withMessage("Selecciona una clase de tu producto"),
   check("price").notEmpty().withMessage("Ponle precio por pieza a tu producto"),
   // check("productoImage").notEmpty().withMessage("Pon tu foto de perfil").bail(),
 ];

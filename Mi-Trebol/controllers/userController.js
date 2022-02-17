@@ -42,8 +42,8 @@ let controlador = {
       });
     }
     req.session.user = user.dataValues;
-    console.log('user: ');
-    console.log(user.dataValues);
+    // console.log('user: ');
+    // console.log(user.dataValues);
 
     // Elije si es vendedor o comprador
     if (user.dataValues.id_category == 1) {
