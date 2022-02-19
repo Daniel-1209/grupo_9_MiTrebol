@@ -41,9 +41,14 @@ router.get('/detail/:id', productsController.detail);
 router.get('/cart', productsController.car);
 // Agregando un nuevo producto al carrito
 router.post('/cart/:id',noRegisterMiddleaware, productsController.newCarProduct);
-// Editar detalles del producto
+// Eliminar un nuevo producto al carrito
+router.delete('/cart/delete/:id',noRegisterMiddleaware, productsController.deleteCarProduct);
+
+// Editar detalles del producto vista
 router.get('/edit/:id', productsController.edit);
+// Editar detalle del producto post
 router.post('/edit/:id',  uploadFile.single('productoImage'), productsController.update);
+
 // Eliminar archivos
 router.delete('/edit/:id/eliminar', productsController.delete);
 

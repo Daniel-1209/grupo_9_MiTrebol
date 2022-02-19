@@ -55,8 +55,7 @@ let controlador = {
     },
     vendedor: async (req, res) => {
         let products = await db.Products.findAll({include: [{association: 'imgs'}]});
-        let user = req.session.user;
-      
+        let user = await db.Users.findByPk(req.session.user.id,{include: [{association: 'myProducts'} ]});;
         
         // console.log(user);
         let myProducts = [];

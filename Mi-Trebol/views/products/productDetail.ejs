@@ -24,7 +24,7 @@
 
                 <div class='info-producto-detalle'>
                     <h1 class='titulo-natural1'>
-                        <%= product.title%>
+                        <%= product.name%>
                     </h1>
 
                     <div class='rateing'>
@@ -76,7 +76,7 @@
                 <br class="brPR">
                 <div class='imagenes_relacionadas'>
                     <% for ( element of products ) { %>
-                        <% if( element.class==product.class ) { %>
+                        <% if( element.id_class==product.id_class ) { %>
 
                             <article id=producto_info_general> <a href="/products/detail/<%= element.id%>">
                                     <img class='imgPR' src='/img/<%= element.imgs[0]?.name%>' alt="Imagen de producto"

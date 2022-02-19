@@ -30,8 +30,8 @@
                                 <label for="canti">Cantidad De Productos: </label>
                                 <input type="number" name="canti" id="can-pro" value="1">
                             </div>
-                             <form action="" >
-                                <input type="button" value="Eliminar" class="eliminar">
+                             <form action="/products/cart/delete/<%= article.id %>?_method=DELETE" method="post" >
+                                 <button type="submit"  class="eliminar" >Eliminar</button>
                             </form>
                         </article>
 

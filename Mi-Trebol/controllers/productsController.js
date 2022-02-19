@@ -2,12 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 
-const productsFilePath = path.join(__dirname, "../data/listaDeProductos.json");
-//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-const carFilePath = path.join(__dirname, "../data/usersList.json");
-const shoppingList = JSON.parse(fs.readFileSync(carFilePath, "utf-8"));
-
 const usersFilePath = path.join(__dirname, "../data/usersList.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
@@ -38,10 +32,16 @@ let controlador = {
     detail: async (req, res) => {
       let id = req.params.id;
       let user = req.session.user;
+      if(user?.id_category === 1 ){
+        user = await db.Users.findByPk(req.session.user.id,{include: [{association: 'myProducts'} ]});;
+      } else if(user?.id_category === 2 ) {
+        user = await db.Users.findByPk(req.session.user.id,{include: [{association: 'ShoppingCar'} ]});;
+      }  
+     
       let product = await db.Products.findByPk(id, { include: [{association: 'imgs'}] });
       let products = await db.Products.findAll({include: [{association: 'imgs'}]});
 
-      console.log(products)
+      // console.log(products)
       res.render("./products/productDetail.ejs", {
         product,
         products,
@@ -50,32 +50,45 @@ let controlador = {
       // console.log('user');
       // console.log(user);
     },
-    car: (req, res) => {
-      let list = req.session.user.ShoppingCar;
-      let user = req.session.user;
+    // Vista del carrito de compras
+    car: async (req, res) => {
+      
+      let user = await db.Users.findByPk(req.session.user.id,{include: [{association: 'ShoppingCar'} ]});;
+      let list = user.ShoppingCar;
 
       res.render("./products/productCart.ejs", { list, user });
       //res.render ('./products/productCart.ejs', {list:shoppingList.car ,products});
     },
-    newCarProduct: (req, res) => {
-      let userNow = req.session.user;
-      //console.log(userNow);
-      for (user of users) {
-        if (userNow.id == user.id) {
-          let index = parseInt(req.params.id);
-          user.car.push(index);
-          break;
-        }
-      }
+    newCarProduct: async (req, res) => {
 
-      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ""));
+      let {id} = req.session.user;
+      //console.log(userNow);
+       db.Cars.create({
+        id_user: id,
+        id_product: req.params.id
+        });
+
       res.redirect("/products/cart");
+
+    },
+    // Eliminando un producto del carrito
+    deleteCarProduct: async (req, res) => {
+
+      let id = req.params.id;
+      // console.log(id)
+       db.Cars.destroy({
+        where: {id_product: id}
+        });
+
+      res.redirect("/products/cart");
+
     },
     // Vista de crear producto
     addProduct: (req, res) => {
-      let user = req.session.user;
 
+      let user = req.session.user;
       res.render("./products/addProduct.ejs", { user });
+
     },
     // Creacion del producto
     create: async (req, res) => {
@@ -123,56 +136,64 @@ let controlador = {
       
 
     },
-    error: (req, res, next) => {
-      const file = req.file;
-      if (!file) {
-        const error = new Error("Por favor selecciona un archivo");
-        error.httpStatusCode = 400;
-        return next(error);
-      }
-
-      let user = req.session.user;
-      res.render("./products/addProduct.ejs", { user });
-    },
-    edit: (req, res) => {
+    // Editando un producto
+    edit: async (req, res) => {
       let id = req.params.id;
-      let produtNow;
       let user = req.session.user;
-      for (element of products) {
-        if (element.id == id) {
-          produtNow = element;
-        }
-      }
+      let produtNow = await db.Products.findByPk(id, { include: [{association: 'imgs'}] });
       // console.log(produtNow);
 
       res.render("./products/editProduct.ejs", { produtNow, user });
     },
+    // Metodo post de editar un producto
     update: (req, res) => {
-      let newProduct = {
-        id: parseInt(req.params.id),
-        ...req.body,
-        imgs: [req.file.filename],
-      };
-      console.log(newProduct);
-      for (let i = 0; i < products.length; i++) {
-        if (products[i].id == newProduct.id) {
-          products[i] = newProduct;
-        }
-      }
+  
+      let id = req.params.id;
+      let { title, shortdescription, longDescription,classe, price } = req.body;
+      db.Products.update(
+        {
+            name: title,
+            price: price,
+            raiting: 0,
+            id_class: classe,
+            shortdescription: shortdescription,
+            longDescription: longDescription,
+            purchases: 0,
+            img_principal: req.file.filename
+        },
+        {
+          where: {id: id}
+        });
 
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect(`/products/detail/` + newProduct.id);
+        db.Images.destroy({
+          where: { id_product: id }
+          });
+
+        db.Images.create({
+          id_product: id,
+          name: req.file.filename
+          });
+     
+      res.redirect(`/products/detail/` + id);
     },
     delete: (req, res) => {
       // console.log('Delete complet');
       const id = req.params.id;
-      let newProducts = products.filter((product) => {
-        return product.id != id;
-      });
-      // console.log(newProducts, id);
 
-      fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
+      db.Images.destroy({
+        where: {id_product: id}
+        });
+
+      db.SellerProducts.destroy({
+        where: {id_product: id}
+        });
+
+      db.Products.destroy({
+        where: {id: id}
+        });
+      
       res.redirect("/indexVendedor");
+      
     },
     notFound: (req, res, err) => {
       if (err) {

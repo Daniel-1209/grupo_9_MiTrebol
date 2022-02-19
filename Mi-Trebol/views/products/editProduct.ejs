@@ -23,7 +23,7 @@
 
   <header class="trebol">
     <div class="logos">
-      <a href="/"><img class="logo" src="/img/logo.png" alt="logotipo de MiTrébol"></a>
+      <a href="/indexVendedor"><img class="logo" src="/img/logo.png" alt="logotipo de MiTrébol"></a>
       <h1 class="tienda">MiTrébol</h1>
     </div>
 
@@ -59,7 +59,7 @@
               <div class="input">
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
-                  <input value="<%= produtNow.title %>" type="text" name="title" required id="text" />
+                  <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
                 </div>
                 <div class="mb-3">
                   <label for="Descripción del producto" class="form-label">Descripción corta</label>
@@ -69,7 +69,7 @@
                 <div class="mb-3">
                   <label class="label-text" for="longdescription">Descripción larga</label>
                   <textarea type="text" name="longdescription" required
-                    id="text3"><%= produtNow.longdescription %></textarea>
+                    id="text3"><%= produtNow.longDescription %></textarea>
                 </div>
 
                 <div class="mb-3">
@@ -79,11 +79,11 @@
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Categoria</label>
                   <select name="form-select" id="class">
-                    <option value="Jabon" <%=produtNow.class=='Jabon' ? 'selected' : '' %> >jabones</option>
-                    <option value="Belleza" <%=produtNow.class=='Belleza' ? 'selected' : '' %> >belleza</option>
-                    <option value="Semillas" <%=produtNow.class=='Semillas' ? 'selected' : '' %> >semillas</option>
-                    <option value="Artesanias" <%=produtNow.class=='Artesanias' ? 'selected' : '' %> >artesania</option>
-                    <option value="Velas" <%=produtNow.class=='Velas' ? 'selected' : '' %> >velas aromáticas</option>
+                    <option value="Jabon" <%=produtNow.id_class == 1 ? 'selected' : '' %> >jabones</option>
+                    <option value="Belleza" <%=produtNow.id_class == 2 ? 'selected' : '' %> >belleza</option>
+                    <option value="Semillas" <%=produtNow.id_class == 3 ? 'selected' : '' %> >semillas</option>
+                    <option value="Artesanias" <%=produtNow.id_class == 4 ? 'selected' : '' %> >artesania</option>
+                    <option value="Velas" <%=produtNow.id_class == 5 ? 'selected' : '' %> >velas aromáticas</option>
                   </select>
                 </div>
 

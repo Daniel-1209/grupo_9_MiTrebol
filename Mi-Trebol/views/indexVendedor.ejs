@@ -146,9 +146,9 @@
                     
 
                     <a href="/products/detail/<%= product.id%>">
-                        <img class="categoria-producto edit" src="/img/<%= product.imgs[0].name%>" alt="">
+                        <img class="categoria-producto edit" src="/img/<%= product.imgs[0]?.name%>" alt="">
                         <h4 class="categoria">
-                            <%= product.title %>
+                            <%= product.name %>
                         </h4>
                     </a>
                     <p>
