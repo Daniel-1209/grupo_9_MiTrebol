@@ -1,13 +1,5 @@
-
 const fs = require('fs');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/listaDeProductos.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const usersFilePath = path.join(__dirname, '../data/usersList.json');
-//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 
 
 // Importamos la base de datos que esta en la carpeta de modelos
@@ -49,9 +41,6 @@ let controlador = {
         }
         
 
-    },
-    search: (req, res) => {
-        res.send('Estado de busqueda');
     },
     vendedor: async (req, res) => {
         let products = await db.Products.findAll({include: [{association: 'imgs'}]});

@@ -3,16 +3,9 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
-const productsFilePath = path.join(__dirname, "../data/usersList.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-const usersFilePath = path.join(__dirname, "../data/usersList.json");
-// const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
 // Base de datos
 const db = require('../database/models')
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let user = null;
 
 let controlador = {

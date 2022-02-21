@@ -30,7 +30,13 @@
         </div>
 
         <nav>
-            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <form action="/products/search" method="get"> 
+                <input type="search" name="search" id="">
+                <button type="submit"> <i class="fas fa-search"></i></button>
+               
+
+            </form>
+            <li><a href=""></i></a></li>
             <li><a href="/">Inicio</a></li>
             <% if(locals.user){ %>
                 <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>

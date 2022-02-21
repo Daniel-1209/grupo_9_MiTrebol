@@ -37,6 +37,9 @@ router.get('/', productsController.home);
 // Detalle de los productos por id
 router.get('/detail/:id', productsController.detail);
 
+// Buscar producto
+router.get('/search',productsController.search );
+
 // Carrito de compras
 router.get('/cart', productsController.car);
 // Agregando un nuevo producto al carrito
@@ -49,7 +52,7 @@ router.get('/edit/:id', productsController.edit);
 // Editar detalle del producto post
 router.post('/edit/:id',  uploadFile.single('productoImage'), productsController.update);
 
-// Eliminar archivos
+// Eliminar producto
 router.delete('/edit/:id/eliminar', productsController.delete);
 
 
