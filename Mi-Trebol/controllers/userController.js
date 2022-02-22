@@ -56,38 +56,27 @@ let controlador = {
     let errors = validationResult(req);
     // console.log(errors.array())
     if (!errors.isEmpty()) {
-      res.render("./users/register.ejs", {
-        user,
-        errors: errors.array(),
-        old: req.body,
-      });
+        res.render("./users/register.ejs", {
+          user,
+          errors: errors.array(),
+          old: req.body,
+        });
     } else {
-      if (req.body.category == "Comprador") {
-        user = {
-          id: users.length + 1,
-          ...req.body,
-          //password: passHasheada ,   //guarda la contraseña hasheada
-          imgs: req.file.filename,
-          car: [],
-        };
-        let passHasheada = bcrypt.hashSync(req.body.password, 10);
-        user.password = passHasheada;
-        user.password_confirmation = passHasheada;
-      } else {
+     
         let passHasheada = bcrypt.hashSync(req.body.password, 10);
 
-        user = {
-          id: users.length + 1,
-          ...req.body,
-          imgs: req.file.filename, //'Profile' //agregar imagen del perfil
-          myProducts: [],
-        };
-        user.password = passHasheada;
-        user.password_confirmation = passHasheada;
-      }
+        db.Users.create({
+          user: req.body.user,
+          first_name: req.body.firstName,
+          last_name: req.body.lastName,
+          email: req.body.email,
+          password: passHasheada,
+          id_category:  req.body.category,
+          avatar: req.file.filename
+        })
 
-      users.push(user);
-      fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+      
+
 
       res.redirect("/users/login");
     }
