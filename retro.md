@@ -133,3 +133,29 @@
 - Confiar que la teoría del Playground es suficiente para comprender los temas y lograr completar el Proyecto Integrados
 - Quedarnos con dudas
 
+
+# Retroalimentación 6to Sprint  
+
+## 1.-¿Qué problemas tuvimos?
+- Al juntarse las actividades por terminar de 2 sprints fue complicado estar al corriente con el 6to
+- Por la acumulación de tareas pendientes del proyecto más las tareas independientes de cada persona se complicó el trabajo en equipo
+
+## 2.-Seguir haciendo:	
+- Seguir con el aprendizaje de playground y asisitir a las clases para poder terminar el proyecto.
+- Hacer un último esfuezo por el último mes de trabajo 
+- Seguir repartiendo las tareas del sprint
+
+## 3.-Hacer más:	
+- Hacer las reuniones semanales
+- Más comunicación entre compañeros y compañeras. 
+- Más trabajo en equipo
+- Repartir de mejor manera las actividades
+
+## 4.-Dejar de hacer:
+- Ausentarnos y confiarnos del tiempo
+- No hacer las reuniones semanales
+- Repartir las tareas de manera desigual
+
+## 5.-Hacer menos:
+- Confiarse del tiempo para desarrollar el sprint
+- No clasficar bien las actividades
