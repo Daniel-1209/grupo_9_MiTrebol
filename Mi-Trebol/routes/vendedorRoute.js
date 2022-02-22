@@ -14,12 +14,12 @@ const validateCreateUser = [
     .notEmpty()
     .withMessage("Ingresa una descripcion corta")
     .isLength({ min: 5 })
-    .withMessage("El nombre debe tener al menos 5 caracteres"),
+    .withMessage("La descripcion corta debe tener al menos 5 caracteres"),
   check("longDescription")
     .notEmpty()
     .withMessage("Ingresa una descripciono detallada")
     .isLength({ min: 15 })
-    .withMessage("El nombre debe tener al menos 15 caracteres"),
+    .withMessage("La descripcion larga debe tener al menos 15 caracteres"),
   check("classe").notEmpty().withMessage("Selecciona una clase de tu producto"),
   check("price").notEmpty().withMessage("Ponle precio por pieza a tu producto"),
   // check("productoImage").notEmpty().withMessage("Pon tu foto de perfil").bail(),

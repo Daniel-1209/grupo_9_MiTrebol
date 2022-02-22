@@ -23,6 +23,26 @@ let controlador = {
         res.send("Error");
       });
   },
+  // Se muestra por categoria
+  category: (req, res) => {
+    let user = {
+      id: req.params.iduser,
+    };
+
+    db.Products.findAll({
+      where: {
+        id_class: req.params.idCategory
+      },
+      // Incluimos  la asociacion
+      include: [{ association: "imgs" }],
+    })
+      .then((data) => {
+        res.render("./products/products.ejs", { products: data, user });
+      })
+      .catch((error) => {
+        res.send("Error");
+      });
+  },
 
   detail: async (req, res) => {
     let id = req.params.id;
@@ -122,9 +142,9 @@ let controlador = {
   // Creacion del producto
   create: async (req, res) => {
     let user = req.session.user;
-
+    // console.log(user);
     let errors = validationResult(req);
-    console.log(errors.array());
+    // console.log(errors.array());
 
     if (!errors.isEmpty()) {
       res.render("./products/addProduct.ejs", {
@@ -135,7 +155,7 @@ let controlador = {
     } else {
       let { title, shortdescription, longDescription, classe, price } =
         req.body;
-
+        // console.log(user);
       let product = await db.Products.create({
         name: title,
         price: price,
@@ -207,6 +227,10 @@ let controlador = {
     const id = req.params.id;
 
     db.Images.destroy({
+      where: { id_product: id },
+    });
+
+    db.Cars.destroy({
       where: { id_product: id },
     });
 
