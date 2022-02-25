@@ -54,52 +54,60 @@
         </div>
         <div class="modal-body">
           <div class="form-container">
-            
-            <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data">
-              <div class="input">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
-                  <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
-                </div>
-                <div class="mb-3">
-                  <label for="Descripción del producto" class="form-label">Descripción corta</label>
-                  <textarea type="text" name="shortdescription" required
-                    id="text2"><%= produtNow.shortdescription %></textarea>
-                </div>
-                <div class="mb-3">
-                  <label class="label-text" for="longdescription">Descripción larga</label>
-                  <textarea type="text" name="longdescription" required
-                    id="text3"><%= produtNow.longDescription %></textarea>
-                </div>
+            <% if (locals.errors) {%>
+              <%for(error of errors ) { %>
+                <p>
+                  <%= error.msg %>
+                </p>
+                <% } %>
+                  <% } %>
 
-                <div class="mb-3">
-                  <label for="formFile" class="form-label">Modificar imagen</label>
-                  <input class="select-file" type="file" name="productoImage" required id="" single>
-                </div>
-                <div class="mb-3">
-                  <label for="formFile" class="form-label">Categoria</label>
-                  <select name="form-select" id="class">
-                    <option value="Jabon" <%=produtNow.id_class == 1 ? 'selected' : '' %> >jabones</option>
-                    <option value="Belleza" <%=produtNow.id_class == 2 ? 'selected' : '' %> >belleza</option>
-                    <option value="Semillas" <%=produtNow.id_class == 3 ? 'selected' : '' %> >semillas</option>
-                    <option value="Artesanias" <%=produtNow.id_class == 4 ? 'selected' : '' %> >artesania</option>
-                    <option value="Velas" <%=produtNow.id_class == 5 ? 'selected' : '' %> >velas aromáticas</option>
-                  </select>
-                </div>
+                    <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data">
+                      <div class="input">
+                        <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
+                          <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
+                        </div>
+                        <div class="mb-3">
+                          <label for="Descripción del producto" class="form-label">Descripción corta</label>
+                          <textarea type="text" name="shortdescription" required
+                            id="text2"><%= produtNow.shortdescription %></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label class="label-text" for="longdescription">Descripción larga</label>
+                          <textarea type="text" name="longDescription" required
+                            id="text3"><%= produtNow.longDescription %></textarea>
+                        </div>
 
-                <div class="input-group mb-3">
-                  <label for="formFile" class="form-label">Precio</label>
-                  <span class="input-group-text">$</span>
-                  <input name="price" type="text" class="form-control" value="<%= produtNow.price %>">
-                </div>
-              </div>
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Modificar imagen</label>
+                          <input class="select-file" type="file" name="productoImage" required id="" single>
+                        </div>
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Categoria</label>
+                          <select name="classe" id="class">
+                            <option value="Jabon" <%=produtNow.id_class==1 ? 'selected' : '' %> >jabones</option>
+                            <option value="Belleza" <%=produtNow.id_class==2 ? 'selected' : '' %> >belleza</option>
+                            <option value="Semillas" <%=produtNow.id_class==3 ? 'selected' : '' %> >semillas</option>
+                            <option value="Artesanias" <%=produtNow.id_class==4 ? 'selected' : '' %> >artesania</option>
+                            <option value="Velas" <%=produtNow.id_class==5 ? 'selected' : '' %> >velas aromáticas
+                            </option>
+                          </select>
+                        </div>
 
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Guardar cambios <i
-                    class="fas fa-plus-circle"></i></button>
-              </div>
+                        <div class="input-group mb-3">
+                          <label for="formFile" class="form-label">Precio</label>
+                          <span class="input-group-text">$</span>
+                          <input name="price" type="text" class="form-control" value="<%= produtNow.price %>">
+                        </div>
+                      </div>
 
-            </form>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar cambios <i
+                            class="fas fa-plus-circle"></i></button>
+                      </div>
+
+                    </form>
           </div>
         </div>
       </div>

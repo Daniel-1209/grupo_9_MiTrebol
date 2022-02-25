@@ -31,7 +31,7 @@ let controlador = {
 
     db.Products.findAll({
       where: {
-        id_class: req.params.idCategory
+        id_class: req.params.idCategory,
       },
       // Incluimos  la asociacion
       include: [{ association: "imgs" }],
@@ -112,8 +112,8 @@ let controlador = {
     let list = user.ShoppingCar;
 
     res.render("./products/productCart.ejs", { list, user });
-    //res.render ('./products/productCart.ejs', {list:shoppingList.car ,products});
   },
+  // Nuevo producto del carrito
   newCarProduct: async (req, res) => {
     let { id } = req.session.user;
     //console.log(userNow);
@@ -155,7 +155,7 @@ let controlador = {
     } else {
       let { title, shortdescription, longDescription, classe, price } =
         req.body;
-        // console.log(user);
+      // console.log(user);
       let product = await db.Products.create({
         name: title,
         price: price,
@@ -192,35 +192,51 @@ let controlador = {
     res.render("./products/editProduct.ejs", { produtNow, user });
   },
   // Metodo post de editar un producto
-  update: (req, res) => {
+  update: async (req, res) => {
     let id = req.params.id;
-    let { title, shortdescription, longDescription, classe, price } = req.body;
-    db.Products.update(
-      {
-        name: title,
-        price: price,
-        raiting: 0,
-        id_class: classe,
-        shortdescription: shortdescription,
-        longDescription: longDescription,
-        purchases: 0,
-        img_principal: req.file.filename,
-      },
-      {
-        where: { id: id },
-      }
-    );
+    let errors = validationResult(req);
+    let user = req.session.user;
 
-    db.Images.destroy({
-      where: { id_product: id },
-    });
+    if (!errors.isEmpty()) {
+      let produtNow = await db.Products.findByPk(id, {
+        include: [{ association: "imgs" }],
+      });
+      res.render("./products/editProduct.ejs", {
+        user,
+        produtNow,
+        errors: errors.array(),
+        old: req.body,
+      });
+    } else {
+      let { title, shortdescription, longDescription, classe, price } =
+        req.body;
+      db.Products.update(
+        {
+          name: title,
+          price: price,
+          raiting: 0,
+          id_class: classe,
+          shortdescription: shortdescription,
+          longDescription: longDescription,
+          purchases: 0,
+          img_principal: req.file.filename,
+        },
+        {
+          where: { id: id },
+        }
+      );
 
-    db.Images.create({
-      id_product: id,
-      name: req.file.filename,
-    });
+      db.Images.destroy({
+        where: { id_product: id },
+      });
 
-    res.redirect(`/products/detail/` + id);
+      db.Images.create({
+        id_product: id,
+        name: req.file.filename,
+      });
+
+      res.redirect(`/products/detail/` + id);
+    }
   },
   delete: (req, res) => {
     // console.log('Delete complet');
