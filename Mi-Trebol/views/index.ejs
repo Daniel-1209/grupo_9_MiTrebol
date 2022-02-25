@@ -55,10 +55,10 @@
                                     Categorías
                                  </a>
                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/products/1">JABONES NATURALES</a></li>
-                                    <li><a class="dropdown-item" href="/products/2">BELLEZA AL NATURAL</a></li>
-                                    <li><a class="dropdown-item" href="/products/4">ARTESANÍAS</a></li>
-                                    <li><a class="dropdown-item" href="/products/3">SEMILLAS</a></li>
+                                    <li><a class="dropdown-item" href="/products/category/1">JABONES NATURALES</a></li>
+                                    <li><a class="dropdown-item" href="/products/category/2">BELLEZA AL NATURAL</a></li>
+                                    <li><a class="dropdown-item" href="/products/category/4">ARTESANÍAS</a></li>
+                                    <li><a class="dropdown-item" href="/products/category/3">SEMILLAS</a></li>
                                     <li>
                                        <hr class="dropdown-divider">
                                     </li>
@@ -99,9 +99,14 @@
                                     </div>
                                     <% } %>
                      </ul>
-                     <form class="d-flex" action="/products/search"  method="get">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                     <form class="d-flex" action="/products/search" method="GET">
+                        <input class="form-control me-2" name="search" type="search" placeholder="Buscar"
+                           aria-label="Search">
                         <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                     </form>
+
+
+
                      </form>
                   </div>
       </div>
@@ -181,7 +186,7 @@
          <div class="row g4">
             <div class="col-sm-12 col-md-6 col-lg">
                <div class="card">
-                  <a href="/products/1">
+                  <a href="/products/category/1">
                      <img src="/img/jabones_product.png" class="card-img-top" alt="Categoría: Jabones">
                      <div class="card-body">
                         <h6 class="card-title upper">
@@ -192,7 +197,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg">
                <div class="card">
-                  <a href="/products/2">
+                  <a href="/products/category/2">
                      <img src="/img/serum_product.png" class="card-img-top" alt="Categoría: Belleza">
                      <div class="card-body">
                         <h6 class="card-title upper">
@@ -203,7 +208,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg">
                <div class="card">
-                  <a href="/products/3">
+                  <a href="/products/category/3">
                      <img src="/img/semillas_producto.png" class="card-img-top" alt="Categoría: Semillas">
                      <div class="card-body">
                         <h6 class="card-title upper">
@@ -214,7 +219,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg">
                <div class="card">
-                  <a href="/products/4">
+                  <a href="/products/category/4">
                      <img src="/img/artesanias_productos.png" class="card-img-top" alt="Categoría: Artesanías.">
                      <div class="card-body">
                         <h6 class="card-title upper">

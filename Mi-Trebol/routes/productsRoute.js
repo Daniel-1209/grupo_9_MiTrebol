@@ -35,7 +35,7 @@ let uploadFile = multer({storage: storage});
 router.get('/', productsController.home);
 
 //Todos los productos por categoria
-router.get('/:idCategory', productsController.category);
+router.get('/category/:idCategory', productsController.category);
 
 // Detalle de los productos por id
 router.get('/detail/:id', productsController.detail);
