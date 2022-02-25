@@ -5,6 +5,7 @@
 ConverterComplet/
 /.pnp
 .pnp.js
+Mi-Trebol/database/config/config.js
 
 # testing
 /coverage
