@@ -14,7 +14,7 @@ let userController = require("../controllers/userController");
 // Validaciones
 const validateCreateUser = [
     check("user").notEmpty().withMessage("Ingresa un usuario").bail(),
-    check("firstName").notEmpty().withMessage("Ingresa tu nombre").bail(),
+    check("firstName").notEmpty().withMessage("Ingresa tu nombre").isLength({min: 2}).withMessage('El nombre debe tener mínimo 2 caracteres').bail(),
     check("lastName").notEmpty().withMessage("Ingresa tus apellidos").bail(),
     check("email").isEmail().withMessage("Ingresa un email valido").bail(),
     check("password").notEmpty().withMessage("Ingresa una contraseña").bail(),

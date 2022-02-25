@@ -9,19 +9,19 @@ let productsController = require("../controllers/productsController");
 
 // Validaciones
 const validateCreateUser = [
-  check("title").notEmpty().withMessage("Ingresa un titulo a tu producto"),
+  check("title").notEmpty().withMessage("Ingresa un titulo a tu producto").isLength({min: 5}).withMessage('El titulo debe contener mínimo 5 caracteres'),
   check("shortdescription")
     .notEmpty()
     .withMessage("Ingresa una descripcion corta")
-    .isLength({ min: 5 })
+    .isLength({ min: 10 })
     .withMessage("La descripcion corta debe tener al menos 5 caracteres"),
   check("longDescription")
     .notEmpty()
     .withMessage("Ingresa una descripciono detallada")
-    .isLength({ min: 15 })
+    .isLength({ min: 20 })
     .withMessage("La descripcion larga debe tener al menos 15 caracteres"),
   check("classe").notEmpty().withMessage("Selecciona una clase de tu producto"),
-  check("price").notEmpty().withMessage("Ponle precio por pieza a tu producto"),
+  check("price").notEmpty().withMessage("Agrega el precio por pieza a tu producto").isLength({max: 6}).withMessage('El costo debe ser por pieza'),
   // check("productoImage").notEmpty().withMessage("Pon tu foto de perfil").bail(),
 ];
 
