@@ -1,154 +1,175 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/productDetail.css">
-        <title>Detalle Producto</title>
-</head>
-
-<body>
-    <!--Cabecera del documento-->
-    <%- include('../partials/header') %>
-
-        <main>
-            <section class='info_completa'>
-                <div class=carrusel_img_detalle>
-                    <div class='contenedor_img_grande'>
-                        <img class='imagen_grande' width=30% src="/img/<%=  product.imgs[0]?.name %>"
-                            alt="<%= product.title%>">
-
-
-                    </div>
-                </div>
-
-                <div class='info-producto-detalle'>
-                    <h1 class='titulo-natural1'>
+   <head>
+      <%- include('../partials/head') %>
+      <link rel="stylesheet" href="/css/index.css">
+      <title>Detalle Producto</title>
+   </head>
+   <body>
+      <!--Cabecera del documento-->
+      <%- include('../partials/header') %>
+      <main>
+      <!-- Detalle del producto -->
+      <section class="categorias" id="">
+         <div class="container">
+            <div class="row">
+               <div class="col-12 text-center">
+                  <h2 class="upper">Detalle del producto</h2>
+                  <p class="informativo upper">Conoce las categorías de tu producto
+                  </p>
+                  <hr class="separador mx-auto">
+               </div>
+            </div>
+            <!-- Imagen grande-->
+            <div class="row g4">
+               <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class="card">
+                     <a href="/products/category/1">
+                        <img src="/img/<%=  product.imgs[0]?.name %>" class="card-img-top" alt=""<%= product.title%>"">
+                        <div class="card-body">
+                           <h6 class="card-title upper text-center">
+                           <%= product.name%></h5>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div class='info-producto-detalle'>
+                     <h1 class='titulo-natural1'>
                         <%= product.name%>
-                    </h1>
-
-                    <div class='rateing'>
+                     </h1>
+                     <div class='rateing'>
                         <p class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                           class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                         <p class='valoracion'>
-                            <%= product.purchases %> compras
+                           <%= product.purchases %> compras
                         </p>
-                    </div>
-                    <div class='detalles'>
+                     </div>
+                     <div class='detalles'>
                         <p id='precio'>$ <%= product.price%>
                         </p>
                         <p id='texto_producto_detalle'>
-                            <%= product.longDescription %>
+                           <%= product.longDescription %>
                         </p>
-                    </div>
-                    <div class='listas_desplegables'>
-                        <select class='detalles_menu' name='Detalles'>
-                            <option class='lista_detalles' value="menudeo">Detalles</option>
-                            <option class='costo_kilo' value="menudeo">Menudeo</option>
-                            <option class='artesado' value="mayoreo">Mayore</option>
+                     </div>
+                     <div class='listas_desplegables'>
+                        <label for="">Selecciona tu tipo de compra</label>
+                        <select class="form-select form-select-sm" name="Detalles" aria-label=".form-select-lg example">
+                           <option selected>Selecciona tu tipo de compra</option>
+                           <option value="1">Mayoreo</option>
+                           <option value="2">Menudeo</option>
                         </select>
-                        <select class='envio' name='Envio'>
-                            <option class='lista_envio' value="menudeo">Envío</option>
-                            <option value="A domicilio">A domicilio</option>
-                            <option value="Recoger en tienda">Recoger en tienda</option>
+                        <label for="">Selecciona tu tipo de envío</label>
+                        <select class="form-select form-select-sm" name="Envio" aria-label=".form-select-lg example">
+                           <option selected>Selecciona tu tipo de envío</option>
+                           <option value="A domicilio">A domicilio</option>
+                           <option value="Recoger en tienda">Recoger en tienda</option>
                         </select>
-                    </div>
-                    <p class='cantidad'>Cantidad</p>
-                    <div class='cantidad_y_carrito'>
+                     </div>
+                     <div class='cantidad_y_carrito'>
                         <div class='cuantos_quieres'>
-                            <p class='numero'>1</p>
-                            <p class='quitar'>-</p>
-                            <p class='agregar'>+</p>
+                           <label for="tentacles">Cantidad de productos (1-100):</label>
+                           <input type="number" id="cantidad" name="cantidad"
+                              min="1" max="100">
                         </div>
-
                         <form action="/products/cart/<%= product.id%>" method="POST" id='bttn0_al_carrito'>
-                            <button type="submit" class="texto_bttn_carrito">Agregar al carrito <i
-                                    class="fas fa-shopping-cart"></i></button>
+                           <button type="submit" class="btn btn-primary">Agregar al carrito <i
+                              class="fas fa-shopping-cart"></i></button>
                         </form>
-                    </div>
-
-                </div>
-            </section>
-
-            <!--PRODUCTOS RELACIONADOS-->
-            <section class='prod_relac'>
-                <h2 class='titulo_relacionados'>Productos relacionados</h2>
-                <br class="brPR">
-                <div class='imagenes_relacionadas'>
-                    <% for ( element of products ) { %>
-                        <% if( element.id_class==product.id_class ) { %>
-
-                            <article id=producto_info_general> <a href="/products/detail/<%= element.id%>">
-                                    <img class='imgPR' src='/img/<%= element.imgs[0]?.name%>' alt="Imagen de producto"
-                                        width="200px" height="200px"> </a>
-                                <div id='caja_general'>
-                                    <div id='info_producto'>
-                                        <p class='titulo_prod'>
-                                            <%= element.title%>
-                                        </p>
-                                        <p class='texto_peque'>
-                                            <%= element.shortDescription %>
-                                        </p>
-                                        <p id='precioRel'>$ <%= element.price%>
-                                        </p>
-                                    </div>
-
-                                    <form action="" method="">
-                                        <input type="button" id='bttn_al_carrito' value="Agregar al carrito">
-                                        <!--<i class="fas fa-shopping-cart"></i> -->
-                                    </form>
-                                </div>
-                            </article>
-
-                            <% } %>
-                                <% } %>
-
-
-
-
-
-
-
-
-                </div>
-            </section>
-
-            <!---------- ¿QUÉ HAY EN LA CAJA?------------>
-            <section>
-                <h2 class='cajas'>¿Qué hay en la caja?</h2>
-                <p class='regala_caja_sorpresa'>lorem kskdnca akdocac aloena qeow fwe wc b egw ...</p>
-                <div class='cajas_dispo'>
-                    <article id=caja_info_general>
-                        <img class='imgPR' width=50% src='/img/caja_1.jpg' alt="Caja sorpresa amiges">
-                        <div id='caja_general'>
-                            <div id='info_producto'>
-                                <p class='titulo_prod'>lorem en bold...</p>
-                                <p class='texto_peque'>lorem normal...</p>
-                            </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--PRODUCTOS RELACIONADOS  -->
+      <section class="relacionados" id="">
+         <div class="container text-center">
+            <div class="row">
+               <div class="col-12">
+                  <h2 class="upper">Productos relacionados</h2>
+                  <p class="informativo upper">Productos que combinan a la perfección con el que estás buscando.
+                  </p>
+                  <hr class="separador mx-auto">
+               </div>
+            </div>
+            <!-- Cards con Categorías-->
+            <div class="row g4">
+               <% for ( element of products ) { %>
+               <% if( element.id_class==product.id_class ) { %>
+               <div class="col-sm-12 col-md-6 col-lg-3">
+                  <div class="card">
+                     <a href="/products/detail/<%= element.id%>">
+                        <img src="/img/<%= element.imgs[0]?.name%>" class="card-img-top" alt="Categoría: Jabones">
+                        <div class="card-body">
+                           <h6 class="card-title upper">
+                           <%= element.title%></h5>
+                           <p class='titulo_prod'>
+                           </p>
+                           <p class='texto_peque'>
+                              <%= element.shortDescription %>
+                           </p>
+                           <p id='precioRel'>$ <%= element.price%>
+                           </p>
                         </div>
-                    </article>
-
-                    <article id=caja_info_general>
-                        <img class='imgPR' src='/img/caja_2.jpg' alt="Caja sorpresa de bodas">
-                        <div id='caja_general'>
-                            <div id='info_producto'>
-                                <p class='titulo_prod'>lorem en bold...</p>
-                                <p class='texto_peque'>lorem normal...</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article id=caja_info_general>
-                        <img class='imgPR' src='/img/caja_3.jpg' alt="caja sorpresa parejas">
-                        <div id='caja_general'>
-                            <div id='info_producto'>
-                                <p class='titulo_prod'>lorem en bold...</p>
-                                <p class='texto_peque'>lorem normal...</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <!-- ------Footer -------->
-            <%- include('../partials/footer') %>
-</body>
+                     </a>
+                  </div>
+               </div>
+               <% } %>
+               <% } %>
+            </div>
+            <!-- Fin Cards Productos -->
+            <div class="row">
+               <div class="col-lg-12 comentario">
+                  <h6>Selecciona todos los productos que necesites, recuerda que el envío va por nuestra cuenta.
+                  </h6>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!---------- Empaque------------>
+      <section class="categorias" id="categorias">
+         <div class="container text-center">
+            <div class="row">
+               <div class="col-12">
+                  <h2 class="upper">Envíos comprometidos con el medio ambiente</h2>
+                  <p class="informativo upper">En MiTrébol cuidamos cada detalle de tu envío
+                  </p>
+                  <hr class="separador mx-auto">
+               </div>
+            </div>
+            <!-- En la caja-->
+            <div class="row g4">
+               <div class="col-sm-12 col-md-6 col-lg">
+                  <div class="card">
+                     <img src="/img/caja_1.jpg" class="card-img-top" alt="Categoría: Jabones">
+                     <div class="card-body">
+                        <h6 class="card-title">
+                        Materiales 100% reciclables</h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg">
+                  <div class="card">
+                     <img src="/img/caja_2.jpg" class="card-img-top" alt="Categoría: Jabones">
+                     <div class="card-body">
+                        <h6 class="card-title">
+                        Cariño y cuidado desde el momento de su envío hasta que lo recibas en casa.</h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg">
+                  <div class="card">
+                     <img src="/img/caja_3.jpg" class="card-img-top" alt="Categoría: Jabones">
+                     <div class="card-body">
+                        <h6 class="card-title">
+                        Paquetes especiales para regalar.</h5>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ------Footer -------->
+      <%- include('../partials/footer') %>
+   </body>

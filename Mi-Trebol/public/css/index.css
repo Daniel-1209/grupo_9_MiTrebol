@@ -101,6 +101,11 @@ hr {
     padding-top:120px;
     padding-bottom:120px;
 }
+.relacionados{
+    padding-top:120px;
+    padding-bottom:120px;
+    background-color: #f8f9fa;
+}
 .artesana{
     color: #ffffff;
     background-image:url(../img/artesana.png);

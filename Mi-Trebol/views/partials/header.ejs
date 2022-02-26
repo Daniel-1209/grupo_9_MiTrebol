@@ -54,23 +54,23 @@
              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/users/login"> <b class="login">Ingresar <i class="fas fa-sign-out"></i></b>  </a>
              </li>
-             <% }else { %>
-             <div class="dropdown">
-                <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1"
-                   data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px" width="50px"
-                   alt="imagen de perfil">
-                <%= user.first_name %>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                   <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
-                   <form class="dropdown-item" action="/close" method="POST">
-                      <button type="submit">Cerrar sesión</button>
-                   </form>
-                </ul>
-             </div>
-             <% } %>
           </ul>
+          <% }else { %>
+            <div class="dropdown">
+               <button class=" btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+               <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px" width="50px"
+                  alt="imagen de perfil">
+               <%= user.first_name %>
+               </button>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
+                  <form class="dropdown-item" action="/close" method="POST">
+                     <button type="submit">Cerrar sesión</button>
+                  </form>
+               </ul>
+            </div>
+            <% } %>
           <form class="d-flex">
              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
              <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
