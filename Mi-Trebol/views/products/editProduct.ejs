@@ -1,136 +1,77 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fuente Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- Hoja de Estilos -->
-  <title>.::MiTrébol::.</title>
-  <link rel="stylesheet" href="/css/index.css">
-
-</head>
-
-<body>
-
-  <header class="trebol">
-    <div class="logos">
-      <a href="/indexVendedor"><img class="logo" src="/img/logo.png" alt="logotipo de MiTrébol"></a>
-      <h1 class="tienda">MiTrébol</h1>
-    </div>
-
-    <nav>
-      <!-- <li><a href="#"><i class="fas fa-search"></i></a></li> -->
-      <li><a href="/indexVendedor">Inicio</a></li>
-      <!-- <li><a href="/products/create">Añadir productos <i class="fas fa-plus-circle"></i></a></li>
-            <div class="dropdown"> -->
-      <!-- <button class=" btn-secondari dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="profile" src="/img/profile.png" alt="imagen de perfil"> 
-                </button> -->
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Cuenta</a></li>
-        <li><a class="dropdown-item" href="#">MisProductos</a></li>
-        <li><a class="dropdown-item" href="/login">Cerrar sesión</a></li>
-      </ul>
-      </div>
-    </nav>
-  </header>
-
-  <section class="hero" id="inicio">
-    <div class="background-image" style="background-image: url(/img/trebol.jpeg);"></div>
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel"> Modificar producto</h5>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
-        <div class="modal-body">
-          <div class="form-container">
-            <% if (locals.errors) {%>
-              <%for(error of errors ) { %>
+   <head>
+      <%- include('../partials/head') %>
+      <link rel="stylesheet" href="/css/index.css">
+      <title>Modificar producto</title>
+   </head>
+   <body>
+    <%- include('../partials/header') %>
+    <section class="login-form" id="">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 text-center">
+               <h2>Modificar producto</h2>
+               <p class="informativo">Modifica o actualiza la información de tus productos.</p>
+               <hr class="separador mx-auto">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
+              <div class="form-container">
+                <% if (locals.errors) {%>
+                <%for(error of errors ) { %>
                 <p>
-                  <%= error.msg %>
+                   <%= error.msg %>
                 </p>
                 <% } %>
-                  <% } %>
-
-                    <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data">
-                      <div class="input">
-                        <div class="mb-3">
-                          <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
-                          <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
-                        </div>
-                        <div class="mb-3">
-                          <label for="Descripción del producto" class="form-label">Descripción corta</label>
-                          <textarea type="text" name="shortdescription" required
+                <% } %>
+                <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data">
+                   <div class="input">
+                      <div class="mb-3">
+                         <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
+                         <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
+                      </div>
+                      <div class="mb-3">
+                         <label for="Descripción del producto" class="form-label">Descripción corta</label>
+                         <textarea type="text" name="shortdescription" required
                             id="text2"><%= produtNow.shortdescription %></textarea>
-                        </div>
-                        <div class="mb-3">
-                          <label class="label-text" for="longdescription">Descripción larga</label>
-                          <textarea type="text" name="longDescription" required
+                      </div>
+                      <div class="mb-3">
+                         <label class="label-text" for="longdescription">Descripción larga</label>
+                         <textarea type="text" name="longDescription" required
                             id="text3"><%= produtNow.longDescription %></textarea>
-                        </div>
+                      </div>
 
-                        <div class="mb-3">
-                          <label for="formFile" class="form-label">Modificar imagen</label>
-                          <input class="select-file" type="file" name="productoImage" required id="" single>
-                        </div>
-                        <div class="mb-3">
-                          <label for="formFile" class="form-label">Categoria</label>
-                          <select name="classe" id="class">
-                            <option value="Jabon" <%=produtNow.id_class==1 ? 'selected' : '' %> >jabones</option>
-                            <option value="Belleza" <%=produtNow.id_class==2 ? 'selected' : '' %> >belleza</option>
-                            <option value="Semillas" <%=produtNow.id_class==3 ? 'selected' : '' %> >semillas</option>
-                            <option value="Artesanias" <%=produtNow.id_class==4 ? 'selected' : '' %> >artesania</option>
-                            <option value="Velas" <%=produtNow.id_class==5 ? 'selected' : '' %> >velas aromáticas
+                      <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupFile01">Modificar imagen</label>
+                        <input class="select-file" type="file" name="productoImage" required id="" single>
+                     </div>
+                      <div class="mb-3">
+                         <label for="formFile" class="form-label">Categoria</label>
+                         <select name="classe" id="class">
+                            <option value="Jabon" <%=produtNow.id_class==1 ? 'selected' : '' %> >Jabones naturales</option>
+                            <option value="Belleza" <%=produtNow.id_class==2 ? 'selected' : '' %> >Belleza al natural</option>
+                            <option value="Semillas" <%=produtNow.id_class==3 ? 'selected' : '' %> >Semillas</option>
+                            <option value="Artesanias" <%=produtNow.id_class==4 ? 'selected' : '' %> >Artesanías</option>
+                            <option value="Velas" <%=produtNow.id_class==5 ? 'selected' : '' %> > Velas aromáticas
                             </option>
-                          </select>
-                        </div>
-
-                        <div class="input-group mb-3">
-                          <label for="formFile" class="form-label">Precio</label>
-                          <span class="input-group-text">$</span>
-                          <input name="price" type="text" class="form-control" value="<%= produtNow.price %>">
-                        </div>
+                         </select>
                       </div>
-
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Guardar cambios <i
-                            class="fas fa-plus-circle"></i></button>
+                      <div class="input-group mb-3">
+                         <label for="formFile" class="form-label">Precio</label>
+                         <span class="input-group-text">$</span>
+                         <input name="price" type="text" class="form-control" value="<%= produtNow.price %>">
                       </div>
-
-                    </form>
-          </div>
-        </div>
+                   </div>
+                   <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Guardar cambios <i
+                         class="fas fa-plus-circle"></i></button>
+                   </div>
+                </form>
+             </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-
-  <!-- Función modal -->
-  <script>
-    var myModal = document.getElementById('myModal')
-    var myInput = document.getElementById('myInput')
-
-    myModal.addEventListener('shown.bs.modal', function () {
-      myInput.focus()
-    })
-  </script>
-</body>
-
+   </section>
+      <%- include('../partials/footer') %>
+   </body>
 </html>

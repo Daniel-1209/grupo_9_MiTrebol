@@ -11,9 +11,10 @@ body{
     font-size: 16px;
 }
 a{
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
+
 a:hover{
     color: #05af56;
     text-decoration: none;
@@ -36,6 +37,9 @@ p.ideas{
 }
 .gris-mockup {
     background-color: #F2F2F2;
+}
+.carrito{
+    color: #6ba449;
 }
 .mrg-btm{
     margin-bottom: 55px;
@@ -84,6 +88,22 @@ hr {
     font-weight: 700;
     background-color: #abd6c0;
     border-color: #abd6c0;
+}
+
+.btn-secondary{
+    border: none;
+    background-color: #abd6c0;
+    color: #232726;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.profile{
+    border-radius: 90%;
+    max-width: 50px;
+    max-height: 50px;
 }
 /*NAVBAR*/
 .logo{

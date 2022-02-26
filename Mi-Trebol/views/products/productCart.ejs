@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include('../partials/head') %>
-        <link rel="stylesheet" href="/css/productCart.css">
-        <title>Mi carrito</title>
-
-    </head>
-    
-<body>
-    <!-- Cabecera de la pagina-->
-    <%- include('../partials/header') %>
-
-    <!-- Cuerpo de la pagina-->
-    <main>
-        <div class="carrito">
-            <!--MI CARRITO DE COMPRAS-->
-            <h2 class="titulo">LISTA DE COMPRAS</h2>
-                <%let suma = 0%>
-                <section class="carro" > 
-
-                    <% for ( article of list) { %>
-
-                        <article class="producto"> <a href="/products/detail/<%= article.id%>">
-                            <img src="/img/<%= article.img_principal %>" alt="articulo">
-                            <strong> <%= article.name %> </strong> </a>
-                            <p> $<%= article.price %> MXN</p>
-                            <% suma += parseFloat(article.price) %>
-                            <div class="cantidad">
-                                <label for="canti">Cantidad De Productos: </label>
-                                <input type="number" name="canti" id="can-pro" value="1">
-                            </div>
-                             <form action="/products/cart/delete/<%= article.id %>?_method=DELETE" method="post" >
-                                 <button type="submit"  class="eliminar" >Eliminar</button>
-                            </form>
-                        </article>
-
-
-                    <%}%>
-                    
-
-                </section>
-        </div>
-        
-
-        <div class="totalPagar">
-        
-                <h2>TOTAL A PAGAR</h2>
-                <h2>$ <span id="enteros"><%= suma %></span> </h2>
-            
-
-            <input type="button" value="PAGAR">
-            
-        </div>
-
-
-    </main>
-    
-    <!-- Pie de la pagina-->
-    
-    <%- include('../partials/footer') %>
-
-</body>
+   <head>
+      <%- include('../partials/head') %>
+      <link rel="stylesheet" href="/css/index.css">
+      <title>Mi carrito</title>
+   </head>
+   <body>
+      <!-- Cabecera de la pagina-->
+      <%- include('../partials/header') %>
+      <!-- Cuerpo de la pagina-->
+      <!-- Mi carrito-->
+      <section class="categorias" id="carrito">
+         <div class="container text-center">
+            <div class="row">
+               <div class="col-12">
+                  <h2 class="upper">Mi Carrito</h2>
+                  <p class="informativo upper">Finaliza tu compra aquí.</p>
+                  <hr class="separador mx-auto" />
+               </div>
+            </div>
+            <%let suma = 0%>
+            <!-- Productos del carrito -->
+            <div class="row g4">
+               <% for ( article of list) { %>
+               <div class="col-sm-12 col-md-6 col-lg-3">
+                  <div class="card">
+                     <a href="/products/detail/<%= article.id%>">
+                        <img src="/img/<%= article.img_principal %>" class="card-img-top" alt="" />
+                        <div class="card-body">
+                           <h6 class="card-title upper"><%= article.name %></h6>
+                           <p> $<%= article.price %> MXN</p>
+                           <% suma += parseFloat(article.price) %>
+                           <div class="cantidad">
+                              <label for="canti">Cantidad De Productos: </label>
+                              <input type="number" name="canti" id="can-pro" value="1">
+                           </div>
+                           <form action="/products/cart/delete/<%= article.id %>?_method=DELETE" method="post">
+                              <button type="submit"  class="btn btn-primary">Eliminar</button>
+                           </form>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <%}%>
+               <div class="col-lg-4">
+                  <h5 class="upper">Total a pagar</h5>
+                  <h2>$ <span id="enteros"><%= suma %></span> </h2>
+                  <input type="button" class="btn btn-primary" value="PAGAR">
+               </div>
+            </div>
+            <!-- Fin Cards Inventario -->
+         </div>
+      </section>
+      <!-- Pie de la pagina-->
+      <%- include('../partials/footer') %>
+   </body>
 </html>

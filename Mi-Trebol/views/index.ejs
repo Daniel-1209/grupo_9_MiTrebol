@@ -44,19 +44,16 @@
                   <li class="nav-item">
                      <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                   </li>
-                  <% if(locals.user){ %>
-                  <li><a href="/products/cart">MiCarrito <i class="fas fa-shopping-cart"></i></a></li>
-                  <% } %>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#categorias" id="navbarDropdown"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                      Categorías
                      </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/products/category/1">JABONES NATURALES</a></li>
-                        <li><a class="dropdown-item" href="/products/category/2">BELLEZA AL NATURAL</a></li>
-                        <li><a class="dropdown-item" href="/products/category/4">ARTESANÍAS</a></li>
-                        <li><a class="dropdown-item" href="/products/category/3">SEMILLAS</a></li>
+                        <li><a class="dropdown-item" href="#">JABONES NATURALES</a></li>
+                        <li><a class="dropdown-item" href="#">BELLEZA AL NATURAL</a></li>
+                        <li><a class="dropdown-item" href="#">SEMILLAS</a></li>
+                        <li><a class="dropdown-item" href="#">ARTESANÍAS</a></li>
                         <li>
                            <hr class="dropdown-divider">
                         </li>
@@ -82,7 +79,7 @@
                   </li>
                   <% }else { %>
                   <div class="dropdown">
-                     <button class=" btn-secondari dropdown-toggle" type="button"
+                     <button class=" btn-secondary dropdown-toggle" type="button"
                         id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                      <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px"
                         width="50px" alt="imagen de perfil">
@@ -90,10 +87,13 @@
                      </button>
                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
+                        <% if(locals.user){ %>
+                        <li><a href="/products/cart" class="dropdown-item" href="#"> Mi Carrito<i class="fas fa-shopping-cart"></i></a></li>
+                            <% } %>
                         <form class="dropdown-item" action="/close" method="POST">
-                           <button type="submit">Cerrar sesión</button>
+                            <button class="btn-primary"  type="submit">Cerrar sesión</button>
                         </form>
-                     </ul>
+                    </ul>
                   </div>
                   <% } %>
                </ul>
@@ -187,8 +187,7 @@
                      <a href="/products/category/1">
                         <img src="/img/jabones_product.png" class="card-img-top" alt="Categoría: Jabones">
                         <div class="card-body">
-                           <h6 class="card-title upper">
-                           Jabones naturales</h5>
+                           <h6 class="card-title upper">Jabones naturales</h6>
                         </div>
                      </a>
                   </div>
@@ -199,7 +198,7 @@
                         <img src="/img/serum_product.png" class="card-img-top" alt="Categoría: Belleza">
                         <div class="card-body">
                            <h6 class="card-title upper">
-                           Belleza al natural</h5>
+                           Belleza al natural</h6>
                         </div>
                      </a>
                   </div>
@@ -210,7 +209,7 @@
                         <img src="/img/semillas_producto.png" class="card-img-top" alt="Categoría: Semillas">
                         <div class="card-body">
                            <h6 class="card-title upper">
-                           Semillas</h5>
+                           Semillas</h6>
                         </div>
                      </a>
                   </div>
@@ -304,7 +303,7 @@
             <!-- Fin Cards Productos -->
             <div class="row">
                <div class="col-lg-12 comentario">
-                  <h6> Los porductos más amados por nuestros compradores. A tu alcance siempre fácil.
+                  <h6> Los productos más amados por nuestros compradores. A tu alcance siempre fácil.
                   </h6>
                </div>
             </div>
