@@ -46,7 +46,7 @@ let controlador = {
         let products = await db.Products.findAll({include: [{association: 'imgs'}]});
         let user = await db.Users.findByPk(req.session.user.id,{include: [{association: 'myProducts'} ]});;
         
-        // console.log(user);
+        // console.log(products[0].imgs[0].name);
         let myProducts = [];
         
         for (let i = 0 ; i< user.myProducts.length; i++) {

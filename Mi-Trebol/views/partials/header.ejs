@@ -2,80 +2,120 @@
 
    <!-- Menú de navegación -->
    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-      <% if(locals.user){ %>
-        <% if(user.id_category == 1 ){ %>
-       <a class="navbar-brand" href="/indexVendedor"> <img src="/img/miTrebol_bg_lg.png" alt="Logo MiTrebol" class="d-inline-block logo-img-fluid"></a>
-       <% } else { %>
-        <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
-        <% } %>
-        <%  }else { %>
-          <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
-          <% } %>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 upper">
-             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-             </li>
-             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#categorias" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorías
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <li><a class="dropdown-item" href="#">JABONES NATURALES</a></li>
-                   <li><a class="dropdown-item" href="#">BELLEZA AL NATURAL</a></li>
-                   <li><a class="dropdown-item" href="#">SEMILLAS</a></li>
-                   <li><a class="dropdown-item" href="#">ARTESANÍAS</a></li>
-                   <li>
-                      <hr class="dropdown-divider">
-                   </li>
-                   <li><a class="dropdown-item" href="/products">TODOS LOS PRODUCTOS</a></li>
-                </ul>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#equipo">Equipo</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#populares">Populares</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#promociones">Promociones</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#contacto">Contacto</a>
-             </li>
-             <% if(!locals.user){ %>
-             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/users/login"> <b class="login">Ingresar <i class="fas fa-sign-out"></i></b>  </a>
-             </li>
-          </ul>
-          <% }else { %>
-            <div class="dropdown">
-               <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-               <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px" width="50px"
-                  alt="imagen de perfil">
-               <%= user.first_name %>
-               </button>
-               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
-                  <% if(locals.user){ %>
-                  <li><a href="/products/cart" class="dropdown-item" href="#"> Mi Carrito<i class="fas fa-shopping-cart"></i></a></li>
-                      <% } %>
-                  <form class="dropdown-item" action="/close" method="POST">
-                      <button class="btn-primary"  type="submit">Cerrar sesión</button>
-                  </form>
-              </ul>
-            </div>
-            <% } %>
-          <form class="d-flex">
-             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-             <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-          </form>
-       </div>
-    </div>
- </nav>
-s</header>
+      <div class="container-fluid">
+         <% if(locals.user){ %>
+            <% if(user.id_category==1 ){ %>
+               <a class="navbar-brand" href="/indexVendedor"> <img src="/img/miTrebol_bg_lg.png" alt="Logo MiTrebol"
+                     class="d-inline-block logo-img-fluid"></a>
+               <% } else { %>
+                  <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
+                  <% } %>
+                     <% }else { %>
+                        <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
+                        <% } %>
+                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                              aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 upper">
+                                 
+                                 <% if(locals.user){ %>
+                                    <% if(user.id_category==1){ %>
+                                       <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page"
+                                             href="/indexVendedor">Inicio</a>
+                                       </li>
+                                       <% } else { %>
+                                          <li class="nav-item">
+                                             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                                          </li>
+                                          <% } %>
+                                             <% }else { %>
+                                                <li class="nav-item">
+                                                   <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                                                </li>
+                                                <% } %>
+                                                   <li class="nav-item dropdown">
+                                                      <a class="nav-link dropdown-toggle" href="#categorias"
+                                                         id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                         aria-expanded="false">
+                                                         Categorías
+                                                      </a>
+                                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                         <li><a class="dropdown-item" href="#">JABONES NATURALES</a>
+                                                         </li>
+                                                         <li><a class="dropdown-item" href="#">BELLEZA AL NATURAL</a>
+                                                         </li>
+                                                         <li><a class="dropdown-item" href="#">SEMILLAS</a></li>
+                                                         <li><a class="dropdown-item" href="#">ARTESANÍAS</a></li>
+                                                         <li>
+                                                            <hr class="dropdown-divider">
+                                                         </li>
+                                                         <li><a class="dropdown-item" href="/products">TODOS LOS
+                                                               PRODUCTOS</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link" aria-current="page" href="#equipo">Equipo</a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link active" aria-current="page"
+                                                         href="#populares">Populares</a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link active" aria-current="page"
+                                                         href="#promociones">Promociones</a>
+                                                   </li>
+                                                   <li class="nav-item">
+                                                      <a class="nav-link active" aria-current="page"
+                                                         href="#contacto">Contacto</a>
+                                                   </li>
+                                                   <% if(!locals.user){ %>
+                                                      <li class="nav-item">
+                                                         <a class="nav-link active" aria-current="page"
+                                                            href="/users/login"> <b class="login">Ingresar <i
+                                                                  class="fas fa-sign-out"></i></b> </a>
+                                                      </li>
+                              </ul>
+                              <% }else { %>
+                                 <% if(user==undefined ) { %>
+                                    <li class="nav-item">
+                                       <a class="nav-link active" aria-current="page" href="/users/login"> <b
+                                             class="login">Ingresar <i class="fas fa-sign-out"></i></b> </a>
+                                    </li>
+                                    <% }else { %>
+                                       <div class="dropdown">
+                                          <button class="btn-secondary dropdown-toggle" type="button"
+                                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                             <img class="profile" src="/img/avatars/<%= user.avatar %>" height="40px"
+                                                width="50px" alt="imagen de perfil">
+                                             <%= user.first_name %>
+                                          </button>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                             <li><a class="dropdown-item" href="#"> Mi Cuenta</a></li>
+                                             <% if(locals.user){ %>
+                                                <li><a href="/products/cart" class="dropdown-item" href="#"> Mi
+                                                      Carrito<i class="fas fa-shopping-cart"></i></a></li>
+                                                <% } %>
+                                                   <form class="dropdown-item" action="/close" method="POST">
+                                                      <button class="btn-primary" type="submit">Cerrar sesión</button>
+                                                   </form>
+                                          </ul>
+                                       </div>
+
+                                       <% } %>
+
+                                          <% } %>
+                                             <form class="d-flex" action="/products/search" method="GET">
+                                                <input class="form-control me-2" name="search" type="search"
+                                                   placeholder="Buscar" aria-label="Search">
+                                                <button class="btn btn-outline-success" type="submit"><i
+                                                      class="fas fa-search"></i></button>
+                                             </form>
+                           </div>
+      </div>
+   </nav>
+   Tengo header
+</header>

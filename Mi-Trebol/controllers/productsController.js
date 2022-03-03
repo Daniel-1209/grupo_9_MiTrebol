@@ -8,10 +8,8 @@ const db = require("../database/models");
 let controlador = {
   // Todos los productos
   home: (req, res) => {
-    let user = {
-      id: req.params.iduser,
-    };
-
+    let user = req.session.user;
+    console.log(user);
     db.Products.findAll({
       // Incluimos  la asociacion
       include: [{ association: "imgs" }],
@@ -25,9 +23,7 @@ let controlador = {
   },
   // Se muestra por categoria
   category: (req, res) => {
-    let user = {
-      id: req.params.iduser,
-    };
+    let user = req.session.user;
 
     db.Products.findAll({
       where: {
@@ -73,9 +69,7 @@ let controlador = {
   },
   // Barra de busqueda
   search: (req, res) => {
-    let user = {
-      id: req.params.iduser,
-    };
+    let user = req.session.user;
     let palabra = req.query.search;
     palabra = palabra.split(" ");
 
@@ -155,6 +149,7 @@ let controlador = {
     } else {
       let { title, shortdescription, longDescription, classe, price } =
         req.body;
+      price = parseFloat(price);
       // console.log(user);
       let product = await db.Products.create({
         name: title,
@@ -210,6 +205,7 @@ let controlador = {
     } else {
       let { title, shortdescription, longDescription, classe, price } =
         req.body;
+      price = parseFloat(price);
       db.Products.update(
         {
           name: title,

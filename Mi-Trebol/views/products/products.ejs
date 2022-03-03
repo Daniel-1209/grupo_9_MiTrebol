@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
    <head>
-      <head>
-         <%- include('../partials/head') %>
+      <%- include('../partials/head') %>
          <link rel="stylesheet" href="/css/index.css">
          <title>Productos</title>
    </head>
-   </head>
-   <body>
+</head>
+
+<body>
    <!-- Cabecera de la pagina-->
    <%- include('../partials/header') %>
-       <!-- Los favoritos -->
-       <section class="populares" id="populares">
-        <div class="container text-center">
-           <div class="row">
-              <div class="col-12">
-                 <h2 class="upper">Los más populares</h2>
-                 <p class="informativo upper">Tus productos favoritos, siempre disponibles.
-                 </p>
-                 <hr class="separador mx-auto">
-              </div>
-           </div>
-           <!-- Cards con Categorías-->
-           <div class="row g4">
-              <% for ( product of products ) { %>
-                 <% if ( product.raiting>= 250 ){ %>
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                 <div class="card">
-                    <a href="/products/detail/<%= product.id%>">
-                       <img src="/img/<%= product.imgs[0].name%>" class="card-img-top" alt="Categoría: Jabones">
-                       <div class="card-body">
-                          <h6 class="card-title upper">
-                             <%= product.title %></h5>
-                          <p><%= product.shortdescription%></p>
-                          <p>$<%= product.price%>MXN </p>
-                          <p class="stars">
-                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                             class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                          </p>
-                          <p class="valoracion">
-                             <%= product.raiting %> valoraciones
-                          </p>
-                       </div>
-                    </a>
-                 </div>
-              </div>
-              <%}%>
-              <% } %>
-           </div>
-           <!-- Fin Cards Productos -->
-           <div class="row">
-              <div class="col-lg-12 comentario">
-                 <h6> Los productos más amados por nuestros compradores. A tu alcance siempre fácil.
-                 </h6>
-              </div>
-           </div>
-        </div>
-     </section>
+      <!-- Los favoritos -->
+      <section class="populares" id="populares">
+         <div class="container text-center">
+            <div class="row">
+               <div class="col-12">
+                  <h2 class="upper">Los más populares</h2>
+                  <p class="informativo upper">Tus productos favoritos, siempre disponibles.
+                  </p>
+                  <hr class="separador mx-auto">
+               </div>
+            </div>
+            <!-- Cards con Categorías-->
+            <div class="row g4">
+               <% for ( product of products ) { %>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                     <div class="card">
+                        <a href="/products/detail/<%= product.id%>">
+                           <img src="/img/<%= product.imgs[0].name%>" class="card-img-top" alt="Categoría: Jabones">
+                           <div class="card-body">
+                              <h6 class="card-title upper">
+                                 <%= product.name %>
+                                    </h5>
+                                    <p>
+                                       <%= product.shortdescription%>
+                                    </p>
+                                    <p>$<%= product.price%>MXN </p>
+                                    <p class="stars">
+                                       <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                          class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </p>
+                                    <p class="valoracion">
+                                       <%= product.raiting %> valoraciones
+                                    </p>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <% } %>
+            </div>
+            <!-- Fin Cards Productos -->
+            <div class="row">
+               <div class="col-lg-12 comentario">
+                  <h6> Los productos más amados por nuestros compradores. A tu alcance siempre fácil.
+                  </h6>
+               </div>
+            </div>
+         </div>
+      </section>
       <%- include('../partials/footer') %>
-   </body>
+</body>
+
 </html>

@@ -24,12 +24,6 @@ module.exports = [
   check("classe")
     .notEmpty()
     .withMessage("Selecciona una clase de tu producto")
-    .bail(),
-  check("price")
-    .notEmpty()
-    .withMessage("Agrega el precio por pieza a tu producto")
-    .isLength({ max: 6 })
-    .withMessage("El costo debe ser por pieza")
-    .bail(),
+    .bail()
   // check("productoImage").notEmpty().withMessage("Pon tu foto de perfil").bail(),
 ];
