@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
 // Base de datos
-const db = require('../database/models')
+const db = require("../database/models");
 
 let user = null;
 
@@ -16,8 +16,9 @@ let controlador = {
   },
   //Hacia el inicio despues de logearse
   begin: async (req, res) => {
-
-    let users = await db.Users.findAll({include: [{association: 'myProducts'}, {association: 'ShoppingCar'} ]});
+    let users = await db.Users.findAll({
+      include: [{ association: "myProducts" }, { association: "ShoppingCar" }],
+    });
 
     for (element of users) {
       if (
@@ -45,7 +46,11 @@ let controlador = {
       res.redirect("/");
     }
   },
-
+  // Vista del perfil
+  profile: (req, res) => {
+    user = req.session.user;
+    res.render("./users/profile.ejs", { user });
+  },
   // Hacia las vista del registro
   register: (req, res) => {
     user = null;
@@ -56,27 +61,23 @@ let controlador = {
     let errors = validationResult(req);
     // console.log(errors.array())
     if (!errors.isEmpty()) {
-        res.render("./users/register.ejs", {
-          user,
-          errors: errors.array(),
-          old: req.body,
-        });
+      res.render("./users/register.ejs", {
+        user,
+        errors: errors.array(),
+        old: req.body,
+      });
     } else {
-     
-        let passHasheada = bcrypt.hashSync(req.body.password, 10);
+      let passHasheada = bcrypt.hashSync(req.body.password, 10);
 
-        db.Users.create({
-          user: req.body.user,
-          first_name: req.body.firstName,
-          last_name: req.body.lastName,
-          email: req.body.email,
-          password: passHasheada,
-          id_category:  req.body.category,
-          avatar: req.file.filename
-        })
-
-      
-
+      db.Users.create({
+        user: req.body.user,
+        first_name: req.body.firstName,
+        last_name: req.body.lastName,
+        email: req.body.email,
+        password: passHasheada,
+        id_category: req.body.category,
+        avatar: req.file.filename,
+      });
 
       res.redirect("/users/login");
     }

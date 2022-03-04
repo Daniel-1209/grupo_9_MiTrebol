@@ -39,6 +39,11 @@ router.get(
   userController.login
 );
 
+router.get(
+  "/perfil",
+  userController.profile
+)
+
 // Iniciar sesion en la cuenta
 router.post("/login", userController.begin);
 
