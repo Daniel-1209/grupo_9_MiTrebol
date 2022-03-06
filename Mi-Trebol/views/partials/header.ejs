@@ -99,7 +99,7 @@
                                           </button>
                                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                              <li><a class="dropdown-item" href="/users/perfil"> Mi Cuenta</a></li>
-                                             <% if(locals.user){ %>
+                                             <% if(user.id_category==2){ %>
                                                 <li><a href="/products/cart" class="dropdown-item" href="#"> Mi
                                                       Carrito<i class="fas fa-shopping-cart"></i></a></li>
                                                 <% } %>
