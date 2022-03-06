@@ -24,12 +24,13 @@
                   </p>
                   <% } %>
                   <% } %>
-                  <form action="/users/register" method="POST" enctype="multipart/form-data">
+                  <form action="/users/register" method="POST" enctype="multipart/form-data" id="registerForm">
                      <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">@</span>
                         <input type="text" class="form-control" placeholder="Usuario" name="user"
                            aria-label="Username" aria-describedby="basic-addon1"
                            value="<%= locals.old && old.user ? old.user : '' %>" id="user">
+                           <span id="user_error" class="error"></span>
                      </div>
                      <div class="input-group">
                         <span class="input-group-text">Nombre y Apellido</span>
@@ -39,24 +40,29 @@
                         <input type="text" placeholder="Apellido" aria-label="Apellido" class="form-control"
                            value="<%= locals.old && old.lastName ? old.lastName : '' %>" name="lastName"
                            id="user">
+                           <span id="name_error" class="error"></span>
+                           <span id="lastName_error" class="error"></span>
                      </div>
                      <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                        <input placeholder="micuenta@mitrebol.com.mx" name="email" required id="email"
+                        <input placeholder="micuenta@mitrebol.com.mx" name="email" id="email"
                            type="email" class="form-control" id="email" aria-describedby="emailHelp"
                            value="<%= locals.old && old.email ? old.email : '' %>" id="user">
+                           <span id="email_error" class="error"></span>
                      </div>
                      <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input placeholder="MiContraseña" name="password" required id="password"
+                        <input placeholder="MiContraseña" name="password" id="password"
                            type="password" class="form-control" id="password" minlength="6"
                            value="<%= locals.old && old.password ? old.password : '' %>" id="user">
+                           <span id="password_error" class="error"></span>
                      </div>
                      <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
-                        <input placeholder="Confirmar contraseña" required id="password" type="password"
+                        <input placeholder="Confirmar contraseña"  id="password" type="password"
                            class="form-control" name="password_confirmation" id="password_confirmation"
                            value="<%= locals.old && old.password_confirmation ? old.password_confirmation : '' %>">
+                           <span id="password_confirmation_error" class="error"></span>
                      </div>
                      <div class="mb-3">
                         <label for="category">Categoría</label>
@@ -71,8 +77,9 @@
                      <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupFile01">Imagen de perfil</label>
                         <input type="file" class="form-control" id="inputGroupFile01" name="avatar" single>
+                        <span id="avatar_error" class="error"></span>
                      </div>
-                     <button type="submit" class="btn btn-primary pad">Registrarme</button>
+                     <button type="submit" id="submitButton" class="btn btn-primary pad">Registrarme</button>
                      <div>
                         <a class="login" href="/users/login">Ya tengo una cuenta</a>
                      </div>
@@ -83,5 +90,6 @@
       </section>
       <%- include('../partials/footer') %>
       <!-- Sección de SCRIPTS -->
+      <script src="../functions/validateRegister.js"></script>
    </body>
 </html>

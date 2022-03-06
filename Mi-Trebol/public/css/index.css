@@ -309,6 +309,7 @@ footer{
     margin-top: 15px;
 }
 
+<<<<<<< HEAD
 
 /* Profile */
 .card {
@@ -348,4 +349,9 @@ footer{
     white-space: nowrap;
     background-color: #00b158;
     transition: width .6s ease;
+=======
+.error{
+    font-size: 0.8rem;
+    color: crimson;
+>>>>>>> 5e0473f6742ab4091df0fab3751bbb113c904054
 }
