@@ -60,6 +60,11 @@ button{
     border: none;
     
 }
+
+.error{
+    font-size: 0.8rem;
+    color: crimson;
+}
 button:hover{
     background-color: #00954b;
     color: #fafafa;
