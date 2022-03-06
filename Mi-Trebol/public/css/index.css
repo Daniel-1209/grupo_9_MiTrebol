@@ -303,3 +303,8 @@ footer{
 .pad{
     margin-top: 15px;
 }
+
+.error{
+    font-size: 0.8rem;
+    color: crimson;
+}
