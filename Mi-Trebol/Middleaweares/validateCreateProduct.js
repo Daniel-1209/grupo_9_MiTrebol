@@ -18,8 +18,8 @@ module.exports = [
     .not()
     .isEmpty()
     .withMessage("Ingresa una descripciono detallada")
-    .isLength({ min: 15 })
-    .withMessage("La descripcion larga debe tener al menos 15 caracteres")
+    .isLength({ min: 20 })
+    .withMessage("La descripcion larga debe tener al menos 20 caracteres")
     .bail(),
   check("classe")
     .notEmpty()

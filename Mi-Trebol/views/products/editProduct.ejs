@@ -19,17 +19,25 @@
               <div class="form-container">
                 <% if (locals.errors) {%>
                 <%for(error of errors ) { %>
-                <p>
-                   <%= error.msg %>
-                </p>
+                  <small class="text-danger" ><%= error.msg %></small> 
                 <% } %>
                 <% } %>
-                <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data">
+                <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data" id="formEdit">
                    <div class="input">
                       <div class="mb-3">
                          <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
                          <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
                       </div>
+                      <div class="smallErName">
+                         <small class="text-danger erName" ></small>
+                      </div>
+                      <% if(typeof errors != 'undefined'){ %>
+                        <% for(let i =0; i<errors.length; i++){ %>
+                           <% if(errors[i].params == "name"){ %>
+                           <small class="text-danger" ><%= errors[i].name %></small>
+                          <% } %>
+                        <% } %>
+                      <% } %>
                       <div class="mb-3">
                          <label for="Descripción del producto" class="form-label">Descripción corta</label>
                          <textarea type="text" name="shortdescription" required
@@ -43,7 +51,7 @@
 
                       <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupFile01">Modificar imagen</label>
-                        <input class="select-file" type="file" name="productoImage" required id="" single>
+                        <input class="select-file" type="file" name="productoImage" required id="imgMod" single>
                      </div>
                       <div class="mb-3">
                          <label for="formFile" class="form-label">Categoria</label>
@@ -52,18 +60,18 @@
                             <option value="2" <%=produtNow.id_class==2 ? 'selected' : '' %> >Belleza al natural</option>
                             <option value="3" <%=produtNow.id_class==3 ? 'selected' : '' %> >Semillas</option>
                             <option value="4" <%=produtNow.id_class==4 ? 'selected' : '' %> >Artesanías</option>
-                            <option value="5" <%=produtNow.id_class==5 ? 'selected' : '' %> > Velas aromáticas
+                            <option value="5" <%=produtNow.id_class==5 ? 'selected' : '' %> >Velas aromáticas
                             </option>
                          </select>
                       </div>
                       <div class="input-group mb-3">
                          <label for="formFile" class="form-label">Precio</label>
                          <span class="input-group-text">$</span>
-                         <input name="price" type="text" class="form-control" value="<%= produtNow.price %>">
+                         <input name="price" type="text" class="form-control" value="<%= produtNow.price %>" id="price">
                       </div>
                    </div>
                    <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary">Guardar cambios <i
+                      <button type="submit" class="btn btn-primary" id="submitEdit">Guardar cambios <i
                          class="fas fa-plus-circle"></i></button>
                    </div>
                 </form>
@@ -73,5 +81,6 @@
       </div>
    </section>
       <%- include('../partials/footer') %>
+      <script src="/js/validateEditFrontEnd.js"></script>
    </body>
 </html>

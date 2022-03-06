@@ -24,7 +24,7 @@
                   </p>
                   <% } %>
                   <% } %>
-                  <form action="/users/register" method="POST" enctype="multipart/form-data">
+                  <form action="/users/register" method="POST" enctype="multipart/form-data" id="formR">
                      <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">@</span>
                         <input type="text" class="form-control" placeholder="Usuario" name="user"
@@ -60,7 +60,7 @@
                      </div>
                      <div class="mb-3">
                         <label for="category">Categoría</label>
-                        <select name="category" class="form-select" aria-label="Default select example">
+                        <select name="category" class="form-select" aria-label="Default select example" id="categoria">
                            <option value="1" <%=locals.old && old.category==='1' ? 'selected' : '' %>
                               >Vendedor</option>
                            <option value="2" <%=locals.old && old.category==='2' ? 'selected' : '' %>
