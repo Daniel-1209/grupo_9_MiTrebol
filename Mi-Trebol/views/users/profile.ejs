@@ -1,99 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-   <!-- Required meta tags -->
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-   <meta name="description" content="MiTrebol" />
-   <!-- Favicon -->
-   <link rel="shortcut icon" href="/img/favicon.ico" type="image/png" />
-   <!-- Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-   <!-- Fontawesome -->
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-   <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-   <!-- Estilos -->
-   <link rel="stylesheet" href="/css/index.css" />
-   <title>MiTrébol</title>
-</head>
-
-<body>
-   <!-- Menú de navegación -->
-   <header>
+   <head>
+      <%- include('../partials/head') %>
+      <link rel="stylesheet" href="/css/index.css">
+      <title>Mi Perfil</title>
+   </head>
+   <body>
+      <!-- Cabecera de la pagina-->
       <%- include('../partials/header') %>
-   </header>
-
-
-   <!-- Inicio -->
-   <section id="inicio">
-      <div class="container-fluid p-0">
-         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <img src="/img/banner_ppal.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                     <div class="col-lg-6 box">
-                        <% if(!locals.user){ %>
-                           <h5 class="upper">Bienvenido a MiTrébol</h5>
-                           <% }else { %>
-                              <h5 class="upper">Bienvenido a MiTrébol <%= user.first_name%>
-                              </h5>
-                              <% } %>
-                                 <h3 class="upper">Disfruta de la belleza y de la naturaleza</h3>
-                                 <a href="#categorias" type="button" class="btn btn-primary">Ver productos</a>
+      <!-- Perfil -->
+      <section class="perfil" id="pefil">
+         <div class="container">
+            <div class="main-body">
+               <div class="row gutters-sm">
+                  <div class="col-md-4 mb-3">
+                     <div class="card">
+                        <div class="card-body">
+                           <div class="d-flex flex-column align-items-center text-center">
+                              <img src="/img/avatars/<%= user.avatar %>" alt="Usuario" class="rounded-circle img-fluid">
+                              <div class="mt-3">
+                                 <% if(!locals.user){ %>
+                                 <h5 class="upper">Bienvenido a MiTrébol</h5>
+                                 <% }else { %>
+                                 <h5 class="upper"><%= user.first_name%>
+                                 </h5>
+                                 <% } %>
+                                 <p class="text-secondary mb-1">Apasionado por las artesanías mexicanas.</p>
+                                 <p class="text-muted font-size-sm">México, CDMX</p>
+                                 <a class="btn btn-primary" href="/products/cart"> Mi Carrito</a>
+                                 <a class="btn btn-primary" href="/indexVendedor">Mi Resumen</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card mt-3">
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><i class="fal fa-globe"></i> Mi página web</h6>
+                              <span class="text-secondary">https://mitrebol.com</span>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><i class="fas fa-seedling"></i> Comprador Nivel</h6>
+                              <span class="text-secondary">MiTrébol 5</span>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><i class="fas fa-dollar-sign"></i> Mis compras </h6>
+                              <span class="text-secondary">19 Este mes</span>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><i class="fas fa-envelope-open-dollar"></i> Mis ventas</h6>
+                              <span class="text-secondary">198 este mes</span>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><i class="fas fa-stars"></i> Reseñas</h6>
+                              <span class="text-secondary">345</span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-8">
+                     <div class="card mb-3">
+                        <div class="card-body">
+                           <div class="row">
+                              <div class="col-sm-3">
+                                 <h6 class="mb-0">Nombre</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                 Alejandro Ramírez
+                              </div>
+                           </div>
+                           <hr>
+                           <div class="row">
+                              <div class="col-sm-3">
+                                 <h6 class="mb-0">Email</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                 alejandro@@mitrebol.com.mx
+                              </div>
+                           </div>
+                           <hr>
+                           <div class="row">
+                              <div class="col-sm-3">
+                                 <h6 class="mb-0">Teléfono</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                 (5512) 826-1029
+                              </div>
+                           </div>
+                           <hr>
+                           <div class="row">
+                              <div class="col-sm-3">
+                                 <h6 class="mb-0">Dirección</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                 Centro, CDMX, México
+                              </div>
+                           </div>
+                           <hr>
+                        </div>
+                     </div>
+                     <!-- Opiniones -->
+                     <div class="row gutters-sm">
+                        <!-- Como vendedor -->
+                        <div class="col-sm-6 mb-3">
+                           <div class="card h-100">
+                              <div class="card-body">
+                                 <h6 class="d-flex align-items-center mb-3">Nivel de satisfacción: Como vendedor</h6>
+                                 <small>Envíos gratis</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Clientes satisfechos</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Quejas de clientes</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Ventas por mayoreo</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Ventas por menudeo</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Como comprador -->
+                        <div class="col-sm-6 mb-3">
+                           <div class="card h-100">
+                              <div class="card-body">
+                                 <h6 class="d-flex align-items-center mb-3">Nivel de satisfacción: Como comprador</h6>
+                                 <small>Envíos gratis</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Compras satisfactorias</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Quejas a tus vendedores</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Compras por mayoreo</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <small>Compras por menudeo</small>
+                                 <div class="progress mb-3" style="height: 5px">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
-               <div class="carousel-item">
-                  <img src="/img/banner_piel_.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5 class="upper">¿Piel delicada?</h5>
-                     <h3 class="upper">No te preocupes en MiTrébol tenemos los muchos clientes con el mismo dilema.
-                        Revisa nuestros productos más vendidos.
-                     </h3>
-                     <a href="#populares" type="button" class="btn btn-primary">Más populares</a>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <img src="/img/banner2_.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5 class="upper">Nuevo en MiTrébol</h5>
-                     <h3 class="upper">¿Te interesa comprar con nosotros, y que te atendamos de inicio a fin? no lo
-                        pienses más y regístrate ahora, es fácil y seguro.
-                     </h3>
-                     <a href="/users/register" type="button" class="btn btn-primary">Regístrarme en MiTrébol</a>
-                  </div>
-               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-               data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-               data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Siguiente</span>
-            </button>
          </div>
-      </div>
-   </section>
-
-   <%- include('../partials/footer') %>
-</body>
-
+      </section>
+      <%- include('../partials/footer') %>
+   </body>
 </html>

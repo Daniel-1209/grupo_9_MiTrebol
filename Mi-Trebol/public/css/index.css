@@ -126,6 +126,11 @@ hr {
     padding-bottom:120px;
     background-color: #f8f9fa;
 }
+
+.perfil{
+    padding-top:50px;
+    padding-bottom:120px;
+}
 .artesana{
     color: #ffffff;
     background-image:url(../img/artesana.png);
@@ -302,4 +307,45 @@ footer{
 
 .pad{
     margin-top: 15px;
+}
+
+
+/* Profile */
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-height: 100vh;
+    height: auto;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 25px;
+}
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #00b158;
+    transition: width .6s ease;
 }

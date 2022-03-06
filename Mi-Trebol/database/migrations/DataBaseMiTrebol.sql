@@ -179,7 +179,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Dani23','Daniel','Garcia','algo@gmail.com','$2a$10$hljlYgb7ai2EysnORNYKhe1Fof6TXs.DCXgmhvJiAZcf2cvXMgNt.',2,'Avatar-1642658606578.jpg'),(2,'Alex12','Alejandro','Montes','danielgarciamendoza.204@gmail.com','$2a$10$c68zwFGgdvc4ix.Bm3BN7up037lDG.heZg98WmjfxPpnkHzuCLbPG',1,'Avatar-1642659257207.jpg');
+INSERT INTO `users` VALUES (1,'Dani23','Daniel','Garcia','algo@gmail.com','$2a$10$hljlYgb7ai2EysnORNYKhe1Fof6TXs.DCXgmhvJiAZcf2cvXMgNt.',2,'Avatar-1642658606578.jpg'),(2,'Alex12','Alejandro','Montes','danielgarciamendoza.204@gmail.com','$2a$10$c68zwFGgdvc4ix.Bm3BN7up037lDG.heZg98WmjfxPpnkHzuCLbPG',1,'Avatar-1642659257207.png');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
