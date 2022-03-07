@@ -45,7 +45,7 @@
                   <label class="label-text" for="productoImage">
                     Seleccionar archivo
                   </label>
-                  <input class="select-file" type="file" name="productoImage" id="" single>
+                  <input class="select-file" type="file" name="productoImage" id="imgMod" single>
 
                   <div id="selectors">
                     <label class="label-text" for="class">Categoría</label>
@@ -64,11 +64,11 @@
                     <div class="wrapper">
                       <span>$</span>
                       <input type="number" name="price" value="<%= locals.old && old.price ? old.price : '' %>"
-                        id="priceInput" />
+                        id="price" />
                     </div>
                   </div>
                   <div>
-                    <button type="submit">
+                    <button type="submit" id="submitAdd">
                       Guardar Producto<span class="plus-icon">+</span>
                     </button>
                   </div>
