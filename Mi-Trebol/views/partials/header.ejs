@@ -7,12 +7,12 @@
             <% if(user.id_category==1 ){ %>
                <a class="navbar-brand" href="/indexVendedor"> <img src="/img/miTrebol_bg_lg.png" alt="Logo MiTrebol"
                      class="d-inline-block logo-img-fluid"></a>
-               <% } else { %>
+            <% } else { %>
                   <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
-                  <% } %>
-                     <% }else { %>
-                        <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
-                        <% } %>
+            <% } %>
+         <% }else { %>
+                  <a href="/"><img class="logo" src="/img/miTrebol_bg_lg.png" alt=""></a>
+         <% } %>
                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                               aria-expanded="false" aria-label="Toggle navigation">
@@ -27,56 +27,97 @@
                                           <a class="nav-link active" aria-current="page"
                                              href="/indexVendedor">Inicio</a>
                                        </li>
-                                       <% } else { %>
+                                       
+                                    <% } else { %>
                                           <li class="nav-item">
                                              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                                           </li>
-                                          <% } %>
-                                             <% }else { %>
-                                                <li class="nav-item">
-                                                   <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                                          <li class="nav-item dropdown">
+                                             <a class="nav-link dropdown-toggle" href="#categorias"
+                                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Categorías
+                                             </a>
+                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/1">JABONES NATURALES</a>
                                                 </li>
-                                                <% } %>
-                                                   <li class="nav-item dropdown">
-                                                      <a class="nav-link dropdown-toggle" href="#categorias"
-                                                         id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                                         aria-expanded="false">
-                                                         Categorías
-                                                      </a>
-                                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                         <li><a class="dropdown-item"
-                                                               href="/products/category/1">JABONES NATURALES</a>
-                                                         </li>
-                                                         <li><a class="dropdown-item"
-                                                               href="/products/category/2">BELLEZA AL NATURAL</a>
-                                                         </li>
-                                                         <li><a class="dropdown-item"
-                                                               href="/products/category/3">SEMILLAS</a></li>
-                                                         <li><a class="dropdown-item"
-                                                               href="/products/category/4">ARTESANÍAS</a></li>
-                                                         <li>
-                                                            <hr class="dropdown-divider">
-                                                         </li>
-                                                         <li><a class="dropdown-item" href="/products">TODOS LOS
-                                                               PRODUCTOS</a></li>
-                                                      </ul>
-                                                   </li>
-                                                   <li class="nav-item">
-                                                      <a class="nav-link" aria-current="page" href="#equipo">Equipo</a>
-                                                   </li>
-                                                   <li class="nav-item">
-                                                      <a class="nav-link active" aria-current="page"
-                                                         href="#populares">Populares</a>
-                                                   </li>
-                                                   <li class="nav-item">
-                                                      <a class="nav-link active" aria-current="page"
-                                                         href="#promociones">Promociones</a>
-                                                   </li>
-                                                   <li class="nav-item">
-                                                      <a class="nav-link active" aria-current="page"
-                                                         href="#contacto">Contacto</a>
-                                                   </li>
-                                                   <% if(!locals.user){ %>
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/2">BELLEZA AL NATURAL</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/3">SEMILLAS</a></li>
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/4">ARTESANÍAS</a></li>
+                                                <li>
+                                                   <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="/products">TODOS LOS
+                                                      PRODUCTOS</a></li>
+                                             </ul>
+                                             </li>
+                                             <li class="nav-item">
+                                                <a class="nav-link" aria-current="page" href="#equipo">Equipo</a>
+                                             </li>
+                                             <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page"
+                                                   href="#populares">Populares</a>
+                                             </li>
+                                             <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page"
+                                                   href="#promociones">Promociones</a>
+                                             </li>
+                                             <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page"
+                                                   href="#contacto">Contacto</a>
+                                             </li>
+                                    <% } %>
+                                 <% }else { %>
+                                          <li class="nav-item">
+                                             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                                          </li>
+                                          <li class="nav-item dropdown">
+                                             <a class="nav-link dropdown-toggle" href="#categorias"
+                                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Categorías
+                                             </a>
+                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/1">JABONES NATURALES</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/2">BELLEZA AL NATURAL</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/3">SEMILLAS</a></li>
+                                                <li><a class="dropdown-item"
+                                                      href="/products/category/4">ARTESANÍAS</a></li>
+                                                <li>
+                                                   <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="/products">TODOS LOS
+                                                      PRODUCTOS</a></li>
+                                             </ul>
+                                          </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link" aria-current="page" href="#equipo">Equipo</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link active" aria-current="page"
+                                                href="#populares">Populares</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link active" aria-current="page"
+                                                href="#promociones">Promociones</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link active" aria-current="page"
+                                                href="#contacto">Contacto</a>
+                                          </li>
+                                 <% } %>
+                                                  
+                              <% if(!locals.user){ %>
                                                       <li class="nav-item">
                                                          <a class="nav-link active" aria-current="page"
                                                             href="/users/login"> <b class="login">Ingresar <i
@@ -120,5 +161,6 @@
                                              </form>
                            </div>
       </div>
+      Tengo header
    </nav>
 </header>
