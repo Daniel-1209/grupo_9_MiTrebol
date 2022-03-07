@@ -6,15 +6,14 @@ window.addEventListener('load', function(){
     let longDescription = document.querySelector('#text3');
     let imgMod = document.querySelector('#imgMod');
     let price = document.querySelector('#price');
-    let btnSubmit = document.querySelector('#submitEdit');
+    let btnSubmit = document.querySelector('#submitAdd');
     console.log(imgMod);
     console.log(shortDescription);
     console.log(btnSubmit);
+
     productName.addEventListener('blur', function(){
     alert('Este campo es obligatorio');
     })
-    
-
     shortDescription.onBlur = () => {
         this.alert('Este campo es obligatorio');
     }
