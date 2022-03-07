@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head>
-      <%- include('../partials/head') %>
+
+<head>
+   <%- include('../partials/head') %>
       <link rel="stylesheet" href="/css/index.css">
       <title>Mi Perfil</title>
-   </head>
-   <body>
-      <!-- Cabecera de la pagina-->
-      <%- include('../partials/header') %>
+</head>
+
+<body>
+   <!-- Cabecera de la pagina-->
+   <%- include('../partials/header') %>
       <!-- Perfil -->
       <section class="perfil" id="pefil">
          <div class="container">
@@ -20,15 +22,19 @@
                               <img src="/img/avatars/<%= user.avatar %>" alt="Usuario" class="rounded-circle img-fluid">
                               <div class="mt-3">
                                  <% if(!locals.user){ %>
-                                 <h5 class="upper">Bienvenido a MiTrébol</h5>
-                                 <% }else { %>
-                                 <h5 class="upper"><%= user.first_name%>
-                                 </h5>
-                                 <% } %>
-                                 <p class="text-secondary mb-1">Apasionado por las artesanías mexicanas.</p>
-                                 <p class="text-muted font-size-sm">México, CDMX</p>
-                                 <a class="btn btn-primary" href="/products/cart"> Mi Carrito</a>
-                                 <a class="btn btn-primary" href="/indexVendedor">Mi Resumen</a>
+                                    <h5 class="upper">Bienvenido a MiTrébol</h5>
+                                    <% }else { %>
+                                       <h5 class="upper">
+                                          <%= user.first_name%>
+                                       </h5>
+                                       <% } %>
+                                          <p class="text-secondary mb-1">Apasionado por las artesanías mexicanas.</p>
+                                          <p class="text-muted font-size-sm">México, CDMX</p>
+                                          <% if ( user.id_category==1){ %>
+                                             <a class="btn btn-primary" href="/indexVendedor">Mi Resumen</a>
+                                             <% } else { %>
+                                                <a class="btn btn-primary" href="/products/cart"> Mi Carrito</a>
+                                                <% } %>
                               </div>
                            </div>
                         </div>
@@ -39,22 +45,27 @@
                               <h6 class="mb-0"><i class="fal fa-globe"></i> Mi página web</h6>
                               <span class="text-secondary">https://mitrebol.com</span>
                            </li>
-                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                              <h6 class="mb-0"><i class="fas fa-seedling"></i> Comprador Nivel</h6>
-                              <span class="text-secondary">MiTrébol 5</span>
-                           </li>
-                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                              <h6 class="mb-0"><i class="fas fa-dollar-sign"></i> Mis compras </h6>
-                              <span class="text-secondary">19 Este mes</span>
-                           </li>
-                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                              <h6 class="mb-0"><i class="fas fa-envelope-open-dollar"></i> Mis ventas</h6>
-                              <span class="text-secondary">198 este mes</span>
-                           </li>
-                           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                              <h6 class="mb-0"><i class="fas fa-stars"></i> Reseñas</h6>
-                              <span class="text-secondary">345</span>
-                           </li>
+                           <% if ( user.id_category==1){ %>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                 <h6 class="mb-0"><i class="fas fa-envelope-open-dollar"></i> Mis ventas</h6>
+                                 <span class="text-secondary">198 este mes</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                 <h6 class="mb-0"><i class="fas fa-stars"></i> Reseñas</h6>
+                                 <span class="text-secondary">345</span>
+                                 <% } else { %>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                 <h6 class="mb-0"><i class="fas fa-seedling"></i> Comprador Nivel</h6>
+                                 <span class="text-secondary">MiTrébol 5</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                 <h6 class="mb-0"><i class="fas fa-dollar-sign"></i> Mis compras </h6>
+                                 <span class="text-secondary">19 Este mes</span>
+                              </li>
+                              <% } %>
+
+
+                                 </li>
                         </ul>
                      </div>
                   </div>
@@ -63,10 +74,10 @@
                         <div class="card-body">
                            <div class="row">
                               <div class="col-sm-3">
-                                 <h6 class="mb-0">Nombre</h6>
+                                 <h6 class="mb-0">Usuario</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                 Alejandro Ramírez
+                                 <%= user.user%>
                               </div>
                            </div>
                            <hr>
@@ -75,16 +86,16 @@
                                  <h6 class="mb-0">Email</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                 alejandro@@mitrebol.com.mx
+                                 <%= user.email%>
                               </div>
                            </div>
                            <hr>
                            <div class="row">
                               <div class="col-sm-3">
-                                 <h6 class="mb-0">Teléfono</h6>
+                                 <h6 class="mb-0">Categoria</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                 (5512) 826-1029
+                                 <%= user.category==1 ? "Vendedor" : "Comprador" %>
                               </div>
                            </div>
                            <hr>
@@ -102,61 +113,78 @@
                      <!-- Opiniones -->
                      <div class="row gutters-sm">
                         <!-- Como vendedor -->
-                        <div class="col-sm-6 mb-3">
-                           <div class="card h-100">
-                              <div class="card-body">
-                                 <h6 class="d-flex align-items-center mb-3">Nivel de satisfacción: Como vendedor</h6>
-                                 <small>Envíos gratis</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Clientes satisfechos</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Quejas de clientes</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Ventas por mayoreo</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Ventas por menudeo</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Como comprador -->
-                        <div class="col-sm-6 mb-3">
-                           <div class="card h-100">
-                              <div class="card-body">
-                                 <h6 class="d-flex align-items-center mb-3">Nivel de satisfacción: Como comprador</h6>
-                                 <small>Envíos gratis</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Compras satisfactorias</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Quejas a tus vendedores</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Compras por mayoreo</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                 </div>
-                                 <small>Compras por menudeo</small>
-                                 <div class="progress mb-3" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                        <%console.log(user)%>
+                        <% if ( user.id_category==1){ %>
+                           <div class="col-sm-6 mb-3">
+                              <div class="card h-100">
+                                 <div class="card-body">
+                                    <h6 class="d-flex align-items-center mb-3">Nivel de satisfacción: Como vendedor</h6>
+                                    <small>Envíos gratis</small>
+                                    <div class="progress mb-3" style="height: 5px">
+                                       <div class="progress-bar" role="progressbar" style="width: 99%"
+                                          aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small>Clientes satisfechos</small>
+                                    <div class="progress mb-3" style="height: 5px">
+                                       <div class="progress-bar" role="progressbar" style="width: 100%"
+                                          aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small>Quejas de clientes</small>
+                                    <div class="progress mb-3" style="height: 5px">
+                                       <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="89"
+                                          aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small>Ventas por mayoreo</small>
+                                    <div class="progress mb-3" style="height: 5px">
+                                       <div class="progress-bar" role="progressbar" style="width: 70%"
+                                          aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small>Ventas por menudeo</small>
+                                    <div class="progress mb-3" style="height: 5px">
+                                       <div class="progress-bar" role="progressbar" style="width: 66%"
+                                          aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
                                  </div>
                               </div>
                            </div>
-                        </div>
+                           <% } else { %>
+                              <div class="col-sm-6 mb-3">
+                                 <div class="card h-100">
+                                    <div class="card-body">
+                                       <h6 class="d-flex align-items-center mb-3">Nivel de satisfacción: Como comprador
+                                       </h6>
+                                       <small>Envíos gratis</small>
+                                       <div class="progress mb-3" style="height: 5px">
+                                          <div class="progress-bar" role="progressbar" style="width: 60%"
+                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                       <small>Compras satisfactorias</small>
+                                       <div class="progress mb-3" style="height: 5px">
+                                          <div class="progress-bar" role="progressbar" style="width: 100%"
+                                             aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                       <small>Quejas a tus vendedores</small>
+                                       <div class="progress mb-3" style="height: 5px">
+                                          <div class="progress-bar" role="progressbar" style="width: 0%"
+                                             aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                       <small>Compras por mayoreo</small>
+                                       <div class="progress mb-3" style="height: 5px">
+                                          <div class="progress-bar" role="progressbar" style="width: 30%"
+                                             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                       <small>Compras por menudeo</small>
+                                       <div class="progress mb-3" style="height: 5px">
+                                          <div class="progress-bar" role="progressbar" style="width: 85%"
+                                             aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <% } %>
+
+                                 <!-- Como comprador -->
+
                      </div>
                   </div>
                </div>
@@ -164,5 +192,6 @@
          </div>
       </section>
       <%- include('../partials/footer') %>
-   </body>
+</body>
+
 </html>
