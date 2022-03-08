@@ -1,4 +1,6 @@
 const { check } = require("express-validator");
+const path = require("path");
+
 module.exports = [
   check("title")
     .not()
@@ -24,6 +26,28 @@ module.exports = [
   check("classe")
     .notEmpty()
     .withMessage("Selecciona una clase de tu producto")
-    .bail()
-  // check("productoImage").notEmpty().withMessage("Pon tu foto de perfil").bail(),
+    .bail(),
+  check("productoImage").custom((value, { req }) => {
+    let file = req.file;
+    // console.log(file, value);
+    let acceptedExtentions = [".jpg", ".jpeg", ".png", ".gif"];
+
+    if (!file) {
+      throw new Error("Tienes que subir una imagen");
+    } else {
+      let fileExtension = path.extname(file.originalname);
+      let fileSize = file.size;
+      if (!acceptedExtentions.includes(fileExtension)) {
+        throw new Error(
+          `Las extenciones permitidas son ${acceptedExtentions.join(",")}`
+        );
+      }
+      
+      if (fileSize > 5000000) {
+        throw new Error(`Imagen muy pesada`);
+      }
+    }
+
+    return true;
+  }),
 ];

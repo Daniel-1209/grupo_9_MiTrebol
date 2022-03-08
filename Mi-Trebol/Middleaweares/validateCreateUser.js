@@ -1,4 +1,5 @@
 const { check } = require("express-validator");
+const path = require("path");
 
 module.exports = [
   check("user").notEmpty().withMessage("Ingresa un usuario"),
@@ -15,7 +16,7 @@ module.exports = [
     .withMessage("Ingresa una contraseña")
     .isStrongPassword()
     .withMessage(
-      "La contraseña deve de tener al menos 1 numero, minuscula y caracter especial"
+      "La contraseña deve de tener al menos 1 numero,mayuscula, minuscula y caracter especial"
     ),
   check("password_confirmation")
     .notEmpty()
@@ -28,5 +29,25 @@ module.exports = [
     })
     .bail(),
   check("category").notEmpty().withMessage("Elije una categoria"),
-  // check("avatar").notEmpty().withMessage("Pon tu foto de perfil").bail(),
+  check("avatar").custom((value, { req }) => {
+    let file = req.file;
+    let acceptedExtentions = [".jpg", ".jpeg", ".png"];
+
+    if (!file) {
+      throw new Error("Tienes que subir una imagen");
+    } else {
+      let fileExtension = path.extname(file.originalname);
+      let fileSize = file.size;
+      if (!acceptedExtentions.includes(fileExtension)) {
+        throw new Error(
+          `Las extenciones permitidas son ${acceptedExtentions.join(",")}`
+        );
+      }
+      
+      if (fileSize > 5000000) {
+        throw new Error(`Imagen muy pesada`);
+      }
+    }
+    return true;
+  }),
 ];
