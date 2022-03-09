@@ -9,8 +9,8 @@ const session = require("express-session");
 
 // Requiriendo middleawares
 const noVendedorMiddleware = require("./Middleaweares/noVendedorMiddleware");
-const noCompradorMiddleware = require("./Middleaweares/noCompradorMiddleware")
-const getCookiesMiddleware = require('./Middleaweares/getCookiesMiddleware');
+const noCompradorMiddleware = require("./Middleaweares/noCompradorMiddleware");
+const getCookiesMiddleware = require("./Middleaweares/getCookiesMiddleware");
 
 var app = express();
 
@@ -29,20 +29,23 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-app.use(session({ secret: "Secreto",
-  saveUninitialized: true,
-  resave: true,
-  cookie : {
-    maxAge:(1000 * 60 * 100)
-}   
-})); // Para guardar un usuario con sesion
+app.use(
+  session({
+    secret: "Secreto",
+    saveUninitialized: true,
+    resave: true,
+    cookie: {
+      maxAge: 1000 * 60 * 100,
+    },
+  })
+); // Para guardar un usuario con sesion
 
 // Utilizando mis middleawares
 
 app.use(noVendedorMiddleware);
 app.use(noCompradorMiddleware);
 app.use(getCookiesMiddleware);
-// LLamado a las paginas web para usarse
+// LLamado a las rutas de paginas web para usarse
 
 const index = require("./routes/indexRoute");
 const vendedor = require("./routes/vendedorRoute");
@@ -50,10 +53,19 @@ const productsRoute = require("./routes/productsRoute");
 const user = require("./routes/usersRoute");
 const { setServers } = require("dns");
 
+// LLamando rutas apis
+const useraApi = require("./routes/APIS/usersApiRoute");
+
+// Usando rutas normales
+
 app.use("/", index);
 app.use("/indexVendedor", vendedor);
 app.use("/products", productsRoute);
 app.use("/users", user);
+
+// Usando rutas Api
+
+app.use("/api/users", useraApi);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

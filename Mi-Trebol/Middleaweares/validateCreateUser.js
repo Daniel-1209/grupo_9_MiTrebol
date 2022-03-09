@@ -1,5 +1,6 @@
 const { check } = require("express-validator");
 const path = require("path");
+const fetch = require("node-fetch");
 
 module.exports = [
   check("user").notEmpty().withMessage("Ingresa un usuario"),
@@ -10,7 +11,19 @@ module.exports = [
     .withMessage("El nombre debe tener mínimo 2 caracteres")
     .bail(),
   check("lastName").notEmpty().withMessage("Ingresa tus apellidos"),
-  check("email").isEmail().withMessage("Ingresa un email valido"),
+  check("email")
+    .isEmail()
+    .withMessage("Ingresa un email valido")
+    .custom(async (value) => {
+      let data = await fetch(
+        `http://localhost:3000/api/users/email?email=${value}`
+      );
+        console.log(data,"Holllaaa")
+      if (data) {
+        throw new Error("Correo electronico ya registrado");
+      }
+      return true;
+    }),
   check("password")
     .notEmpty()
     .withMessage("Ingresa una contraseña")
@@ -43,7 +56,7 @@ module.exports = [
           `Las extenciones permitidas son ${acceptedExtentions.join(",")}`
         );
       }
-      
+
       if (fileSize > 5000000) {
         throw new Error(`Imagen muy pesada`);
       }
