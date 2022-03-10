@@ -18,7 +18,9 @@ module.exports = [
       let data = await fetch(
         `http://localhost:3000/api/users/email?email=${value}`
       );
-        console.log(data,"Holllaaa")
+      data = await data.json();
+      console.log(data, "Holllaaa");
+      
       if (data) {
         throw new Error("Correo electronico ya registrado");
       }
