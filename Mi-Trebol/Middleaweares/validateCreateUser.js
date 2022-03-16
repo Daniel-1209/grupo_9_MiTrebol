@@ -19,7 +19,7 @@ module.exports = [
         `http://localhost:3000/api/users/email?email=${value}`
       );
       data = await data.json();
-      console.log(data, "Holllaaa");
+      // console.log(data, "Holllaaa");
       
       if (data) {
         throw new Error("Correo electronico ya registrado");
