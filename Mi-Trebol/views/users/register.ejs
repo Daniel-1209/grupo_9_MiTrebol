@@ -20,7 +20,7 @@
                   <% if (locals.errors) {%>
                   <%for(error of errors ) { %>
                   <p>
-                     <%= error.msg %>
+                     <small class="text-danger" ><%= error.msg %></small>
                   </p>
                   <% } %>
                   <% } %>
