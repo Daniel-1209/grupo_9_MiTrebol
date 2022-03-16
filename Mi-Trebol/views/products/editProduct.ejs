@@ -1,86 +1,120 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <%- include('../partials/head') %>
+
+<head>
+   <%- include('../partials/head') %>
       <link rel="stylesheet" href="/css/index.css">
       <title>Modificar producto</title>
-   </head>
-   <body>
-    <%- include('../partials/header') %>
-    <section class="login-form" id="">
-      <div class="container">
-         <div class="row">
-            <div class="col-12 text-center">
-               <h2>Modificar producto</h2>
-               <p class="informativo">Modifica o actualiza la información de tus productos.</p>
-               <hr class="separador mx-auto">
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
-              <div class="form-container">
-                <% if (locals.errors) {%>
-                <%for(error of errors ) { %>
-                  <small class="text-danger" ><%= error.msg %></small> 
-                <% } %>
-                <% } %>
-                <form action="/products/edit/<%= produtNow.id %>" method="POST" enctype="multipart/form-data" id="formEdit">
-                   <div class="input">
-                      <div class="mb-3">
-                         <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
-                         <input value="<%= produtNow.name %>" type="text" name="title" required id="text" />
-                      </div>
-                      <div class="smallErName">
-                         <small class="text-danger erName" ></small>
-                      </div>
-                      <% if(typeof errors != 'undefined'){ %>
-                        <% for(let i =0; i<errors.length; i++){ %>
-                           <% if(errors[i].params == "name"){ %>
-                           <small class="text-danger" ><%= errors[i].name %></small>
-                          <% } %>
-                        <% } %>
-                      <% } %>
-                      <div class="mb-3">
-                         <label for="Descripción del producto" class="form-label">Descripción corta</label>
-                         <textarea type="text" name="shortdescription" required
-                            id="text2"><%= produtNow.shortdescription %></textarea>
-                      </div>
-                      <div class="mb-3">
-                         <label class="label-text" for="longdescription">Descripción larga</label>
-                         <textarea type="text" name="longDescription" required
-                            id="text3"><%= produtNow.longDescription %></textarea>
-                      </div>
+</head>
 
-                      <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupFile01">Modificar imagen</label>
-                        <input class="select-file" type="file" name="productoImage" required id="imgMod" single>
-                     </div>
-                      <div class="mb-3">
-                         <label for="formFile" class="form-label">Categoria</label>
-                         <select name="classe" id="class">
-                            <option value="1" <%=produtNow.id_class==1 ? 'selected' : '' %> >Jabones naturales</option>
-                            <option value="2" <%=produtNow.id_class==2 ? 'selected' : '' %> >Belleza al natural</option>
-                            <option value="3" <%=produtNow.id_class==3 ? 'selected' : '' %> >Semillas</option>
-                            <option value="4" <%=produtNow.id_class==4 ? 'selected' : '' %> >Artesanías</option>
-                            <option value="5" <%=produtNow.id_class==5 ? 'selected' : '' %> >Velas aromáticas
-                            </option>
-                         </select>
-                      </div>
-                      <div class="input-group mb-3">
-                         <label for="formFile" class="form-label">Precio</label>
-                         <span class="input-group-text">$</span>
-                         <input name="price" type="text" class="form-control" value="<%= produtNow.price %>" id="price">
-                      </div>
-                   </div>
-                   <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary" id="submitEdit">Guardar cambios <i
-                         class="fas fa-plus-circle"></i></button>
-                   </div>
-                </form>
-             </div>
+<body>
+   <%- include('../partials/header') %>
+      <section class="login-form" id="">
+         <div class="container">
+            <div class="row">
+               <div class="col-12 text-center">
+                  <h2>Modificar producto</h2>
+                  <p class="informativo">Modifica o actualiza la información de tus productos.</p>
+                  <hr class="separador mx-auto">
+               </div>
+               <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
+                  <div class="form-container">
+
+                     <% if (locals.errors) {%>
+                        <%for(error of errors ) { %>
+                           <p>
+                              <small class="text-danger">
+                                 <%= error.msg %>
+                              </small>
+                           </p>
+                           <% } %>
+                              <% } %>
+                                 <form action="/products/edit/<%= produtNow.id %>" method="POST"
+                                    enctype="multipart/form-data" id="formEdit">
+                                    <div class="input">
+                                       <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Nombre
+                                             del producto</label>
+                                          <input value="<%= produtNow.name %>" type="text" name="title" required
+                                             id="text" />
+                                       </div>
+                                       <div class="smallErName">
+                                          <small class="text-danger erName"></small>
+                                       </div>
+                                       <% if(typeof errors !='undefined' ){ %>
+                                          <% for(let i=0; i<errors.length; i++){ %>
+                                             <% if(errors[i].params=="name" ){ %>
+                                                <small class="text-danger">
+                                                   <%= errors[i].name %>
+                                                </small>
+                                                <% } %>
+                                                   <% } %>
+                                                      <% } %>
+                                                         <div class="mb-3">
+                                                            <label for="Descripción del producto"
+                                                               class="form-label">Descripción corta</label>
+                                                            <textarea type="text" name="shortdescription" required
+                                                               id="text2"><%= produtNow.shortdescription %></textarea>
+                                                            <br>
+                                                            <small class="text-danger erShortDes"></small>
+                                                         </div>
+                                                         <div class="mb-3">
+                                                            <label class="label-text" for="longdescription">Descripción
+                                                               larga</label>
+                                                            <textarea type="text" name="longDescription" required
+                                                               id="text3"><%= produtNow.longDescription %></textarea>
+                                                            <br>
+                                                            <small class="text-danger erLongDes"></small>
+                                                         </div>
+
+                                                         <div class="input-group mb-3">
+                                                            <label class="input-group-text"
+                                                               for="inputGroupFile01">Modificar
+                                                               imagen</label>
+                                                            <input class="select-file" type="file" name="productoImage"
+                                                               required id="imgMod" single>
+                                                            <br>
+                                                            <small class="text-danger erImage"></small>
+                                                         </div>
+                                                         <div class="mb-3">
+                                                            <label for="formFile" class="form-label">Categoria</label>
+                                                            <select name="classe" id="class">
+                                                               <option value="1" <%=produtNow.id_class==1 ? 'selected'
+                                                                  : '' %> >Jabones naturales
+                                                               </option>
+                                                               <option value="2" <%=produtNow.id_class==2 ? 'selected'
+                                                                  : '' %> >Belleza al natural
+                                                               </option>
+                                                               <option value="3" <%=produtNow.id_class==3 ? 'selected'
+                                                                  : '' %> >Semillas</option>
+                                                               <option value="4" <%=produtNow.id_class==4 ? 'selected'
+                                                                  : '' %> >Artesanías</option>
+                                                               <option value="5" <%=produtNow.id_class==5 ? 'selected'
+                                                                  : '' %> >Velas aromáticas
+                                                               </option>
+                                                            </select>
+                                                         </div>
+                                                         <div class="input-group mb-3">
+                                                            <label for="formFile" class="form-label">Precio</label>
+                                                            <span class="input-group-text">$</span>
+                                                            <input name="price" type="text" class="form-control"
+                                                               value="<%= produtNow.price %>" id="price">
+                                                            <br>
+                                                            <small class="text-danger erPrice"></small>
+                                                         </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="submit" class="btn btn-primary" id="submitEdit">Guardar
+                                          cambios <i class="fas fa-plus-circle"></i></button>
+                                    </div>
+                                 </form>
+                  </div>
+               </div>
             </div>
          </div>
-      </div>
-   </section>
+      </section>
       <%- include('../partials/footer') %>
-      <script src="/js/validateEditFrontEnd.js"></script>
-   </body>
+         <script src="/js/validateEditFrontEnd.js"></script>
+</body>
+
 </html>
