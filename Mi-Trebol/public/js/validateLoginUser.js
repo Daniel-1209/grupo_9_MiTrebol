@@ -5,13 +5,26 @@ window.addEventListener("load", () => {
   let textPassword = document.querySelector("#texPassword");
   let form = document.querySelector("#formulario");
 
+  validateEmail = (emailField) => {
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(emailField).toLowerCase());
+  };
+
   email.focus();
 
   email.addEventListener("blur", (e) => {
     e.preventDefault();
+    console.log(validateEmail(email.value));
     if (email.value === "") {
       // console.log(email.value);
       textEmail.innerHTML = "Correo vacio";
+      textEmail.style.color = "red";
+      email.style.border = "1px solid red";
+      textEmail.style.textAlign = "center";
+      textEmail.style.fontSize = "15px";
+    } else if (!validateEmail(email.value)) {
+      textEmail.innerHTML = "Correo no valido";
       textEmail.style.color = "red";
       email.style.border = "1px solid red";
       textEmail.style.textAlign = "center";
@@ -44,9 +57,9 @@ window.addEventListener("load", () => {
       textPassword.innerHTML = "Contraseña vacia";
       textPassword.style.color = "red";
       password.style.border = "1px solid red";
-    } else if (email.value === "") {
-      console.log(email.value);
-      textEmail.innerHTML = "Correo vacio";
+    } else if (email.value === "" || !validateEmail(email.value)) {
+      // console.log(email.value);
+      textEmail.innerHTML = "Correo vacio o no valido";
       textEmail.style.color = "red";
       email.style.border = "1px solid red";
     } else {

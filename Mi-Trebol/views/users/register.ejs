@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <%- include('../partials/head') %>
+
+<head>
+   <%- include('../partials/head') %>
       <link rel="stylesheet" href="/css/index.css">
       <title>Registro</title>
-   </head>
-   <body>
-      <!-- Cabecera de la pagina-->
-      <%- include('../partials/header') %>
+</head>
+
+<body>
+   <!-- Cabecera de la pagina-->
+   <%- include('../partials/header') %>
       <section class="login-form" id="">
          <div class="container">
             <div class="row">
@@ -18,78 +20,85 @@
                </div>
                <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
                   <% if (locals.errors) {%>
-                  <%for(error of errors ) { %>
-                  <p>
-                     <small class="text-danger" ><%= error.msg %></small>
-                  </p>
-                  <% } %>
-                  <% } %>
-                  <form action="/users/register" method="POST" enctype="multipart/form-data" id="formR">
-                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input type="text" class="form-control" placeholder="Usuario" name="user"
-                           aria-label="Username" aria-describedby="basic-addon1"
-                           value="<%= locals.old && old.user ? old.user : '' %>" id="user">
-                           <span id="user_error" class="error"></span>
-                     </div>
-                     <div class="input-group">
-                        <span class="input-group-text">Nombre y Apellido</span>
-                        <input type="text" placeholder="Nombre" aria-label="Nombre" class="form-control"
-                           value="<%= locals.old && old.firstName ? old.firstName : '' %>" name="firstName"
-                           id="user">
-                        <input type="text" placeholder="Apellido" aria-label="Apellido" class="form-control"
-                           value="<%= locals.old && old.lastName ? old.lastName : '' %>" name="lastName"
-                           id="user">
-                           <span id="name_error" class="error"></span>
-                           <span id="lastName_error" class="error"></span>
-                     </div>
-                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                        <input placeholder="micuenta@mitrebol.com.mx" name="email" id="email"
-                           type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                           value="<%= locals.old && old.email ? old.email : '' %>" id="user">
-                           <span id="email_error" class="error"></span>
-                     </div>
-                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input placeholder="MiContraseña" name="password" id="password"
-                           type="password" class="form-control" id="password" minlength="6"
-                           value="<%= locals.old && old.password ? old.password : '' %>" id="user">
-                           <span id="password_error" class="error"></span>
-                     </div>
-                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
-                        <input placeholder="Confirmar contraseña"  id="password" type="password"
-                           class="form-control" name="password_confirmation" id="password_confirmation"
-                           value="<%= locals.old && old.password_confirmation ? old.password_confirmation : '' %>">
-                           <span id="password_confirmation_error" class="error"></span>
-                     </div>
-                     <div class="mb-3">
-                        <label for="category">Categoría</label>
-                        <select name="category" class="form-select" aria-label="Default select example" id="categoria">
-                           <option value="1" <%=locals.old && old.category==='1' ? 'selected' : '' %>
-                              >Vendedor</option>
-                           <option value="2" <%=locals.old && old.category==='2' ? 'selected' : '' %>
-                              >Comprador
-                           </option>
-                        </select>
-                     </div>
-                     <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupFile01">Imagen de perfil</label>
-                        <input type="file" class="form-control" id="inputGroupFile01" name="avatar" single>
-                        <span id="avatar_error" class="error"></span>
-                     </div>
-                     <button type="submit" id="submitButton" class="btn btn-primary pad">Registrarme</button>
-                     <div>
-                        <a class="login" href="/users/login">Ya tengo una cuenta</a>
-                     </div>
-                  </form>
+                     <%for(error of errors ) { %>
+                        <p>
+                           <small class="text-danger">
+                              <%= error.msg %>
+                           </small>
+                        </p>
+                        <% } %>
+                           <% } %>
+                              <form action="/users/register" method="POST" enctype="multipart/form-data"
+                                 id="formRegister">
+                                 <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <input type="text" class="form-control" placeholder="Usuario" name="user"
+                                       aria-label="Username" aria-describedby="basic-addon1"
+                                       value="<%= locals.old && old.user ? old.user : '' %>" id="user"/>
+                                 </div>
+                                 <span id="user_error" class="error"></span>
+                                 
+                                 <div class="input-group">
+                                    <span class="input-group-text">Nombre y Apellido</span>
+                                    <input type="text" placeholder="Nombre" aria-label="Nombre" class="form-control"
+                                       value="<%= locals.old && old.firstName ? old.firstName : '' %>" name="firstName"
+                                       id="firstName">
+                                    <input type="text" placeholder="Apellido" aria-label="Apellido" class="form-control"
+                                       value="<%= locals.old && old.lastName ? old.lastName : '' %>" name="lastName"
+                                       id="lastName">
+                                    <span id="name_error" class="error"></span>
+                                    <span id="lastName_error" class="error"></span>
+                                 </div><br />
+                                 <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                                    <input placeholder="micuenta@mitrebol.com.mx" name="email" id="email" type="email"
+                                       class="form-control" aria-describedby="emailHelp"
+                                       value="<%= locals.old && old.email ? old.email : '' %>">
+                                    <span id="email_error" class="error"></span>
+                                 </div>
+                                 <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <input placeholder="MiContraseña" name="password" id="password" type="password"
+                                       class="form-control" minlength="6"
+                                       value="<%= locals.old && old.password ? old.password : '' %>">
+                                    <span id="password_error" class="error"></span>
+                                 </div>
+                                 <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
+                                    <input placeholder="Confirmar contraseña" type="password" class="form-control"
+                                       name="password_confirmation" id="password_confirmation"
+                                       value="<%= locals.old && old.password_confirmation ? old.password_confirmation : '' %>">
+                                    <span id="password_confirmation_error" class="error"></span>
+                                 </div>
+                                 <div class="mb-3">
+                                    <label for="category">Categoría</label>
+                                    <select name="category" class="form-select" aria-label="Default select example"
+                                       id="categoria">
+                                       <option value="1" <%=locals.old && old.category==='1' ? 'selected' : '' %>
+                                          >Vendedor</option>
+                                       <option value="2" <%=locals.old && old.category==='2' ? 'selected' : '' %>
+                                          >Comprador
+                                       </option>
+                                    </select>
+                                 </div>
+                                 <div class="input-group mb-3">
+                                    <label class="input-group-text" for="inputGroupFile01">Imagen de perfil</label>
+                                    <input type="file" class="form-control" id="avatar" name="avatar" single>
+                                    <span id="avatar_error" class="error"></span>
+                                 </div>
+                                 <button type="submit" id="submitButton"
+                                    class="btn btn-primary pad">Registrarme</button>
+                                 <div>
+                                    <a class="login" href="/users/login">Ya tengo una cuenta</a>
+                                 </div>
+                              </form>
                </div>
             </div>
          </div>
       </section>
       <%- include('../partials/footer') %>
-      <!-- Sección de SCRIPTS -->
-      <script src="../functions/validateRegister.js"></script>
-   </body>
+         <!-- Sección de SCRIPTS -->
+         <script src="/js/validateRegisterUserFrondEnd.js"></script>
+</body>
+
 </html>
