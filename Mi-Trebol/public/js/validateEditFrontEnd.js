@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
             errors.forEach(error => {
                 if(error == 'Es necesario escribir una descripción corta'){
                    smallShortTag.innerHTML += `${error}`
-                    alert('Es necesario escribir una descripción corta');
+                   
                 }
             })
         }
@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
             errors.forEach(error => {
                 if(error == 'Agrega una descripción detallada del producto'){
                    smallLongTag.innerHTML += `${error}`
-                    alert('Agrega una descripción detallada del producto');
+                   
                 }
             })
         }
@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
             errors.forEach(error => {
                 if(error == 'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'){
                    smallImage.innerHTML += `${error}`
-                    alert('Agrega una descripción detallada del producto');
+                   
                 }
             })
             fileInput.value = '';
@@ -73,7 +73,7 @@ window.addEventListener('load', function () {
         errors.forEach(error => {
             if(error == 'Debe asignar el precio'){
                smallPrice.innerHTML += `${error}`
-                alert('Debe asignar el precio');
+               
             }
         })
     })

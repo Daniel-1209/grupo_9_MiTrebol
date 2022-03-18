@@ -1,3 +1,8 @@
+![Logo DigitalHouse](https://play-lh.googleusercontent.com/xD78B_Wcf9q5iWhKIQS8n1NwdfkVFDJjjUubkcd6rHaiHpOYmFVMoeQ5hbomDGekvhQ)
+
+
+
+
 # Retroalimentación del 1er Sprint
 ## 1.- Qué debemos empezar a hacer:
 •	Contemplar y dar seguimiento a todas las opiniones en el chat del equipo.   
@@ -159,3 +164,34 @@
 ## 5.-Hacer menos:
 - Confiarse del tiempo para desarrollar el sprint
 - No clasficar bien las actividades
+
+# Retroalimentación 7mo Sprint  
+
+## 1.-¿Qué problemas tuvimos?
+- Falta de tiempo personal
+- No hacer mi parte al 100%
+- Mala organizacion en nuestras tareas personales
+- No comunicarnos los problemas a los otros cuando se presentan
+- Hacer las cosas rapido sin verificarlas
+
+## 2.-Seguir haciendo:	
+- Presentadonos en clases a pesar de no entender nada jajaja
+- Entregar todos nuestros trabajos
+- Seguir en equipo desde el inicio
+
+## 3.-Hacer más:	
+- Hacer las reuniones semanales
+- Más comunicación entre compañeros y compañeras.
+- Recabar mas información de fuentes externas
+
+## 4.-Dejar de hacer:
+- Ausentarnos y confiarnos del tiempo
+- No hacer las reuniones semanales
+- Dejar todo al ultimo
+
+## 5.-Hacer menos:
+- Confiarse del tiempo para desarrollar el sprint
+- No clasficar bien las actividades
+- No revisar mis actividades ante de git push
+
+

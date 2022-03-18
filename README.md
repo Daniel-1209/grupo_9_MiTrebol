@@ -1,3 +1,6 @@
+![Logo DigitalHouse](https://diariodigital.com.mx/wp-content/uploads/2020/08/digital.house_.diario.jpg)
+
+
 # Grupo_9_MiTrebol
 
 ## Descripcion de la pagina
