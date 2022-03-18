@@ -28,22 +28,28 @@
                     <label class="label-text" for="title">Nombre del producto</label>
                     <input  type="text" name="title"
                       value="<%= locals.old && old.title ? old.title : '' %>" id="text" />
-                      <br>
-                      <small class="text-danger erNameAdd"></small>
+                      <div  class="erNameAdd">
+                        <ul class="erUl">
+                         <!-- <small class="text-danger erNameAdd"></small>--> 
+                        </ul>
+                      </div>
                     </div>
                   <div>
                     <label class="label-text" for="shortdescription">Descripción corta</label>
                     <textarea type="text" name="shortdescription"
                       id="text2"><%= locals.old && old.shortdescription ? old.shortdescription : '' %></textarea>
-                      <br>
-                      <small class="text-danger erShortDesAdd"></small>
+                      <div  class="erShortAdd">
+                        <ul>
+                        </ul>
+                      </div>
                     </div>
                   <div>
                     <label class="label-text" for="longDescription">Descripción larga</label>
                     <textarea type="text" name="longDescription"
                       id="text3"> <%= locals.old && old.longDescription ? old.longDescription : '' %></textarea>
-                      <br>
-                      <small class="text-danger erLongDesAdd"></small>
+                      <div class="erLongAdd" >
+                        <ul></ul>
+                      </div>
                     </div>
                 </div>
                 <div id="filepriceandselectors">
@@ -52,8 +58,9 @@
                     Seleccionar archivo
                   </label>
                   <input class="select-file" type="file" name="productoImage" id="imgMod" single>
-                  <br>
-                  <small class="text-danger erImageAdd"></small>
+                  <div class="erImageAdd">
+                    <ul></ul>
+                  </div>
 
                   <div id="selectors">
                     <label class="label-text" for="class">Categoría</label>
@@ -73,8 +80,9 @@
                       <span>$</span>
                       <input type="number" name="price" value="<%= locals.old && old.price ? old.price : '' %>"
                         id="price" />
-                        <br>
-                        <small class="text-danger erPriceAdd"></small>
+                        <div class="erPriceAdd">
+                          <ul></ul>
+                        </div>
                     </div>
                   </div>
                   <div>
