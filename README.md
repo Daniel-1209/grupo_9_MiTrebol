@@ -1,3 +1,6 @@
+![Logo DigitalHouse](https://play-lh.googleusercontent.com/xD78B_Wcf9q5iWhKIQS8n1NwdfkVFDJjjUubkcd6rHaiHpOYmFVMoeQ5hbomDGekvhQ)
+
+
 # Grupo_9_MiTrebol
 
 ## Descripcion de la pagina
