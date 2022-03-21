@@ -216,7 +216,7 @@ window.addEventListener("load", () => {
       erros[6].classList.remove("aceptepStyle");
       erros[6].classList.add("errorStyle");
     } else {
-      form.submit();
+      formRegister.submit();
     }
   });
 });
