@@ -32,8 +32,8 @@ window.addEventListener("load", () => {
 
   user.addEventListener("blur", (e) => {
     e.preventDefault();
-    if (user.value === "") {
-      erros[0].innerHTML = "User vacio";
+    if (user.value.length <= 5) {
+      erros[0].innerHTML = "User con mínimo 5 caracteres";
       user.style.border = "1px solid red";
       erros[0].classList.remove("aceptepStyle");
       erros[0].classList.add("errorStyle");
@@ -171,19 +171,52 @@ window.addEventListener("load", () => {
     }
   });
 
-  // formRegister.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   if (password.value === "") {
-  //     textPassword.innerHTML = "Contraseña vacia";
-  //     textPassword.style.color = "red";
-  //     password.style.border = "1px solid red";
-  //   } else if (email.value === "" || !validateEmail(email.value)) {
-  //     // console.log(email.value);
-  //     textEmail.innerHTML = "Correo vacio o no valido";
-  //     textEmail.style.color = "red";
-  //     email.style.border = "1px solid red";
-  //   } else {
-  //     form.submit();
-  //   }
-  // });
+  formRegister.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const filePath = avatar.value;
+    const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    if (user.value.length <= 5) {
+      erros[0].innerHTML = "User vacio";
+      user.style.border = "1px solid red";
+      erros[0].classList.remove("aceptepStyle");
+      erros[0].classList.add("errorStyle");
+    } else if (firstName.value === "") {
+      erros[1].innerHTML = "Nombre vacio";
+      firstName.style.border = "1px solid red";
+      erros[1].classList.remove("aceptepStyle");
+      erros[1].classList.add("errorStyle");
+    } else if (lastName.value === "") {
+      erros[2].innerHTML = "Apellidos vacios";
+      lastName.style.border = "1px solid red";
+      erros[2].classList.remove("aceptepStyle");
+      erros[2].classList.add("errorStyle");
+    } else if (email.value === "") {
+      erros[3].innerHTML = "Email vacio";
+      email.style.border = "1px solid red";
+      erros[3].classList.remove("aceptepStyle");
+      erros[3].classList.add("errorStyle");
+    } else if (password.value.length <= 5) {
+      erros[4].innerHTML = "Contraseña vacia";
+      password.style.border = "1px solid red";
+      erros[4].classList.remove("aceptepStyle");
+      erros[4].classList.add("errorStyle");
+    } else if (password.value !== password_confirmation.value) {
+      erros[5].innerHTML = "Contraseña vacia o no son iguales";
+      password_confirmation.style.border = "1px solid red";
+      erros[5].classList.remove("aceptepStyle");
+      erros[5].classList.add("errorStyle");
+    } else if (!allowedExtensions.exec(filePath)) {
+      erros[6].innerHTML = "Extension invalida";
+      avatar.style.border = "1px solid red";
+      erros[6].classList.remove("aceptepStyle");
+      erros[6].classList.add("errorStyle");
+    } else if (avatar.files[0].size > 5000000) {
+      erros[6].innerHTML = "El tamaño de la imagen excede los 5 MB";
+      avatar.style.border = "1px solid red";
+      erros[6].classList.remove("aceptepStyle");
+      erros[6].classList.add("errorStyle");
+    } else {
+      form.submit();
+    }
+  });
 });
