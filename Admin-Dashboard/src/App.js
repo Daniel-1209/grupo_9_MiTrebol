@@ -1,13 +1,14 @@
-import React from "react";
-import Routers from "./routers";
-import Contex from "./context/ProviderDashboard";
-
-const App = () => {
+import React from 'react';
+import SideBar from './components/SideBar';
+import ContentWrapper from './components/ContentWrapper';
+function App() {
   return (
-    <Contex>
-      <Routers />
-    </Contex>
-  )
-};
+    <React.Fragment>
+      	<div id="wrapper">
+          <SideBar />
+        </div>
+    </React.Fragment>
+  );
+}
 
 export default App;
