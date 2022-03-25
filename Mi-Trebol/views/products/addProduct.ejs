@@ -12,7 +12,7 @@
   <%- include('../partials/header') %>
 
     <div class="form-container">
-      <form action="/indexVendedor/create" method="POST" enctype="multipart/form-data">
+      <form action="/indexVendedor/create" method="POST" enctype="multipart/form-data" id="formAdd">
         <div class="formsheader">
           <h2 class="titulo">Añadir producto</h2>
         </div>
@@ -27,9 +27,9 @@
                   <div>
                     <label class="label-text" for="title">Nombre del producto</label>
                     <input  type="text" name="title"
-                      value="<%= locals.old && old.title ? old.title : '' %>" id="text" />
+                      value="<%= locals.old && old.title ? old.title : '' %>" id="name" />
                       <div  class="erNameAdd">
-                        <ul class="erUl">
+                        <ul class="ul">
                          <!-- <small class="text-danger erNameAdd"></small>--> 
                         </ul>
                       </div>
@@ -37,7 +37,7 @@
                   <div>
                     <label class="label-text" for="shortdescription">Descripción corta</label>
                     <textarea type="text" name="shortdescription"
-                      id="text2"><%= locals.old && old.shortdescription ? old.shortdescription : '' %></textarea>
+                      id="shortText"><%= locals.old && old.shortdescription ? old.shortdescription : '' %></textarea>
                       <div  class="erShortAdd">
                         <ul>
                         </ul>
@@ -46,7 +46,7 @@
                   <div>
                     <label class="label-text" for="longDescription">Descripción larga</label>
                     <textarea type="text" name="longDescription"
-                      id="text3"> <%= locals.old && old.longDescription ? old.longDescription : '' %></textarea>
+                      id="longText"> <%= locals.old && old.longDescription ? old.longDescription : '' %></textarea>
                       <div class="erLongAdd" >
                         <ul></ul>
                       </div>
