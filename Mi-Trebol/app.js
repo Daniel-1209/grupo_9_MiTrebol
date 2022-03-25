@@ -55,6 +55,7 @@ const { setServers } = require("dns");
 
 // LLamando rutas apis
 const useraApi = require("./routes/APIS/usersApiRoute");
+const productsApi = require('./routes/APIS/productsApiRoute')
 
 // Usando rutas normales
 
@@ -66,6 +67,7 @@ app.use("/users", user);
 // Usando rutas Api
 
 app.use("/api/users", useraApi);
+app.use("/api/products", productsApi);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
