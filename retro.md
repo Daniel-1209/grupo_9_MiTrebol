@@ -194,4 +194,26 @@
 - No clasficar bien las actividades
 - No revisar mis actividades ante de git push
 
+# Retroalimentación 8vo Sprint  
+
+## 1.-¿Qué problemas tuvimos?
+- La acumulación de tareas pendientes dificultaron la entrega del sprint
+- Tareas personales que dificultaron la entrega de actividades
+- Tiempos de entrega de periodos cortos por desfase del calendario  
+
+## 2.-Seguir haciendo:	
+- Esforzándonos día a día para lograr el objetivo
+- Trabajar en equipo, comunicarnos y repartir las tareas
+- 
+
+## 3.-Hacer más:	
+- Dividir las tareas
+- Enfocarnos al 100% en estos ultimos días
+- Usar la página y probar todas las rutas y funcionalidades.
+
+## 4.-Dejar de hacer:
+- Aplazar tareas urgentes y/o stoppers
+
+## 5.-Hacer menos:
+- Dormir
 
