@@ -36,10 +36,12 @@
                                           <label for="exampleFormControlInput1" class="form-label">Nombre
                                              del producto</label>
                                           <input value="<%= produtNow.name %>" type="text" name="title" required
-                                             id="text" />
-                                       </div>
-                                       <div class="smallErName">
-                                          <small class="text-danger erName"></small>
+                                             id="name" />
+                                          <div class="erNameAdd">
+                                             <ul class="ul">
+                                                <!-- <small class="text-danger erNameAdd"></small>-->
+                                             </ul>
+                                          </div>
                                        </div>
                                        <% if(typeof errors !='undefined' ){ %>
                                           <% for(let i=0; i<errors.length; i++){ %>
@@ -54,17 +56,20 @@
                                                             <label for="Descripción del producto"
                                                                class="form-label">Descripción corta</label>
                                                             <textarea type="text" name="shortdescription" required
-                                                               id="text2"><%= produtNow.shortdescription %></textarea>
-                                                            <br>
-                                                            <small class="text-danger erShortDes"></small>
+                                                               id="shortText"><%= produtNow.shortdescription %></textarea>
+                                                            <div class="erShortAdd">
+                                                               <ul>
+                                                               </ul>
+                                                            </div>
                                                          </div>
                                                          <div class="mb-3">
                                                             <label class="label-text" for="longdescription">Descripción
                                                                larga</label>
                                                             <textarea type="text" name="longDescription" required
-                                                               id="text3"><%= produtNow.longDescription %></textarea>
-                                                            <br>
-                                                            <small class="text-danger erLongDes"></small>
+                                                               id="longText"><%= produtNow.longDescription %></textarea>
+                                                            <div class="erLongAdd">
+                                                               <ul></ul>
+                                                            </div>
                                                          </div>
 
                                                          <div class="input-group mb-3">
@@ -73,8 +78,9 @@
                                                                imagen</label>
                                                             <input class="select-file" type="file" name="productoImage"
                                                                required id="imgMod" single>
-                                                            <br>
-                                                            <small class="text-danger erImage"></small>
+                                                            <div class="erImageAdd">
+                                                               <ul></ul>
+                                                            </div>
                                                          </div>
                                                          <div class="mb-3">
                                                             <label for="formFile" class="form-label">Categoria</label>
@@ -99,8 +105,9 @@
                                                             <span class="input-group-text">$</span>
                                                             <input name="price" type="text" class="form-control"
                                                                value="<%= produtNow.price %>" id="price">
-                                                            <br>
-                                                            <small class="text-danger erPrice"></small>
+                                                            <div class="erPriceAdd">
+                                                               <ul></ul>
+                                                            </div>
                                                          </div>
                                     </div>
                                     <div class="modal-footer">
