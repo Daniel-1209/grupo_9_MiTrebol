@@ -8,10 +8,15 @@ let indexController = require('../../controllers/APIS/usersApiController');
 router.get('/', indexController.all);
 
 /* Detalle por cada usuario. */
-router.get('/:id', indexController.detail);
+router.get('/user/:id', indexController.detail);
 
 /* Correo electronico de usuario */
 router.get('/email', indexController.electronic);
+
+
+/* Categorias de usuario */
+router.get('/categorias', indexController.countCategories);
+
 
 
 module.exports = router;
