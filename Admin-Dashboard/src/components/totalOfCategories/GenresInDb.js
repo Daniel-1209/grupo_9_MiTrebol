@@ -5,6 +5,22 @@ import { useState, useEffect } from "react";
 
 function GenresInDb() {
   const [products, setProducts] = useState({});
+  const [users, setUsers] = useState({});
+
+  useEffect(() => {
+    fetch("/api/products")
+      .then((data) => {
+        return data.json();
+      })
+      .then((element) => setProducts(element));
+
+      fetch("/api/users/categorias")
+      .then((data) => {
+        return data.json();
+      })
+      .then((element) => setUsers(element));
+
+  }, []);
   useEffect(() => {
     fetch("/api/products")
       .then((data) => {
@@ -102,26 +118,26 @@ function GenresInDb() {
             <div className="row">
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">Jabones</div>
+                  <div className="card-body">Vendedores</div>
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
                   <div className="card-body">
-                    {products?.countByCategory?.Jabon}{" "}
+                    {users.countVendors}{" "}
                   </div>
                 </div>
               </div>
 
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">Belleza</div>
+                  <div className="card-body">Compradores</div>
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
                   <div className="card-body">
-                    {products?.countByCategory?.Belleza}
+                    {users.countBuyers}
                   </div>
                 </div>
               </div>

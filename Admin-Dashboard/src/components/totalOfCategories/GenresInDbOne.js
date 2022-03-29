@@ -5,14 +5,24 @@ import { useState, useEffect } from "react";
 
 function GenresInDb() {
   const [products, setProducts] = useState({});
+  const [users, setUsers] = useState({});
+
   useEffect(() => {
     fetch("/api/products")
       .then((data) => {
         return data.json();
       })
       .then((element) => setProducts(element));
+
+      fetch("/api/users/categorias")
+      .then((data) => {
+        return data.json();
+      })
+      .then((element) => setUsers(element));
+
   }, []);
   console.log(products);
+  console.log(users);
 
   return (
     <div className="col-lg-6 mb-4">
