@@ -4,6 +4,8 @@ import ContentWrapper from './ContentWrapper';
 import GenresInDb from './totalOfCategories/GenresInDb';
 import LastMovieInDb from './LastUserAndProductInDb';
 import ContentRowMovies from './ContentRowMovies';
+import ListadoOfProducts from './listadoOfTotals/ListadoOfProducts';
+import ListadoOfUsers from './listadoOfTotals/ListadoOfUsers';
 import NotFound from './NotFound';
 import Search from './SearchMovies';
 
@@ -48,17 +50,17 @@ function SideBar(){
 
                  {/*<!-- Nav Item - Pages -->*/}
                  <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/ListadoOfProducts">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Total de Productos</span>
+                        <span>Listado de Productos</span>
                     </Link>
                 </li>
 
                  {/*<!-- Nav Item - Pages -->*/}
                  <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/ListadoOfUsers">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Total de Usuarios</span>
+                        <span>Listado de Usuarios</span>
                     </Link>
                 </li>
 
@@ -117,6 +119,12 @@ function SideBar(){
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />
+                </Route>
+                <Route path="/ListadoOfProducts">
+                    <ListadoOfProducts />
+                </Route>
+                <Route path="/ListadoOfUsers">
+                    <ListadoOfUsers />
                 </Route>
                 <Route path="/SearchMovie">
                     <Search />

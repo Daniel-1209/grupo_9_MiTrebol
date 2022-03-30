@@ -14,24 +14,23 @@ function GenresInDb() {
       })
       .then((element) => setProducts(element));
 
-      fetch("/api/users/categorias")
+    fetch("/api/users/categorias")
       .then((data) => {
         return data.json();
       })
       .then((element) => setUsers(element));
 
-  }, []);
-  useEffect(() => {
     fetch("/api/products")
       .then((data) => {
         return data.json();
       })
       .then((element) => setProducts(element));
   }, []);
-  console.log(products);
+
+  // console.log(products);
 
   return (
-    <div style={{  display: 'flex', width: '100%'}}>
+    <div style={{ display: "flex", width: "100%" }}>
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
           <div className="card-header py-3">
@@ -123,9 +122,7 @@ function GenresInDb() {
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">
-                    {users.countVendors}{" "}
-                  </div>
+                  <div className="card-body">{users.countVendors} </div>
                 </div>
               </div>
 
@@ -136,12 +133,9 @@ function GenresInDb() {
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">
-                    {users.countBuyers}
-                  </div>
+                  <div className="card-body">{users.countBuyers}</div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>

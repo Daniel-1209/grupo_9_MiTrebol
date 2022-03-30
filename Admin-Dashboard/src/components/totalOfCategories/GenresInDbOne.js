@@ -21,8 +21,8 @@ function GenresInDb() {
       .then((element) => setUsers(element));
 
   }, []);
-  console.log(products);
-  console.log(users);
+  // console.log(products);
+  // console.log(users);
 
   return (
     <div className="col-lg-6 mb-4">
