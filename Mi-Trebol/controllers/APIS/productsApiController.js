@@ -2,7 +2,7 @@
 const db = require("../../database/models");
 
 let controlador = {
-  // Todos los usuarios
+  // Todos los Productos
   all: (req, res) => {
     db.Products.findAll().then((data) => {
       const products = [];
@@ -20,6 +20,8 @@ let controlador = {
           name: element.name,
           description: element.shortdescription,
           category: element.id_class,
+          price: element.price,
+          img: element.img_principal,
           detail: `/api/products/${element.id}`,
         };
         products.push(product);

@@ -10,6 +10,7 @@ let controlador = {
         const user = {
           id: element.id,
           user: element.user,
+          avatar: element.avatar,
           name: `${element.first_name} ${element.last_name}`,
           email: element.email,
           detail: `/api/users/${element.id}`,
