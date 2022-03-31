@@ -116,23 +116,23 @@ function GenresInDb() {
           <div className="card-body">
             <div className="row">
               <div className="col-lg-6 mb-4">
-                <div className="card bg-darkUsers text-white shadow">
+                <div style={{color:'white'}} className="card bg-darkUsers shadow">
                   <div className="card-body">Vendedores</div>
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
-                <div className="card bg-darkUsers text-white shadow">
+                <div style={{color:'white'}}  className="card bg-darkUsers  shadow">
                   <div className="card-body">{users.countVendors} </div>
                 </div>
               </div>
 
               <div className="col-lg-6 mb-4">
-                <div className="card bg-darkUsers text-white shadow">
+                <div style={{color:'white'}}  className="card bg-darkUsers shadow">
                   <div className="card-body">Compradores</div>
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
-                <div className="card bg-darkUsers text-white shadow">
+                <div style={{color:'white'}}  className="card bg-darkUsers shadow">
                   <div className="card-body">{users.countBuyers}</div>
                 </div>
               </div>
