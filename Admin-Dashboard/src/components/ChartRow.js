@@ -4,8 +4,8 @@ import React from 'react';
 function ChartRow(props){
     return (
                 <tr>
-                    <td>{props.Title}</td>
-                    <td>{props.Length}</td>
+                    <td>{props.Shopper}</td>
+                    <td>{props.Sales}</td>
                     <td>{props.Rating}</td>
                     <td>
                         <ul>
@@ -14,7 +14,7 @@ function ChartRow(props){
                             )}
                         </ul>
                     </td>
-                    <td>{props.Awards}</td>
+                    <td>{props.Date}</td>
                 </tr>
             )
     }

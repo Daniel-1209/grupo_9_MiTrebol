@@ -3,18 +3,18 @@ import ChartRow from './ChartRow';
 
 let tableRowsData = [
     {
-        Title: 'Billy Elliot ',
-        Length: '123',
+        Shopper: 'Jesús Alcantara',
+        Sales: '1223',
         Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
+        Categories: ['Jabones','Velas','Artesanías'],
+        Date: 2020
     },
     {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
+        Shopper: 'Elena Cruz',
+        Sales: '1422',
         Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
+        Categories: ['Belleza al natural','Semillas','Artesanías'],
+        Date: 2021
     },
     
 ]
@@ -29,22 +29,13 @@ function Chart (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
+                                <th>Nombre del producto</th>
+                                <th>Ventas</th>
                                 <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Categorías</th>
+                                <th>Fecha de registro</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {

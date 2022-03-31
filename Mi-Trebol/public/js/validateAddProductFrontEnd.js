@@ -302,15 +302,19 @@ window.addEventListener('load', function () {
 
         if (nameTag.value.length < 5 || nameTag.value.length == 0) {
             errorsName.erMsgLength = erMsgLength;
+            sName.innerHTML = `<li><small class="text-danger">${erMsgLength}</small></li>`;
         }
         else if (shorTextTag.value.length < 10 || shorTextTag.value.length == 0) {
             errorsShort.erShortLength = erShortLength;
+            sShort.innerHTML = `<li><small class="text-danger">${erShortEmpty}</small></li>`
         }
         else if (longText.value.length < 20 || longText.value.length == 0) {
             errorsLong.errorsLong = errorsLong;
+            sLong.innerHTML = `<li><small class="text-danger">${erLongEmpty}</small></li>`
         }
         else if (price.value.length > 6 || price.value.length == 0) {
             errors.erPriceInvalid = erPriceInvalid;
+            sPrice.innerHTML = `<li><small class="text-danger">${erPriceBlur}</small></li>`
         }
         else {
             formAddTag.submit();

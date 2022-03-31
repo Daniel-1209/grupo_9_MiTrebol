@@ -10,6 +10,7 @@ let controlador = {
         const user = {
           id: element.id,
           user: element.user,
+          avatar: element.avatar,
           name: `${element.first_name} ${element.last_name}`,
           email: element.email,
           detail: `/api/users/${element.id}`,
@@ -54,6 +55,41 @@ let controlador = {
       res.json({
         status: 200,
         user: user,
+      });
+    });
+  },
+  // Contador de los usuarios => Vendedores y Compradores
+  countCategories: (req, res) => {
+    db.Users.findAll().then((data) => {
+      const usersBuyers = [];
+      const usersVendors = [];
+      let countBuyers = 0;
+      let countVendors = 0;
+
+      data.forEach((element) => {
+        const user = {
+          id: element.id,
+          user: element.user,
+          name: `${element.first_name} ${element.last_name}`,
+          email: element.email,
+          avatar: element.avatar,
+          detail: `/api/users/${element.id}`,
+        };
+        if( element.id_category === 1    ){
+          usersVendors.push(user);
+          countVendors++ ;
+        }else{
+          usersBuyers.push(user);
+          countBuyers++;
+        }
+        
+      });
+      res.json({
+        countBuyers: countBuyers,
+        countVendors: countVendors ,
+        status: 200,
+        usersBuyers: usersBuyers,
+        countVendors: countVendors
       });
     });
   },

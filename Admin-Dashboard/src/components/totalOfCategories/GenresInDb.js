@@ -5,17 +5,32 @@ import { useState, useEffect } from "react";
 
 function GenresInDb() {
   const [products, setProducts] = useState({});
+  const [users, setUsers] = useState({});
+
   useEffect(() => {
     fetch("/api/products")
       .then((data) => {
         return data.json();
       })
       .then((element) => setProducts(element));
+
+    fetch("/api/users/categorias")
+      .then((data) => {
+        return data.json();
+      })
+      .then((element) => setUsers(element));
+
+    fetch("/api/products")
+      .then((data) => {
+        return data.json();
+      })
+      .then((element) => setProducts(element));
   }, []);
-  console.log(products);
+
+  // console.log(products);
 
   return (
-    <div style={{  display: 'flex', width: '100%'}}>
+    <div style={{ display: "flex", width: "100%" }}>
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
           <div className="card-header py-3">
@@ -102,30 +117,25 @@ function GenresInDb() {
             <div className="row">
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">Jabones</div>
+                  <div className="card-body">Vendedores</div>
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">
-                    {products?.countByCategory?.Jabon}{" "}
-                  </div>
+                  <div className="card-body">{users.countVendors} </div>
                 </div>
               </div>
 
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">Belleza</div>
+                  <div className="card-body">Compradores</div>
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-darkUsers text-white shadow">
-                  <div className="card-body">
-                    {products?.countByCategory?.Belleza}
-                  </div>
+                  <div className="card-body">{users.countBuyers}</div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
