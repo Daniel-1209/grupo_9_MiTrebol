@@ -49,7 +49,7 @@ let controlador = {
         first_name: data.first_name,
         last_name: data.last_name,
         email: data.email,
-        avatar: data.avatar
+        avatar: data.avatar,
       };
 
       res.json({
@@ -75,21 +75,46 @@ let controlador = {
           avatar: element.avatar,
           detail: `/api/users/${element.id}`,
         };
-        if( element.id_category === 1    ){
+        if (element.id_category === 1) {
           usersVendors.push(user);
-          countVendors++ ;
-        }else{
+          countVendors++;
+        } else {
           usersBuyers.push(user);
           countBuyers++;
         }
-        
       });
       res.json({
         countBuyers: countBuyers,
-        countVendors: countVendors ,
+        countVendors: countVendors,
         status: 200,
         usersBuyers: usersBuyers,
-        countVendors: countVendors
+        countVendors: countVendors,
+      });
+    });
+  },
+  // Buscar los usuarios
+  search: (req, res) => {
+    db.Users.findAll({
+      where: {
+        first_name: {
+          [db.Sequelize.Op.like]: `%${req.query.text}%`,
+        }
+      },
+    }).then((data) => {
+      console.log(data);
+      const users = [];
+      data.forEach((user) => {
+        const userini = {
+          name: `${user.first_name} ${user.last_name}`,
+          email: user.email,
+          imgUrl: `http://localhost:3000/img/avatars/${user.avatar}`,
+        };
+        users.push(userini);
+      });
+
+      res.json({
+        status: 200,
+        users: users,
       });
     });
   },

@@ -7,7 +7,9 @@ import ContentRowMovies from './ContentRowMovies';
 import ListadoOfProducts from './listadoOfTotals/ListadoOfProducts';
 import ListadoOfUsers from './listadoOfTotals/ListadoOfUsers';
 import NotFound from './NotFound';
-import Search from './SearchMovies';
+
+import SearchUser from './search/SearchUser';
+import SearchProduct from './search/SearcProduct';
 
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -75,13 +77,13 @@ function SideBar(){
 
 
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/SearchMovie">
+                <Link className="nav-link" to="/SearchProduct">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Buscar Producto</span></Link>
                 </li>
 
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/SearchMovie">
+                <Link className="nav-link" to="/SearchUser">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Buscar Usuario</span></Link>
                 </li>
@@ -127,8 +129,11 @@ function SideBar(){
                 <Route path="/ListadoOfUsers">
                     <ListadoOfUsers />
                 </Route>
-                <Route path="/SearchMovie">
-                    <Search />
+                <Route path="/SearchUser">
+                    <SearchUser />
+                </Route>
+                <Route path="/SearchProduct">
+                    <SearchProduct />
                 </Route>
                 <Route component={NotFound} />
             </Switch>

@@ -59,6 +59,32 @@ let controlador = {
       });
     });
   },
+  // Buscar los Productos
+  search: (req, res) => {
+    db.Products.findAll({
+      where: {
+        name: {
+          [db.Sequelize.Op.like]: `%${req.query.text}%`,
+        }
+      },
+    }).then((data) => {
+      console.log(data);
+      const products = [];
+      data.forEach((product) => {
+        const productIni = {
+          title: product.name,
+          description: product.shortdescription,
+          imgUrl: `http://localhost:3000/img/${product.img_principal}`,
+        };
+        products.push(productIni);
+      });
+
+      res.json({
+        status: 200,
+        products: products,
+      });
+    });
+  },
 };
 
 module.exports = controlador;
