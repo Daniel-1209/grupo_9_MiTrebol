@@ -300,16 +300,16 @@ window.addEventListener('load', function () {
     btnSubmitAdd.addEventListener('click', function (evento) {
         evento.preventDefault();
 
-        if (nameTag.value.length < 5) {
+        if (nameTag.value.length < 5 || nameTag.value.length == 0) {
             errorsName.erMsgLength = erMsgLength;
         }
-        else if (shorTextTag.value.length < 10) {
+        else if (shorTextTag.value.length < 10 || shorTextTag.value.length == 0) {
             errorsShort.erShortLength = erShortLength;
         }
-        else if (longText.value.length < 20) {
+        else if (longText.value.length < 20 || longText.value.length == 0) {
             errorsLong.errorsLong = errorsLong;
         }
-        else if (price.value.length > 6) {
+        else if (price.value.length > 6 || price.value.length == 0) {
             errors.erPriceInvalid = erPriceInvalid;
         }
         else {

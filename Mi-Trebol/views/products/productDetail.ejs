@@ -54,18 +54,25 @@
                         </p>
                      </div>
                      <div class='listas_desplegables'>
+                        <form action="/products/cart/<%= product.id%>" method="POST" id='bttn0_al_carrito'>
                         <label for="">Selecciona tu tipo de compra</label>
-                        <select class="form-select form-select-sm" name="Detalles" aria-label=".form-select-lg example">
+                        <select class="form-select form-select-sm" name="Detalles" aria-label=".form-select-lg example" id="purchaseType">
                            <option selected>Selecciona tu tipo de compra</option>
                            <option value="1">Mayoreo</option>
                            <option value="2">Menudeo</option>
                         </select>
+                        <div class="erPurchase">
+                           <ul></ul>
+                         </div>
                         <label for="">Selecciona tu tipo de envío</label>
-                        <select class="form-select form-select-sm" name="Envio" aria-label=".form-select-lg example">
+                        <select class="form-select form-select-sm" name="Envio" aria-label=".form-select-lg example" id="deliveryType">
                            <option selected>Selecciona tu tipo de envío</option>
                            <option value="A domicilio">A domicilio</option>
                            <option value="Recoger en tienda">Recoger en tienda</option>
                         </select>
+                        <div class="erDelivery">
+                           <ul></ul>
+                         </div>
                      </div>
                      <div class='cantidad_y_carrito'>
                         <div class='cuantos_quieres'>
@@ -73,8 +80,10 @@
                            <input type="number" id="cantidad" name="cantidad"
                               min="1" max="100">
                         </div>
-                        <form action="/products/cart/<%= product.id%>" method="POST" id='bttn0_al_carrito'>
-                           <button type="submit" class="btn btn-primary">Agregar al carrito <i
+                        <div class="erQuantity">
+                           <ul></ul>
+                         </div>
+                           <button type="submit" class="btn btn-primary" id="submitDetail">Agregar al carrito <i
                               class="fas fa-shopping-cart"></i></button>
                         </form>
                      </div>
@@ -176,4 +185,5 @@
       </section>
       <!-- ------Footer -------->
       <%- include('../partials/footer') %>
+      <script src="/js/validateAddCart.js"></script>
    </body>

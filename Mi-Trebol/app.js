@@ -55,7 +55,7 @@ const { setServers } = require("dns");
 
 // LLamando rutas apis
 const useraApi = require("./routes/APIS/usersApiRoute");
-const productsApi = require('./routes/APIS/productsApiRoute')
+const productsApi = require('./routes/APIS/productsApiRoute');
 
 // Usando rutas normales
 
