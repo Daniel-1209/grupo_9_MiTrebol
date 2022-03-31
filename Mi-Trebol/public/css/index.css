@@ -296,6 +296,10 @@ footer {
 }
 
 /* From login section */
+input, textarea {
+  width: 100%;
+}
+
 .form-check-input:checked {
   background-color: #abd6c0;
   border-color: #05af56;

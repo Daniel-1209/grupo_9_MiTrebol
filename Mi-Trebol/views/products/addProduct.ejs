@@ -1,104 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/index.css" />
-    <title>añadirproducto</title>
-</head>
-
-<body>
-  <!-- Cabecera de la pagina-->
-  <%- include('../partials/header') %>
-
-    <div class="form-container">
-      <form action="/indexVendedor/create" method="POST" enctype="multipart/form-data" id="formAdd">
-        <div class="formsheader">
-          <h2 class="titulo">Añadir producto</h2>
-        </div>
-        <% if (locals.errors) {%>
-          <%for(error of errors ) { %>
-            <p>
-              <small class="text-danger">
-                <%= error.msg %>
-              </small>
-            </p>
-            <% } %>
-              <% } %>
-                <div class="input">
-                  <div>
-                    <label class="label-text" for="title">Nombre del producto</label>
-                    <input type="text" name="title" value="<%= locals.old && old.title ? old.title : '' %>" id="name" />
-                    <div class="erNameAdd">
-                      <ul class="ul">
-                        <!-- <small class="text-danger erNameAdd"></small>-->
-                      </ul>
-                    </div>
+   <head>
+      <%- include('../partials/head') %>
+      <link rel="stylesheet" href="/css/index.css" />
+      <title>Añadir Producto</title>
+   </head>
+   <body>
+      <!-- Cabecera de la pagina-->
+      <%- include('../partials/header') %>
+      <section class="login-form" id="">
+         <div class="container">
+            <form action="/indexVendedor/create" method="POST" enctype="multipart/form-data" id="formAdd">
+               <div class="col-12 text-center">
+                  <h2>Añadir producto</h2>
+                  <p class="informativo">Añade un producto a tu inventario.</p>
+                  <hr class="separador mx-auto">
+               </div>
+               <% if (locals.errors) {%>
+               <%for(error of errors ) { %>
+               <p>
+                  <small class="text-danger">
+                  <%= error.msg %>
+                  </small>
+               </p>
+               <% } %>
+               <% } %>
+               <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
+                  <div class="input">
+                     <div>
+                        <label class="label-text" for="title">Nombre del producto</label>
+                        <input type="text" name="title" value="<%= locals.old && old.title ? old.title : '' %>" id="name" />
+                        <div class="erNameAdd">
+                           <ul class="ul">
+                              <!-- <small class="text-danger erNameAdd"></small>-->
+                           </ul>
+                        </div>
+                     </div>
+                     <div>
+                        <label class="label-text" for="shortdescription">Descripción corta</label>
+                        <textarea type="text" name="shortdescription"
+                           id="shortText"><%= locals.old && old.shortdescription ? old.shortdescription : '' %></textarea>
+                        <div class="erShortAdd">
+                           <ul>
+                           </ul>
+                        </div>
+                     </div>
+                     <div>
+                        <label class="label-text" for="longDescription">Descripción larga</label>
+                        <textarea type="text" name="longDescription"
+                           id="longText"> <%= locals.old && old.longDescription ? old.longDescription : '' %></textarea>
+                        <div class="erLongAdd">
+                           <ul></ul>
+                        </div>
+                     </div>
                   </div>
-                  <div>
-                    <label class="label-text" for="shortdescription">Descripción corta</label>
-                    <textarea type="text" name="shortdescription"
-                      id="shortText"><%= locals.old && old.shortdescription ? old.shortdescription : '' %></textarea>
-                    <div class="erShortAdd">
-                      <ul>
-                      </ul>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="label-text" for="longDescription">Descripción larga</label>
-                    <textarea type="text" name="longDescription"
-                      id="longText"> <%= locals.old && old.longDescription ? old.longDescription : '' %></textarea>
-                    <div class="erLongAdd">
-                      <ul></ul>
-                    </div>
-                  </div>
-                </div>
-                <div id="filepriceandselectors">
-
-                  <label class="label-text" for="productoImage">
-                    Seleccionar archivo
-                  </label>
-                  <input class="select-file" type="file" name="productoImage" id="imgMod" single>
-                  <div class="erImageAdd">
-                    <ul></ul>
-                  </div>
-
-                  <div id="selectors">
-                    <label class="label-text" for="class">Categoría</label>
-                    <select name="classe" id="classe">
-                      <option value="1" <%=locals.old && old.classe==='1' ? 'selected' : '' %> >jabones</option>
-                      <option value="2" <%=locals.old && old.classe==='2' ? 'selected' : '' %> >belleza</option>
-                      <option value="3" <%=locals.old && old.classe==='3' ? 'selected' : '' %> >semillas</option>
-                      <option value="4" <%=locals.old && old.classe==='4' ? 'selected' : '' %> >artesania</option>
-                      <option value="5" <%=locals.old && old.classe==='5' ? 'selected' : '' %> >velas aromáticas
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="price">
-                    <label class="label-text" for="price"> Precio </label>
-                    <div class="wrapper">
-                      <span>$</span>
-                      <input type="number" name="price" value="<%= locals.old && old.price ? old.price : '' %>"
-                        id="price" />
-                      <div class="erPriceAdd">
+                  <div class="input-group mb-3">
+                     <label class="input-group-text"
+                        for="inputGroupFile01">Modificar
+                     imagen</label>
+                     <input class="select-file" type="file" name="productoImage"
+                        required id="imgMod" single>
+                     <div class="erImageAdd">
                         <ul></ul>
-                      </div>
-                    </div>
+                     </div>
                   </div>
-                  <div>
-                    <button type="submit" id="submitAdd">
-                      Guardar Producto<span class="plus-icon">+</span>
-                    </button>
+                  <label for="formFile" class="form-label">Categoria</label>
+                  <select name="classe" id="class">
+                     <option value="1" <%=locals.old && old.classe==='1' ? 'selected' : '' %> >Jabones naturales
+                     </option>
+                     <option value="2"  <%=locals.old && old.classe==='2' ? 'selected' : '' %> >Belleza al natural
+                     </option>
+                     <option value="3" <%=locals.old && old.classe==='3' ? 'selected' : '' %> >Semillas</option>
+                     <option value="4"  <%=locals.old && old.classe==='4' ? 'selected' : '' %> >Artesanías</option>
+                     <option value="5"  <%=locals.old && old.classe==='5' ? 'selected' : '' %> >Velas aromáticas
+                     </option>
+                  </select>
+                  <div class="input-group mb-3">
+                     <label for="formFile" class="form-label">Precio</label>
+                     <span class="input-group-text">$</span>
+                     <input name="price" type="text" class="form-control"
+                        value="<%= locals.old && old.price ? old.price : '' %>" id="price">
+                     <div class="erPriceAdd">
+                        <ul></ul>
+                     </div>
                   </div>
-                </div>
-      </form>
-    </div>
-
-    <!-- Pie de la pagina-->
-    <%- include('../partials/footer') %>
+                  <div class="modal-footer">
+                     <button type="submit" class="btn btn-primary" id="submitEdit"> Guardar Producto <i class="fas fa-plus-circle"></i></button>
+                  </div>
+               </div>
+         </div>
+         </form>
+         </div>
+      </section>
+      <!-- Pie de la pagina-->
+      <%- include('../partials/footer') %>
       <script src='/js/validateAddProductFrontEnd.js'></script>
-</body>
-
+   </body>
 </html>

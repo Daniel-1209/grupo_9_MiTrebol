@@ -59,7 +59,7 @@ function LastMovieInDb() {
               style={{ width: 40 + "rem" }}
               
               src={`http://localhost:3000/img/${ products.products[products.products.length - 1].img }`}
-              alt=" Star Wars - Mandalorian "
+              alt="Productos - MiTrebol "
             />
           </div>
           <p> Precio: ${products.products[products.products.length - 1].price}</p>
@@ -84,7 +84,7 @@ function LastMovieInDb() {
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
               style={{ width: 40 + "rem" }} 
               src={`http://localhost:3000/img/avatars/${users.users[users.users.length - 1].avatar}`}
-              alt=" Star Wars - Mandalorian "
+              alt="Ultimo Usuario En la DB"
             />
           </div>
           <p>Nombre de Usuario: {users.users[users.users.length - 1].user}</p>{" "}

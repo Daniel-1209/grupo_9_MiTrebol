@@ -31,7 +31,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - MI-TREBOL</span></Link>
+                        <span>Dashboard - MiTRÉBOL</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -44,6 +44,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
+                        <i class="fa-solid"></i>
                         <span>Totales en categorias</span>
                     </Link>
                 </li>
