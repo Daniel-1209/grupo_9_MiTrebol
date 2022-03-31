@@ -13,6 +13,9 @@ router.get('/user/:id', indexController.detail);
 /* Correo electronico de usuario */
 router.get('/email', indexController.electronic);
 
+/* Correo electronico de usuario */
+router.get('/search', indexController.search);
+
 
 /* Categorias de usuario */
 router.get('/categorias', indexController.countCategories);
